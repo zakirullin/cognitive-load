@@ -14,7 +14,7 @@ An average human being is capable of holding roughly **four facts** in his worki
 
 *Let's imagine we were asked to make some fixes to a completely unfamiliar project. It was said that a really smart developer had contributed to it. Lots of cool technologies, fancy libraries and trendy frameworks were used. In other words, **the previous author had high cognitive load in his head, which we are yet to recreate.***
 
-![Cognitive Load](https://raw.githubusercontent.com/zakirullin/cognitive-load/main/img/cognitiveload.png)
+![Cognitive Load](/img/cognitiveload.png)
 
 ## Types of cognitive load
 **Intrinsic** - is the inherent level of difficulty associated with a specific problem we're solving. Can't be reduced, it is in the very heart of software development.  
@@ -32,7 +32,6 @@ Let's jump straight to the concrete practical examples of extraneous cognitive l
 > `🧠`: fresh working memory, zero cognitive load  
 > `🧠++`: two facts in our working memory, cognitive load increased  
 > `🤯`: working memory overflow, more than 4 facts  
-
 
 ## Inheritance nightmare
 We're tasked to change a few things for our admin users: `🧠`
@@ -57,7 +56,7 @@ Mantras like "methods should be shorter than 15 lines of code" or "classes shoul
 **Shallow module** - complex interface, simple functionality  
 **Deep module** - simple interface, complex functionality
 
-![Deep module](https://raw.githubusercontent.com/zakirullin/cognitive-load/main/img/deepmodule.png)
+![Deep module](/img/deepmodule.png)
 
 Having too many shallow modules can make it difficult understand the project. **Not only we have to keep in mind each module responsibilities, but also all their interactions**. `🤯`
 
@@ -113,7 +112,7 @@ Then QA folks come in play:
 It's better to abstract away your business details from HTTP transfer protocol, and return them just in response body:
 ```json
 {
-   "code": "jwt_has_expired"
+    "code": "jwt_has_expired"
 }
 ```
 
@@ -125,9 +124,9 @@ Cognitive load on the QA side: `🧠`
 ## Complicated if statements
 ```go
 if val > someConstant && // 🧠+
-(condition2 || condition3) && // 🧠+++, prev cond should be true, one of c2 or c3 has be true
-(condition4 && !condition5) {// 🤯, we're messed up here
-   ...
+    (condition2 || condition3) && // 🧠+++, prev cond should be true, one of c2 or c3 has be true
+    (condition4 && !condition5) { // 🤯, we're messed up here
+    ...
 }
 ```
 
@@ -138,31 +137,31 @@ isAllowed = condition2 || condition3
 isSecure = condition4 && !condition5 
 // 🧠, we don't need to remember conditions, there are descriptive variables
 if isValid && isAllowed && isSecure {
-   ...
+    ...
 }
 ```
 
 ## Nested ifs
 ```go
 if isValid { // 🧠+, okay nested code applies to valid input only
- if isSecure { // 🧠++, we do stuff1 for valid and secure input only
-    stuff1 // 🧠+++
- }
- stuff2 // 🧠++++, we do stuff2 for all sorts of valid input, we should keep in mind stuff1, because it may interfere with our stuff2
+    if isSecure { // 🧠++, we do stuff1 for valid and secure input only
+        stuff1 // 🧠+++
+    }
+    stuff2 // 🧠++++, we do stuff2 for all sorts of valid input, we should keep in mind stuff1, because it may interfere with our stuff2
 } 
 ```
 
 Compare it with the early returns and failing fast:
 ```go
 if !isValid
-   return
+    return
  
 // 🧠, we don't really care about earlier returns, if we're here then all good
 
 stuff2 // 🧠+
 
 if !isSecure
-   return
+    return
    
 // 🧠+
 
@@ -210,7 +209,7 @@ Take a look at the overarching design principles of one of the biggest tech comp
 
 Does the new fancy buzzword comply with these principles? Or all it does is creating extraneous cognitive load?
 
-![Cognitive Load](https://raw.githubusercontent.com/zakirullin/cognitive-load/main/img/complexity.jpg)
+![Cognitive Load](/img/complexity.jpg)
 Code Complexity vs. Experience from [@flaviocopes](https://twitter.com/flaviocopes)
 
 **If you are holding a lot of facts that aren't directly relevant to the problem at hand, think about future developers, yourself included. They would have to recreate this high cognitive load.**
