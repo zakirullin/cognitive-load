@@ -200,10 +200,10 @@ Take a look at the overarching design principles of one of the biggest tech comp
 `Simplicity`: The code accomplishes its goal in the simplest way possible.  
 `Concision`: The code has a high signal-to-noise ratio, or intrinsic-to-extraneous cognitive load ratio.  
 `Maintainability`: The code is written such that it can be easily maintained.  
-`Consistency``: The code is consistent with the broader codebase.  
+`Consistency`: The code is consistent with the broader codebase.  
 
 Does the new fancy buzzword comply with these principles? Or all it does is creating extraneous cognitive load?
 
 If you are holding a lot of facts that aren't directly relevant to the problem at hand, think about future developers, yourself included. They would have to recreate this high cognitive load.
 
-*Contributions are welcome!*
+*Contributions are welcome!* 🚀
