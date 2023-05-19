@@ -63,7 +63,7 @@ I have two pet projects, both of them are somewhat 5K lines of code. The first o
 
 Once I came back, I realized that it is tremendously hard to untangle all those interactions between these 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before start coding. On the other hand, I was able to quickly grasp the second project, because it only had a few deep classes with simple interface.
 
-> **The best components are those that provide powerful functionality yet have simple interface.**
+> **The best components are those that provide powerful functionality yet have simple interface.**  
 John K. Ousterhout
 
 > **Note**
@@ -195,12 +195,12 @@ Even though these layered architectures have accelerated the important shift fro
 Those architectures are not fundamental, they're just subjective, biased consequences of more fundamental principles. Why rely on these subjective interpretations? Follow the fundamentals instead: DIP, IoC, single source of truth, coupling, true invariant, complexity, cognitive load and information hiding.
 
 ## Learning from the Giants
-Take a look at the overarching design principles of one of the biggest tech companies:
-**Clarity**: The code’s purpose and rationale is clear to the reader.
-**Simplicity**: The code accomplishes its goal in the simplest way possible.
-**Concision**: The code has a high signal-to-noise ratio, or intrinsic-to-extraneous cognitive load ratio.
-**Maintainability**: The code is written such that it can be easily maintained.
-**Consistency**: The code is consistent with the broader codebase
+Take a look at the overarching design principles of one of the biggest tech companies:  
+**Clarity**: The code’s purpose and rationale is clear to the reader.  
+**Simplicity**: The code accomplishes its goal in the simplest way possible.  
+**Concision**: The code has a high signal-to-noise ratio, or intrinsic-to-extraneous cognitive load ratio.  
+**Maintainability**: The code is written such that it can be easily maintained.  
+**Consistency**: The code is consistent with the broader codebase.  
 
 Does the new fancy buzzword comply with these principles? Or all it does is creating extraneous cognitive load?
 
