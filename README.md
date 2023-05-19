@@ -10,9 +10,9 @@ This paper discusses a thinking tool that would enable us to create simple yet m
 
 We should strive to reduce the cognitive load in our projects as much as possible.
 
-An average human being is capable of holding roughly four facts in his working memory. Once the cognitive load hits this threshold, a significant effort must be applied in order to understand things.
+An average human being is capable of holding roughly **four facts** in his working memory. Once the cognitive load hits this threshold, a significant effort must be applied in order to understand things.
 
-Let's imagine we were asked to make some fixes to a completely unfamiliar project. It was said that a really smart developer had contributed to it. Lots of cool technologies, fancy libraries and trendy frameworks were used. In other words, **the previous author had high cognitive load in his head, which we are yet to recreate.**
+*Let's imagine we were asked to make some fixes to a completely unfamiliar project. It was said that a really smart developer had contributed to it. Lots of cool technologies, fancy libraries and trendy frameworks were used. In other words, **the previous author had high cognitive load in his head, which we are yet to recreate.***
 
 ![Cognitive Load](https://raw.githubusercontent.com/zakirullin/cognitive-load/main/img/cognitiveload.png)
 
