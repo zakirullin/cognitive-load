@@ -26,18 +26,13 @@ Let's jump straight to the concrete practical examples of extraneous cognitive l
 
 ----
 
-> **Note**
-> We will reffer to our cognitive load as follows:
-> 🧠 - fresh working memory, zero cognitive load
-> 🧠++ - two facts in our working memory, cognitive load increased
-> 🤯 - working memory overflow, more than 4 facts
+```
+We will refer to our cognitive load as follows:
+🧠 - fresh working memory, zero cognitive load
+🧠++ - two facts in our working memory, cognitive load increased
+🤯 - working memory overflow, more than 4 facts
 ```
 
-> **Note**
-> We will reffer to our cognitive load as follows:
-> 🧠 - fresh working memory, zero cognitive load
-> 🧠++ - two facts in our working memory, cognitive load increased
-> 🤯 - working memory overflow, more than 4 facts
 
 ### Inheritance nightmare
 We're tasked to change a few things for our admin users. 🧠
@@ -72,10 +67,8 @@ Once I came back, I realized that it is tremendously hard to untangle all those 
 > **The best components are those that provide powerful functionality yet have simple interface.**
 John K. Ousterhout
 
-```
 > **Note**
-The greatest book on the topic is "A Philosophy of Software Design". Not only it covers the very essense of complexity, but it also has so far the greatest interpretation of Parnas' influential paper "On the Criteria To Be Used in Decomposing Systems into Modules".
-```
+> The greatest book on the topic is "A Philosophy of Software Design". Not only it covers the very essense of complexity, but it also has so far the greatest interpretation of Parnas' influential paper "On the Criteria To Be Used in Decomposing Systems into Modules".
 
 ### Too many small microservices
 We can apply the aforementioned scale-agnostic principle to microservice architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e. services that aren't that shallow. One of the worst and most difficult-to-fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation. 🤯
