@@ -27,14 +27,14 @@ Let's jump straight to the concrete practical examples of extraneous cognitive l
 ----
 
 > **Note**
-> We will refer to our cognitive load as follows:  
+> We will refer to the level cognitive load as follows:  
 > `🧠`: fresh working memory, zero cognitive load  
 > `🧠++`: two facts in our working memory, cognitive load increased  
 > `🤯`: working memory overflow, more than 4 facts  
 
 
 ## Inheritance nightmare
-We're tasked to change a few things for our admin users. 🧠
+We're tasked to change a few things for our admin users. `🧠`
 
 `AdminController extends UserController extends GuestController extends BaseController`
 
@@ -43,7 +43,7 @@ Basic role mechanics got introduced in `GuestController`: `🧠++`
 Things got partially altered in `UserController`: `🧠+++`  
 Finally we're here, `AdminController`, let's code stuff! `🧠++++`  
 
-Oh, wait, there's `SuperuserController`, which extends `AdminController`. By modifying `AdminController` we can break things in the inherited class, so let's dive in `SuperuserController` first: 🤯
+Oh, wait, there's `SuperuserController`, which extends `AdminController`. By modifying `AdminController` we can break things in the inherited class, so let's dive in `SuperuserController` first: `🤯`
 
 Prefer composition over inheritance. We won't go into the details - there are enough articles on the topic.
 
@@ -70,7 +70,7 @@ John K. Ousterhout
 > The greatest book on the topic is "A Philosophy of Software Design". Not only it covers the very essense of complexity, but it also has so far the greatest interpretation of Parnas' influential paper "On the Criteria To Be Used in Decomposing Systems into Modules".
 
 ## Too many small microservices
-We can apply the aforementioned scale-agnostic principle to microservice architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e. services that aren't that shallow. One of the worst and most difficult-to-fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation. 🤯
+We can apply the aforementioned scale-agnostic principle to microservice architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e. services that aren't that shallow. One of the worst and most difficult-to-fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation. `🤯`
 
 I once consulted a startup. The team of four developers introduced 17(!) microservices. They were 10 months behind schedule and appeared nowhere close to the public release. Every new requirement led to changes across 4+ microservices. TTM was unacceptably low. Cognitive load was unbearably high. Is it the appropriate way to approach the uncertainty of a new system? The only team's justification was: "FAANG companies proved microservice architecture to be effective".
 
@@ -79,7 +79,7 @@ A well-crafted monolith with truly isolated modules is often much more convenien
 ## Featureful languages
 We feel excited when new features got released in our favourite language. We spend some time learning these features, we build code upon them.
 
-If there are lots of features, we may spend half an hour playing with a few lines of code, to use one or another feature. And it's kinda waste of time. But what's worse, **when you come back later, you would have to recreate that thought process!** 🤯
+If there are lots of features, we may spend half an hour playing with a few lines of code, to use one or another feature. And it's kinda waste of time. But what's worse, **when you come back later, you would have to recreate that thought process!** `🤯`
 
 **You not only have to understand this complicated program, you have to understand why a programmer decided this was the way to approach a problem from the features that are available.**
 Those statements are made by none other than Rob Pike.
@@ -111,8 +111,8 @@ It's better to abstract away your business details from HTTP transfer protocol, 
 }
 ```
 
-Cognitive load on the frontend side: 🧠 (fresh, no facts are hold in mind)  
-Cognitive load on the QA side: 🧠
+Cognitive load on the frontend side: `🧠` (fresh, no facts are hold in mind)  
+Cognitive load on the QA side: `🧠`
 
 > As for following that mystical "RESTful API" and using all sorts of HTTP verbs and statuses, the standart simply doesn't exist. The only valid document on this matter is a thesis published by Roy Fielding, dated back in 2000, and it says nothing about verbs and statuses. People go along with very few basic HTTP statuses and POSTs only, and they're doing just fine.*
 
@@ -170,7 +170,7 @@ Frameworks evolve at its own pace, which in most cases doesn't match app's own l
 
 By relying too much on a framework, we oblige all upcoming engineers to learn this framework first (or its particular version). Even though frameworks enable us to launch MVPs in a matter of days, in the long run they tend to add unnecessary complexity and cognitive load.
 
-Worse yet, at some point frameworks can become a significant constraint when faced with a new requirement that just doesn't fit the architecture. From here onwards people end up forking a framework and maintaining its own custom version. Imagine the amount of cognitive load a newcomer would have to build (i.e. learn this custom framework) in order to deliver some value. 🤯
+Worse yet, at some point frameworks can become a significant constraint when faced with a new requirement that just doesn't fit the architecture. From here onwards people end up forking a framework and maintaining its own custom version. Imagine the amount of cognitive load a newcomer would have to build (i.e. learn this custom framework) in order to deliver some value. `🤯`
 
 **By no means we advocate to invent all the things from scratch!**
 
@@ -181,12 +181,12 @@ DDD has some great points, although it is often misinterpreted. People say "We w
 
 Ubiquitous language, domain, bounded contexts, aggregate, event storming are all about problem space. They are meant to help us learn the insights about the domain and extract the boundaries. DDD enables developers, domain experts and business people to communicate effectively using a single, unified language.
 
-Rather than focusing on these problem space aspects of DDD, we tend to emphasize on certain folder structures, services, repositories, and other solution space techniques. Information loss and subjectivity often go hand in hand with these interpritations. All this dramatically contributes to the overall extraneous cognitive load. 🤯
+Rather than focusing on these problem space aspects of DDD, we tend to emphasize on certain folder structures, services, repositories, and other solution space techniques. Information loss and subjectivity often go hand in hand with these interpritations. All this dramatically contributes to the overall extraneous cognitive load. `🤯`
 
 ## Hexagonal/Onion architecture
 There is some engineering excitement around all this stuff.
 
-I myself was a passionate Onion Architecture advocate for years. I applied it here and there, I encouraged other teams to do the same. The complexity of our projects went up, the sheer number of files alone has doubled. It felt like we were writing a lot of gluing code. On ever changing requirements we had to make changes in multiple layers of abstractions, it all became tedious. 🤯
+I myself was a passionate Onion Architecture advocate for years. I applied it here and there, I encouraged other teams to do the same. The complexity of our projects went up, the sheer number of files alone has doubled. It felt like we were writing a lot of gluing code. On ever changing requirements we had to make changes in multiple layers of abstractions, it all became tedious. `🤯`
 
 In the end, we gave it all up in favour of good old dependency inversion principle. No project structure enforced, no port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.
 
