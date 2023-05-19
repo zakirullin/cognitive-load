@@ -1,7 +1,7 @@
 # Cognitive Load Developer's Handbook 🧠
 
 ## Why bother reading?
-We spend much more time reading and understanding code than writing it. The crucial metric we should keep an eye on is the amount of cognitive load we need to build in our brains in order to understand the code and deliver value.
+We spend much more time reading and understanding code than writing it. Therefore, the amount of cognitive load we need to build in our brains in order to understand the code is crucial.
 
 This paper discusses a thinking tool that would enable us to create simple yet maintainable applications. We would view every decision, trendy buzzword, and any fancy technology through the lens of cognitive load.
 
