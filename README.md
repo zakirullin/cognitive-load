@@ -14,7 +14,7 @@ An average human being is capable of holding roughly four facts in his working m
 
 Let's imagine we were asked to make some fixes to a completely unfamiliar project. It was said that a really smart developer had contributed to it. Lots of cool technologies, fancy libraries and trendy frameworks were used. In other words, **the previous author had high cognitive load in his head, which we are yet to recreate.**
 
-![Cognitive Load](https://raw.githubusercontent.com/zakirullin/cognitive-load/main/img/CognitiveLoad.png)
+[[img/cognitiveload.png]]
 
 ### Types of cognitive load
 **Intrinsic** - is the inherent level of difficulty associated with a specific probem we're solving. Can't be reduced, it is in the very heart of software development.
@@ -54,7 +54,7 @@ Mantras like "methods should be shorther than 15 lines of code" or "classes shou
 `Shallow module` - complex interface, simple functionality
 `Deep module` - simple interface, complex functionality
 
-![Deep module](https://raw.githubusercontent.com/zakirullin/cognitive-load/main/img/DeepModule.png)
+[[img/deepmodule.png]]
 
 Having too many shallow classes can make it difficult understand the project. Not only we have to keep in mind each class responsibilities, but also all their interatctions.
 
