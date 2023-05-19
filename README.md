@@ -49,7 +49,7 @@ Oh, wait, there's `SuperuserController` extending `AdminController`. By modifyin
 Prefer composition over inheritance. We won't go into the details - there are enough articles on the topic.
 
 ## Too many small methods, classes or  modules
-Mantras like "methods should be shorther than 15 lines of code" or "classes should be small" turned out to be somewhat wrong.
+Mantras like "methods should be shorter than 15 lines of code" or "classes should be small" turned out to be somewhat wrong.
 
 **Shallow module** - complex interface, simple functionality  
 **Deep module** - simple interface, complex functionality
