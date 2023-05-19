@@ -150,7 +150,7 @@ if isValid { // 🧠+, okay nested code applies to valid input only
 } 
 ```
 
-Compare it with the early returns and fail fast:
+Compare it with the early returns and failing fast:
 ```go
 if !isValid
    return
