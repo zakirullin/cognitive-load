@@ -28,7 +28,7 @@ Let's jump straight to the concrete practical examples of extraneous cognitive l
 
 ```
 > **Note**
->We will reffer to our cognitive load as follows:
+> We will reffer to our cognitive load as follows:
 > 🧠 - fresh working memory, zero cognitive load
 > 🧠++ - two facts in our working memory, cognitive load increased
 > 🤯 - working memory overflow, more than 4 facts
