@@ -59,7 +59,7 @@ Mantras like "methods should be shorter than 15 lines of code" or "classes shoul
 
 ![Deep module](https://raw.githubusercontent.com/zakirullin/cognitive-load/main/img/deepmodule.png)
 
-Having too many shallow classes can make it difficult understand the project. **Not only we have to keep in mind each class responsibilities, but also all their interactions**.
+Having too many shallow modules can make it difficult understand the project. **Not only we have to keep in mind each module responsibilities, but also all their interactions**.
 
 > Information hiding is paramount, and we don't hide as much complexity in shallow modules.
 
