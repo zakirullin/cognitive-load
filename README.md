@@ -35,7 +35,7 @@ Let's jump straight to the concrete practical examples of extraneous cognitive l
 
 
 ## Inheritance nightmare
-We're tasked to change a few things for our admin users. `🧠`
+We're tasked to change a few things for our admin users: `🧠`
 
 `AdminController extends UserController extends GuestController extends BaseController`
 
@@ -44,7 +44,7 @@ Basic role mechanics got introduced in `GuestController`: `🧠++`
 Things got partially altered in `UserController`: `🧠+++`  
 Finally we're here, `AdminController`, let's code stuff! `🧠++++`  
 
-Oh, wait, there's `SuperuserController`, which extends `AdminController`. By modifying `AdminController` we can break things in the inherited class, so let's dive in `SuperuserController` first: `🤯`
+Oh, wait, there's `SuperuserController` extending `AdminController`. By modifying `AdminController` we can break things in the inherited class, so let's dive in `SuperuserController` first: `🤯`
 
 Prefer composition over inheritance. We won't go into the details - there are enough articles on the topic.
 
@@ -56,9 +56,9 @@ Mantras like "methods should be shorther than 15 lines of code" or "classes shou
 
 ![Deep module](https://raw.githubusercontent.com/zakirullin/cognitive-load/main/img/deepmodule.png)
 
-Having too many shallow classes can make it difficult understand the project. Not only we have to keep in mind each class responsibilities, but also all their interatctions.
+Having too many shallow classes can make it difficult understand the project. **Not only we have to keep in mind each class responsibilities, but also all their interactions**.
 
-**Information hiding is paramount, and we don't hide as much complexity in shallow modules.**
+> Information hiding is paramount, and we don't hide as much complexity in shallow modules.
 
 I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas the second one has only 7 deep classes. I haven't been maintaining any of these projects for one year and a half.
 
@@ -70,7 +70,7 @@ John K. Ousterhout
 > **Note**
 > The greatest book on the topic is "A Philosophy of Software Design". Not only it covers the very essense of complexity, but it also has so far the greatest interpretation of Parnas' influential paper "On the Criteria To Be Used in Decomposing Systems into Modules".
 
-## Too many small microservices
+## Too many shallow microservices
 We can apply the aforementioned scale-agnostic principle to microservice architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e. services that aren't that shallow. One of the worst and most difficult-to-fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation. `🤯`
 
 I once consulted a startup. The team of four developers introduced 17(!) microservices. They were 10 months behind schedule and appeared nowhere close to the public release. Every new requirement led to changes across 4+ microservices. TTM was unacceptably low. Cognitive load was unbearably high. Is it the appropriate way to approach the uncertainty of a new system? The only team's justification was: "FAANG companies proved microservice architecture to be effective".
