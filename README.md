@@ -5,7 +5,7 @@ We spend much more time reading and understanding code than writing it. The cruc
 
 This paper discusses a thinking tool that would enable us to create simple yet maintainable applications. We would view every decision, trendy buzzword, and any fancy technology through the lens of cognitive load.
 
-### Cognitive load
+## Cognitive load
 **Cognitive load is how much a developer needs to know in order to complete a task.**
 
 We should strive to reduce the cognitive load in our projects as much as possible.
@@ -28,12 +28,12 @@ Let's jump straight to the concrete practical examples of extraneous cognitive l
 
 > **Note**
 > We will refer to our cognitive load as follows:  
-> 🧠 - fresh working memory, zero cognitive load  
-> 🧠++ - two facts in our working memory, cognitive load increased  
-> 🤯 - working memory overflow, more than 4 facts  
+> 🧠 fresh working memory, zero cognitive load  
+> 🧠++ two facts in our working memory, cognitive load increased  
+> 🤯 working memory overflow, more than 4 facts  
 
 
-### Inheritance nightmare
+## Inheritance nightmare
 We're tasked to change a few things for our admin users. 🧠
 
 `AdminController extends UserController extends GuestController extends BaseController`
@@ -47,7 +47,7 @@ Oh, wait, there's `SuperuserController`, which extends `AdminController`. By mod
 
 Prefer composition over inheritance. We won't go into the details - there are enough articles on the topic.
 
-### Too many small methods, classes or  modules
+## Too many small methods, classes or  modules
 Mantras like "methods should be shorther than 15 lines of code" or "classes should be small" turned out to be somewhat wrong.
 
 `Shallow module` - complex interface, simple functionality  
@@ -69,14 +69,14 @@ John K. Ousterhout
 > **Note**
 > The greatest book on the topic is "A Philosophy of Software Design". Not only it covers the very essense of complexity, but it also has so far the greatest interpretation of Parnas' influential paper "On the Criteria To Be Used in Decomposing Systems into Modules".
 
-### Too many small microservices
+## Too many small microservices
 We can apply the aforementioned scale-agnostic principle to microservice architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e. services that aren't that shallow. One of the worst and most difficult-to-fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation. 🤯
 
 I once consulted a startup. The team of four developers introduced 17(!) microservices. They were 10 months behind schedule and appeared nowhere close to the public release. Every new requirement led to changes across 4+ microservices. TTM was unacceptably low. Cognitive load was unbearably high. Is it the appropriate way to approach the uncertainty of a new system? The only team's justification was: "FAANG companies proved microservice architecture to be effective".
 
 A well-crafted monolith with truly isolated modules is often much more convenient and flexible than a bunch of microservices. It's only when the need for separate deployments becomes crucial (e.g. development team scailing) that you should consider adding a network layer between our modules (future microservices).
 
-### Featureful languages
+## Featureful languages
 We feel excited when new features got released in our favourite language. We spend some time learning these features, we build code upon them.
 
 If there are lots of features, we may spend half an hour playing with a few lines of code, to use one or another feature. And it's kinda waste of time. But what's worse, **when you come back later, you would have to recreate that thought process!** 🤯
@@ -84,7 +84,7 @@ If there are lots of features, we may spend half an hour playing with a few line
 **You not only have to understand this complicated program, you have to understand why a programmer decided this was the way to approach a problem from the features that are available.**
 Those statements are made by none other than Rob Pike.
 
-### Business logic and HTTP status codes
+## Business logic and HTTP status codes
 On the backend we return:
 ```go
 401 // for expired jwt token
@@ -116,7 +116,7 @@ Cognitive load on the QA side: 🧠
 
 > As for following that mystical "RESTful API" and using all sorts of HTTP verbs and statuses, the standart simply doesn't exist. The only valid document on this matter is a thesis published by Roy Fielding, dated back in 2000, and it says nothing about verbs and statuses. People go along with very few basic HTTP statuses and POSTs only, and they're doing just fine.*
 
-### Complicated if statements
+## Complicated if statements
 ```go
 if val > someConstant && // 🧠+
 (condition2 || condition3) && // 🧠+++, prev cond should be true, one of c2 or c3 has be true
@@ -136,7 +136,7 @@ if isValid && isAllowed && isSecure {
 }
 ```
 
-### Nested ifs
+## Nested ifs
 ```go
 if isValid { // 🧠+, okay nested code applies to valid input only
  if isSecure { // 🧠++, we do stuff1 for valid and secure input only
@@ -165,7 +165,7 @@ stuff1 // 🧠++
 
 We can focus on the happy path only, thus freeing our working memory for all sort os preconditions.
 
-### High coupling with a framework
+## High coupling with a framework
 Frameworks evolve at its own pace, which in most cases doesn't match app's own life cycle.
 
 By relying too much on a framework, we oblige all upcoming engineers to learn this framework first (or its particular version). Even though frameworks enable us to launch MVPs in a matter of days, in the long run they tend to add unnecessary complexity and cognitive load.
@@ -176,14 +176,14 @@ Worse yet, at some point frameworks can become a significant constraint when fac
 
 We can write code in somewhat framework-agnostic way. The business logic should not reside within a framework; rather, it should use the framework's components. Put a framework outside of your core logic. Use the framework in a library-like fashion. That would enable new contributors to bring value from day one, without the need of going through debris of framework-related complexity first.
 
-### DDD
+## DDD
 DDD has some great points, although it is often misinterpreted. People say "We write our code in DDD", which is kind of strange, because DDD is intended for problem space, not for solution space.
 
 Ubiquitous language, domain, bounded contexts, aggregate, event storming are all about problem space. They are meant to help us learn the insights about the domain and extract the boundaries. DDD enables developers, domain experts and business people to communicate effectively using a single, unified language.
 
 Rather than focusing on these problem space aspects of DDD, we tend to emphasize on certain folder structures, services, repositories, and other solution space techniques. Information loss and subjectivity often go hand in hand with these interpritations. All this dramatically contributes to the overall extraneous cognitive load. 🤯
 
-### Hexagonal/Onion architecture
+## Hexagonal/Onion architecture
 There is some engineering excitement around all this stuff.
 
 I myself was a passionate Onion Architecture advocate for years. I applied it here and there, I encouraged other teams to do the same. The complexity of our projects went up, the sheer number of files alone has doubled. It felt like we were writing a lot of gluing code. On ever changing requirements we had to make changes in multiple layers of abstractions, it all became tedious. 🤯
@@ -194,7 +194,7 @@ Even though these layered architectures have accelerated the important shift fro
 
 Those architectures are not fundamental, they're just subjective, biased consequences of more fundamental principles. Why rely on these subjective interpretations? Follow the fundamentals instead: DIP, IoC, single source of truth, coupling, true invariant, complexity, cognitive load and information hiding.
 
-### Learning from the Giants
+## Learning from the Giants
 Take a look at the overarching design principles of one of the biggest tech companies:
 **Clarity**: The code’s purpose and rationale is clear to the reader.
 **Simplicity**: The code accomplishes its goal in the simplest way possible.
