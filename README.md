@@ -73,7 +73,7 @@ John K. Ousterhout
 ## Too many shallow microservices
 We can apply the aforementioned scale-agnostic principle to microservice architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e. services that aren't that shallow. One of the worst and most difficult-to-fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation. `🤯`
 
-I once consulted a startup. The team of four developers introduced 17(!) microservices. They were 10 months behind schedule and appeared nowhere close to the public release. Every new requirement led to changes across 4+ microservices. TTM was unacceptably low. Cognitive load was unbearably high. Is it the appropriate way to approach the uncertainty of a new system? The only team's justification was: "FAANG companies proved microservice architecture to be effective".
+I once consulted a startup where a team of four developers introduced 17(!) microservices. They were 10 months behind schedule and appeared nowhere close to the public release. Every new requirement led to changes across 4+ microservices. TTM was unacceptably low. Cognitive load was unbearably high. Is it the appropriate way to approach the uncertainty of a new system? The only team's justification was: "FAANG companies proved microservice architecture to be effective".
 
 A well-crafted monolith with truly isolated modules is often much more convenient and flexible than a bunch of microservices. It's only when the need for separate deployments becomes crucial (e.g. development team scailing) that you should consider adding a network layer between our modules (future microservices).
 
