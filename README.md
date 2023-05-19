@@ -50,8 +50,8 @@ Prefer composition over inheritance. We won't go into the details - there are en
 ## Too many small methods, classes or  modules
 Mantras like "methods should be shorther than 15 lines of code" or "classes should be small" turned out to be somewhat wrong.
 
-`Shallow module` - complex interface, simple functionality  
-`Deep module` - simple interface, complex functionality
+**Shallow module** - complex interface, simple functionality  
+**Deep module** - simple interface, complex functionality
 
 ![Deep module](https://raw.githubusercontent.com/zakirullin/cognitive-load/main/img/deepmodule.png)
 
