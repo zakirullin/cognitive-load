@@ -6,7 +6,7 @@ We spend much more time reading and understanding code than writing it. The cruc
 This paper discusses a thinking tool that would enable us to create simple yet maintainable applications. We would view every decision, trendy buzzword, and any fancy technology through the lens of cognitive load.
 
 ## Cognitive load
-**Cognitive load is how much a developer needs to know in order to complete a task.**
+> **Cognitive load is how much a developer needs to know in order to complete a task.**
 
 We should strive to reduce the cognitive load in our projects as much as possible.
 
