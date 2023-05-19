@@ -204,6 +204,6 @@ Take a look at the overarching design principles of one of the biggest tech comp
 
 Does the new fancy buzzword comply with these principles? Or all it does is creating extraneous cognitive load?
 
-If you are holding a lot of facts that aren't directly relevant to the problem at hand, think about future developers, yourself included. They would have to recreate this high cognitive load.
+**If you are holding a lot of facts that aren't directly relevant to the problem at hand, think about future developers, yourself included. They would have to recreate this high cognitive load.**
 
 *Contributions are welcome!* 🚀
