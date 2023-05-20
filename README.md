@@ -173,7 +173,7 @@ We can focus on the happy path only, thus freeing our working memory for all sor
 ## High coupling with a framework
 Frameworks evolve at its own pace, which in most cases doesn't match app's own life cycle.
 
-By relying too much on a framework, we oblige all upcoming engineers to learn this framework first (or its particular version). Even though frameworks enable us to launch MVPs in a matter of days, in the long run they tend to add unnecessary complexity and cognitive load.
+By relying too much on a framework, we oblige all upcoming developers to learn this framework first (or its particular version). Even though frameworks enable us to launch MVPs in a matter of days, in the long run they tend to add unnecessary complexity and cognitive load.
 
 Worse yet, at some point frameworks can become a significant constraint when faced with a new requirement that just doesn't fit the architecture. From here onwards people end up forking a framework and maintaining its own custom version. Imagine the amount of cognitive load a newcomer would have to build (i.e. learn this custom framework) in order to deliver some value. `🤯`
 
