@@ -210,7 +210,7 @@ Take a look at the overarching design principles of one of the biggest tech comp
 Does the new fancy buzzword comply with these principles? Or all it does is creating extraneous cognitive load?
 
 <details>
-  <summary>Related meme</summary>
+  <summary>Here's a fun picture</summary>
   <img src="img/complexity.jpg">
   Code Complexity vs. Experience from <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
