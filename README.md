@@ -56,7 +56,7 @@ Mantras like "methods should be shorter than 15 lines of code" or "classes shoul
 **Shallow module** - complex interface, simple functionality  
 **Deep module** - simple interface, complex functionality
 
-![Deep module](/img/deepmodule.png)
+![Deep module](/img/deepmodulev2.png)
 
 Having too many shallow modules can make it difficult understand the project. **Not only we have to keep in mind each module responsibilities, but also all their interactions**. `🤯`
 
@@ -193,9 +193,9 @@ There is some engineering excitement around all this stuff.
 
 I myself was a passionate Onion Architecture advocate for years. I applied it here and there, I encouraged other teams to do the same. The complexity of our projects went up, the sheer number of files alone has doubled. It felt like we were writing a lot of gluing code. On ever changing requirements we had to make changes in multiple layers of abstractions, it all became tedious. `🤯`
 
-In the end, we gave it all up in favour of good old dependency inversion principle. No project structure enforced, no port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.
+In the end, we gave it all up in favour of good old dependency inversion principle. No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.
 
-Even though these layered architectures have accelerated the important shift from traditional database-centric applications towards somewhat infrastructure-externalized approach (business logic became independent of any external stuff), the idea is by no means novel.
+Even though these layered architectures have accelerated an important shift from traditional database-centric applications towards somewhat infrastructure-externalized approach (business logic became independent of any external stuff), the idea is by no means novel.
 
 Those architectures are not fundamental, they're just subjective, biased consequences of more fundamental principles. Why rely on these subjective interpretations? Follow the fundamentals instead: DIP, IoC, single source of truth, coupling, true invariant, complexity, cognitive load and information hiding.
 
