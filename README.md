@@ -211,9 +211,8 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 
 <details>
   <summary>Related meme</summary>
-
-    ![Cognitive Load](https://raw.githubusercontent.com/zakirullin/cognitive-load/main/img/complexity.jpg)
-    Code Complexity vs. Experience from [@flaviocopes](https://twitter.com/flaviocopes)
+  <img src="img/complexity.jpg">
+  Code Complexity vs. Experience from [@flaviocopes](https://twitter.com/flaviocopes)
 </details>
 
 **If you are holding a lot of facts that aren't directly relevant to the problem at hand, think about future developers, yourself included. They would have to recreate this high cognitive load.**
