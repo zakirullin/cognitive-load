@@ -64,7 +64,7 @@ Having too many shallow modules can make it difficult understand the project. **
 
 I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas the second one has only 7 deep classes. I haven't been maintaining any of these projects for one year and a half.
 
-Once I came back, I realized that it is tremendously hard to untangle all those interactions between these 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before start coding. On the other hand, I was able to quickly grasp the second project, because it only had a few deep classes with simple interface.
+Once I came back, I realised that it is enormously difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.
 
 > **The best components are those that provide powerful functionality yet have simple interface.**  
 John K. Ousterhout
@@ -73,11 +73,11 @@ John K. Ousterhout
 > The greatest book on the topic is "A Philosophy of Software Design". Not only it covers the very essence of complexity, but it also has so far the greatest interpretation of Parnas' influential paper "On the Criteria To Be Used in Decomposing Systems into Modules".
 
 ## Too many shallow microservices
-We can apply the aforementioned scale-agnostic principle to microservice architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that aren't that shallow. One of the worst and most difficult-to-fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.
+We can apply the aforementioned scale-agnostic principle to microservices architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that aren't that shallow. One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.
 
-I once consulted a startup where a team of four developers introduced 17(!) microservices. They were 10 months behind schedule and appeared nowhere close to the public release. Every new requirement led to changes across 4+ microservices. TTM was unacceptably low. Cognitive load was unbearably high. `🤯`  
+I once consulted a startup where a team of four developers introduced 17(!) microservices. They were 10 months behind schedule and appeared nowhere close to the public release. Every new requirement led to changes in 4+ microservices. TTM was unacceptably low. Cognitive load was unbearably high. `🤯`  
 
-Is it the appropriate way to approach the uncertainty of a new system? The only team's justification was: "FAANG companies proved microservice architecture to be effective".
+Is this the right way to approach the uncertainty of a new system? The only team's justification was: "The FAANG companies proved microservices architecture to be effective".
 
 A well-crafted monolith with truly isolated modules is often much more convenient and flexible than a bunch of microservices. It's only when the need for separate deployments becomes crucial (e.g. development team scaling) that you should consider adding a network layer between our modules (future microservices).
 
@@ -87,7 +87,7 @@ We feel excited when new features got released in our favourite language. We spe
 If there are lots of features, we may spend half an hour playing with a few lines of code, to use one or another feature. And it's kinda waste of time. But what's worse, **when you come back later, you would have to recreate that thought process!** `🤯`
 
 **You not only have to understand this complicated program, you have to understand why a programmer decided this was the way to approach a problem from the features that are available.**
-Those statements are made by none other than Rob Pike.
+These statements are made by none other than Rob Pike.
 
 ## Business logic and HTTP status codes
 On the backend we return:
@@ -97,19 +97,19 @@ On the backend we return:
 418 // for banned users
 ```
 
-Guys on the frontend use backend API to implement login functionality. They would have to temporary create the following cognitive load in their brains:
+The guys on the frontend use backend API to implement login functionality. They would have to temporarily  create the following cognitive load in their brains:
 ```go
 401 is for expired jwt token // 🧠+, ok just temporary remember it
 403 is for not enough access // 🧠++
 418 is for banned users // 🧠+++
 ```
-Frontend devs would introduce (hopefully) variables/functions like `isTokenExpired(status)`, so that the following generations of developers wouldn't have to recreate this kind of `status -> meaning` mapping in their brains.
+Frontend devs would (hopefully) introduce variables/functions like `isTokenExpired(status)`, so that subsequent generations of developers wouldn't have to recreate this kind of `status -> meaning` mapping in their brains.
 
-Then QA folks come in play:
+Then QA people come into play:
 "Hey, I got `403` status, is that expired token or not enough access?"
-**QA people can't jump straight to testing, because first they have to recreate the cognitive load guys on the backend once created.**
+**QA people can't jump straight to testing, because first they have to recreate the cognitive load that the guys on the backend once created.**
 
-It's better to abstract away your business details from the HTTP transfer protocol, and return status codes right in the response body:
+It's better to abstract away your business details from the HTTP transfer protocol, and return status codes directly in the response body:
 ```json
 {
     "code": "jwt_has_expired"
@@ -119,7 +119,7 @@ It's better to abstract away your business details from the HTTP transfer protoc
 Cognitive load on the frontend side: `🧠` (fresh, no facts are held in mind)  
 Cognitive load on the QA side: `🧠`
 
-> As for following that mystical "RESTful API" and using all sorts of HTTP verbs and statuses, the standard simply doesn't exist. The only valid document on this matter is a thesis published by Roy Fielding, dated back in 2000, and it says nothing about verbs and statuses. People go along with very few basic HTTP statuses and POSTs only, and they're doing just fine.*
+> As for following this mystical "RESTful API" and using all sorts of HTTP verbs and statuses, the standard simply doesn't exist. The only valid document on the matter is a paper published by Roy Fielding, dated back in 2000, and it says nothing about verbs and statuses. People go along with just a few basic HTTP statuses and POSTs only, and they're doing just fine.
 
 ## Complicated if statements
 ```go
@@ -171,33 +171,33 @@ stuff1 // 🧠++
 We can focus on the happy path only, thus freeing our working memory for all sort os preconditions.
 
 ## High coupling with a framework
-Frameworks evolve at its own pace, which in most cases doesn't match app's own life cycle.
+Frameworks evolve at their own pace, which in most cases doesn't match the lifecycle of the application.
 
-By relying too much on a framework, we oblige all upcoming developers to learn this framework first (or its particular version). Even though frameworks enable us to launch MVPs in a matter of days, in the long run they tend to add unnecessary complexity and cognitive load.
+By relying too heavily on a framework, we force all upcoming developers to learn that framework first (or its particular version). Even though frameworks enable us to launch MVPs in a matter of days, in the long run they tend to add unnecessary complexity and cognitive load.
 
-Worse yet, at some point frameworks can become a significant constraint when faced with a new requirement that just doesn't fit the architecture. From here onwards people end up forking a framework and maintaining its own custom version. Imagine the amount of cognitive load a newcomer would have to build (i.e. learn this custom framework) in order to deliver some value. `🤯`
+Worse yet, at some point frameworks can become a significant constraint when faced with a new requirement that just doesn't fit the architecture. From here onwards people end up forking a framework and maintaining their own custom version. Imagine the amount of cognitive load a newcomer would have to build (i.e. learn this custom framework) in order to deliver any value. `🤯`
 
 **By no means we advocate to invent all the things from scratch!**
 
-We can write code in somewhat framework-agnostic way. The business logic should not reside within a framework; rather, it should use the framework's components. Put a framework outside of your core logic. Use the framework in a library-like fashion. That would enable new contributors to bring value from day one, without the need of going through debris of framework-related complexity first.
+We can write code in a somewhat framework-agnostic way. The business logic should not reside within a framework; rather, it should use the framework's components. Put a framework outside of your core logic. Use the framework in a library-like fashion. This would allow new contributors to add value from day one, without the need of going through debris of framework-related complexity first.
 
 ## DDD
-DDD has some great points, although it is often misinterpreted. People say "We write our code in DDD", which is kind of strange, because DDD is intended for problem space, not for solution space.
+DDD has some great points, although it is often misinterpreted. People say "We write our code in DDD", which is a bit strange, because DDD is about problem space, not for solution space.
 
-Ubiquitous language, domain, bounded contexts, aggregate, event storming are all about problem space. They are meant to help us learn the insights about the domain and extract the boundaries. DDD enables developers, domain experts and business people to communicate effectively using a single, unified language. Rather than focusing on these problem space aspects of DDD, we tend to emphasize on certain folder structures, services, repositories, and other solution space techniques. 
+Ubiquitous language, domain, bounded contexts, aggregate, event storming are all about problem space. They are meant to help us learn the insights about the domain and extract the boundaries. DDD enables developers, domain experts and business people to communicate effectively using a single, unified language. Rather than focusing on these problem space aspects of DDD, we tend to emphasise particular folder structures, services, repositories, and other solution space techniques. 
 
-Chances are, the way we interpret DDD is likely to be unique and subjective. And if build code upon this understanding, i.e., we create a lot of extraneous cognitive load - future developers are doomed. `🤯`
+Chances are that the way we interpret DDD is likely to be unique and subjective. And if we build code upon this understanding, i.e., we create a lot of extraneous cognitive load - future developers are doomed. `🤯`
 
 ## Hexagonal/Onion architecture
-There is some engineering excitement around all this stuff.
+There is a certain technical excitement about all this stuff.
 
-I myself was a passionate Onion Architecture advocate for years. I applied it here and there, I encouraged other teams to do the same. The complexity of our projects went up, the sheer number of files alone has doubled. It felt like we were writing a lot of gluing code. On ever changing requirements we had to make changes across multiple layers of abstractions, it all became tedious. `🤯`
+I myself was a passionate advocate of Onion Architecture for years. I used it here and there and encouraged other teams to do the same. The complexity of our projects went up, the sheer number of files alone has doubled. It felt like we were writing a lot of gluing code. On ever changing requirements we had to make changes across multiple layers of abstractions, it all became tedious. `🤯`
 
-In the end, we gave it all up in favour of good old dependency inversion principle. No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.
+In the end, we gave it all up in favour of the good old dependency inversion principle. No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.
 
-Even though these layered architectures have accelerated an important shift from traditional database-centric applications towards somewhat infrastructure-externalized approach (business logic became independent of any external stuff), the idea is by no means novel.
+Even though these layered architectures have accelerated an important shift from traditional database-centric applications to a somewhat infrastructure-externalized approach (business logic became independent of any external stuff), the idea is by no means novel.
 
-Those architectures are not fundamental, they're just subjective, biased consequences of more fundamental principles. Why rely on these subjective interpretations? Follow the fundamentals instead: DIP, IoC, single source of truth, coupling, true invariant, complexity, cognitive load and information hiding.
+These architectures are not fundamental, they're just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamentals instead: DIP, IoC, single source of truth, coupling, true invariant, complexity, cognitive load and information hiding.
 
 ## Learning from the Giants
 Take a look at the overarching design principles of one of the biggest tech companies:  
