@@ -3,7 +3,7 @@
 ## Why bother reading?
 We spend much more time reading and understanding code than writing it. Therefore, the amount of cognitive load we need to build in our brains in order to understand the code is crucial.
 
-This paper discusses a thinking tool that would enable us to create simple yet maintainable applications. We would view every decision, trendy buzzword, and any fancy technology through the lens of cognitive load.
+This paper discusses a fundamental thinking tool that would enable us to create simple yet maintainable applications. We would view every decision, trendy buzzword, and any fancy technology through the lens of cognitive load.
 
 ## Cognitive load
 > **Cognitive load is how much a developer needs to know in order to complete a task.**
@@ -109,7 +109,7 @@ Then QA folks come in play:
 "Hey, I got `403` status, is that expired token or not enough access?"
 **QA people can't jump straight to testing, because first they have to recreate the cognitive load guys on the backend once created.**
 
-It's better to abstract away your business details from HTTP transfer protocol, and return them just in response body:
+It's better to abstract away your business details from the HTTP transfer protocol, and return status codes right in the response body:
 ```json
 {
     "code": "jwt_has_expired"
@@ -184,14 +184,14 @@ We can write code in somewhat framework-agnostic way. The business logic should 
 ## DDD
 DDD has some great points, although it is often misinterpreted. People say "We write our code in DDD", which is kind of strange, because DDD is intended for problem space, not for solution space.
 
-Ubiquitous language, domain, bounded contexts, aggregate, event storming are all about problem space. They are meant to help us learn the insights about the domain and extract the boundaries. DDD enables developers, domain experts and business people to communicate effectively using a single, unified language.
+Ubiquitous language, domain, bounded contexts, aggregate, event storming are all about problem space. They are meant to help us learn the insights about the domain and extract the boundaries. DDD enables developers, domain experts and business people to communicate effectively using a single, unified language. Rather than focusing on these problem space aspects of DDD, we tend to emphasize on certain folder structures, services, repositories, and other solution space techniques. 
 
-Rather than focusing on these problem space aspects of DDD, we tend to emphasize on certain folder structures, services, repositories, and other solution space techniques. Information loss and subjectivity often go hand in hand with these interpretations. All this dramatically contributes to the overall extraneous cognitive load. `🤯`
+Chances are, the way we interpret DDD is likely to be unique and subjective. And if build code upon this understanding, i.e. we create a lot of extraneous cognitive load - future developers are doomed.
 
 ## Hexagonal/Onion architecture
 There is some engineering excitement around all this stuff.
 
-I myself was a passionate Onion Architecture advocate for years. I applied it here and there, I encouraged other teams to do the same. The complexity of our projects went up, the sheer number of files alone has doubled. It felt like we were writing a lot of gluing code. On ever changing requirements we had to make changes in multiple layers of abstractions, it all became tedious. `🤯`
+I myself was a passionate Onion Architecture advocate for years. I applied it here and there, I encouraged other teams to do the same. The complexity of our projects went up, the sheer number of files alone has doubled. It felt like we were writing a lot of gluing code. On ever changing requirements we had to make changes across multiple layers of abstractions, it all became tedious. `🤯`
 
 In the end, we gave it all up in favour of good old dependency inversion principle. No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.
 
