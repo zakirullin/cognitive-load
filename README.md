@@ -116,7 +116,7 @@ It's better to abstract away your business details from the HTTP transfer protoc
 }
 ```
 
-Cognitive load on the frontend side: `🧠` (fresh, no facts are hold in mind)  
+Cognitive load on the frontend side: `🧠` (fresh, no facts are held in mind)  
 Cognitive load on the QA side: `🧠`
 
 > As for following that mystical "RESTful API" and using all sorts of HTTP verbs and statuses, the standard simply doesn't exist. The only valid document on this matter is a thesis published by Roy Fielding, dated back in 2000, and it says nothing about verbs and statuses. People go along with very few basic HTTP statuses and POSTs only, and they're doing just fine.*
