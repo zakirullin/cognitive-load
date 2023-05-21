@@ -79,7 +79,7 @@ I once consulted a startup where a team of four developers introduced 17(!) micr
 
 Is this the right way to approach the uncertainty of a new system? The only team's justification was: "The FAANG companies proved microservices architecture to be effective".
 
-A well-crafted monolith with truly isolated modules is often much more convenient and flexible than a bunch of microservices. It's only when the need for separate deployments becomes crucial (e.g. development team scaling) that you should consider adding a network layer between our modules (future microservices).
+A well-crafted monolith with truly isolated modules is often much more convenient and flexible than a bunch of microservices. It's only when the need for separate deployments becomes crucial (e.g. development team scaling) that you should consider adding a network layer between the modules (future microservices).
 
 ## Featureful languages
 We feel excited when new features got released in our favourite language. We spend some time learning these features, we build code upon them.
@@ -186,7 +186,7 @@ DDD has some great points, although it is often misinterpreted. People say "We w
 
 Ubiquitous language, domain, bounded contexts, aggregate, event storming are all about problem space. They are meant to help us learn the insights about the domain and extract the boundaries. DDD enables developers, domain experts and business people to communicate effectively using a single, unified language. Rather than focusing on these problem space aspects of DDD, we tend to emphasise particular folder structures, services, repositories, and other solution space techniques. 
 
-Chances are that the way we interpret DDD is likely to be unique and subjective. And if we build code upon this understanding, i.e., we create a lot of extraneous cognitive load - future developers are doomed. `🤯`
+Chances are that the way we interpret DDD is likely to be unique and subjective. And if we build code upon this understanding, i.e., if we create a lot of extraneous cognitive load - future developers are doomed. `🤯`
 
 ## Hexagonal/Onion architecture
 There is a certain technical excitement about all this stuff.
