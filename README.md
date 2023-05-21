@@ -215,6 +215,6 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
   Code Complexity vs. Experience from <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
 
-**If you are holding a lot of facts in your head, think about future developers, yourself included. They would have to recreate this high cognitive load.**
+**If you are holding a lot of stuff in your head, think about future developers, yourself included. They would have to recreate this high cognitive load.**
 
 *Contributions are welcome!* 🚀
