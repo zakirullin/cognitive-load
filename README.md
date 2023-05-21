@@ -10,7 +10,7 @@ This paper discusses a fundamental thinking tool that would enable us to create 
 
 We should strive to reduce the cognitive load in our projects as much as possible.
 
-The average person can hold about *four facts* in working memory. . Once the cognitive load reaches this threshold, a significant effort is required to understand things.
+The average person can hold about four facts in working memory. Once the cognitive load reaches this threshold, a significant effort is required to understand things.
 
 *Let's say we've been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool technologies, fancy libraries and trendy frameworks were used. In other words, **the previous author had a high cognitive load in his head, which we have yet to recreate.***
 
@@ -38,14 +38,14 @@ We're tasked to change a few things for our admin users: `🧠`
 
 `AdminController extends UserController extends GuestController extends BaseController`
 
-Ohh, part of the functionality lies in `BaseController`, let's have a look: `🧠+`  
+Ohh, part of the functionality is in `BaseController`, let's have a look: `🧠+`  
 Basic role mechanics got introduced in `GuestController`: `🧠++`  
 Things got partially altered in `UserController`: `🧠+++`  
 Finally we're here, `AdminController`, let's code stuff! `🧠++++`  
 
-Oh, wait, there's `SuperuserController` extending `AdminController`. By modifying `AdminController` we can break things in the inherited class, so let's dive in `SuperuserController` first: `🤯`
+Oh, wait, there's `SuperuserController` which extends `AdminController`. By modifying `AdminController` we can break things in the inherited class, so let's dive in `SuperuserController` first: `🤯`
 
-Prefer composition over inheritance. We won't go into the details - there are enough articles on the topic.
+Prefer composition over inheritance. We won't go into the details - there are plenty of articles on the subject.
 
 ## Too many small methods, classes or modules
 > **Note**
