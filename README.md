@@ -186,7 +186,7 @@ DDD has some great points, although it is often misinterpreted. People say "We w
 
 Ubiquitous language, domain, bounded contexts, aggregate, event storming are all about problem space. They are meant to help us learn the insights about the domain and extract the boundaries. DDD enables developers, domain experts and business people to communicate effectively using a single, unified language. Rather than focusing on these problem space aspects of DDD, we tend to emphasize on certain folder structures, services, repositories, and other solution space techniques. 
 
-Chances are, the way we interpret DDD is likely to be unique and subjective. And if build code upon this understanding, i.e. we create a lot of extraneous cognitive load - future developers are doomed.
+Chances are, the way we interpret DDD is likely to be unique and subjective. And if build code upon this understanding, i.e. we create a lot of extraneous cognitive load - future developers are doomed. `🤯`
 
 ## Hexagonal/Onion architecture
 There is some engineering excitement around all this stuff.
