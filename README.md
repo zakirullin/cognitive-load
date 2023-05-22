@@ -14,7 +14,7 @@ The average person can hold roughly four facts in working memory. Once the cogni
 
 *Let's say we've been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool technologies, fancy libraries and trendy frameworks were used. In other words, **the previous author had a high cognitive load in his head, which we have yet to recreate.***
 
-![Cognitive Load](/img/cognitiveload.png)
+![Cognitive Load](/img/cognitiveloadv2.png)
 
 ## Types of cognitive load
 **Intrinsic** - is the inherent level of difficulty associated with a specific problem we're solving. It can't be reduced, it's at the very heart of software development.  
