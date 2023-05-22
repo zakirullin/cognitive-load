@@ -90,15 +90,15 @@ If there are lots of features, we may spend half an hour playing with a few line
 These statements are made by none other than Rob Pike.
 
 ## Business logic and HTTP status codes
-On the backend we return:
-**401** for expired jwt token
-**403** for not enough access
-**418** for banned users
+On the backend we return:  
+**401** for expired jwt token  
+**403** for not enough access  
+**418** for banned users  
 
-The guys on the frontend use backend API to implement login functionality. They would have to temporarily  create the following cognitive load in their brains:
-**401** is for expired jwt token // `🧠+`, ok just temporary remember it
-**403** is for not enough access // `🧠++`
-**418** is for banned users // `🧠+++`
+The guys on the frontend use backend API to implement login functionality. They would have to temporarily  create the following cognitive load in their brains:  
+**401** is for expired jwt token // `🧠+`, ok just temporary remember it  
+**403** is for not enough access // `🧠++`  
+**418** is for banned users // `🧠+++`  
 
 Frontend devs would (hopefully) introduce variables/functions like `isTokenExpired(status)`, so that subsequent generations of developers wouldn't have to recreate this kind of `status -> meaning` mapping in their brains.
 
