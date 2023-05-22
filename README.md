@@ -58,7 +58,7 @@ Mantras like "methods should be shorter than 15 lines of code" or "classes shoul
 
 ![Deep module](/img/deepmodulev2.png)
 
-Having too many shallow modules can make it difficult understand the project. **Not only we have to keep in mind each module responsibilities, but also all their interactions**. Huge, difficult-to-grasp call stacks often come in pairs with shallow modules. `🤯`
+Having too many shallow modules can make it difficult understand the project. **Not only we have to keep in mind each module responsibilities, but also all their interactions**. Huge call stacks dramatically increase extraneous cognitive load. `🤯`
 
 > Information hiding is paramount, and we don't hide as much complexity in shallow modules.
 
