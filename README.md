@@ -12,7 +12,7 @@ We should strive to reduce the cognitive load in our projects as much as possibl
 
 The average person can hold roughly four facts in working memory. Once the cognitive load reaches this threshold, a significant effort is required to understand things.
 
-*Let's say we've been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool technologies, fancy libraries and trendy frameworks were used. In other words, **the previous author had a high cognitive load in his head, which we have yet to recreate.***
+*Let's say we've been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool technologies, fancy libraries and trendy frameworks were used. In other words, **the previous author had a high cognitive load in his head, which we are yet to recreate.***
 
 ![Cognitive Load](/img/cognitiveloadv2.png)
 
@@ -91,18 +91,15 @@ These statements are made by none other than Rob Pike.
 
 ## Business logic and HTTP status codes
 On the backend we return:
-```go
-401 // for expired jwt token
-403 // for not enough access
-418 // for banned users
-```
+**401** for expired jwt token
+**403** for not enough access
+**418** for banned users
 
 The guys on the frontend use backend API to implement login functionality. They would have to temporarily  create the following cognitive load in their brains:
-```go
-401 is for expired jwt token // 🧠+, ok just temporary remember it
-403 is for not enough access // 🧠++
-418 is for banned users // 🧠+++
-```
+**401** is for expired jwt token // `🧠+`, ok just temporary remember it
+**403** is for not enough access // `🧠++`
+**418** is for banned users // `🧠+++`
+
 Frontend devs would (hopefully) introduce variables/functions like `isTokenExpired(status)`, so that subsequent generations of developers wouldn't have to recreate this kind of `status -> meaning` mapping in their brains.
 
 Then QA people come into play:
