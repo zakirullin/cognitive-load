@@ -89,6 +89,8 @@ If there are lots of features, we may spend half an hour playing with a few line
 **You not only have to understand this complicated program, you have to understand why a programmer decided this was the way to approach a problem from the features that are available.**
 These statements are made by none other than Rob Pike.
 
+> **Reduce cognitive load by limiting the number of choices.**  
+
 ## Business logic and HTTP status codes
 On the backend we return:  
 `401` for expired jwt token  
