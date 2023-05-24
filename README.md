@@ -188,11 +188,11 @@ Ubiquitous language, domain, bounded contexts, aggregate, event storming are all
 Chances are that the way we interpret DDD is likely to be unique and subjective. And if we build code upon this understanding, i.e., if we create a lot of extraneous cognitive load - future developers are doomed. `🤯`
 
 ## Hexagonal/Onion architecture
-There is a certain technical excitement about all this stuff.
+There is a certain engineering excitement about all this stuff.
 
 I myself was a passionate advocate of Onion Architecture for years. I used it here and there and encouraged other teams to do the same. The complexity of our projects went up, the sheer number of files alone has doubled. It felt like we were writing a lot of gluing code. On ever changing requirements we had to make changes across multiple layers of abstractions, it all became tedious. `🤯`
 
-In the end, we gave it all up in favour of the good old dependency inversion principle. No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.
+This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it made a lot more harm than good. In the end, we gave it all up in favour of the good old dependency inversion principle. No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.
 
 Even though these layered architectures have accelerated an important shift from traditional database-centric applications to a somewhat infrastructure-externalized approach (business logic became independent of any external stuff), the idea is by no means novel.
 
