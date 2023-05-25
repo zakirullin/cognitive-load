@@ -181,7 +181,7 @@ Worse yet, at some point frameworks can become a significant constraint when fac
 We can write code in a somewhat framework-agnostic way. The business logic should not reside within a framework; rather, it should use the framework's components. Put a framework outside of your core logic. Use the framework in a library-like fashion. This would allow new contributors to add value from day one, without the need of going through debris of framework-related complexity first.
 
 ## DDD
-DDD has some great points, although it is often misinterpreted. People say "We write our code in DDD", which is a bit strange, because DDD is about problem space, not about solution space.
+Domain-driven design (DDD) has some great points, although it is often misinterpreted. People say "We write our code in DDD", which is a bit strange, because DDD is about problem space, not about solution space.
 
 Ubiquitous language, domain, bounded contexts, aggregate, event storming are all about problem space. They are meant to help us learn the insights about the domain and extract the boundaries. DDD enables developers, domain experts and business people to communicate effectively using a single, unified language. Rather than focusing on these problem space aspects of DDD, we tend to emphasise particular folder structures, services, repositories, and other solution space techniques. 
 
