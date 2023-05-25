@@ -58,7 +58,7 @@ Mantras like "methods should be shorter than 15 lines of code" or "classes shoul
 
 ![Deep module](/img/deepmodulev2.png)
 
-Having too many shallow modules can make it difficult understand the project. **Not only we have to keep in mind each module responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. `🤯`
+Having too many shallow modules can make it difficult understand the project. **Not only do we have to keep in mind each module responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. `🤯`
 
 > Information hiding is paramount, and we don't hide as much complexity in shallow modules.
 
@@ -178,7 +178,7 @@ By relying too heavily on a framework, we force all upcoming developers to learn
 
 Worse yet, at some point frameworks can become a significant constraint when faced with a new requirement that just doesn't fit the architecture. From here onwards people end up forking a framework and maintaining their own custom version. Imagine the amount of cognitive load a newcomer would have to build (i.e. learn this custom framework) in order to deliver any value. `🤯`
 
-**By no means we advocate to invent all the things from scratch!**
+**By no means do we advocate to invent everything from scratch!**
 
 We can write code in a somewhat framework-agnostic way. The business logic should not reside within a framework; rather, it should use the framework's components. Put a framework outside of your core logic. Use the framework in a library-like fashion. This would allow new contributors to add value from day one, without the need of going through debris of framework-related complexity first.
 
