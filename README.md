@@ -91,6 +91,8 @@ These statements are made by none other than Rob Pike.
 
 > **Reduce cognitive load by limiting the number of choices.**  
 
+Language features are OK, as long as they are orthogonal to each other.
+
 ## Business logic and HTTP status codes
 On the backend we return:  
 `401` for expired jwt token  
@@ -167,10 +169,10 @@ if !isSecure
 stuff1 // 🧠++
 ```
 
-We can focus on the happy path only, thus freeing our working memory for all sort os preconditions.
+We can focus on the happy path only, thus freeing our working memory from all sorts of preconditions.
 
 ## High coupling with a framework
-Frameworks evolve at their own pace, which in most cases doesn't match the lifecycle of the application.
+Frameworks evolve at their own pace, which in most cases doesn't match the lifecycle of our project.
 
 By relying too heavily on a framework, we force all upcoming developers to learn that framework first (or its particular version). Even though frameworks enable us to launch MVPs in a matter of days, in the long run they tend to add unnecessary complexity and cognitive load.
 
@@ -190,9 +192,9 @@ Chances are that the way we interpret DDD is likely to be unique and subjective.
 ## Hexagonal/Onion architecture
 There is a certain engineering excitement about all this stuff.
 
-I myself was a passionate advocate of Onion Architecture for years. I used it here and there and encouraged other teams to do the same. The complexity of our projects went up, the sheer number of files alone has doubled. It felt like we were writing a lot of gluing code. On ever changing requirements we had to make changes across multiple layers of abstractions, it all became tedious. `🤯`
+I myself was a passionate advocate of Onion Architecture for years. I used it here and there and encouraged other teams to do so. The complexity of our projects went up, the sheer number of files alone has doubled. It felt like we were writing a lot of gluing code. On ever changing requirements we had to make changes across multiple layers of abstractions, it all became tedious. `🤯`
 
-This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it made a lot more harm than good. In the end, we gave it all up in favour of the good old dependency inversion principle. No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.
+This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it made a lot more harm than good. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.**
 
 Even though these layered architectures have accelerated an important shift from traditional database-centric applications to a somewhat infrastructure-externalized approach (business logic became independent of any external stuff), the idea is by no means novel.
 
@@ -202,7 +204,7 @@ These architectures are not fundamental, they're just subjective, biased consequ
 Take a look at the overarching design principles of one of the biggest tech companies:  
 `Clarity`: The code’s purpose and rationale is clear to the reader.  
 `Simplicity`: The code accomplishes its goal in the simplest way possible.  
-`Concision`: The code has a high signal-to-noise ratio, or intrinsic-to-extraneous cognitive load ratio.  
+`Concision`: The code has a high signal-to-noise ratio, or a high intrinsic-to-extraneous cognitive load ratio.  
 `Maintainability`: The code is written such that it can be easily maintained.  
 `Consistency`: The code is consistent with the broader codebase.  
 
