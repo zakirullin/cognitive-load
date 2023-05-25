@@ -131,7 +131,7 @@ if val > someConstant && // 🧠+
 }
 ```
 
-Introducing temporary variables with meaningful names:
+Introduce temporary variables with meaningful names:
 ```go
 isValid = var > someConstant
 isAllowed = condition2 || condition3
