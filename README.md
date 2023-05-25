@@ -214,7 +214,7 @@ This architecture was something that made intuitive sense at first, but every ti
 
 Even though these layered architectures have accelerated an important shift from traditional database-centric applications to a somewhat infrastructure-externalized approach (business logic became independent of any external stuff), the idea is by no means novel.
 
-These architectures are not fundamental, they're just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamentals instead: DIP, IoC, single source of truth, coupling, true invariant, complexity, cognitive load and information hiding.
+These architectures are not fundamental, they're just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamentals instead: DIP, IoC, single source of truth, cohesion, coupling, true invariant, complexity, cognitive load and information hiding.
 
 ## Learning from the Giants
 Take a look at the overarching design principles of one of the biggest tech companies:  
