@@ -248,4 +248,5 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 
 **Do not code in gibberish.**
 
+---
 *Contributions are welcome!* 🚀
