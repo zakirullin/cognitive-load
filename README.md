@@ -215,7 +215,7 @@ I myself was a passionate advocate of Onion Architecture for years. I used it he
 
 This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it made a lot more harm than good. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.**
 
-Even though these layered architectures have accelerated an important shift from traditional database-centric applications to a somewhat infrastructure-externalized approach (business logic became independent of any external stuff), the idea is by no means novel.
+Even though these layered architectures have accelerated an important shift from traditional database-centric applications to a somewhat infrastructure-externalized approach (core business logic became independent of any external stuff), the idea is by no means novel.
 
 These architectures are not fundamental, they're just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamentals instead: DIP, IoC, single source of truth, cohesion, coupling, true invariant, complexity, cognitive load and information hiding.
 
@@ -242,7 +242,7 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 > **Note**
 > Be aware that as an author you don't experience high cognitive load because you have developed a mental model of the project over time. Others, however, do not have this mental model and would need to invest time in building it.
 
-*The intricate and multifaceted nature of cognitive load within the realm of comprehension and problem-solving necessitates a diligent and strategic approach in order to navigate the complexities and optimize mental capacity allocation.*
+*The intricate and multifaceted nature of cognitive load within the realm of comprehension and problem-solving necessitates a diligent and strategic approach in order to navigate the complexities and optimize mental capacity allocation.* `🤯`  
 
 **Do you feel it? The above statement is difficult to understand. We have just created an unnecessary cognitive load in your head. Do not do this to your colleagues.**  
 
