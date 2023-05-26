@@ -237,6 +237,6 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 
 **If you are holding a lot of stuff in your head, think about future developers, yourself included. They would have to recreate this high cognitive load.**
 
-Be aware that as an author you don't experience high cognitive load because you have developed a mental model of a project over time. Others, however, do not have this mental model and would need to invest time in building it.
+Be aware that as an author you don't experience high cognitive load because you have developed a mental model of the project over time. Others, however, do not have this mental model and would need to invest time in building it.
 
 *Contributions are welcome!* 🚀
