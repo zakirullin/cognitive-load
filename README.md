@@ -121,7 +121,7 @@ Cognitive load on the frontend side: `🧠` (fresh, no facts are held in mind)
 Cognitive load on the QA side: `🧠`
 
 People spend time arguing between `401` and `403`, making choices based on their level of understanding. But in the end it just doesn't make any sense.
-We can introduce a taxonomy based on user and server, but apart from that, things are kind of blurry.
+We can separate errors into either user-related or server-related, but apart from that, things are kind of blurry.
 
 > As for following this mystical "RESTful API" and using all sorts of HTTP verbs and statuses, the standard simply doesn't exist. The only valid document on the matter is a paper published by Roy Fielding, dated back in 2000, and it says nothing about verbs and statuses. People go along with just a few basic HTTP statuses and POSTs only, and they're doing just fine.
 
