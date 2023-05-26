@@ -235,8 +235,17 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
   Code Complexity vs. Experience from <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
 
+
+## Conclusion
 **If you are holding a lot of stuff in your head, think about future developers, yourself included. They would have to recreate this high cognitive load.**
 
-Be aware that as an author you don't experience high cognitive load because you have developed a mental model of the project over time. Others, however, do not have this mental model and would need to invest time in building it.
+> **Note**
+> Be aware that as an author you don't experience high cognitive load because you have developed a mental model of the project over time. Others, however, do not have this mental model and would need to invest time in building it.
+
+*The intricate and multifaceted nature of cognitive load within the realm of comprehension and problem-solving necessitates a diligent and strategic approach in order to navigate the complexities and optimize mental capacity allocation.*
+
+**With the above statement we have just created an unnecessary cognitive load in your head. Do not do this to your colleagues.**  
+
+**Do not code in gibberish.**
 
 *Contributions are welcome!* 🚀
