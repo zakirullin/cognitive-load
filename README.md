@@ -110,7 +110,7 @@ Then QA people come into play:
 "Hey, I got `403` status, is that expired token or not enough access?"
 **QA people can't jump straight to testing, because first they have to recreate the cognitive load that the guys on the backend once created.**
 
-Why holding this custom mapping in our working memory? It's better to abstract away your business details from the HTTP transfer protocol, and return status codes directly in the response body:
+Why holding this custom mapping in our working memory? It's better to abstract away your business details from the HTTP transfer protocol, and return self-descriptive codes directly in the response body:
 ```json
 {
     "code": "jwt_has_expired"
