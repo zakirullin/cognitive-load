@@ -234,4 +234,6 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 
 **If you are holding a lot of stuff in your head, think about future developers, yourself included. They would have to recreate this high cognitive load.**
 
+You as an author have a much greater capacity of holding unrelated things in your "working memory" at a time, because you have a mental model of a project.
+
 *Contributions are welcome!* 🚀
