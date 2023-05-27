@@ -1,4 +1,4 @@
-# Cognitive Load Developer's Handbook 🧠
+# Cognitive Load Developer's Handbook
 
 ## Why bother reading?
 We spend far more time reading and understanding code than writing it. Therefore, the amount of cognitive load we need to build in our brains in order to understand code is crucial.
