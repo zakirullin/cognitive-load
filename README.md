@@ -127,9 +127,9 @@ We can separate errors into either user-related or server-related, but apart fro
 
 ## Complicated if statements
 ```go
-if val > someConstant && // 🧠+
-    (condition2 || condition3) && // 🧠+++, prev cond should be true, one of c2 or c3 has be true
-    (condition4 && !condition5) { // 🤯, we're messed up here
+if val > someConstant // 🧠+
+    && (condition2 || condition3) // 🧠+++, prev cond should be true, one of c2 or c3 has be true
+    && (condition4 && !condition5) { // 🤯, we're messed up here
     ...
 }
 ```
