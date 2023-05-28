@@ -56,7 +56,7 @@ Mantras like "methods should be shorter than 15 lines of code" or "classes shoul
 **Shallow module** - complex interface, simple functionality  
 **Deep module** - simple interface, complex functionality
 
-![Deep module](/img/deepmodulev2.png)
+![Deep module](/img/deepmodulev3.png)
 
 Having too many shallow modules can make it difficult understand the project. **Not only do we have to keep in mind each module responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. `🤯`
 
