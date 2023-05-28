@@ -204,14 +204,14 @@ We can write code in a somewhat framework-agnostic way. The business logic shoul
 ## DDD
 Domain-driven design has some great points, although it is often misinterpreted. People say "We write our code in DDD", which is a bit strange, because DDD is about problem space, not about solution space.
 
-Ubiquitous language, domain, bounded contexts, aggregate, event storming are all about problem space. They are meant to help us learn the insights about the domain and extract the boundaries. DDD enables developers, domain experts and business people to communicate effectively using a single, unified language. Rather than focusing on these problem space aspects of DDD, we tend to emphasise particular folder structures, services, repositories, and other solution space techniques. 
+Ubiquitous language, domain, bounded context, aggregate, event storming are all about problem space. They are meant to help us learn the insights about the domain and extract the boundaries. DDD enables developers, domain experts and business people to communicate effectively using a single, unified language. Rather than focusing on these problem space aspects of DDD, we tend to emphasise particular folder structures, services, repositories, and other solution space techniques. 
 
 Chances are that the way we interpret DDD is likely to be unique and subjective. And if we build code upon this understanding, i.e., if we create a lot of extraneous cognitive load - future developers are doomed. `🤯`
 
 ## Hexagonal/Onion architecture
 There is a certain engineering excitement about all this stuff.
 
-I myself was a passionate advocate of Onion Architecture for years. I used it here and there and encouraged other teams to do so. The complexity of our projects went up, the sheer number of files alone has doubled. It felt like we were writing a lot of gluing code. On ever changing requirements we had to make changes across multiple layers of abstractions, it all became tedious. `🤯`
+I myself was a passionate advocate of Onion Architecture for years. I used it here and there and encouraged other teams to do so. The complexity of our projects went up, the sheer number of files alone had doubled. It felt like we were writing a lot of gluing code. On ever changing requirements we had to make changes across multiple layers of abstractions, it all became tedious. `🤯`
 
 This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it made a lot more harm than good. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.**
 
