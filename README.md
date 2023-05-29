@@ -223,7 +223,7 @@ These architectures are not fundamental, they're just subjective, biased consequ
 Take a look at the overarching design principles of one of the biggest tech companies:  
 `Clarity`: The code’s purpose and rationale is clear to the reader.  
 `Simplicity`: The code accomplishes its goal in the simplest way possible.  
-`Concision`: **The code has a high signal-to-noise ratio, or a high intrinsic-to-extraneous cognitive load ratio.**  
+`Concision`: **The code has a high signal-to-noise ratio, or core logic to gluing code ratio**  
 `Maintainability`: The code is written such that it can be easily maintained.  
 `Consistency`: The code is consistent with the broader codebase.  
 
@@ -249,4 +249,7 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 **Do not code in gibberish.**
 
 ---
+<a class="github-button" href="https://github.com/zakirullin" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Follow @zakirullin on GitHub">Follow @zakirullin for more articles</a>
+
 *Contributions are welcome!* 🚀
+
