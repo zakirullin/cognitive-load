@@ -249,7 +249,7 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 **Do not code in gibberish.**
 
 ---
-<a class="github-button" href="https://github.com/zakirullin" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Follow @zakirullin on GitHub">Follow @zakirullin for more articles</a>
+[![GitHub zakirullin](https://img.shields.io/github/followers/zakirullin?label=follow%20for%20more%20articles&style=social)](https://github.com/zakirullin)
 
 *Contributions are welcome!* 🚀
 
