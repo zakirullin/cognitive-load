@@ -70,7 +70,7 @@ Once I came back, I realised that it is enormously difficult to untangle all the
 John K. Ousterhout
 
 > **Note**
-> The greatest book on the topic is "A Philosophy of Software Design". Not only it covers the very essence of complexity, but it also has so far the greatest interpretation of Parnas' influential paper "On the Criteria To Be Used in Decomposing Systems into Modules".
+> The greatest book on the topic is "A Philosophy of Software Design". Not only does it cover the very essence of complexity, but it also has the greatest interpretation so far of Parnas' influential paper "On the Criteria To Be Used in Decomposing Systems into Modules".
 
 ## Too many shallow microservices
 We can apply the aforementioned scale-agnostic principle to microservices architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that aren't that shallow. One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.
@@ -110,7 +110,7 @@ Then QA people come into play:
 "Hey, I got `403` status, is that expired token or not enough access?"
 **QA people can't jump straight to testing, because first they have to recreate the cognitive load that the guys on the backend once created.**
 
-Why holding this custom mapping in our working memory? It's better to abstract away your business details from the HTTP transfer protocol, and return self-descriptive codes directly in the response body:
+Why hold this custom mapping in our working memory? It's better to abstract away your business details from the HTTP transfer protocol, and return self-descriptive codes directly in the response body:
 ```json
 {
     "code": "jwt_has_expired"
@@ -176,7 +176,7 @@ We can focus on the happy path only, thus freeing our working memory from all so
 
 ## Abusing DRY principle
 
-Do not repeat yourself - that is one of the first principles you are taught as a software engineer. It is so deeply embedded in ourselves that we can not stand the fact of a few extra lines of code. Although in general good and fundamental rule, overused leads to the cognitive load we can not handle.
+Do not repeat yourself - that is one of the first principles you are taught as a software engineer. It is so deeply embedded in ourselves that we can not stand the fact of a few extra lines of code. Although in general a good and fundamental rule, when overused it leads to the cognitive load we can not handle.
 
 Nowadays, everyone builds software based on logically separated components. Often those are distributed among multiple codebases representing separate services. When you strive to eliminate any repetition, you might end up creating tight coupling between unrelated components. As a result changes in one part may have unintended consequences in other seemingly unrelated areas. It can also hinder the ability to replace or modify individual components without impacting the entire system. `🤯`  
 
