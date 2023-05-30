@@ -249,7 +249,6 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 **Do not code in gibberish.**
 
 ---
-[![GitHub zakirullin](https://img.shields.io/github/followers/zakirullin?label=follow%20for%20more%20articles&style=social)](https://github.com/zakirullin)
-
 *Contributions are welcome!* 🚀
 
+[Follow for more articles](https://github.com/zakirullin)
