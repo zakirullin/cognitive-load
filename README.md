@@ -251,4 +251,4 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 ---
 *Contributions are welcome!* 🚀
 
-[Follow for more articles](https://github.com/zakirullin)|[Discuss](https://github.com/zakirullin/cognitive-load/discussions)
+[Follow for more articles](https://github.com/zakirullin) | [Discuss](https://github.com/zakirullin/cognitive-load/discussions)
