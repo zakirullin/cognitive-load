@@ -237,7 +237,7 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 
 
 ## Conclusion
-We have enough intrinsic cognitive load in the work that we do already, why add more on top of that? We should be doing everything we can, to reduce any cognitive load above and beyond what is intrinsic to the work we do.  
+We have enough intrinsic cognitive load in the work that we do already, why add more on top of that? We should be doing everything we can to reduce any cognitive load above and beyond what is intrinsic to the work we do.  
 
 **If you are holding a lot of stuff in your head, think about future developers, yourself included. They would have to recreate this high cognitive load.**
 
