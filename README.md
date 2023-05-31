@@ -69,7 +69,7 @@ Once I came back, I realised that it is enormously difficult to untangle all the
 > **The best components are those that provide powerful functionality yet have simple interface.**  
 John K. Ousterhout
 
-The interface of UNIX File I/O is very simple. It has only five basic I/O calls:
+The interface of the UNIX I/O is very simple. It has only five basic calls:
 ```python
 open(path, flags, permissions)
 read(fd, buffer, count)
