@@ -53,8 +53,8 @@ Prefer composition over inheritance. We won't go into detail - there's [plenty o
  
 Mantras like "methods should be shorter than 15 lines of code" or "classes should be small" turned out to be somewhat wrong.
 
-**Shallow module** - complex interface, simple functionality  
 **Deep module** - simple interface, complex functionality
+**Shallow module** - interface is relatively complex to the small functionality it provides 
 
 ![Deep module](/img/deepmodulev3.png)
 
