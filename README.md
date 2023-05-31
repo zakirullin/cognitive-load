@@ -78,7 +78,7 @@ lseek(fd, offset, referencePosition)
 close(fd)
 ```
 
-A modern implementation has hundreds of thousands of lines of code. Lots of complexity is hidden under the hood. Yet it is easy to use due to its simple interface.
+A modern implementation of this simple interface has hundreds of thousands of lines of code. Lots of complexity is hidden under the hood. Yet it is easy to use due to its simple interface.
 
 This example is taken from the book "A Philosophy of Software Design" by John K. Ousterhout. Not only does this book covers the very essence of complexity, but it also has the greatest interpretation of Parnas' influential paper "On the Criteria To Be Used in Decomposing Systems into Modules". Both are essential reads.
 
