@@ -69,8 +69,18 @@ Once I came back, I realised that it is enormously difficult to untangle all the
 > **The best components are those that provide powerful functionality yet have simple interface.**  
 John K. Ousterhout
 
-> **Note**
-> The greatest book on the topic is "A Philosophy of Software Design". Not only does it cover the very essence of complexity, but it also has the greatest interpretation so far of Parnas' influential paper "On the Criteria To Be Used in Decomposing Systems into Modules".
+The interface of UNIX File I/O is very simple. It has only five basic I/O calls:
+```C
+open(path, flags, permissions)
+read(fd, buffer, count)
+write(fd, buffer, count)
+lseek(fd, offset, referencePosition)
+close(fd)
+```
+
+A modern implementation has hundreds of thousands of lines of code. Lots of complexity is hidden under the hood. Yet it is easy to use due to its simple interface.
+
+The greatest book on the topic is "A Philosophy of Software Design". Not only does it cover the very essence of complexity, but it also has the greatest interpretation so far of Parnas' influential paper "On the Criteria To Be Used in Decomposing Systems into Modules".
 
 ## Too many shallow microservices
 We can apply the aforementioned scale-agnostic principle to microservices architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that aren't that shallow. One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.
