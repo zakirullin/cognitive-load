@@ -70,7 +70,7 @@ Once I came back, I realised that it is enormously difficult to untangle all the
 John K. Ousterhout
 
 The interface of UNIX File I/O is very simple. It has only five basic I/O calls:
-```c++
+```python
 open(path, flags, permissions)
 read(fd, buffer, count)
 write(fd, buffer, count)
