@@ -223,7 +223,7 @@ These architectures are not fundamental, they're just subjective, biased consequ
 Take a look at the overarching design principles of one of the biggest tech companies:  
 `Clarity`: The code’s purpose and rationale is clear to the reader.  
 `Simplicity`: The code accomplishes its goal in the simplest way possible.  
-`Concision`: **The code has a high signal-to-noise ratio, or core logic to gluing code ratio**  
+`Concision`: **The code has a high signal-to-noise ratio**. In other words, we should have more intrinsic than extraneous cognitive load.
 `Maintainability`: The code is written such that it can be easily maintained.  
 `Consistency`: The code is consistent with the broader codebase.  
 
