@@ -139,7 +139,7 @@ Introduce temporary variables with meaningful names:
 isValid = var > someConstant
 isAllowed = condition2 || condition3
 isSecure = condition4 && !condition5 
-// 🧠, we don't need to remember conditions, there are descriptive variables
+// 🧠, we don't need to remember the conditions, there are descriptive variables
 if isValid && isAllowed && isSecure {
     ...
 }
@@ -223,8 +223,7 @@ These architectures are not fundamental, they're just subjective, biased consequ
 Take a look at the overarching design principles of one of the biggest tech companies:  
 `Clarity`: The code’s purpose and rationale is clear to the reader.  
 `Simplicity`: The code accomplishes its goal in the simplest way possible.  
-`Concision`: **The code has a high signal-to-noise ratio**. In other words, we should have more intrinsic than extraneous cognitive load.
-`Maintainability`: The code is written such that it can be easily maintained.  
+`Concision`: The code is easy to discern the relevant details, and the naming and structure guide the reader through these details.  
 `Consistency`: The code is consistent with the broader codebase.  
 
 Does the new fancy buzzword comply with these principles? Or all it does is creating extraneous cognitive load?
@@ -237,9 +236,7 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 
 
 ## Conclusion
-We have enough intrinsic cognitive load in the work that we do already, why add more on top of that? We should be doing everything we can to reduce any cognitive load above and beyond what is intrinsic to the work we do.  
-
-**If you are holding a lot of stuff in your head, think about future developers, yourself included. They would have to recreate this high cognitive load.**
+**If you are holding a lot of extraneous stuff in your head, think about future developers, yourself included. They would have to recreate this high cognitive load.**
 
 > **Note**
 > Be aware that as an author you don't experience high cognitive load because you have developed a mental model of the project over time. Others, however, do not have this mental model and would need to invest time in building it.
@@ -248,9 +245,11 @@ We have enough intrinsic cognitive load in the work that we do already, why add 
 
 **Do you feel it? The above statement is difficult to understand. We have just created an unnecessary cognitive load in your head. Do not do this to your colleagues.**  
 
-**Do not code in gibberish.**
+We have enough intrinsic cognitive load in the work that we do already, why add more on top of that? We should be doing everything we can to reduce any cognitive load above and beyond what is intrinsic to the work we do.  
+
+**Do not make the lives of future developers harder.**
 
 ---
 *Contributions are welcome!* 🚀
 
-[Follow for more articles](https://github.com/zakirullin) | [Discuss](https://github.com/zakirullin/cognitive-load/discussions)
+[Follow for more articles](https://github.com/zakirullin) | [Discuss](https://github.com/zakirullin/cognitive-load/discussions/17)
