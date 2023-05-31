@@ -45,7 +45,7 @@ Finally we're here, `AdminController`, let's code stuff! `🧠++++`
 
 Oh, wait, there's `SuperuserController` which extends `AdminController`. By modifying `AdminController` we can break things in the inherited class, so let's dive in `SuperuserController` first: `🤯`
 
-Prefer composition over inheritance. We won't go into the details - there are plenty of articles on the subject.
+Prefer composition over inheritance. We won't go into the details - there are [plenty of materials](https://www.youtube.com/watch?v=hxGOiiR9ZKg) on the subject.
 
 ## Too many small methods, classes or modules
 > **Note**
