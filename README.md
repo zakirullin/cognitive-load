@@ -79,26 +79,6 @@ We can separate errors into either user-related or server-related, but apart fro
 
 > As for following this mystical "RESTful API" and using all sorts of HTTP verbs and statuses, the standard simply doesn't exist. The only valid document on the matter is a paper published by Roy Fielding, dated back in 2000, and it says nothing about verbs and statuses. People go along with just a few basic HTTP statuses and POSTs only, and they're doing just fine.
 
-## Complicated if statements
-```go
-if val > someConstant // 🧠+
-    && (condition2 || condition3) // 🧠+++, prev cond should be true, one of c2 or c3 has be true
-    && (condition4 && !condition5) { // 🤯, we're messed up here
-    ...
-}
-```
-
-Introduce temporary variables with meaningful names:
-```go
-isValid = var > someConstant
-isAllowed = condition2 || condition3
-isSecure = condition4 && !condition5 
-// 🧠, we don't need to remember the conditions, there are descriptive variables
-if isValid && isAllowed && isSecure {
-    ...
-}
-```
-
 ## Too many small methods, classes or modules
 > **Note**
 > Method, class and module are interchangeable in this context 
@@ -155,6 +135,26 @@ These statements are made by none other than Rob Pike.
 > **Reduce cognitive load by limiting the number of choices.**  
 
 Language features are OK, as long as they are orthogonal to each other.
+
+## Complicated if statements
+```go
+if val > someConstant // 🧠+
+    && (condition2 || condition3) // 🧠+++, prev cond should be true, one of c2 or c3 has be true
+    && (condition4 && !condition5) { // 🤯, we're messed up here
+    ...
+}
+```
+
+Introduce temporary variables with meaningful names:
+```go
+isValid = var > someConstant
+isAllowed = condition2 || condition3
+isSecure = condition4 && !condition5 
+// 🧠, we don't need to remember the conditions, there are descriptive variables
+if isValid && isAllowed && isSecure {
+    ...
+}
+```
 
 ## Nested ifs
 ```go
