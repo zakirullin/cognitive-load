@@ -47,38 +47,6 @@ Oh, wait, there's `SuperuserController` which extends `AdminController`. By modi
 
 Prefer composition over inheritance. We won't go into detail - there's [plenty of material](https://www.youtube.com/watch?v=hxGOiiR9ZKg) out there.
 
-## Business logic and HTTP status codes
-On the backend we return:  
-`401` for expired jwt token  
-`403` for not enough access  
-`418` for banned users
-
-The guys on the frontend use backend API to implement login functionality. They would have to temporarily  create the following cognitive load in their brains:  
-`401` is for expired jwt token // `🧠+`, ok just temporary remember it  
-`403` is for not enough access // `🧠++`  
-`418` is for banned users // `🧠+++`
-
-Frontend devs would (hopefully) introduce variables/functions like `isTokenExpired(status)`, so that subsequent generations of developers wouldn't have to recreate this kind of `status -> meaning` mapping in their brains.
-
-Then QA people come into play:
-"Hey, I got `403` status, is that expired token or not enough access?"
-**QA people can't jump straight to testing, because first they have to recreate the cognitive load that the guys on the backend once created.**
-
-Why hold this custom mapping in our working memory? It's better to abstract away your business details from the HTTP transfer protocol, and return self-descriptive codes directly in the response body:
-```json
-{
-    "code": "jwt_has_expired"
-}
-```
-
-Cognitive load on the frontend side: `🧠` (fresh, no facts are held in mind)  
-Cognitive load on the QA side: `🧠`
-
-People spend time arguing between `401` and `403`, making choices based on their level of understanding. But in the end it just doesn't make any sense.
-We can separate errors into either user-related or server-related, but apart from that, things are kind of blurry.
-
-> As for following this mystical "RESTful API" and using all sorts of HTTP verbs and statuses, the standard simply doesn't exist. The only valid document on the matter is a paper published by Roy Fielding, dated back in 2000, and it says nothing about verbs and statuses. People go along with just a few basic HTTP statuses and POSTs only, and they're doing just fine.
-
 ## Too many small methods, classes or modules
 > **Note**
 > Method, class and module are interchangeable in this context 
@@ -135,6 +103,38 @@ These statements are made by none other than Rob Pike.
 > **Reduce cognitive load by limiting the number of choices.**  
 
 Language features are OK, as long as they are orthogonal to each other.
+
+## Business logic and HTTP status codes
+On the backend we return:  
+`401` for expired jwt token  
+`403` for not enough access  
+`418` for banned users  
+
+The guys on the frontend use backend API to implement login functionality. They would have to temporarily  create the following cognitive load in their brains:  
+`401` is for expired jwt token // `🧠+`, ok just temporary remember it  
+`403` is for not enough access // `🧠++`  
+`418` is for banned users // `🧠+++`  
+
+Frontend devs would (hopefully) introduce variables/functions like `isTokenExpired(status)`, so that subsequent generations of developers wouldn't have to recreate this kind of `status -> meaning` mapping in their brains.
+
+Then QA people come into play:
+"Hey, I got `403` status, is that expired token or not enough access?"
+**QA people can't jump straight to testing, because first they have to recreate the cognitive load that the guys on the backend once created.**
+
+Why hold this custom mapping in our working memory? It's better to abstract away your business details from the HTTP transfer protocol, and return self-descriptive codes directly in the response body:
+```json
+{
+    "code": "jwt_has_expired"
+}
+```
+
+Cognitive load on the frontend side: `🧠` (fresh, no facts are held in mind)  
+Cognitive load on the QA side: `🧠`
+
+People spend time arguing between `401` and `403`, making choices based on their level of understanding. But in the end it just doesn't make any sense.
+We can separate errors into either user-related or server-related, but apart from that, things are kind of blurry.
+
+> As for following this mystical "RESTful API" and using all sorts of HTTP verbs and statuses, the standard simply doesn't exist. The only valid document on the matter is a paper published by Roy Fielding, dated back in 2000, and it says nothing about verbs and statuses. People go along with just a few basic HTTP statuses and POSTs only, and they're doing just fine.
 
 ## Complicated if statements
 ```go
