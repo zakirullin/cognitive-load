@@ -235,7 +235,7 @@ Take a look at the overarching design principles of one of the biggest tech comp
 `Clarity`: The code’s purpose and rationale is clear to the reader.  
 `Simplicity`: The code accomplishes its goal in the simplest way possible.  
 `Concision`: The code is easy to discern the relevant details, and the naming and structure guide the reader through these details.  
-`Maintainability`: The code is easy for a future programmer to modify correctly
+`Maintainability`: The code is easy for a future programmer to modify correctly.  
 `Consistency`: The code is consistent with the broader codebase.  
 
 Does the new fancy buzzword comply with these principles? Or all it does is creating extraneous cognitive load?
