@@ -81,7 +81,7 @@ close(fd)
 A modern implementation of this interface has **hundreds of thousands of lines of code**. Lots of complexity is hidden under the hood. Yet it is easy to use due to its simple interface.
 
 > **Note**
-> This deep module example is taken from the book "A Philosophy of Software Design" by John K. Ousterhout. Not only does this book covers the very essence of complexity, but it also has the greatest interpretation of Parnas' influential paper "On the Criteria To Be Used in Decomposing Systems into Modules". Both are essential reads. You can start with a similar read: [Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29).
+> This deep module example is taken from the book "A Philosophy of Software Design" by John K. Ousterhout. Not only does this book covers the very essence of complexity, but it also has the greatest interpretation of Parnas' influential paper "On the Criteria To Be Used in Decomposing Systems into Modules". Both are essential reads. Related reading: [Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29).
 
 ## Too many shallow microservices
 We can apply the aforementioned scale-agnostic principle to microservices architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that aren't that shallow. One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.
