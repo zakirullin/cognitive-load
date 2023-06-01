@@ -226,7 +226,7 @@ I myself was a passionate advocate of Onion Architecture for years. I used it he
 
 Jumping from call to call to read along and figure out what goes wrong and what is missing is a vital requirement to quickly solve problem. With this architecture’s layer uncoupling it requires an exponential factor of extra, often disjointed, traces to get to the point where the failure occurs. `🤯`  
 
-> Do not layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is dictated by requirements.  
+> Do not layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons.    
 
 This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it made a lot more harm than good. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.**
 
