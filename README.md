@@ -134,8 +134,7 @@ Cognitive load on the QA side: `🧠`
 The same rule applies to all sorts of numeric statuses (in database or wherever) - prefer self-describing strings, we are not in the era of 640K computers to optimise for storage.  
 
 > **Note**
-> People spend time arguing between `401` and `403`, making choices based on their level of understanding. But in the end it just doesn't make any sense. We can separate errors into either user-related or server-related, but apart from that, things are kind of blurry.  
-> As for following this mystical "RESTful API" and using all sorts of HTTP verbs and statuses, the standard simply doesn't exist. The only valid document on the matter is a paper published by Roy Fielding, dated back in 2000, and it says nothing about verbs and statuses. People go along with just a few basic HTTP statuses and POSTs only, and they're doing just fine.
+> People spend time arguing between `401` and `403`, making choices based on their level of understanding. But in the end it just doesn't make any sense. We can separate errors into either user-related or server-related, but apart from that, things are kind of blurry. As for following this mystical "RESTful API" and using all sorts of HTTP verbs and statuses, the standard simply doesn't exist. The only valid document on the matter is a paper published by Roy Fielding, dated back in 2000, and it says nothing about verbs and statuses. People go along with just a few basic HTTP statuses and POSTs only, and they're doing just fine.
 
 ## Complicated if statements
 ```go
