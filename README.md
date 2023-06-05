@@ -23,7 +23,7 @@ The average person can hold roughly [four facts](https://github.com/zakirullin/c
 
 **Germane** - imposed by tasks relevant to an overall goal. In the context of software delivery, an example of germane load is knowing the syntax of your team’s language of choice.
 
-Learn more about [Managing Information Overload](https://youtu.be/DUlFxffjDFo) here.
+Learn more about [Managing Information Overload](https://youtu.be/DUlFxffjDFo).
 
 Let's jump straight to the concrete practical examples of extraneous cognitive load.
 
