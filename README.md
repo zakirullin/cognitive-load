@@ -270,6 +270,6 @@ We have enough intrinsic cognitive load in the work that we do already, why add 
 **Do not make the lives of future developers harder.**
 
 ---
-*Contributions are welcome!* 🚀
+*Contributions are welcome!* 🌱
 
 [Follow for more articles](https://github.com/zakirullin) | [Discuss](https://github.com/zakirullin/cognitive-load/discussions/17) | [Contact the author on LinkedIn](https://www.linkedin.com/in/zakirullin/)
