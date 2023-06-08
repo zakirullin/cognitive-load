@@ -54,7 +54,7 @@ Mantras like "methods should be shorter than 15 lines of code" or "classes shoul
 **Deep module** - simple interface, complex functionality  
 **Shallow module** - interface is relatively complex to the small functionality it provides 
 
-![Deep module](/img/deepmodulev3.png)
+![Deep module](/img/deepmodulev4.png)
 
 Having too many shallow modules can make it difficult understand the project. **Not only do we have to keep in mind each module responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. `🤯`
 
@@ -263,7 +263,7 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 
 **Do you feel it? The above statement is difficult to understand. We have just created an unnecessary cognitive load in your head. Do not do this to your colleagues.**  
 
-![Smart Author](/img/smartauthor.png)
+![Smart Author](/img/smartauthorv2.png)
 
 We have enough intrinsic cognitive load in the work that we do already, why add more on top of that? We should reduce any cognitive load beyond what is intrinsic to the work we do.
 
