@@ -3,7 +3,7 @@
 ## Why bother reading?
 We spend far more time reading and understanding code than writing it. Therefore, the amount of cognitive load we need to build in our brains in order to understand code is crucial.
 
-This paper discusses a fundamental thinking tool that would enable us to create simple yet maintainable applications. We would look at every decision, every trendy buzzword, and every fancy technology through the lens of cognitive load.
+This paper discusses a fundamental thinking tool that would enable us to create simple yet maintainable applications. We would examine how much our poor choices could increase the mental capacity required.
 
 ## Cognitive load
 > **Cognitive load is how much a developer needs to know in order to complete a task.**
@@ -25,7 +25,7 @@ Let's jump straight to the concrete practical examples of extraneous cognitive l
 
 *P.S. Contributions are welcome! Feel free to send PRs with your own examples.*
 
-----
+---
 
 > **Note**
 > We will refer to the level cognitive load as follows:  
@@ -265,7 +265,7 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 
 **Do you feel it? The above statement is difficult to understand. We have just created an unnecessary cognitive load in your head. Do not do this to your colleagues.**  
 
-We have enough intrinsic cognitive load in the work that we do already, why add more on top of that? We should be doing everything we can to reduce any cognitive load above and beyond what is intrinsic to the work we do.  
+We have enough intrinsic cognitive load in the work that we do already, why add more on top of that? We should reduce any cognitive load beyond what is intrinsic to the work we do.
 
 **Do not make the lives of future developers harder.**
 
