@@ -1,9 +1,7 @@
 # Cognitive Load Developer's Handbook
 
-## Why bother reading?
-We spend far more time reading and understanding code than writing it. Therefore, the amount of cognitive load we need to build in our brains in order to understand code is crucial.
-
-This paper discusses a fundamental thinking tool that would enable us to create simple yet maintainable applications. We would learn to avoid creating unnecessary cognitive load, making our projects easier to work on.
+## Introduction
+We spend far more time reading and understanding code than writing it. Therefore, **the amount of cognitive load we need to build in our brains in order to understand code is crucial**.
 
 ## Cognitive load
 > **Cognitive load is how much a developer needs to know in order to complete a task.**
