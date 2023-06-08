@@ -263,6 +263,8 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 
 **Do you feel it? The above statement is difficult to understand. We have just created an unnecessary cognitive load in your head. Do not do this to your colleagues.**  
 
+![Smart Author](/img/smartauthor.png)
+
 We have enough intrinsic cognitive load in the work that we do already, why add more on top of that? We should reduce any cognitive load beyond what is intrinsic to the work we do.
 
 **Do not make the lives of future developers harder.**
