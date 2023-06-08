@@ -265,7 +265,7 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 
 ![Smart Author](/img/smartauthorv2.png)
 
-We have enough intrinsic cognitive load in the work that we do already, why add more on top of that? We should reduce any cognitive load beyond what is intrinsic to the work we do.
+We have enough complexity in the work that we do already, why add more on top of that? We should reduce any cognitive load beyond what is intrinsic to the work we do.
 
 **Do not make the lives of future developers harder.**
 
