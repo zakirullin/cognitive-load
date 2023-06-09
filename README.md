@@ -261,7 +261,7 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 
 *The intricate and multifaceted nature of cognitive load within the realm of comprehension and problem-solving necessitates a diligent and strategic approach in order to navigate the complexities and optimize mental capacity allocation.* `🤯`  
 
-**Do you feel it? The above statement is difficult to understand. We have just created an unnecessary cognitive load in your head. Do not do this to your colleagues.**  
+Do you feel it? The above statement is difficult to understand. We have just created an unnecessary cognitive load in your head. **Do not do this to your colleagues.**  
 
 ![Smart Author](/img/smartauthorv2.png)
 
