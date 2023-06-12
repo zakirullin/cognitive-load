@@ -257,7 +257,7 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 **If you are holding a lot of extraneous stuff in your head, think about future developers, yourself included. They would have to recreate this high cognitive load.**
 
 > **Warning**
-> Be aware that as an author you don't experience high cognitive load because you have developed a mental model of the project over time. Others, however, do not have this mental model and would need to invest time in building it. This is the Germane cognitive load, which we haven't discussed yet for the sake of simplicity and lower cognitive load.  
+> Be aware that as an author you don't experience high cognitive load because you have developed a mental model of the project over time. Others, however, do not have this mental model and would need to invest time in building it.
 
 *The intricate and multifaceted nature of cognitive load within the realm of comprehension and problem-solving necessitates a diligent and strategic approach in order to navigate the complexities and optimize mental capacity allocation.* `🤯`  
 
