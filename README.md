@@ -1,9 +1,7 @@
 # Cognitive Load Developer's Handbook
 
-## Why bother reading?
-We spend far more time reading and understanding code than writing it. Therefore, the amount of cognitive load we need to build in our brains in order to understand code is crucial.
-
-This paper discusses a fundamental thinking tool that would enable us to create simple yet maintainable applications. We would look at every decision, every trendy buzzword, and every fancy technology through the lens of cognitive load.
+## Introduction
+We spend far more time reading and understanding code than writing it. Therefore, **the amount of cognitive load we need to build in our brains in order to understand code is crucial**.
 
 ## Cognitive load
 > **Cognitive load is how much a developer needs to know in order to complete a task.**
@@ -29,7 +27,7 @@ Let's jump straight to the concrete practical examples of extraneous cognitive l
 
 *P.S. Contributions are welcome! Feel free to send PRs with your own examples.*
 
-----
+---
 
 > **Note**
 > We will refer to the level cognitive load as follows:  
@@ -60,7 +58,7 @@ Mantras like "methods should be shorter than 15 lines of code" or "classes shoul
 **Deep module** - simple interface, complex functionality  
 **Shallow module** - interface is relatively complex to the small functionality it provides 
 
-![Deep module](/img/deepmodulev3.png)
+![Deep module](/img/deepmodulev4.png)
 
 Having too many shallow modules can make it difficult understand the project. **Not only do we have to keep in mind each module responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. `🤯`
 
@@ -267,9 +265,11 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 
 *The intricate and multifaceted nature of cognitive load within the realm of comprehension and problem-solving necessitates a diligent and strategic approach in order to navigate the complexities and optimize mental capacity allocation.* `🤯`  
 
-**Do you feel it? The above statement is difficult to understand. We have just created an unnecessary cognitive load in your head. Do not do this to your colleagues.**  
+Do you feel it? The above statement is difficult to understand. We have just created an unnecessary cognitive load in your head. **Do not do this to your colleagues.**  
 
-We have enough intrinsic cognitive load in the work that we do already, why add more on top of that? We should be doing everything we can to reduce any cognitive load above and beyond what is intrinsic to the work we do.  
+![Smart Author](/img/smartauthorv2.png)
+
+We have enough complexity in the work that we do already, why add more on top of that? We should reduce any cognitive load beyond what is intrinsic to the work we do.
 
 **Do not make the lives of future developers harder.**
 
