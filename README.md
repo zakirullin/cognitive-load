@@ -270,6 +270,6 @@ We have enough complexity in the work that we do already, why add more on top of
 **Do not make the lives of future developers harder.**
 
 ---
-*Contributions are welcome!* 🌱
+[Connect on LinkedIn for more articles](https://www.linkedin.com/in/zakirullin/)  
 
-[Connect on LinkedIn for more articles](https://www.linkedin.com/in/zakirullin/) 
+*Contributions are welcome!* 🌱
