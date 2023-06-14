@@ -272,4 +272,4 @@ We have enough complexity in the work that we do already, why add more on top of
 ---
 *Contributions are welcome!* 🌱
 
-[Follow for more articles](https://github.com/zakirullin) | [Discuss](https://github.com/zakirullin/cognitive-load/discussions/17) | [Contact the author on LinkedIn](https://www.linkedin.com/in/zakirullin/)
+[Connect on LinkedIn for more articles](https://www.linkedin.com/in/zakirullin/) 
