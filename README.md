@@ -230,7 +230,7 @@ Jumping from call to call to read along and figure out what goes wrong and what 
 
 This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it made a lot more harm than good. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.**
 
-> Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons.  
+> Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons. **Layers of abstraction aren't free of charge, they are to be held in our working memory**.  
 
 Even though these layered architectures have accelerated an important shift from traditional database-centric applications to a somewhat infrastructure-externalized approach (core business logic became independent of any external stuff), the idea is by no means novel.
 
