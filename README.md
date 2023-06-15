@@ -232,7 +232,7 @@ This architecture was something that made intuitive sense at first, but every ti
 
 > Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons. **Layers of abstraction aren't free of charge, they are to be held in our working memory**.  
 
-Even though these layered architectures have accelerated an important shift from traditional database-centric applications to a somewhat infrastructure-externalized approach (core business logic became independent of any external stuff), the idea is by no means novel.
+Even though these layered architectures have accelerated an important shift from traditional database-centric applications to a somewhat infrastructure-independent approach, where the core business logic is independent of anything external, the idea is by no means novel.  
 
 These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamentals instead: isolation, DIP, IoC, single source of truth, cohesion, coupling, true invariant, complexity, cognitive load and information hiding.
 
