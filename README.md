@@ -79,7 +79,7 @@ close(fd)
 A modern implementation of this interface has **hundreds of thousands of lines of code**. Lots of complexity is hidden under the hood. Yet it is easy to use due to its simple interface.
 
 > **Note**
-> This deep module example is taken from the book [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php) by John K. Ousterhout. Not only does this book covers the very essence of complexity in software development, but it also has the greatest interpretation of Parnas' influential paper [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf). Both are essential reads. Another related reading: [Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29).
+> This deep module example is taken from the book [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php) by John K. Ousterhout. Not only does this book cover the very essence of complexity in software development, but it also has the greatest interpretation of Parnas' influential paper [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf). Both are essential reads. Another related reading: [Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29).
 
 > **Warning**
 > If you think we are rooting for bloated God objects with too many responsibilities, you got it wrong.  
@@ -136,7 +136,7 @@ Cognitive load on the QA side: `🧠`
 The same rule applies to all sorts of numeric statuses (in database or wherever) - prefer self-describing strings. We are not in the era of 640K computers to optimise for storage.  
 
 > **Note**
-> People spend time arguing between `401` and `403`, making choices based on their level of understanding. But in the end it just doesn't make any sense. We can separate errors into either user-related or server-related, but apart from that, things are kind of blurry. As for following this mystical "RESTful API" and using all sorts of HTTP verbs and statuses, the standard simply doesn't exist. The only valid document on the matter is a paper published by Roy Fielding, dated back in 2000, and it says nothing about verbs and statuses. People go along with just a few basic HTTP statuses and POSTs only, and they are doing just fine.
+> People spend time arguing between `401` and `403`, making choices based on their level of understanding. But in the end it just doesn't make any sense. We can separate errors into either user-related or server-related, but apart from that, things are kind of blurry. As for following this mystical "RESTful API" and using all sorts of HTTP verbs and statuses, the standard simply doesn't exist. The only valid document on the matter is a paper published by Roy Fielding, dated back in 2000, and it says nothing about verbs and statuses. People get along with just a few basic HTTP statuses and POSTs only, and they are doing just fine.
 
 ## Complicated if statements
 ```go
