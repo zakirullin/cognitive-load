@@ -257,7 +257,7 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 **If you are holding a lot of extraneous stuff in your head, think about future developers, yourself included. They would have to recreate this high cognitive load.**
 
 > **Warning**
-> Be aware that, as an author, you may not experience a high cognitive load because you have developed a mental model of the extraneous stuff over time. Others, however, do not have this mental model and would have to create a high cognitive load in their heads. In other words, extraneous things that are familiar to you are translated into an unnecessary cognitive load for others.    
+> Be aware that, as an author, you may not experience a high cognitive load because you have developed a mental model of your extraneous stuff over time. Others, however, do not have this mental model and would have to create a high cognitive load in their heads. In other words, extraneous things that are familiar to you are translated into an unnecessary cognitive load for others.    
 
 *The intricate and multifaceted nature of cognitive load within the realm of comprehension and problem-solving necessitates a diligent and strategic approach in order to navigate the complexities and optimize mental capacity allocation.* `🤯`  
 
