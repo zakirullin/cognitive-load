@@ -10,7 +10,7 @@ We should strive to reduce the cognitive load in our projects as much as possibl
 
 The average person can hold roughly [four unrelated facts](https://github.com/zakirullin/cognitive-load/issues/16) in working memory. Once the cognitive load reaches this threshold, a significant effort is required to understand things.
 
-*Let's say we have been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool technologies, fancy libraries and trendy frameworks were used. In other words, **the previous author had a high cognitive load in his head, which we are yet to recreate.***
+*Let's say we have been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool architectures, fancy libraries and trendy technologies were used. In other words, **the previous author once had a high cognitive load in his head, which we are yet to recreate.***
 
 ![Cognitive Load](/img/cognitiveloadv2.png)
 
@@ -257,7 +257,7 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 **If you are holding a lot of extraneous stuff in your head, think about future developers, yourself included. They would have to recreate this high cognitive load.**
 
 > **Warning**
-> Be aware that as an author you don't experience high cognitive load because you have developed a mental model of the project over time. Others, however, do not have this mental model and would need to invest time in building it.
+> Be aware that, as an author, you may not experience a high cognitive load because you have developed a mental model of the extraneous stuff over time. Others, however, do not have this mental model and would have to create a high cognitive load in their heads. In other words, extraneous things that are familiar to you are translated into an unnecessary cognitive load for others.    
 
 *The intricate and multifaceted nature of cognitive load within the realm of comprehension and problem-solving necessitates a diligent and strategic approach in order to navigate the complexities and optimize mental capacity allocation.* `🤯`  
 
