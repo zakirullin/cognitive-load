@@ -1,7 +1,7 @@
 # Cognitive Load Developer's Handbook
 
 ## Introduction
-We spend far more time reading and understanding code than writing it. Therefore, **the amount of cognitive load we need to build in our brains in order to understand code is crucial**.
+We spend far more time reading and understanding code than writing it. Therefore, **the amount of cognitive load we need to build in our brains in order to understand code is a crucial metric**.
 
 ## Cognitive load
 > **Cognitive load is how much a developer needs to know in order to complete a task.**
@@ -252,7 +252,6 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
   Code Complexity vs. Experience from <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
 
-
 ## Conclusion
 **If you are holding a lot of extraneous stuff in your head, think about future developers, yourself included. They would have to recreate this high cognitive load.**
 
@@ -265,7 +264,7 @@ Do you feel it? The above statement is difficult to understand. We have just cre
 
 ![Smart Author](/img/smartauthorv2.png)
 
-We have enough complexity in the work that we do already, why add more on top of that? We should reduce any cognitive load beyond what is intrinsic to the work we do.
+We have enough complexity in the work that we do already, why add more on top of that? We should reduce any cognitive load above and beyond what is intrinsic to the work we do.
 
 **Do not make the lives of future developers harder.**
 
