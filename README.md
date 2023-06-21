@@ -22,7 +22,7 @@ The tricky part is that the previous author didn't experience a high cognitive l
   It is likely that the previous author(s) created this huge mess one tiny increment at a time, not all at once. So you are the first person who has ever had to try to make sense of it all at once.<br><br>
   In my class I describe a sprawling SQL stored procedure we were looking at one day, with hundreds of lines of conditionals in a huge WHERE clause. Someone asked how anyone could have let it get this bad. I told them: “When there are only 2 or 3 conditionals, adding another one doesn’t make any difference. By the time there are 20 or 30 conditionals, adding another one doesn’t make any difference!”<br><br>
   There is no “simplifying force” acting on the code base other than deliberate choices that you make.Simplifying takes effort, and people are too often in a hurry.<br><br>
-  <a href="https://dannorth.net">Dan North</a>
+  Thanks to <a href="https://dannorth.net">Dan North</a> for sharing his ideas.
 </details>
 
 ## Types of cognitive load
