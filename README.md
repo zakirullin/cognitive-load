@@ -14,7 +14,7 @@ The average person can hold roughly [four unrelated facts](https://github.com/za
 
 ![Cognitive Load](/img/cognitiveloadv2.png)
 
-The tricky part is that the previous author didn't experience a high cognitive load because of the familiarity of the project. It is also possible that he added complexity incrementally, so that the cognitive load was low, and he could keep it all in his head.
+The tricky part is that the previous author may not experience a high cognitive load due to the familiarity of the project. It is also possible that he added complexity incrementally, so that the cognitive load was low, and he could keep it all in his head.
 
 <details>
   <summary>Simplicity vs Familiarity, Dan North's comments</summary>
