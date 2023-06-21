@@ -280,6 +280,6 @@ We have enough complexity in the work that we do already, why add more on top of
 **Do not make the lives of future developers harder.**
 
 ---
-[Connect on LinkedIn for more articles](https://www.linkedin.com/in/zakirullin/)  
+Connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/) or follow on [Github](https://github.com/zakirullin) for more articles  
 
 *Contributions are welcome!* 🌱
