@@ -12,7 +12,7 @@ The average person can hold roughly [four unrelated facts](https://github.com/za
 
 *Let's say we have been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool architectures, fancy libraries and trendy technologies were used. In other words, **the previous author had created a high cognitive load for us.***
 
-![Cognitive Load](/img/cognitiveloadv2.png)
+![Cognitive Load](/img/cognitiveloadv3.png)
 
 The tricky part is that the previous author may not have experienced a high cognitive load due to familiarity with the project. It is also possible that the complexity was added incrementally, one tiny increment at a time, so that the cognitive load was low for the author.  
 
