@@ -17,7 +17,7 @@ The average person can hold roughly [four unrelated facts](https://github.com/za
 The tricky part is that the previous author may not have experienced a high cognitive load due to familiarity with the project. It is also possible that the complexity was added incrementally, one tiny increment at a time, so that the cognitive load was low for the author.  
 
 <details>
-  <summary>Simplicity vs Familiarity, Dan North's comment</summary>
+  <summary>Familiarity vs Simplicity, Dan North's comment</summary>
   <br>
   The problem is that <b>familiarity is not the same as simplicity</b>. They <i>feel</i> the same — that same ease of moving through a space without much mental effort — but for very different reasons. Every “clever” (read: “self-indulgent”) and non-idiomatic trick you use incurs a learning penalty for everyone else. Once they have done that learning, then they will find working with the code less difficult. So it is hard to recognise how to simplify code that you are already familiar with. This is why I try to get “the new kid” to critique the code before they get too institutionalised!<br><br>
   It is likely that the previous author(s) created this huge mess one tiny increment at a time, not all at once. So you are the first person who has ever had to try to make sense of it all at once.<br><br>
