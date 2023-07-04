@@ -280,6 +280,13 @@ We have enough complexity in the work that we do already, why add more on top of
 
 **Do not make the lives of future developers harder.**
 
+## Related reading
+- [Managing Information Overload](https://youtu.be/DUlFxffjDFo).
+- [The Flaws of Inheritance](https://www.youtube.com/watch?v=hxGOiiR9ZKg)
+- [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php)
+- [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf)
+- [Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29).
+
 ---
 Connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/) or follow on [Github](https://github.com/zakirullin) for more articles  
 
