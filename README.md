@@ -1,3 +1,5 @@
+[简体中文](https://github.com/zakirullin/cognitive-load/README.zh-CN.md
+
 # Cognitive Load Developer's Handbook
 
 ## Introduction
