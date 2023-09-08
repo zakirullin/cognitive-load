@@ -1,4 +1,4 @@
-[简体中文](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-CN.md)
+[简体中文](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md)
 
 # Cognitive Load Developer's Handbook
 
