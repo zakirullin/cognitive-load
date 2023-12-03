@@ -6,7 +6,7 @@
 We spend far more time reading and understanding code than writing it. Therefore, the amount of cognitive load required to understand code is a crucial metric.
 
 ## Cognitive load
-> **Cognitive load is how much a developer needs to think in order to complete a task.** Higher cognitive load means that developers have to spend more time learning the required information.
+> **Cognitive load is how much a developer needs to think in order to complete a task.** 
 
 We should strive to reduce the cognitive load in our projects as much as possible.
 
