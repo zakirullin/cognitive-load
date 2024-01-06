@@ -301,7 +301,7 @@ We have enough complexity in the work that we do already, why add more on top of
 **Do not make the lives of future developers harder.**
 
 ---
-[I want more! A complete handbook for personal and corporate use](https://inmind.tech/cognitive-load)
+[I want more! A complete handbook for personal or corporate use](https://inmind.tech/cognitive-load)
 
 
-Follow on [Twitter](https://twitter.com/zakirullin) or onnect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
+Follow on [Twitter](https://twitter.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
