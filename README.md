@@ -23,7 +23,7 @@ The average person can hold roughly [four unrelated facts](https://github.com/za
 The tricky part is that the previous author may not have experienced a high cognitive load due to familiarity with the project.   
 
 <details>
-  <summary>Familiarity vs Simplicity, Dan North's comment</summary>
+  <summary><b>Familiarity vs Simplicity, Dan North's comment</b></summary>
   <br>
   The problem is that <b>familiarity is not the same as simplicity</b>. They <i>feel</i> the same — that same ease of moving through a space without much mental effort — but for very different reasons. Every “clever” (read: “self-indulgent”) and non-idiomatic trick you use incurs a learning penalty for everyone else. Once they have done that learning, then they will find working with the code less difficult. So it is hard to recognise how to simplify code that you are already familiar with. This is why I try to get “the new kid” to critique the code before they get too institutionalised!<br><br>
   It is likely that the previous author(s) created this huge mess one tiny increment at a time, not all at once. So you are the first person who has ever had to try to make sense of it all at once.<br><br>
@@ -80,7 +80,7 @@ These statements are made by none other than Rob Pike.
 Language features are OK, as long as they are orthogonal to each other.
 
 <details>
-  <summary>Thoughts from an engineer with 20+ years of C++ experience ⭐️</summary>
+  <summary><b>Thoughts from an engineer with 20+ years of C++ experience ⭐️</b></summary>
   <br>
   I was looking at my RSS reader the other day and noticed that I have somewhat three hundred unread articles under the "C++" tag. I haven't read a single article about the language since last summer, and I feel great!<br><br>
   I've been using C++ for 20 years for now, that's almost two-thirds of my life. Most of my experience lies in dealing with the darkest corners of the language (such as undefined behaviours of all sorts). It's not a reusable experience, and it's kind of creepy to throw it all away now.<br><br>
@@ -280,7 +280,7 @@ Take a look at the overarching design principles of one of the biggest tech comp
 Does the new fancy buzzword comply with these principles? Or all it does is creating extraneous cognitive load?
 
 <details>
-  <summary>Here's a fun picture</summary>
+  <summary><b>Here's a fun picture</b></summary>
   <img src="img/complexity.jpg">
   Code Complexity vs. Experience from <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
