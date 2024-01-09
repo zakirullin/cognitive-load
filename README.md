@@ -66,33 +66,6 @@ Oh, wait, there's `SuperuserController` which extends `AdminController`. By modi
 
 Prefer composition over inheritance. We won't go into detail - there's [plenty of material](https://www.youtube.com/watch?v=hxGOiiR9ZKg) out there.
 
-## Featureful languages
-We feel excited when new features got released in our favourite language. We spend some time learning these features, we build code upon them.
-
-If there are lots of features, we may spend half an hour playing with a few lines of code, to use one or another feature. And it's kind of a waste of time. But what's worse, **when you come back later, you would have to recreate that thought process!** `🤯`
-
-**You not only have to understand this complicated program, you have to understand why a programmer decided this was the way to approach a problem from the features that are available.**  
-
-These statements are made by none other than Rob Pike.
-
-> **Reduce cognitive load by limiting the number of choices.**  
-
-Language features are OK, as long as they are orthogonal to each other.
-
-<details>
-  <summary><b>Thoughts from an engineer with 20+ years of C++ experience ⭐️</b></summary>
-  <br>
-  I was looking at my RSS reader the other day and noticed that I have somewhat three hundred unread articles under the "C++" tag. I haven't read a single article about the language since last summer, and I feel great!<br><br>
-  I've been using C++ for 20 years for now, that's almost two-thirds of my life. Most of my experience lies in dealing with the darkest corners of the language (such as undefined behaviours of all sorts). It's not a reusable experience, and it's kind of creepy to throw it all away now.<br><br>
-  Like, can you imagine, <code>requires C1&lt;T::type&gt; || C2&lt;T::type&gt;</code> is not the same thing as <code>requires (C1&lt;T::type&gt; || C2&lt;T::type&gt;)</code>.<br><br>
-  You can't allocate space for a trivial type and just <code>memcpy</code> a set of bytes there without extra effort - that won't start the lifetime of an object. This was the case before C++20. It was fixed in C++20, but the cognitive load of the language has only increased.<br><br>
-  Cognitive load is constantly growing, even though things got fixed. I should know what was fixed, when it was fixed, and what it was like before. I am a professional after all. Sure, C++ is good at legacy support, which also means that you <b>will face</b> that legacy. For example, last month a colleague of mine asked me about some behaviour in C++03. <code>🤯</code><br><br>
-  There were 20 ways of initialization. Uniform initialization syntax has been added. Now we have 21 ways of initialization. By the way, does anyone remember the rules for selecting constructors from the initializer list? Something about implicit conversion with the least loss of information, <i>but if</i> the value is known statically, then... <code>🤯</code><br><br>
-  <b>This increased cognitive load is not caused by a business task at hand. It is not an intrinsic complexity of the domain. It is just there due to historical reasons</b> (<i>extraneous cognitive load</i>).<br><br>
-  I had to come up with some rules. Like, if that line of code is not as obvious and I have to remember the standard, I better not write it that way. The standard is somewhat 1500 pages long, by the way.<br><br>
-  <b>By no means I am trying to blame C++. I love the language. It's just that I am tired now.</b>
-</details>
-
 ## Too many small methods, classes or modules
 > Method, class and module are interchangeable in this context 
  
@@ -168,6 +141,33 @@ Cognitive load on the QA side: `🧠`
 The same rule applies to all sorts of numeric statuses (in database or wherever) - prefer self-describing strings. We are not in the era of 640K computers to optimise for storage.  
 
 > People spend time arguing between `401` and `403`, making choices based on their level of understanding. But in the end it just doesn't make any sense. We can separate errors into either user-related or server-related, but apart from that, things are kind of blurry. As for following this mystical "RESTful API" and using all sorts of HTTP verbs and statuses, the standard simply doesn't exist. The only valid document on the matter is a paper published by Roy Fielding, dated back in 2000, and it says nothing about verbs and statuses. People get along with just a few basic HTTP statuses and POSTs only, and they are doing just fine.
+
+## Featureful languages
+We feel excited when new features got released in our favourite language. We spend some time learning these features, we build code upon them.
+
+If there are lots of features, we may spend half an hour playing with a few lines of code, to use one or another feature. And it's kind of a waste of time. But what's worse, **when you come back later, you would have to recreate that thought process!** `🤯`
+
+**You not only have to understand this complicated program, you have to understand why a programmer decided this was the way to approach a problem from the features that are available.**  
+
+These statements are made by none other than Rob Pike.
+
+> **Reduce cognitive load by limiting the number of choices.**  
+
+Language features are OK, as long as they are orthogonal to each other.
+
+<details>
+  <summary><b>Thoughts from an engineer with 20+ years of C++ experience ⭐️</b></summary>
+  <br>
+  I was looking at my RSS reader the other day and noticed that I have somewhat three hundred unread articles under the "C++" tag. I haven't read a single article about the language since last summer, and I feel great!<br><br>
+  I've been using C++ for 20 years for now, that's almost two-thirds of my life. Most of my experience lies in dealing with the darkest corners of the language (such as undefined behaviours of all sorts). It's not a reusable experience, and it's kind of creepy to throw it all away now.<br><br>
+  Like, can you imagine, <code>requires C1&lt;T::type&gt; || C2&lt;T::type&gt;</code> is not the same thing as <code>requires (C1&lt;T::type&gt; || C2&lt;T::type&gt;)</code>.<br><br>
+  You can't allocate space for a trivial type and just <code>memcpy</code> a set of bytes there without extra effort - that won't start the lifetime of an object. This was the case before C++20. It was fixed in C++20, but the cognitive load of the language has only increased.<br><br>
+  Cognitive load is constantly growing, even though things got fixed. I should know what was fixed, when it was fixed, and what it was like before. I am a professional after all. Sure, C++ is good at legacy support, which also means that you <b>will face</b> that legacy. For example, last month a colleague of mine asked me about some behaviour in C++03. <code>🤯</code><br><br>
+  There were 20 ways of initialization. Uniform initialization syntax has been added. Now we have 21 ways of initialization. By the way, does anyone remember the rules for selecting constructors from the initializer list? Something about implicit conversion with the least loss of information, <i>but if</i> the value is known statically, then... <code>🤯</code><br><br>
+  <b>This increased cognitive load is not caused by a business task at hand. It is not an intrinsic complexity of the domain. It is just there due to historical reasons</b> (<i>extraneous cognitive load</i>).<br><br>
+  I had to come up with some rules. Like, if that line of code is not as obvious and I have to remember the standard, I better not write it that way. The standard is somewhat 1500 pages long, by the way.<br><br>
+  <b>By no means I am trying to blame C++. I love the language. It's just that I am tired now.</b>
+</details>
 
 ## Complicated if statements
 ```go
