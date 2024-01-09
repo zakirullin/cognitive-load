@@ -5,9 +5,9 @@
 ## Introduction
 There are so many buzzwords and best practices out there, but let's focus on something more fundamental. What matters is the amount of confusion developers feel going through the code.
 
-Confusion costs time and money. **Confusion is caused by high cognitive load**. It's not a fancy imaginary concept, it can't be misguiding - cognitive load is there, and we can feel it.
+Confusion costs time and money. **Confusion is caused by high cognitive load**. It's not a fancy imaginary concept, it can't be misleading - cognitive load is there, and we can feel it.
 
-Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load in our code.
+Since we spend far more time reading and understanding code than writing it, we should be constantly asking ourselves whether we are embedding excessive cognitive load into our code.
 
 ## Cognitive load
 > **Cognitive load is how much a developer needs to think in order to complete a task.** 
@@ -299,5 +299,4 @@ We have enough complexity in the work that we do already, why add more on top of
 **Do not make the lives of future developers harder.**
 
 ---
-
 Follow on [Twitter](https://twitter.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
