@@ -1,4 +1,4 @@
-# Cognitive Load Developer's Handbook
+# Cognitive Load In Software Development
 
 *It is a living document, last update: **January 2024***
 
