@@ -299,4 +299,4 @@ We have enough complexity in the work that we do already, why add more on top of
 ---
 [A digital guide for corporate or personal use](https://inmind.tech/cognitive-load)
 
-Follow on [Twitter](https://twitter.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
+Follow on [GitHub](https://github.com/zakirullin), [Twitter](https://twitter.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
