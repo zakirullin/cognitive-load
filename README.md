@@ -20,7 +20,7 @@ The average person can hold roughly [four unrelated facts](https://github.com/za
 
 ![Cognitive Load](/img/cognitiveloadv4.png)
 
-The tricky part is that the previous author may not have experienced a high cognitive load due to familiarity with the project.   
+The tricky part is that the previous author may not have experienced a high cognitive load due to familiarity with the project. In other words, extraneous things that are familiar to you are translated into a high cognitive load for others. 
 
 <details>
   <summary><b>Familiarity vs Simplicity, Dan North's comment</b></summary>
@@ -286,10 +286,6 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 </details>
 
 ## Conclusion
-**If you are holding a lot of extraneous stuff in your head, think about future developers, yourself included. They would have to recreate this thought process.**
-
-> Be aware that, as an author, you may not experience a high cognitive load because you have developed a mental model of your extraneous stuff over time. Others, however, do not have this mental model and would have to create a high cognitive load in their heads. In other words, extraneous things that are familiar to you are translated into an unnecessary cognitive load for others.    
-
 *The intricate and multifaceted nature of cognitive load within the realm of comprehension and problem-solving necessitates a diligent and strategic approach in order to navigate the complexities and optimize mental capacity allocation.* `🤯`  
 
 Do you feel it? The above statement is difficult to understand. We have just created an unnecessary cognitive load in your head. **Do not do this to your colleagues.**  
