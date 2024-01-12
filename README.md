@@ -32,7 +32,7 @@ The tricky part is that the previous author may not have experienced a high cogn
   <i>Thanks to <a href="https://dannorth.net">Dan North</a> for sharing his ideas.</i>
 </details>
 
-Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve.
+> Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve.
 
 ## Types of cognitive load
 **Intrinsic** - caused by the inherent difficulty of a task. It can't be reduced, it's at the very heart of software development.  
@@ -300,3 +300,5 @@ We have enough complexity in the work that we do already, why add more on top of
 [A digital guide for corporate or personal use](https://inmind.tech/cognitive-load)
 
 Follow on [GitHub](https://github.com/zakirullin), [Twitter](https://twitter.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
+
+[![Star on GitHub](https://img.shields.io/github/stars/zakirullin/cognitive-load.svg?style=for-the-badge)](https://github.com/zakirullin/cognitive-load/stargazers)
