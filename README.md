@@ -66,51 +66,6 @@ Oh, wait, there's `SuperuserController` which extends `AdminController`. By modi
 
 Prefer composition over inheritance. We won't go into detail - there's [plenty of material](https://www.youtube.com/watch?v=hxGOiiR9ZKg) out there.
 
-## Too many small methods, classes or modules
-> Method, class and module are interchangeable in this context 
- 
-Mantras like "methods should be shorter than 15 lines of code" or "classes should be small" turned out to be somewhat wrong.
-
-**Deep module** - simple interface, complex functionality  
-**Shallow module** - interface is relatively complex to the small functionality it provides 
-
-![Deep module](/img/deepmodulev4.png)
-
-Having too many shallow modules can make it difficult understand the project. **Not only do we have to keep in mind each module responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. `🤯`
-
-> Information hiding is paramount, and we don't hide as much complexity in shallow modules.
-
-I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas the second one has only 7 deep classes. I haven't been maintaining any of these projects for one year and a half.
-
-Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.
-
-> **The best components are those that provide powerful functionality yet have simple interface.**  
-John K. Ousterhout
-
-The interface of the UNIX I/O is very simple. It has only five basic calls:
-```python
-open(path, flags, permissions)
-read(fd, buffer, count)
-write(fd, buffer, count)
-lseek(fd, offset, referencePosition)
-close(fd)
-```
-
-A modern implementation of this interface has **hundreds of thousands of lines of code**. Lots of complexity is hidden under the hood. Yet it is easy to use due to its simple interface.
-
-> This deep module example is taken from the book [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php) by John K. Ousterhout. Not only does this book cover the very essence of complexity in software development, but it also has the greatest interpretation of Parnas' influential paper [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf). Both are essential reads. Other related readings: [It's probably time to stop recommending Clean Code](https://qntm.org/clean), [Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29), [Linear code is more readable](https://blog.separateconcerns.com/2023-09-11-linear-code.html).
-
-If you think we are rooting for bloated God objects with too many responsibilities, you got it wrong.  
-
-## Too many shallow microservices
-We can apply the aforementioned scale-agnostic principle to microservices architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that aren't that shallow. One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.
-
-I once consulted a startup where a team of three developers introduced 17(!) microservices. They were 10 months behind schedule and appeared nowhere close to the public release. Every new requirement led to changes in 4+ microservices. Diagnostic difficulty in integration space skyrocketed. Both time to market and cognitive load were unacceptably high. `🤯`  
-
-Is this the right way to approach the uncertainty of a new system? It's enormously difficult to elicit the right logical boundaries in the beginning, and by introducing too many microservices we make things worse. The team's only justification was: "The FAANG companies proved microservices architecture to be effective".
-
-A well-crafted monolith with truly isolated modules is often much more convenient and flexible than a bunch of microservices. It's only when the need for separate deployments becomes crucial (e.g. development team scaling) that you should consider adding a network layer between the modules (future microservices).
-
 ## Complicated if statements
 ```go
 if val > someConstant // 🧠+
@@ -159,6 +114,51 @@ stuff1 // 🧠++
 ```
 
 We can focus on the happy path only, thus freeing our working memory from all sorts of preconditions.
+
+## Too many small methods, classes or modules
+> Method, class and module are interchangeable in this context 
+ 
+Mantras like "methods should be shorter than 15 lines of code" or "classes should be small" turned out to be somewhat wrong.
+
+**Deep module** - simple interface, complex functionality  
+**Shallow module** - interface is relatively complex to the small functionality it provides 
+
+![Deep module](/img/deepmodulev4.png)
+
+Having too many shallow modules can make it difficult understand the project. **Not only do we have to keep in mind each module responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. `🤯`
+
+> Information hiding is paramount, and we don't hide as much complexity in shallow modules.
+
+I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas the second one has only 7 deep classes. I haven't been maintaining any of these projects for one year and a half.
+
+Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.
+
+> **The best components are those that provide powerful functionality yet have simple interface.**  
+John K. Ousterhout
+
+The interface of the UNIX I/O is very simple. It has only five basic calls:
+```python
+open(path, flags, permissions)
+read(fd, buffer, count)
+write(fd, buffer, count)
+lseek(fd, offset, referencePosition)
+close(fd)
+```
+
+A modern implementation of this interface has **hundreds of thousands of lines of code**. Lots of complexity is hidden under the hood. Yet it is easy to use due to its simple interface.
+
+> This deep module example is taken from the book [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php) by John K. Ousterhout. Not only does this book cover the very essence of complexity in software development, but it also has the greatest interpretation of Parnas' influential paper [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf). Both are essential reads. Other related readings: [It's probably time to stop recommending Clean Code](https://qntm.org/clean), [Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29), [Linear code is more readable](https://blog.separateconcerns.com/2023-09-11-linear-code.html).
+
+If you think we are rooting for bloated God objects with too many responsibilities, you got it wrong.  
+
+## Too many shallow microservices
+We can apply the aforementioned scale-agnostic principle to microservices architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that aren't that shallow. One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.
+
+I once consulted a startup where a team of three developers introduced 17(!) microservices. They were 10 months behind schedule and appeared nowhere close to the public release. Every new requirement led to changes in 4+ microservices. Diagnostic difficulty in integration space skyrocketed. Both time to market and cognitive load were unacceptably high. `🤯`  
+
+Is this the right way to approach the uncertainty of a new system? It's enormously difficult to elicit the right logical boundaries in the beginning, and by introducing too many microservices we make things worse. The team's only justification was: "The FAANG companies proved microservices architecture to be effective".
+
+A well-crafted monolith with truly isolated modules is often much more convenient and flexible than a bunch of microservices. It's only when the need for separate deployments becomes crucial (e.g. development team scaling) that you should consider adding a network layer between the modules (future microservices).
 
 ## Featureful languages
 We feel excited when new features got released in our favourite language. We spend some time learning these features, we build code upon them.
