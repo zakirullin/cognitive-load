@@ -160,7 +160,7 @@ Is this the right way to approach the uncertainty of a new system? It's enormous
 
 A well-crafted monolith with truly isolated modules is often much more convenient and flexible than a bunch of microservices. It's only when the need for separate deployments becomes crucial (e.g. development team scaling) that you should consider adding a network layer between the modules (future microservices).
 
-## Featureful languages
+## Feature-rich languages
 We feel excited when new features got released in our favourite language. We spend some time learning these features, we build code upon them.
 
 If there are lots of features, we may spend half an hour playing with a few lines of code, to use one or another feature. And it's kind of a waste of time. But what's worse, **when you come back later, you would have to recreate that thought process!** `🤯`
