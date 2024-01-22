@@ -292,10 +292,12 @@ Do you feel it? The above statement is difficult to understand. We have just cre
 
 ![Smart Author](/img/smartauthorv2.png)
 
-We have enough complexity in the work that we do already, why add more on top of that? We should reduce any cognitive load above and beyond what is intrinsic to the work we do. Boring and straightforward code is a way to go.
+We have enough complexity in the work that we do already, why add more on top of that? We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
 
 > Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.  
 > Brian Kernighan
+
+Boring and straightforward code is a way to go.  
 
 ---
 Follow on [GitHub](https://github.com/zakirullin), [Twitter](https://twitter.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
