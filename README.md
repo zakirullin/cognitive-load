@@ -14,7 +14,7 @@ Since we spend far more time reading and understanding code than writing it, we 
 
 We should strive to reduce the cognitive load in our projects as much as possible.
 
-The average person can hold roughly [four unrelated facts](https://github.com/zakirullin/cognitive-load/issues/16) in working memory. Once the cognitive load reaches this threshold, a significant effort is required to understand things.
+When reading through code, you hold various facts in memory, such as conditional logic, boolean variables state, model's state, execution flow, other component's interface, possible effect on the coupled code and so on. The average person can hold roughly [four unrelated facts](https://github.com/zakirullin/cognitive-load/issues/16) in working memory. Once the cognitive load reaches this threshold, a significant effort is required to understand things.
 
 *Let's say we have been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool architectures, fancy libraries and trendy technologies were used. In other words, **the previous author had created a high cognitive load for us.***
 
@@ -75,7 +75,7 @@ if val > someConstant // 🧠+
 }
 ```
 
-Introduce temporary variables with meaningful names:
+Introduce intermediate variables with meaningful names:
 ```go
 isValid = var > someConstant
 isAllowed = condition2 || condition3
@@ -134,7 +134,7 @@ I have two pet projects, both of them are somewhat 5K lines of code. The first o
 Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.
 
 > **The best components are those that provide powerful functionality yet have simple interface.**  
-John K. Ousterhout
+> John K. Ousterhout
 
 The interface of the UNIX I/O is very simple. It has only five basic calls:
 ```python
@@ -261,6 +261,9 @@ I myself was a passionate advocate of Onion Architecture for years. I used it he
 
 Jumping from call to call to read along and figure out what goes wrong and what is missing is a vital requirement to quickly solve problem. With this architecture’s layer uncoupling it requires an exponential factor of extra, often disjointed, traces to get to the point where the failure occurs. `🤯`  
 
+> Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.  
+> Brian Kernighan
+
 This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it made a lot more harm than good. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.**
 
 > Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons. **[Layers of abstraction aren't free of charge](https://blog.jooq.org/why-you-should-not-implement-layered-architecture), they are to be held in our working memory**.  
@@ -288,15 +291,13 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 ## Conclusion
 *The intricate and multifaceted nature of cognitive load within the realm of comprehension and problem-solving necessitates a diligent and strategic approach in order to navigate the complexities and optimize mental capacity allocation.* `🤯`  
 
-Do you feel it? The above statement is difficult to understand. We have just created an unnecessary cognitive load in your head. **Do not do this to your colleagues.**  
+Do you feel it? The above statement is difficult to understand. We have just created an unnecessary cognitive load in your head. **Do not do this to your colleagues.**
 
 ![Smart Author](/img/smartauthorv2.png)
 
-We have enough complexity in the work that we do already, why add more on top of that? We should reduce any cognitive load above and beyond what is intrinsic to the work we do.
+We have enough complexity in the work that we do already, why add more on top of that? We should reduce any cognitive load above and beyond what is intrinsic to the work we do. Boring and straightforward code is a way to go.
 
 **Do not make the lives of future developers harder.**
 
 ---
-[A digital guide for corporate or personal use](https://inmind.tech/cognitive-load)
-
 Follow on [GitHub](https://github.com/zakirullin), [Twitter](https://twitter.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
