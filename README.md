@@ -297,7 +297,5 @@ We have enough complexity in the work that we do already, why add more on top of
 > Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.  
 > Brian Kernighan
 
-**Do not make the lives of future developers harder.**
-
 ---
 Follow on [GitHub](https://github.com/zakirullin), [Twitter](https://twitter.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
