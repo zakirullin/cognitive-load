@@ -14,7 +14,7 @@ Since we spend far more time reading and understanding code than writing it, we 
 
 We should strive to reduce the cognitive load in our projects as much as possible.
 
-When reading through code, you hold various things in memory, such as conditional logic, boolean variables values, data state, execution flow, other component's interface, possible effect on the coupled code and so on. The average person can hold roughly [four unrelated facts](https://github.com/zakirullin/cognitive-load/issues/16) in working memory. Once the cognitive load reaches this threshold, a significant effort is required to understand things.
+When reading through code, you hold various things in memory, such as conditional logic, boolean variables values, data state, execution flow, other component's contract, possible effect on the coupled code and so on. The average person can hold roughly [four unrelated facts](https://github.com/zakirullin/cognitive-load/issues/16) in working memory. Once the cognitive load reaches this threshold, a significant effort is required to understand things.
 
 *Let's say we have been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool architectures, fancy libraries and trendy technologies were used. In other words, **the previous author had created a high cognitive load for us.***
 
