@@ -10,9 +10,9 @@ Confusion costs time and money. **Confusion is caused by high cognitive load**. 
 Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load into our code.
 
 ## Cognitive load
-> **Cognitive load is how much a developer needs to think in order to complete a task.** 
+> Cognitive load is how much a developer needs to think in order to complete a task.
 
-We should strive to reduce the cognitive load in our projects as much as possible.
+We should reduce the cognitive load in our projects as much as possible.
 
 When reading code, you hold various facts in your head, such as conditional logic, variables' values, related component's contract, effects on the coupled code and so on. The average person can hold roughly [four such unrelated facts](https://github.com/zakirullin/cognitive-load/issues/16) in working memory. Once the cognitive load reaches this threshold, a significant effort is required to understand things.
 
@@ -133,8 +133,8 @@ I have two pet projects, both of them are somewhat 5K lines of code. The first o
 
 Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.
 
-> **The best components are those that provide powerful functionality yet have simple interface.**  
-> John K. Ousterhout
+> The best components are those that provide powerful functionality yet have simple interface.  
+> **John K. Ousterhout**
 
 The interface of the UNIX I/O is very simple. It has only five basic calls:
 ```python
@@ -169,7 +169,7 @@ If there are lots of features, we may spend half an hour playing with a few line
 
 These statements are made by none other than Rob Pike.
 
-> **Reduce cognitive load by limiting the number of choices.**  
+> Reduce cognitive load by limiting the number of choices.  
 
 Language features are OK, as long as they are orthogonal to each other.
 
@@ -230,7 +230,7 @@ In fact, the same problem arises even within a single module. You might extract 
 
 Rob Pike once said:
 
-> **A little copying is better than a little dependency.**  
+> A little copying is better than a little dependency.  
 
 We are tempted to not reinvent the wheel so strong that we are ready to import large, heavy libraries to use a small function that we could easily write by ourselves. It introduces unnecessary dependencies and bloated code. Make informed decisions about when to import external libraries and when it is more appropriate to write concise, self-contained code snippets to accomplish smaller tasks.
 
@@ -295,7 +295,7 @@ Do you feel it? The above statement is difficult to understand. We have just cre
 We have enough complexity in the work that we do already, why add more on top of that? We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
 
 > Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.  
-> Brian Kernighan
+> **Brian Kernighan**
 
 Boring and straightforward code is a way to go.  
 
