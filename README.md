@@ -96,7 +96,7 @@ if isValid { // 🧠+, okay nested code applies to valid input only
 } 
 ```
 
-Compare it with the early returns and failing fast:
+Compare it with the early returns:
 ```go
 if !isValid
     return
