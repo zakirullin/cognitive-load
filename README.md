@@ -279,8 +279,11 @@ Take a look at the overarching design principles of one of the biggest tech comp
 
 Does the new fancy buzzword comply with these principles? Or all it does is creating extraneous cognitive load?
 
-![Complexity](/img/complexity.png)
-Code Complexity vs. Experience (by <a href="https://twitter.com/flaviocopes">@flaviocopes</a>)
+<details>
+  <summary><b>Here's a fun picture</b></summary>
+  <img src="img/complexity.png">
+  Code Complexity vs. Experience from <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
+</details>
 
 ## Conclusion
 *The intricate and multifaceted nature of cognitive load within the realm of comprehension and problem-solving necessitates a diligent and strategic approach in order to navigate the complexities and optimize mental capacity allocation.* `🤯`  
