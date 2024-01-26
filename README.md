@@ -152,7 +152,7 @@ A modern implementation of this interface has **hundreds of thousands of lines o
 If you think we are rooting for bloated God objects with too many responsibilities, you got it wrong.  
 
 ## Too many shallow microservices
-We can apply the aforementioned scale-agnostic principle to microservices architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that aren't that shallow. One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.
+We can apply the above scale-agnostic principle to microservices architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that aren't that shallow. One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.
 
 I once consulted a startup where a team of three developers introduced 17(!) microservices. They were 10 months behind schedule and appeared nowhere close to the public release. Every new requirement led to changes in 4+ microservices. Diagnostic difficulty in integration space skyrocketed. Both time to market and cognitive load were unacceptably high. `🤯`  
 
@@ -267,7 +267,7 @@ This architecture was something that made intuitive sense at first, but every ti
 
 Even though these layered architectures have accelerated an important shift from traditional database-centric applications to a somewhat infrastructure-independent approach, where the core business logic is independent of anything external, the idea is by no means novel.  
 
-These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamentals instead: DIP, isolation, single source of truth, true invariant, complexity, cognitive load and information hiding.
+These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamentals instead: dependency inversion principle, isolation, single source of truth, true invariant, complexity, cognitive load and information hiding.
 
 ## Learning from the Giants
 Take a look at the overarching design principles of one of the biggest tech companies:  
@@ -279,11 +279,8 @@ Take a look at the overarching design principles of one of the biggest tech comp
 
 Does the new fancy buzzword comply with these principles? Or all it does is creating extraneous cognitive load?
 
-<details>
-  <summary><b>Here's a fun picture</b></summary>
-  <img src="img/complexity.jpg">
-  Code Complexity vs. Experience from <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
-</details>
+![Complexity](/img/complexity.png)
+Code Complexity vs. Experience (by <a href="https://twitter.com/flaviocopes">@flaviocopes</a>)
 
 ## Conclusion
 *The intricate and multifaceted nature of cognitive load within the realm of comprehension and problem-solving necessitates a diligent and strategic approach in order to navigate the complexities and optimize mental capacity allocation.* `🤯`  
