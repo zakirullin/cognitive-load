@@ -281,8 +281,8 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 
 <details>
   <summary><b>Here's a fun picture</b></summary>
-  <img src="img/complexity.png">
-  Code Complexity vs. Experience from <a href="https://twitter.com/flaviocopes">@flaviocopes</a><br><br>
+  <img src="img/complexity.png"><br>
+  Code Complexity vs. Experience from <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
 
 ## Conclusion
