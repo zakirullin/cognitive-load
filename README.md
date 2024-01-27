@@ -234,7 +234,7 @@ Rob Pike once said:
 
 We are tempted to not reinvent the wheel so strong that we are ready to import large, heavy libraries to use a small function that we could easily write by ourselves. It introduces unnecessary dependencies and bloated code. Make informed decisions about when to import external libraries and when it is more appropriate to write concise, self-contained code snippets to accomplish smaller tasks.
 
-By being mindful of the DRY principle, we can write more efficient and manageable code, while abusing it could lead to indirect coupling (or just unnecessary coupling), premature abstractions and large, generic solutions, maintenance complexity, high cognitive load.
+Abuse of this principle could lead to indirect coupling (or just unnecessary coupling), premature abstractions and large, generic solutions, maintenance complexity, high cognitive load.
 
 ## Tight coupling with a framework
 Frameworks evolve at their own pace, which in most cases doesn't match the lifecycle of our project.
