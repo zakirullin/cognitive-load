@@ -262,6 +262,8 @@ Even though these layered architectures have accelerated an important shift from
 
 These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamentals instead: dependency inversion principle, isolation, single source of truth, true invariant, complexity, cognitive load and information hiding.
 
+[Discussion](https://github.com/zakirullin/cognitive-load/discussions/24)
+
 ## DDD
 Domain-driven design has some great points, although it is often misinterpreted. People say "We write code in DDD", which is a bit strange, because DDD is about problem space, not about solution space.
 
