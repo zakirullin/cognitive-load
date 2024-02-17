@@ -1,6 +1,6 @@
 # Cognitive Load In Software Development
 
-*It is a living document, last update: **January 2024***
+*It is a living document, last update: **February 2024***
 
 ## Introduction
 There are so many buzzwords and best practices out there, but let's focus on something more fundamental. What matters is the amount of confusion developers feel going through the code.
@@ -286,6 +286,9 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
   <img src="img/complexity.png"><br>
   Code Complexity vs. Experience from <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
+
+> One principle duct tape programmers understand well is that any kind of coding technique that’s even slightly complicated is going to doom your project. Duct tape programmers tend to avoid C++, templates, multiple inheritance, multithreading, DDD and a host of other things that are all totally reasonable, when you think long and hard about them, but are, honestly, just a little bit too hard for the human brain.
+> **Joel Spolsky**
 
 ## Conclusion
 *The intricate and multifaceted nature of cognitive load within the realm of comprehension and problem-solving necessitates a diligent and strategic approach in order to navigate the complexities and optimize mental capacity allocation.* `🤯`  
