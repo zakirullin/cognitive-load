@@ -287,7 +287,7 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
   Code Complexity vs. Experience from <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
 
-> One principle duct tape programmers understand well is that any kind of coding technique that’s even slightly complicated is going to doom your project. Duct tape programmers tend to avoid C++, templates, multiple inheritance, multithreading and a host of other technologies that are all totally reasonable, when you think long and hard about them, but are, honestly, just a little bit too hard for the human brain.  
+> One principle duct tape programmers understand well is that any kind of coding technique that’s even slightly complicated is going to doom your project. Duct tape programmers tend to avoid C++, templates, multiple inheritance, multithreading and a host of other technologies that are all totally reasonable, when you think long and hard about them, but are, honestly, **just a little bit too hard for the human brain**.  
 > **Joel Spolsky**
 
 ## Conclusion
