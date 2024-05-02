@@ -18,7 +18,7 @@ When reading code, you put things like values of variables, control flow logic a
 
 <details>
   <summary><b>Cognitive load and interruptions</b></summary>
-  <img src="img/interruption.jpg"><br>
+  <img src="img/interruption.jpeg"><br>
   Why developers hate being interrupted
 </details>
 
