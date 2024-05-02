@@ -36,7 +36,6 @@ The tricky part is that the previous author may not have experienced a high cogn
 <details>
   <summary><b>Cognitive load and interruptions</b></summary>
   <img src="img/interruption.jpeg"><br>
-  Why developers hate being interrupted
 </details>
 
 ## Types of cognitive load
