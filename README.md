@@ -96,7 +96,6 @@ if isValid { // 🧠+, okay nested code applies to valid input only
     if isSecure { // 🧠++, we do stuff1 for valid and secure input only
         stuff1 // 🧠+++
     }
-    stuff2 // 🧠++++, we do stuff2 for all sorts of valid input, we should keep in mind stuff1, because it may interfere with our stuff2
 } 
 ```
 
@@ -105,16 +104,12 @@ Compare it with the early returns:
 if !isValid
     return
  
-// 🧠, we don't really care about earlier returns, if we are here then all good
-
-stuff2 // 🧠+
-
 if !isSecure
     return
-   
-// 🧠+
 
-stuff1 // 🧠++
+// 🧠, we don't really care about earlier returns, if we are here then all good
+
+stuff1 // 🧠+
 ```
 
 We can focus on the happy path only, thus freeing our working memory from all sorts of preconditions.
