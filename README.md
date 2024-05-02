@@ -16,12 +16,6 @@ We should reduce the cognitive load in our projects as much as possible.
 
 When reading code, you put things like values of variables, control flow logic and call sequences into your head. The average person can hold roughly [four such things](https://github.com/zakirullin/cognitive-load/issues/16) in working memory. Once the cognitive load reaches this threshold, a significant effort is required to understand things.
 
-<details>
-  <summary><b>Cognitive load and interruptions</b></summary>
-  <img src="img/interruption.jpeg"><br>
-  Why developers hate being interrupted
-</details>
-
 *Let's say we have been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool architectures, fancy libraries and trendy technologies were used. In other words, **the previous author had created a high cognitive load for us.***
 
 ![Cognitive Load](/img/cognitiveloadv4.png)
@@ -39,6 +33,11 @@ The tricky part is that the previous author may not have experienced a high cogn
   <blockquote>Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve.</blockquote>
 </details>
 
+<details>
+  <summary><b>Cognitive load and interruptions</b></summary>
+  <img src="img/interruption.jpeg"><br>
+  Why developers hate being interrupted
+</details>
 
 ## Types of cognitive load
 **Intrinsic** - caused by the inherent difficulty of a task. It can't be reduced, it's at the very heart of software development.  
