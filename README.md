@@ -93,8 +93,8 @@ if isValid && isAllowed && isSecure {
 ## Nested ifs
 ```go
 if isValid { // 🧠+, okay nested code applies to valid input only
-    if isSecure { // 🧠++, we do stuff1 for valid and secure input only
-        stuff1 // 🧠+++
+    if isSecure { // 🧠++, we do stuff for valid and secure input only
+        stuff // 🧠+++
     }
 } 
 ```
@@ -109,7 +109,7 @@ if !isSecure
 
 // 🧠, we don't really care about earlier returns, if we are here then all good
 
-stuff1 // 🧠+
+stuff // 🧠+
 ```
 
 We can focus on the happy path only, thus freeing our working memory from all sorts of preconditions.
