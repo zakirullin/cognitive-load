@@ -286,8 +286,8 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
   Code Complexity vs. Experience from <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
 
-> One principle duct tape programmers understand well is that any kind of coding technique that’s even slightly complicated is going to doom your project. Duct tape programmers tend to avoid C++, templates, multiple inheritance, multithreading and a host of other technologies that are all totally reasonable, when you think long and hard about them, but are, honestly, **just a little bit too hard for the human brain**.  
-> **Joel Spolsky**
+> Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.  
+> **Brian Kernighan**
 
 ## Conclusion
 *The intricate and multifaceted nature of cognitive load within the realm of comprehension and problem-solving necessitates a diligent and strategic approach in order to navigate the complexities and optimize mental capacity allocation.* `🤯`  
@@ -297,9 +297,6 @@ Do you feel it? The above statement is difficult to understand. We have just cre
 ![Smart Author](/img/smartauthorv2.png)
 
 We have enough complexity in the work that we do already, why add more on top of that? We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
-
-> Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.  
-> **Brian Kernighan**
 
 Boring and straightforward code is a way to go.  
 
