@@ -1,4 +1,4 @@
-# Cognitive Load In Software Development
+# Cognitive Load is what matters
 
 *It is a living document, last update: **February 2024***
 
