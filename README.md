@@ -43,7 +43,7 @@ The tricky part is that the previous author may not have experienced a high cogn
 
 **Extraneous** - created by the way the information is presented. Caused by factors not directly relevant to the task, such as smart author's quirks. Can be greatly reduced. We will focus on this type of cognitive load. 
 
-![Intrinsic vs Extraneous](/img/smartauthorv3.png)
+![Intrinsic vs Extraneous](/img/smartauthorv4.png)
 
 Let's jump straight to the concrete practical examples of extraneous cognitive load.
 
@@ -294,7 +294,7 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 
 Do you feel it? The above statement is difficult to understand. We have just created an unnecessary cognitive load in your head. **Do not do this to your colleagues.**
 
-![Smart Author](/img/smartauthorv3.png)
+![Smart Author](/img/smartauthorv4.png)
 
 We have enough complexity in the work that we do already, why add more on top of that? We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
 
