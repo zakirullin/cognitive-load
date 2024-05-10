@@ -5,7 +5,7 @@
 ## Introduction
 There are so many buzzwords and best practices out there, but let's focus on something more fundamental. What matters is the amount of confusion developers feel going through the code.
 
-Confusion costs time and money. **Confusion is caused by high cognitive load**. It's not some fancy invented concept like OOP, but rather a fundamental human constraint.
+Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy invented concept, but rather a fundamental human constraint.
 
 Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load into our code. 
 
