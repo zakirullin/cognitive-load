@@ -5,9 +5,9 @@
 ## Introduction
 There are so many buzzwords and best practices out there, but let's focus on something more fundamental. What matters is the amount of confusion developers feel going through the code.
 
-Confusion costs time and money. **Confusion is caused by high cognitive load**. It's not a fancy imaginary concept, it's a fundamental constraint, and we can feel it.
-
-Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load into our code.
+Confusion costs time and money. **Confusion is caused by high cognitive load**. It's not some fancy imaginary concept, it's a fundamental human constraint, and that makes it of the utmost importance.
+ 
+Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load into our code. 
 
 ## Cognitive load
 > Cognitive load is how much a developer needs to think in order to complete a task.
@@ -56,20 +56,6 @@ We will refer to the level cognitive load as follows:
 `🧠++`: two facts in our working memory, cognitive load increased  
 `🤯`: working memory overflow, more than 4 facts  
 
-## Inheritance nightmare
-We are asked to change a few things for our admin users: `🧠`
-
-`AdminController extends UserController extends GuestController extends BaseController`
-
-Ohh, part of the functionality is in `BaseController`, let's have a look: `🧠+`  
-Basic role mechanics got introduced in `GuestController`: `🧠++`  
-Things got partially altered in `UserController`: `🧠+++`  
-Finally we are here, `AdminController`, let's code stuff! `🧠++++`  
-
-Oh, wait, there's `SuperuserController` which extends `AdminController`. By modifying `AdminController` we can break things in the inherited class, so let's dive in `SuperuserController` first: `🤯`
-
-Prefer composition over inheritance. We won't go into detail - there's [plenty of material](https://www.youtube.com/watch?v=hxGOiiR9ZKg) out there.
-
 ## Complex conditionals 
 ```go
 if val > someConstant // 🧠+
@@ -113,6 +99,20 @@ stuff // 🧠+
 ```
 
 We can focus on the happy path only, thus freeing our working memory from all sorts of preconditions.
+
+## Inheritance nightmare
+We are asked to change a few things for our admin users: `🧠`
+
+`AdminController extends UserController extends GuestController extends BaseController`
+
+Ohh, part of the functionality is in `BaseController`, let's have a look: `🧠+`  
+Basic role mechanics got introduced in `GuestController`: `🧠++`  
+Things got partially altered in `UserController`: `🧠+++`  
+Finally we are here, `AdminController`, let's code stuff! `🧠++++`  
+
+Oh, wait, there's `SuperuserController` which extends `AdminController`. By modifying `AdminController` we can break things in the inherited class, so let's dive in `SuperuserController` first: `🤯`
+
+Prefer composition over inheritance. We won't go into detail - there's [plenty of material](https://www.youtube.com/watch?v=hxGOiiR9ZKg) out there.
 
 ## Too many small methods, classes or modules
 > Method, class and module are interchangeable in this context 
