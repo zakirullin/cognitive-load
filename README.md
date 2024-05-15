@@ -296,7 +296,7 @@ Do you feel it? The above statement is difficult to understand. We have just cre
 
 ![Smart Author](/img/smartauthorv4.png)
 
-The work we do is already mentally taxing, why make it worse? We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
+The work we do is already mentally demanding, why make it worse? We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
 
 Boring and straightforward code is a way to go.  
 
