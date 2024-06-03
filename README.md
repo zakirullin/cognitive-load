@@ -43,7 +43,7 @@ The tricky part is that the previous author may not have experienced a high cogn
 
 **Extraneous** - created by the way the information is presented. Caused by factors not directly relevant to the task, such as smart author's quirks. Can be greatly reduced. We will focus on this type of cognitive load. 
 
-![Intrinsic vs Extraneous](/img/smartauthorv4.png)
+![Intrinsic vs Extraneous](/img/smartauthorv5.png)
 
 Let's jump straight to the concrete practical examples of extraneous cognitive load.
 
@@ -122,7 +122,7 @@ Mantras like "methods should be shorter than 15 lines of code" or "classes shoul
 **Deep module** - simple interface, complex functionality  
 **Shallow module** - interface is relatively complex to the small functionality it provides 
 
-![Deep module](/img/deepmodulev4.png)
+![Deep module](/img/deepmodulev5.png)
 
 Having too many shallow modules can make it difficult understand the project. **Not only do we have to keep in mind each module responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. `🤯`
 
@@ -294,7 +294,7 @@ Does the new fancy buzzword comply with these principles? Or all it does is crea
 
 Do you feel it? The above statement is difficult to understand. We have just created an unnecessary cognitive load in your head. **Do not do this to your colleagues.**
 
-![Smart Author](/img/smartauthorv4.png)
+![Smart Author](/img/smartauthorv5.png)
 
 We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
 
