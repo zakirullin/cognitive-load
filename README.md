@@ -299,7 +299,5 @@ Do you feel it? The above statement is difficult to understand. We have just cre
 
 We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
 
-Boring and straightforward code is a way to go.  
-
 ---
 Follow on [GitHub](https://github.com/zakirullin), [Twitter](https://twitter.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
