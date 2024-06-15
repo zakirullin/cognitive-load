@@ -1,9 +1,9 @@
 # Cognitive Load is what matters
 
-*It is a living document, last update: **May 2024***
+*It is a living document, last update: **June 2024***
 
 ## Introduction
-There are so many buzzwords and best practices out there, but let's focus on something more fundamental. What matters is the amount of confusion developers feel going through the code.
+There are so many buzzwords and best practices out there, but they are all imagined. What is real is the confusion developers feel when going through the code.
 
 Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy abstract concept, but rather a fundamental human constraint.
 
