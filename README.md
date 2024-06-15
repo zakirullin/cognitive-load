@@ -3,7 +3,7 @@
 *It is a living document, last update: **June 2024***
 
 ## Introduction
-There are so many buzzwords and best practices out there, but they are all imagined. What is real is the confusion developers feel when going through the code.
+There are so many buzzwords and best practices out there, but they are all but imagined. What is real is the confusion developers feel when going through the code.
 
 Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy abstract concept, but rather a fundamental human constraint.
 
