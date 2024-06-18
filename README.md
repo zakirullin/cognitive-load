@@ -32,7 +32,7 @@ The tricky part is that the previous author may not have experienced a high cogn
   <i>Thanks to <a href="https://dannorth.net">Dan North</a> for his comment above.</i><br><br>
 </details>
 
-Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve.  
+Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improvein your code.  
 
 <details>
   <summary><b>Cognitive load and interruptions</b></summary>
