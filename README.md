@@ -30,8 +30,9 @@ The tricky part is that the previous author may not have experienced a high cogn
   In my class I describe a sprawling SQL stored procedure we were looking at one day, with hundreds of lines of conditionals in a huge WHERE clause. Someone asked how anyone could have let it get this bad. I told them: “When there are only 2 or 3 conditionals, adding another one doesn’t make any difference. By the time there are 20 or 30 conditionals, adding another one doesn’t make any difference!”<br><br>
   There is no “simplifying force” acting on the code base other than deliberate choices that you make. Simplifying takes effort, and people are too often in a hurry.<br><br>
   <i>Thanks to <a href="https://dannorth.net">Dan North</a> for his comment above.</i><br><br>
-  <blockquote>Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve.</blockquote>
 </details>
+
+Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve.  
 
 <details>
   <summary><b>Cognitive load and interruptions</b></summary>
