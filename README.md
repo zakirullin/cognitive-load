@@ -5,7 +5,7 @@
 ## Introduction
 There are so many buzzwords and best practices out there, but let's focus on something more fundamental. What matters is the amount of confusion developers feel when going through the code.
 
-Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy abstract concept, but rather **a fundamental human constraint**. It offers more practical, concrete insights than the all-too-familiar "keep it simple" approach.
+Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy abstract concept, but rather **a fundamental human constraint**. It offers more practical insights than the all-too-familiar "keep it simple" approach.
 
 Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load into our code. 
 
@@ -253,7 +253,7 @@ There is a certain engineering excitement about all this stuff.
 
 I myself was a passionate advocate of Onion Architecture for years. I used it here and there and encouraged other teams to do so. The complexity of our projects went up, the sheer number of files alone had doubled. It felt like we were writing a lot of glue code. On ever changing requirements we had to make changes across multiple layers of abstractions, it all became tedious. `🤯`
 
-Jumping from call to call to read along and figure out what goes wrong and what is missing is a vital requirement to quickly solve problem. With this architecture’s layer uncoupling it requires an exponential factor of extra, often disjointed, traces to get to the point where the failure occurs. `🤯`  
+Jumping from call to call to read along and figure out what goes wrong and what is missing is a vital requirement to quickly solve problem. With this architecture’s layer uncoupling it requires an exponential factor of extra, often disjointed, traces to get to the point where the failure occurs. Every such trace takes space in our limited working memory. `🤯`  
 
 This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it made a lot more harm than good. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.**
 
@@ -301,4 +301,4 @@ Do you feel it? The above statement is difficult to understand. We have just cre
 We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
 
 ---
-Follow on [GitHub](https://github.com/zakirullin), [Twitter](https://twitter.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
+Follow on [Twitter](https://twitter.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
