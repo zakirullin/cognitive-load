@@ -6,7 +6,7 @@
 There are so many buzzwords and best practices out there, but let's focus on something more fundamental. What matters is the amount of confusion developers feel when going through the code.
 
 Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy abstract concept, but rather **a fundamental human constraint**.
- Cognitive load gives us far more concrete insights than the vague concept of simplicity.
+ This concept gives us far more concrete insights than the vague simplicity principle.
 
 Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load into our code. 
 
