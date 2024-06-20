@@ -301,4 +301,4 @@ Do you feel it? The above statement is difficult to understand. We have just cre
 We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
 
 ---
-Follow on [Twitter](https://twitter.com/zakirullin), [GitHub](https://github.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
+Follow on [Twitter](https://twitter.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
