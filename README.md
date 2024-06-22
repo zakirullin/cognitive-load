@@ -199,7 +199,7 @@ The guys on the frontend use backend API to implement login functionality. They 
 `403` is for not enough access // `🧠++`  
 `418` is for banned users // `🧠+++`  
 
-Frontend devs would (hopefully) introduce variables/functions like `isTokenExpired(status)`, so that subsequent generations of developers wouldn't have to recreate this kind of `status -> meaning` mapping in their brains.
+Frontend developers would (hopefully) introduce some kind `numeric status -> meaning` dictionary on their side, so that subsequent generations of contributors wouldn't have to recreate this mapping in their brains.
 
 Then QA people come into play:
 "Hey, I got `403` status, is that expired token or not enough access?"
