@@ -156,7 +156,7 @@ We can apply the above scale-agnostic principle to microservices architecture as
 
 I once consulted a startup where a team of three developers introduced 17(!) microservices. They were 10 months behind schedule and appeared nowhere close to the public release. Every new requirement led to changes in 4+ microservices. Diagnostic difficulty in integration space skyrocketed. Both time to market and cognitive load were unacceptably high. `🤯`  
 
-Is this the right way to approach the uncertainty of a new system? It's enormously difficult to elicit the right logical boundaries in the beginning, and by introducing too many microservices we make things worse. The team's only justification was: "The F(M)AANG companies proved microservices architecture to be effective". Hello, you got to stop dreaming big.
+Is this the right way to approach the uncertainty of a new system? It's enormously difficult to elicit the right logical boundaries in the beginning, and by introducing too many microservices we make things worse. The team's only justification was: "The F(M)AANG companies proved microservices architecture to be effective". *Hello, you got to stop dreaming big.*
 
 Checkout the [Tanenbaum–Torvalds debate](https://en.wikipedia.org/wiki/Tanenbaum%E2%80%93Torvalds_debate). The claim was that Linux's monolithic design was flawed and obsolete, and that we should do a microkernel architecture instead. Indeed, the microkernel design seemed to be superior "from a theoretical and aesthetical" point of view. Three decades on, microkernel-based GNU Hurd is not yet production ready, and Linux is everywhere - this page is powered by Linux, your smart teapot is powered by Linux.  
 
