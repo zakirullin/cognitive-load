@@ -68,7 +68,7 @@ if val > someConstant // 🧠+
 
 Introduce intermediate variables with meaningful names:
 ```go
-isValid = var > someConstant
+isValid = val > someConstant
 isAllowed = condition2 || condition3
 isSecure = condition4 && !condition5 
 // 🧠, we don't need to remember the conditions, there are descriptive variables
