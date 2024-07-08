@@ -61,7 +61,7 @@ We will refer to the level cognitive load as follows:
 ```go
 if val > someConstant // 🧠+
     && (condition2 || condition3) // 🧠+++, prev cond should be true, one of c2 or c3 has be true
-    && (condition4 && !condition5) { // 🤯, we are messed up here
+    && (condition4 && !condition5) { // 🤯, we are messed up by this point
     ...
 }
 ```
