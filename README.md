@@ -223,12 +223,6 @@ People spend time arguing between `401` and `403`, making decisions based on the
 
 P.S. It's often mentally taxing to distinguish between "authentication" and "authorization". We can use simpler terms like ["login" and "permissions"](https://ntietz.com/blog/lets-say-instead-of-auth/) to reduce the cognitive load.
 
-## Business logic and HTTP verbs
-
-As for this mystical "RESTful API" and using all sorts of HTTP verbs, the standard simply doesn't exist. The only valid document on the matter is a paper published by Roy Fielding, dated back in 2000, and it says nothing about verbs. People get along with just a few basic HTTP statuses and POSTs only, and they are doing just fine.
-
-`POST /getItems`. How awful is that? Does it make you feel uncomfortable? We've migrated from `GET` to `POST` because we'd reached the filter query length limit. The only minor drawback is that `POST /getItems` is not aesthetically pleasing to read. But nowadays client-side libraries are code-generated, so you'd only see fancy `api.getItems()`. 
-
 ## Abusing DRY principle
 
 Do not repeat yourself - that is one of the first principles you are taught as a software engineer. It is so deeply embedded in ourselves that we can not stand the fact of a few extra lines of code. Although in general a good and fundamental rule, when overused it leads to the cognitive load we can not handle.
