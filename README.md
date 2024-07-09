@@ -12,7 +12,7 @@ Since we spend far more time reading and understanding code than writing it, we 
 ## Cognitive load
 > Cognitive load is how much a developer needs to think in order to complete a task.
 
-When reading code, you put things like values of variables, control flow logic and call sequences into your head. The average person can hold roughly [four such items](https://github.com/zakirullin/cognitive-load/issues/16) in working memory. Once the cognitive load reaches this threshold, it becomes much harder to understand things.
+When reading code, you put things like values of variables, control flow logic and call sequences into your head. The average person can hold roughly [four such chunks](https://github.com/zakirullin/cognitive-load/issues/16) in working memory. Once the cognitive load reaches this threshold, it becomes much harder to understand things.
 
 *Let's say we have been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool architectures, fancy libraries and trendy technologies were used. In other words, **the previous author had created a high cognitive load for us.***
 
