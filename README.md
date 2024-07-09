@@ -217,7 +217,7 @@ Why hold this custom mapping in our working memory? It's better to abstract away
 Cognitive load on the frontend side: `🧠` (fresh, no facts are held in mind)  
 Cognitive load on the QA side: `🧠`
 
-The same rule applies to all sorts of numeric statuses (in database or wherever) - prefer self-describing strings. We are not in the era of 640K computers to optimise for memory.  
+The same rule applies to all sorts of numeric statuses (in the database or wherever) - **prefer self-describing strings**. We are not in the era of 640K computers to optimise for memory.  
 
 People spend time arguing between `401` and `403`, making decisions based on their own mental models. New developers are coming in, and they need to recreate that thought process. You may have documented the "whys" (ADRs) for your code, helping newcomers to understand the decisions made. But in the end it just doesn't make any sense. We can separate errors into either user-related or server-related, but apart from that, things are kind of blurry. 
 
