@@ -282,7 +282,7 @@ Take a look at the overarching design principles of one of the biggest tech comp
 `Maintainability`: The code is easy for a future programmer to modify correctly.  
 `Consistency`: The code is consistent with the broader codebase.  
 
-Does the new fancy buzzword comply with these principles? Or all it does is creating extraneous cognitive load?
+Does your code comply with these principles? Or all it does is creating extraneous cognitive load?
 
 <details>
   <summary><b>Here's a fun picture</b></summary>
