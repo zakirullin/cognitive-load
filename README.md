@@ -235,7 +235,7 @@ Rob Pike once said:
 
 > A little copying is better than a little dependency.  
 
-We are tempted to not reinvent the wheel so strong that we are ready to import large, heavy libraries to use a small function that we could easily write by ourselves. It introduces unnecessary dependencies and bloated code. Make informed decisions about when to import external libraries and when it is more appropriate to write concise, self-contained code snippets to accomplish smaller tasks.
+We are tempted to not reinvent the wheel so strong that we are ready to import large, heavy libraries to use a small function that we could easily write by ourselves. Make informed decisions about when to import external libraries and when it is more appropriate to write concise, self-contained code snippets to accomplish smaller tasks.
 
 ## Tight coupling with a framework
 Frameworks evolve at their own pace, which in most cases doesn't match the lifecycle of our project.
