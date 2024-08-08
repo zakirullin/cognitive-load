@@ -272,6 +272,12 @@ Ubiquitous language, domain, bounded context, aggregate, event storming are all 
 
 Chances are that the way we interpret DDD is likely to be unique and subjective. And if we build code upon this understanding, i.e., if we create a lot of extraneous cognitive load - future developers are doomed. `🤯`
 
+<details>
+  <summary><b>Here's a fun picture</b></summary>
+  <img src="img/complexity.png"><br>
+  <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
+</details>
+
 ## Conclusion
 *The intricate and multifaceted nature of cognitive load within the realm of comprehension and problem-solving necessitates a diligent and strategic approach in order to navigate the complexities and optimize mental capacity allocation.* `🤯`  
 
@@ -280,12 +286,6 @@ Do you feel it? The above statement is difficult to understand. We have just cre
 ![Smart Author](/img/smartauthorv5.png)
 
 We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
-
-<details>
-  <summary><b>Here's a fun picture</b></summary>
-  <img src="img/complexity.png"><br>
-  <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
-</details>
 
 ---
 Follow on [Twitter](https://twitter.com/zakirullin), [GitHub](https://github.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
