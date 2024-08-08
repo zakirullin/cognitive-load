@@ -284,7 +284,7 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
 <details>
   <summary><b>Here's a fun picture</b></summary>
   <img src="img/complexity.png"><br>
-  Code Complexity vs. Experience from <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
+  <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
 
 ---
