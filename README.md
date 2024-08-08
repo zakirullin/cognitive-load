@@ -1,6 +1,6 @@
 # Cognitive Load is what matters
 
-*It is a living document, last update: **June 2024***
+*It is a living document, last update: **August 2024***
 
 ## Introduction
 There are so many buzzwords and best practices out there, but let's focus on something more fundamental. What matters is the amount of confusion developers feel when going through the code.
@@ -158,7 +158,7 @@ I once consulted a startup where a team of three developers introduced 17(!) mic
 
 Is this the right way to approach the uncertainty of a new system? It's enormously difficult to elicit the right logical boundaries in the beginning. The key is to make decisions as late as you can responsibly wait, because that is when you have the most information on which to base the decision. By introducing a network layer we make our design decisions hard to revert right from the start. The team's only justification was: "The F(M)AANG companies proved microservices architecture to be effective". *Hello, you got to stop dreaming big.*
 
-The [Tanenbaum-Torvalds debate](https://en.wikipedia.org/wiki/Tanenbaum%E2%80%93Torvalds_debate) argued that Linux's monolithic design was flawed and obsolete, and that a microkernel architecture should be used instead. Indeed, the microkernel design seemed to be superior "from a theoretical and aesthetical" point of view. On the practical side of things - three decades on, microkernel-based GNU Hurd is still in development, and monolithic Linux is everywhere. This page is powered by Linux, your smart teapot is powered by Linux.  
+The [Tanenbaum-Torvalds debate](https://en.wikipedia.org/wiki/Tanenbaum%E2%80%93Torvalds_debate) argued that Linux's monolithic design was flawed and obsolete, and that a microkernel architecture should be used instead. Indeed, the microkernel design seemed to be superior "from a theoretical and aesthetical" point of view. On the practical side of things - three decades on, microkernel-based GNU Hurd is still in development, and monolithic Linux is everywhere. This page is powered by Linux, your smart teapot is powered by Linux. By monolothic Linux.
 
 A well-crafted monolith with truly isolated modules is often much more flexible than a bunch of microservices. It also requires far less cognitive effort to maintain. It's only when the need for separate deployments becomes crucial (e.g. development team scaling) that you should consider adding a network layer between the modules (future microservices).
 
@@ -237,8 +237,6 @@ Rob Pike once said:
 
 We are tempted to not reinvent the wheel so strong that we are ready to import large, heavy libraries to use a small function that we could easily write by ourselves. It introduces unnecessary dependencies and bloated code. Make informed decisions about when to import external libraries and when it is more appropriate to write concise, self-contained code snippets to accomplish smaller tasks.
 
-Abuse of this principle could lead to indirect coupling (or just unnecessary coupling), premature abstractions and large, generic solutions, maintenance complexity, high cognitive load.
-
 ## Tight coupling with a framework
 Frameworks evolve at their own pace, which in most cases doesn't match the lifecycle of our project.
 
@@ -274,25 +272,6 @@ Ubiquitous language, domain, bounded context, aggregate, event storming are all 
 
 Chances are that the way we interpret DDD is likely to be unique and subjective. And if we build code upon this understanding, i.e., if we create a lot of extraneous cognitive load - future developers are doomed. `🤯`
 
-## Learning from the Giants
-Take a look at the overarching design principles of one of the biggest tech companies:  
-`Clarity`: The code’s purpose and rationale is clear to the reader.  
-`Simplicity`: The code accomplishes its goal in the simplest way possible.  
-`Concision`: The code is easy to discern the relevant details, and the naming and structure guide the reader through these details.  
-`Maintainability`: The code is easy for a future programmer to modify correctly.  
-`Consistency`: The code is consistent with the broader codebase.  
-
-Does your code comply with these principles? Or all it does is creating extraneous cognitive load?
-
-<details>
-  <summary><b>Here's a fun picture</b></summary>
-  <img src="img/complexity.png"><br>
-  Code Complexity vs. Experience from <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
-</details>
-
-> Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.  
-> **Brian Kernighan**
-
 ## Conclusion
 *The intricate and multifaceted nature of cognitive load within the realm of comprehension and problem-solving necessitates a diligent and strategic approach in order to navigate the complexities and optimize mental capacity allocation.* `🤯`  
 
@@ -301,6 +280,12 @@ Do you feel it? The above statement is difficult to understand. We have just cre
 ![Smart Author](/img/smartauthorv5.png)
 
 We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
+
+<details>
+  <summary><b>Here's a fun picture</b></summary>
+  <img src="img/complexity.png"><br>
+  Code Complexity vs. Experience from <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
+</details>
 
 ---
 Follow on [Twitter](https://twitter.com/zakirullin), [GitHub](https://github.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
