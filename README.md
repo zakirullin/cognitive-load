@@ -176,7 +176,7 @@ These statements are made by none other than Rob Pike.
 Language features are OK, as long as they are orthogonal to each other.
 
 <details>
-  <summary><b>Thoughts from an engineer with 20+ years of C++ experience ⭐️</b></summary>
+  <summary><b>Thoughts from an engineer with 20 years of C++ experience ⭐️</b></summary>
   <br>
   I was looking at my RSS reader the other day and noticed that I have somewhat three hundred unread articles under the "C++" tag. I haven't read a single article about the language since last summer, and I feel great!<br><br>
   I've been using C++ for 20 years for now, that's almost two-thirds of my life. Most of my experience lies in dealing with the darkest corners of the language (such as undefined behaviours of all sorts). It's not a reusable experience, and it's kind of creepy to throw it all away now.<br><br>
