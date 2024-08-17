@@ -14,13 +14,13 @@ Since we spend far more time reading and understanding code than writing it, we 
 
 When reading code, you put things like values of variables, control flow logic and call sequences into your head. The average person can hold roughly [four such chunks](https://github.com/zakirullin/cognitive-load/issues/16) in working memory. Once the cognitive load reaches this threshold, it becomes much harder to understand things.
 
-*Let's say we have been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool architectures, fancy libraries and trendy technologies were used. In other words, **the previous author had created a high cognitive load for us.***
+*Let's say we have been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool architectures, fancy libraries and trendy technologies were used. In other words, **the author had created a high cognitive load for us.***
 
 ![Cognitive Load](/img/cognitiveloadv4.png)
 
 We should reduce the cognitive load in our projects as much as possible.
 
-The tricky part is that the previous author may not have experienced a high cognitive load due to familiarity with the project.
+The tricky part is that the author may not have experienced a high cognitive load due to familiarity with the project.
 
 <details>
   <summary><b>Familiarity vs Simplicity</b></summary>
