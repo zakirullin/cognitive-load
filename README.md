@@ -165,9 +165,9 @@ A well-crafted monolith with truly isolated modules is often much more flexible 
 ## Feature-rich languages
 We feel excited when new features got released in our favourite language. We spend some time learning these features, we build code upon them.
 
-If there are lots of features, we may spend half an hour playing with a few lines of code, to use one or another feature. And it's kind of a waste of time. But what's worse, **when you come back later, you would have to recreate that thought process!** `🤯`
-
-**You not only have to understand this complicated program, you have to understand why a programmer decided this was the way to approach a problem from the features that are available.**  
+If there are lots of features, we may spend half an hour playing with a few lines of code, to use one or another feature. And it's kind of a waste of time. But what's worse, **when you come back later, you would have to recreate that thought process!**
+ 
+**You not only have to understand this complicated program, you have to understand why a programmer decided this was the way to approach a problem from the features that are available.** `🤯`
 
 These statements are made by none other than Rob Pike.
 
