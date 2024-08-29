@@ -281,7 +281,7 @@ Chances are that the way we interpret DDD is likely to be unique and subjective.
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
 
-Do you feel it? The above paragraph is difficult to understand. We have just created an unnecessary cognitive load in your head. **Do not do this to your colleagues.**
+Do you feel it? Not only do we have to jump all over the article to follow the references, but the paragraph in general is difficult to understand. We have just created an unnecessary cognitive load in your head. **Do not do this to your colleagues.**
 
 ![Smart Author](/img/smartauthorv5.png)
 
