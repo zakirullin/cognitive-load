@@ -279,7 +279,7 @@ Chances are that the way we interpret DDD is likely to be unique and subjective.
 </details>
 
 ## Conclusion
-Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either `🤯`  
+Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
 
 Do you feel it? The above paragraph is difficult to understand. We have just created an unnecessary cognitive load in your head. **Do not do this to your colleagues.**
 
