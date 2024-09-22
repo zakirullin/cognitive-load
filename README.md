@@ -152,14 +152,14 @@ A modern implementation of this interface has **hundreds of thousands of lines o
 If you think we are rooting for bloated God objects with too many responsibilities, you got it wrong.  
 
 ## Shallow modules and SRP
-All too often, engineers end up creating lots of shallow modules, following some vague "a module should be responsible for one, and only one, thing" principle. What's that fuzzy one thing? Instantiating an object is one thing, right? So we'll introduce lots of `Builder` and `FactoryFactory` classes, and they all do only one thing. That's all very wrong.  
+All too often, engineers end up creating lots of shallow modules, following some vague "a module should be responsible for one, and only one, thing" principle. What is this fuzzy one thing? Instantiating an object is one thing, right? How about saving a user? We introduce things like `MetricsProviderFactoryFactory` and `UserSaver` classes, and all they do is one tiny thing. The names and interfaces of such classes tend to be more mentally taxing than their entire implementations, what kind of abstraction is that? That's all very wrong.  
 
-We make changes to our systems to satisfy our stackeholders and users. **They are our reasons to change**. This is what this Single Responsibility Principle is all about.   
+We make changes to our systems to satisfy our stackeholders and users. We are responsible to them.  
 
 > A module should be responsible to one, and only one, user or stackeholder.  
 > **Uncle Bob**
 
-Even now, this interpretation can do more harm than good. This rule can be understood in as many different ways as there are people. Looking back at how much cognitive load a decision induces is a more clearer way.   
+This is what this Single Responsibility Principle is all about. But even now, this interpretation can do more harm than good. This rule can be understood in as many different ways as there are people. Looking back at how much cognitive load a decision induces is a more clearer way.   
 
 ## Too many shallow microservices
 This shallow-deep module principle is scale-agnostic, and we can apply it to microservices architecture. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that are not so shallow (=deep). One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.
