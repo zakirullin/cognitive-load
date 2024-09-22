@@ -155,6 +155,7 @@ All too often, engineers end up creating shallow modules, following some vague "
 We make changes to our systems to satisfy our stackeholders and users. **They are our reasons to change**. This is what this Single Responsibility Principle is all about.   
 
 > A module should be responsible to one, and only one, user or stackeholder.  
+> **Uncle Bob**
 
 Even now, this interpretation can do more harm than good. Looking back at how much cognitive load a decision induces is a more clearer way.   
 
