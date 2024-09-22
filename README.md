@@ -149,6 +149,8 @@ A modern implementation of this interface has **hundreds of thousands of lines o
 
 > This deep module example is taken from the book [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php) by John K. Ousterhout. Not only does this book cover the very essence of complexity in software development, but it also has the greatest interpretation of Parnas' influential paper [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf). Both are essential reads. Other related readings: [It's probably time to stop recommending Clean Code](https://qntm.org/clean), [Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29), [Linear code is more readable](https://blog.separateconcerns.com/2023-09-11-linear-code.html).
 
+If you think we are rooting for bloated God objects with too many responsibilities, you got it wrong.  
+
 ## Shallow modules and SRP
 All too often, engineers end up creating shallow modules, following some vague "a module should do one, and only one, thing" principle. What's that fuzzy one thing? Instantiating an object is one thing, right? So we'll introduce lots of `Builder` and `FactoryFactory` classes, and they all do only one thing. That's very wrong.  
 
