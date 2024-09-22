@@ -152,7 +152,7 @@ A modern implementation of this interface has **hundreds of thousands of lines o
 If you think we are rooting for bloated God objects with too many responsibilities, you got it wrong.  
 
 ## Shallow modules and SRP
-All too often, engineers end up creating shallow modules, following some vague "a module should do one, and only one, thing" principle. What's that fuzzy one thing? Instantiating an object is one thing, right? So we'll introduce lots of `Builder` and `FactoryFactory` classes, and they all do only one thing. That's very wrong.  
+All too often, engineers end up creating shallow modules, following some vague "a module should be responsible for one, and only one, thing" principle. What's that fuzzy one thing? Instantiating an object is one thing, right? So we'll introduce lots of `Builder` and `FactoryFactory` classes, and they all do only one thing. That's all very wrong.  
 
 We make changes to our systems to satisfy our stackeholders and users. **They are our reasons to change**. This is what this Single Responsibility Principle is all about.   
 
