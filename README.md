@@ -1,6 +1,6 @@
 # Cognitive Load is what matters
 
-*It is a living document, last update: **August 2024***
+*It is a living document, last update: **September 2024***
 
 ## Introduction
 There are so many buzzwords and best practices out there, but let's focus on something more fundamental. What matters is the amount of confusion developers feel when going through the code.
@@ -149,7 +149,12 @@ A modern implementation of this interface has **hundreds of thousands of lines o
 
 > This deep module example is taken from the book [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php) by John K. Ousterhout. Not only does this book cover the very essence of complexity in software development, but it also has the greatest interpretation of Parnas' influential paper [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf). Both are essential reads. Other related readings: [It's probably time to stop recommending Clean Code](https://qntm.org/clean), [Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29), [Linear code is more readable](https://blog.separateconcerns.com/2023-09-11-linear-code.html).
 
-If you think we are rooting for bloated God objects with too many responsibilities, you got it wrong.  
+## Shallow modules and SRP
+All too often, engineers end up creating shallow modules, following some vague "a module should do one, and only one, thing" principle. What's that fuzzy one thing? Instantiating an object is one thing, right? So we'll introduce lots of `Builder` and `FactoryFactory` classes, and they all do only one thing. That's very wrong.  
+
+We make changes to our systems to satisfy our stackeholders and users. **They are our reasons to change**. This is what this Single Responsibility Principle is all about.   
+
+> A module should be responsible to one, and only one, user or stackeholder.  
 
 ## Too many shallow microservices
 We can apply the above scale-agnostic principle to microservices architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that aren't that shallow. One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.
