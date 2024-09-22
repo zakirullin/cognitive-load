@@ -161,7 +161,7 @@ We make changes to our systems to satisfy our stackeholders and users. We are re
 
 This is what this Single Responsibility Principle is all about. Simply put, if we introduce a bug in one place, and then two different business people come to complain, we've violated the principle. It has nothing to do with the number of things we do in our module.    
 
-But even now, this interpretation can do more harm than good. This rule can be understood in as many different ways as there are individuals. A better approach would be to look at how much cognitive load it all creates. It's mentally demanding to remember that change in one module can trigger a chain of reactions across different business streams.  
+But even now, this interpretation can do more harm than good. This rule can be understood in as many different ways as there are individuals. A better approach would be to look at how much cognitive load it all creates. It's mentally demanding to remember that change in one module can trigger a chain of reactions across different business streams. And that's about it.  
 
 ## Too many shallow microservices
 This shallow-deep module principle is scale-agnostic, and we can apply it to microservices architecture. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that are not so shallow (=deep). One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.
