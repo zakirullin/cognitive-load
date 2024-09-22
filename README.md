@@ -159,7 +159,7 @@ We make changes to our systems to satisfy our stackeholders and users. **They ar
 > A module should be responsible to one, and only one, user or stackeholder.  
 > **Uncle Bob**
 
-Even now, this interpretation can do more harm than good. Looking back at how much cognitive load a decision induces is a more clearer way.   
+Even now, this interpretation can do more harm than good. This rule can be understood in as many different ways as there are people. Looking back at how much cognitive load a decision induces is a more clearer way.   
 
 ## Too many shallow microservices
 We can apply the above scale-agnostic principle to microservices architecture as well. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that aren't that shallow. One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.
