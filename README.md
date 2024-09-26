@@ -14,11 +14,6 @@ Since we spend far more time reading and understanding code than writing it, we 
 
 When reading code, you put things like values of variables, control flow logic and call sequences into your head. The average person can hold roughly [four such chunks](https://github.com/zakirullin/cognitive-load/issues/16) in working memory. Once the cognitive load reaches this threshold, it becomes much harder to understand things.
 
-<details>
-  <summary><b>Cognitive load and interruptions</b></summary>
-  <img src="img/interruption.jpeg"><br>
-</details>
-
 *Let's say we have been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool architectures, fancy libraries and trendy technologies were used. In other words, **the author had created a high cognitive load for us.***
 
 ![Cognitive Load](/img/cognitiveloadv4.png)
@@ -284,12 +279,6 @@ Ubiquitous language, domain, bounded context, aggregate, event storming are all 
 
 Chances are that the way we interpret DDD is likely to be unique and subjective. And if we build code upon this understanding, i.e., if we create a lot of extraneous cognitive load - future developers are doomed. `🤯`
 
-<details>
-  <summary><b>Here's a fun picture</b></summary>
-  <img src="img/complexity.png"><br>
-  <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
-</details>
-
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
 
@@ -301,3 +290,16 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
 
 ---
 Follow on [Twitter](https://twitter.com/zakirullin), [GitHub](https://github.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
+
+<details>
+  <summary><b>Cognitive load and interruptions</b></summary>
+  <img src="img/interruption.jpeg"><br>
+</details>
+
+<details>
+  <summary><b>Here's a fun picture</b></summary>
+  <img src="img/complexity.png"><br>
+  <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
+</details>
+
+
