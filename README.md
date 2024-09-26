@@ -291,13 +291,14 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
 ---
 Follow on [Twitter](https://twitter.com/zakirullin), [GitHub](https://github.com/zakirullin) or connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/)
 
+Some folklore:
 <details>
   <summary><b>Cognitive load and interruptions</b></summary>
   <img src="img/interruption.jpeg"><br>
 </details>
 
 <details>
-  <summary><b>Here's a fun picture</b></summary>
+  <summary><b>Coding principles and experience</b></summary>
   <img src="img/complexity.png"><br>
   <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
