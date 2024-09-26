@@ -43,8 +43,6 @@ Once you onboard new people on your project, try to measure the amount of confus
 
 Let's jump straight to the concrete practical examples of extraneous cognitive load.
 
-*P.S.  contributions are welcome!*
-
 ---
 
 We will refer to the level cognitive load as follows:  
@@ -302,3 +300,5 @@ Some folklore:
   <summary><b>Cognitive load and interruptions</b></summary>
   <img src="img/interruption.jpeg"><br>
 </details>
+
+**Contributions are welcome!**
