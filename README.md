@@ -293,14 +293,12 @@ Follow on [Twitter](https://twitter.com/zakirullin), [GitHub](https://github.com
 
 Some folklore:
 <details>
-  <summary><b>Cognitive load and interruptions</b></summary>
-  <img src="img/interruption.jpeg"><br>
-</details>
-
-<details>
   <summary><b>Coding principles and experience</b></summary>
   <img src="img/complexity.png"><br>
   <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
 
-
+<details>
+  <summary><b>Cognitive load and interruptions</b></summary>
+  <img src="img/interruption.jpeg"><br>
+</details>
