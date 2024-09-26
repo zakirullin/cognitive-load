@@ -1,6 +1,6 @@
 # Cognitive Load is what matters
 
-*It is a living document, last update: **September 2024**, your contributions are welcome!*
+*It is a living document, last update: **September 2024**. Your contributions are welcome!*
 
 ## Introduction
 There are so many buzzwords and best practices out there, but let's focus on something more fundamental. What matters is the amount of confusion developers feel when going through the code.
