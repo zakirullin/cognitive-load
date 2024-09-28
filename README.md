@@ -268,9 +268,7 @@ If you think these architectures allow you to quickly swap out databases or othe
 
 Even though these layered architectures have accelerated an important shift from traditional database-centric applications to a somewhat infrastructure-independent approach, where the core business logic is independent of anything external, the idea is by no means novel.  
 
-These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamental rules instead: dependency inversion principle, cognitive load and information hiding.
-
-[Discussion](https://github.com/zakirullin/cognitive-load/discussions/24)
+These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamental rules instead: dependency inversion principle, cognitive load and information hiding. [Discuss](https://github.com/zakirullin/cognitive-load/discussions/24)
 
 ## DDD
 Domain-driven design has some great points, although it is often misinterpreted. People say "We write code in DDD", which is a bit strange, because DDD is about problem space, not about solution space.
