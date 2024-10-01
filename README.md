@@ -147,7 +147,7 @@ If you think we are rooting for bloated God objects with too many responsibiliti
 ## Shallow modules and SRP
 All too often, we end up creating lots of shallow modules, following some vague "a module should be responsible for one, and only one, thing" principle. What is this blurry one thing? Instantiating an object is one thing, right? So `MetricsProviderFactoryFactory` seems to be just fine. The names and interfaces of such classes tend to be more mentally taxing than their entire implementations, what kind of abstraction is that? Something went wrong.  
 
-We make changes to our systems to satisfy our stackeholders and users. We are responsible to them.  
+We make changes to our systems to satisfy our users and stackeholders. We are responsible to them.  
 
 > A module should be responsible to one, and only one, user or stackeholder.  
 > **Uncle Bob**
