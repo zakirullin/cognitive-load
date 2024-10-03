@@ -142,8 +142,6 @@ A modern implementation of this interface has **hundreds of thousands of lines o
 
 > This deep module example is taken from the book [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php) by John K. Ousterhout. Not only does this book cover the very essence of complexity in software development, but it also has the greatest interpretation of Parnas' influential paper [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf). Both are essential reads. Other related readings: [It's probably time to stop recommending Clean Code](https://qntm.org/clean), [Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29).
 
-Jumping between components is also mentally demanding, [linear thinking](https://blog.separateconcerns.com/2023-09-11-linear-code.html) is more natural to us humans.  
-
 P.S. If you think we are rooting for bloated God objects with too many responsibilities, you got it wrong.  
 
 ## Shallow modules and SRP
@@ -157,6 +155,8 @@ We make changes to our systems to satisfy our users and stackeholders. We are re
 This is what this Single Responsibility Principle is all about. Simply put, if we introduce a bug in one place, and then two different business people come to complain, we've violated the principle. It has nothing to do with the number of things we do in our module.    
 
 But even now, this interpretation can do more harm than good. This rule can be understood in as many different ways as there are individuals. A better approach would be to look at how much cognitive load it all creates. It's mentally demanding to remember that change in one module can trigger a chain of reactions across different business streams. And that's about it.  
+
+> Jumping between such components is also mentally demanding, [linear thinking](https://blog.separateconcerns.com/2023-09-11-linear-code.html) is more natural to us humans.  
 
 ## Too many shallow microservices
 This shallow-deep module principle is scale-agnostic, and we can apply it to microservices architecture. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that are not so shallow (=deep). One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.
