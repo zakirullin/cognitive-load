@@ -32,7 +32,7 @@ The tricky part is that the author may not have experienced a high cognitive loa
 >
 > *Thanks to [Dan North](https://dannorth.net) for his comment*.  
 
-The author has internalized the project into his long-term memory, so there's nothing to think about.  
+The author has internalized the project into his long-term memory, so there's nothing for him to think about.  
 
 ![Mental Models](/img/mentalmodelsv13.png)
 
