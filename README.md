@@ -34,7 +34,7 @@ The tricky part is that the author may not have experienced a high cognitive loa
 
 The author has internalized the project into his long-term memory, so there's nothing for him to think about.  
 
-![Mental Models](/img/mentalmodelsv13.png)
+![Mental Models](/img/mentalmodelsv14.png)
 
 The more mental models there are to learn, the longer it takes for a new developer to deliver value.  
 
