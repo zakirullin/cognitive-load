@@ -36,7 +36,7 @@ The author has internalized the project into his long-term memory, so there's no
 
 ![Mental Models](/img/mentalmodelsv13.png)
 
-The more mental models there are to internalize, the longer it takes for a new developer to deliver value.  
+The more mental models there are to learn, the longer it takes for a new developer to deliver value.  
 
 Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code. 
 
