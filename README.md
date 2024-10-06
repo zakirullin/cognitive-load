@@ -32,8 +32,6 @@ The tricky part is that the author may not have experienced a high cognitive loa
 >
 > *Thanks to [Dan North](https://dannorth.net) for his comment*.  
 
-Over time, the author internalizes the mental models of the project and feels no cognitive load.  
-
 ![Mental Models](/img/mentalmodelsv8.png)
 
 When you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code.  
