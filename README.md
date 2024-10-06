@@ -32,7 +32,7 @@ There is no “simplifying force” acting on the code base other than deliberat
 
 *Thanks to [Dan North](https://dannorth.net) for his comment*.  
 
-![Mental Models](/img/mentalmodelsv3.png)
+![Mental Models](/img/mentalmodelsv4.png)
 
 Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code.  
 
