@@ -45,7 +45,7 @@ Once you onboard new people on your project, try to measure the amount of confus
 
 **Extraneous** - created by the way the information is presented. Caused by factors not directly relevant to the task, such as smart author's quirks. Can be greatly reduced. We will focus on this type of cognitive load. 
 
-![Intrinsic vs Extraneous](/img/smartauthorv9.png)
+![Intrinsic vs Extraneous](/img/smartauthorv5.png)
 
 Let's jump straight to the concrete practical examples of extraneous cognitive load.
 
@@ -290,7 +290,7 @@ Imagine for a moment that what we inferred in the second chapter isn’t actuall
 
 Do you feel it? Not only do you have to jump all over the article to get the meaning (shallow modules!), but the paragraph in general is difficult to understand. We have just created an unnecessary cognitive load in your head. **Do not do this to your colleagues.**
 
-![Smart Author](/img/smartauthorv9.png)
+![Smart Author](/img/smartauthorv5.png)
 
 We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
 
