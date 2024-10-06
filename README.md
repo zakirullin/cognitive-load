@@ -32,7 +32,7 @@ The tricky part is that the author may not have experienced a high cognitive loa
 >
 > *Thanks to [Dan North](https://dannorth.net) for his comment*.  
 
-Over time, the author learns the mental models of the project and doesn't experience any cognitive load.  
+Over time, the author internalizes the mental models of the project and feels no cognitive load.  
 
 ![Mental Models](/img/mentalmodelsv8.png)
 
