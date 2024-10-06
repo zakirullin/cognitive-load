@@ -32,6 +32,8 @@ The tricky part is that the author may not have experienced a high cognitive loa
   <i>Thanks to <a href="https://dannorth.net">Dan North</a> for his comment above.</i><br><br>
 </details>
 
+![Mental Models](/img/mentalmodels.png)
+
 Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code.  
 
 ## Types of cognitive load
