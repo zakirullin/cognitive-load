@@ -36,7 +36,7 @@ The author has internalized the project, so there's nothing to think about.
 
 ![Mental Models](/img/mentalmodelsv8.png)
 
-When you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code. The more mental models there are to internalize, the longer it takes for a new developer to deliver value.  
+The more mental models there are to internalize, the longer it takes for a new developer to deliver value. Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code. 
 
 ## Types of cognitive load
 **Intrinsic** - caused by the inherent difficulty of a task. It can't be reduced, it's at the very heart of software development.  
