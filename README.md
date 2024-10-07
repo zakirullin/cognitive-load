@@ -267,9 +267,7 @@ Chances are that the way we interpret DDD is likely to be unique and subjective.
 
 ## Low cognitive load vs familiarity 
 
-So the author of the code should keep the cognitive load low.  
-
-The tricky part here is that the author may not experience a high cognitive load due to familiarity with the project. 
+The tricky part here is that the you may not experience a high cognitive load due to familiarity with the project. 
 
 > **Low cognitive load is not the same as familiarity**. They *feel* the same — that same ease of moving through a space without much mental effort — but for very different reasons. Every “clever” (read: “self-indulgent”) and non-idiomatic trick you use incurs a learning penalty for everyone else. Once they have done that learning, then they will find working with the code less difficult. So it is hard to recognise how to simplify code that you are already familiar with. This is why I try to get “the new kid” to critique the code before they get too institutionalised!  
 >
@@ -281,9 +279,9 @@ The tricky part here is that the author may not experience a high cognitive load
 >
 > *Thanks to [Dan North](https://dannorth.net) for his comment*.  
 
-The author has internalized the project into his long-term memory, so there's nothing for him to think about.  
+You've internalized the project into your long-term memory, so you don't experience cognitive load.  
 
-![Mental Models](/img/mentalmodelsv14.png)
+![Mental Models](/img/mentalmodelsv15.png)
 
 The more mental models there are to learn, the longer it takes for a new developer to deliver value.  
 
