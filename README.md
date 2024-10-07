@@ -279,7 +279,7 @@ You may not experience a high cognitive load due to familiarity with the project
 >
 > *Thanks to [Dan North](https://dannorth.net) for his comment*.  
 
-If you are familiar with the project and have internalized it into your long-term memory, you won't experience a high cognitive load.  
+If you've internalized the mental models of the project into your long-term memory, you won't experience a high cognitive load.  
 
 ![Mental Models](/img/mentalmodelsv15.png)
 
