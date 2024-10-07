@@ -20,28 +20,6 @@ When reading code, you put things like values of variables, control flow logic a
 
 We should reduce the cognitive load in our projects as much as possible.
 
-## Low cognitive load vs familiarity 
-
-The tricky part is that the author may not have experienced a high cognitive load due to familiarity with the project. 
-
-> **Low cognitive load is not the same as familiarity**. They *feel* the same — that same ease of moving through a space without much mental effort — but for very different reasons. Every “clever” (read: “self-indulgent”) and non-idiomatic trick you use incurs a learning penalty for everyone else. Once they have done that learning, then they will find working with the code less difficult. So it is hard to recognise how to simplify code that you are already familiar with. This is why I try to get “the new kid” to critique the code before they get too institutionalised!  
->
-> It is likely that the previous author(s) created this huge mess one tiny increment at a time, not all at once. So you are the first person who has ever had to try to make sense of it all at once.  
->
-> In my class I describe a sprawling SQL stored procedure we were looking at one day, with hundreds of lines of conditionals in a huge WHERE clause. Someone asked how anyone could have let it get this bad. I told them: “When there are only 2 or 3 conditionals, adding another one doesn’t make any difference. By the time there are 20 or 30 conditionals, adding another one doesn’t make any difference!”  
->
-> There is no “simplifying force” acting on the code base other than deliberate choices that you make. Simplifying takes effort, and people are too often in a hurry.  
->
-> *Thanks to [Dan North](https://dannorth.net) for his comment*.  
-
-The author has internalized the project into his long-term memory, so there's nothing for him to think about.  
-
-![Mental Models](/img/mentalmodelsv14.png)
-
-The more mental models there are to learn, the longer it takes for a new developer to deliver value.  
-
-Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code. 
-
 ## Types of cognitive load
 **Intrinsic** - caused by the inherent difficulty of a task. It can't be reduced, it's at the very heart of software development.  
 
@@ -286,6 +264,30 @@ Domain-driven design has some great points, although it is often misinterpreted.
 Ubiquitous language, domain, bounded context, aggregate, event storming are all about problem space. They are meant to help us learn the insights about the domain and extract the boundaries. DDD enables developers, domain experts and business people to communicate effectively using a single, unified language. Rather than focusing on these problem space aspects of DDD, we tend to emphasise particular folder structures, services, repositories, and other solution space techniques. 
 
 Chances are that the way we interpret DDD is likely to be unique and subjective. And if we build code upon this understanding, i.e., if we create a lot of extraneous cognitive load - future developers are doomed. `🤯`
+
+## Low cognitive load vs familiarity 
+
+So the author of the code should keep the cognitive load low.  
+
+The tricky part here is that the author may not experience a high cognitive load due to familiarity with the project. 
+
+> **Low cognitive load is not the same as familiarity**. They *feel* the same — that same ease of moving through a space without much mental effort — but for very different reasons. Every “clever” (read: “self-indulgent”) and non-idiomatic trick you use incurs a learning penalty for everyone else. Once they have done that learning, then they will find working with the code less difficult. So it is hard to recognise how to simplify code that you are already familiar with. This is why I try to get “the new kid” to critique the code before they get too institutionalised!  
+>
+> It is likely that the previous author(s) created this huge mess one tiny increment at a time, not all at once. So you are the first person who has ever had to try to make sense of it all at once.  
+>
+> In my class I describe a sprawling SQL stored procedure we were looking at one day, with hundreds of lines of conditionals in a huge WHERE clause. Someone asked how anyone could have let it get this bad. I told them: “When there are only 2 or 3 conditionals, adding another one doesn’t make any difference. By the time there are 20 or 30 conditionals, adding another one doesn’t make any difference!”  
+>
+> There is no “simplifying force” acting on the code base other than deliberate choices that you make. Simplifying takes effort, and people are too often in a hurry.  
+>
+> *Thanks to [Dan North](https://dannorth.net) for his comment*.  
+
+The author has internalized the project into his long-term memory, so there's nothing for him to think about.  
+
+![Mental Models](/img/mentalmodelsv14.png)
+
+The more mental models there are to learn, the longer it takes for a new developer to deliver value.  
+
+Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code. 
 
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
