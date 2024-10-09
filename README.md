@@ -135,9 +135,9 @@ All too often, we end up creating lots of shallow modules, following some vague 
 
 > Jumping between such shallow components is also mentally exhausting, [linear thinking](https://blog.separateconcerns.com/2023-09-11-linear-code.html) is more natural to us humans.  
 
-We make changes to our systems to satisfy our users and stackeholders. We are responsible to them.  
+We make changes to our systems to satisfy our users and stakeholders. We are responsible to them.  
 
-> A module should be responsible to one, and only one, user or stackeholder.  
+> A module should be responsible to one, and only one, user or stakeholder.  
 > **Uncle Bob**
 
 This is what this Single Responsibility Principle is all about. Simply put, if we introduce a bug in one place, and then two different business people come to complain, we've violated the principle. It has nothing to do with the number of things we do in our module.    
