@@ -36,6 +36,8 @@ We will refer to the level cognitive load as follows:
 `🧠++`: two facts in our working memory, cognitive load increased  
 `🤯`: working memory overflow, more than 4 facts  
 
+P.S. Our brain is [much more complex than this](https://github.com/zakirullin/cognitive-load/issues/16), but we can go with this simplistic model.
+
 ## Complex conditionals 
 ```go
 if val > someConstant // 🧠+
