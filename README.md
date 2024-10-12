@@ -36,7 +36,7 @@ We will refer to the level cognitive load as follows:
 `🧠++`: two facts in our working memory, cognitive load increased  
 `🤯`: working memory overflow, more than 4 facts  
 
-> Our brain is [much more complex and unexplored](https://github.com/zakirullin/cognitive-load/issues/16), but we can go with this simplistic model.
+> Our brain is much more complex and unexplored, but we can go with this simplistic model.
 
 ## Complex conditionals 
 ```go
