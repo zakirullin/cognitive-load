@@ -1,5 +1,7 @@
 # Cognitive Load is what matters
 
+[Readable version](https://minds.md/zakirullin/cognitive)
+
 *It is a living document, last update: **October 2024**. Your contributions are welcome!*
 
 ## Introduction
