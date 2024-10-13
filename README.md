@@ -312,3 +312,6 @@ Some folklore:
   <summary><b>Cognitive load and interruptions</b></summary>
   <img src="img/interruption.jpeg"><br>
 </details>
+
+Readable version:
+[minds.md/zakirullin/cognitive](https://minds.md/zakirullin/cognitive)
