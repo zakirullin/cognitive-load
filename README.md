@@ -313,5 +313,5 @@ Some folklore:
   <img src="img/interruption.jpeg"><br>
 </details>
 
-Readable version:
+Readable version:  
 [minds.md/zakirullin/cognitive](https://minds.md/zakirullin/cognitive)
