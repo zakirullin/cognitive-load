@@ -258,10 +258,10 @@ This architecture was something that made intuitive sense at first, but every ti
 
 If you think that such layering will allow you to quickly replace a database or other dependencies, you're mistaken. Changing the storage causes lots of problems, and believe us, having some abstractions for the data access layer is the least of your worries. At best, abstractions can save somewhat 10% of your migration time (if any), the real pain is in data model incompatibilities, communication protocols, distributed systems challenges, and implicit interfaces.
 
-> With a sufficient number of users of an API,
-> it does not matter what you promise in the contract:
-> all observable behaviors of your system
-> will be depended on by somebody.
+> With a sufficient number of users of an API,  
+> it does not matter what you promise in the contract:  
+> all observable behaviors of your system  
+> will be depended on by somebody.  
 > [The law of implicit interfaces](https://www.hyrumslaw.com/).
 
 **So, why pay the price of high cognitive load for such an architecture, if it doesn't pay off in the future?** Plus, in most cases, that future of replacing some core component never happens.  
