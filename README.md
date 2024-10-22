@@ -242,7 +242,9 @@ Worse yet, at some point frameworks can become a significant constraint when fac
 
 **By no means do we advocate to invent everything from scratch!**
 
-We can write code in a somewhat framework-agnostic way. The business logic should not reside within a framework; rather, it should use the framework's components. Put a framework outside of your core logic. Use the framework in a library-like fashion. This would allow new contributors to add value from day one, without the need of going through debris of framework-related complexity first.
+We can write code in a somewhat framework-agnostic way. The business logic should not reside within a framework; rather, it should use the framework's components. Put a framework outside of your core logic. Use the framework in a library-like fashion. This would allow new contributors to add value from day one, without the need of going through debris of framework-related complexity first.  
+
+How many of you deal with frameworks today, that require you to know [special magic](https://www.infoq.com/presentations/8-lines-code-refactoring)?
 
 ## Hexagonal/Onion architecture
 There is a certain engineering excitement about all this stuff.
@@ -288,6 +290,8 @@ The more mental models there are to learn, the longer it takes for a new develop
 
 Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code. 
 
+**Can a junior developer understand your code in a matter of hours? Or there's much learning to do?**
+
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
 
@@ -302,7 +306,6 @@ Connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/), follow on [Twitt
 
 [Readable version](https://minds.md/zakirullin/cognitive)
 
-Some folklore:
 <details>
   <summary><b>Cognitive load and interruptions</b></summary>
   <img src="img/interruption.jpeg"><br>
@@ -312,3 +315,12 @@ Some folklore:
   <img src="img/complexity.png"><br>
   <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
+<details>
+    <summary><b>Some boring easy to understand architectures</b></summary>
+    <a href="https://danluu.com/simple-architectures/">Our architecture is a standard CRUD app architecture, a Python monolith on top of Postgres</a><br>
+    <a href="https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million">How Instagram scaled to 14 million users with only 3 engineers</a><br>
+    <a href="https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/">The companies where we were like ”woah, these folks are smart as hell” for the most part failed](</a><br>
+    <a href="https://www.joelonsoftware.com/2001/04/21/dont-let-architecture-astronauts-scare-you/">We've got one function that wires up the entire system. If you want to know how the system works - go read the function</a><br>  
+    <a href="https://www.joelonsoftware.com/2001/04/21/dont-let-architecture-astronauts-scare-you/">Clever thinker invents a new, broader abstraction, but nobody really knows what they're talking about</a><br> 
+</details>
+
