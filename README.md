@@ -236,15 +236,13 @@ We are tempted to not reinvent the wheel so strong that we are ready to import l
 ## Tight coupling with a framework
 Frameworks evolve at their own pace, which in most cases doesn't match the lifecycle of our project.
 
-By relying too heavily on a framework, we force all upcoming developers to learn that framework first (or its particular version). Even though frameworks enable us to launch MVPs in a matter of days, in the long run they tend to add unnecessary complexity and cognitive load.
+There's a lot of "magic" in frameworks. By relying too heavily on a framework, **we force all upcoming developers to learn that framework as well**. It can take months. Even though frameworks enable us to launch MVPs in a matter of days, in the long run they tend to add unnecessary complexity and cognitive load.
 
 Worse yet, at some point frameworks can become a significant constraint when faced with a new requirement that just doesn't fit the architecture. From here onwards people end up forking a framework and maintaining their own custom version. Imagine the amount of cognitive load a newcomer would have to build (i.e. learn this custom framework) in order to deliver any value. `🤯`
 
 **By no means do we advocate to invent everything from scratch!**
 
 We can write code in a somewhat framework-agnostic way. The business logic should not reside within a framework; rather, it should use the framework's components. Put a framework outside of your core logic. Use the framework in a library-like fashion. This would allow new contributors to add value from day one, without the need of going through debris of framework-related complexity first.  
-
-How many of you deal with frameworks today, that require you to know [special magic](https://www.infoq.com/presentations/8-lines-code-refactoring)?
 
 ## Hexagonal/Onion architecture
 There is a certain engineering excitement about all this stuff.
@@ -319,8 +317,8 @@ Connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/), follow on [Twitt
     <summary><b>Some boring easy to understand architectures</b></summary>
     <a href="https://danluu.com/simple-architectures/">Our architecture is a standard CRUD app architecture, a Python monolith on top of Postgres</a><br>
     <a href="https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million">How Instagram scaled to 14 million users with only 3 engineers</a><br>
-    <a href="https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/">The companies where we were like ”woah, these folks are smart as hell” for the most part failed](</a><br>
-    <a href="https://www.joelonsoftware.com/2001/04/21/dont-let-architecture-astronauts-scare-you/">We've got one function that wires up the entire system. If you want to know how the system works - go read the function</a><br>  
+    <a href="https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/">The companies where we were like ”woah, these folks are smart as hell” for the most part failed</a><br>
+    <a href="https://www.infoq.com/presentations/8-lines-code-refactoring">One function that wires up the entire system. If you want to know how the system works - go read it</a><br>  
     <a href="https://www.joelonsoftware.com/2001/04/21/dont-let-architecture-astronauts-scare-you/">Clever thinker invents a new, broader abstraction, but nobody really knows what they're talking about</a><br> 
 </details>
 
