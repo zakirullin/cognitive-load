@@ -289,11 +289,11 @@ Once you onboard new people on your project, try to measure the amount of confus
 **Can a junior developer understand your code in a matter of hours? Or there's much learning to do?**
 
 ## Examples
-Our architecture is a standard CRUD app architecture, [a Python monolith on top of Postgres](https://danluu.com/simple-architectures/)  
-How Instagram scaled to 14 million users with [only 3 engineers](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million)  
-The companies where we were like ”woah, these folks are [smart as hell](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” for the most part failed  
-One function that wires up the entire system. If you want to know how the system works - [go read it](https://www.infoq.com/presentations/8-lines-code-refactoring)   
-[Clever thinker](https://www.joelonsoftware.com/2001/04/21/dont-let-architecture-astronauts-scare-you/) invents a new, broader abstraction, but nobody really knows what they're talking about  
+- Our architecture is a standard CRUD app architecture, [a Python monolith on top of Postgres](https://danluu.com/simple-architectures/)  
+- How Instagram scaled to 14 million users with [only 3 engineers](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million)  
+- The companies where we were like ”woah, these folks are [smart as hell](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” for the most part failed  
+- One function that wires up the entire system. If you want to know how the system works - [go read it](https://www.infoq.com/presentations/8-lines-code-refactoring)   
+- [Clever thinker](https://www.joelonsoftware.com/2001/04/21/dont-let-architecture-astronauts-scare-you/) invents a new, broader abstraction, but nobody really knows what they're talking about  
 
 As you can see, these architectures are quite boring and easy to understand. There's not much to learn.  
 
