@@ -296,7 +296,7 @@ Once you onboard new people on your project, try to measure the amount of confus
 - The companies where we were like ”woah, these folks are [smart as hell](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” for the most part failed  
 - One function that wires up the entire system. If you want to know how the system works - [go read it](https://www.infoq.com/presentations/8-lines-code-refactoring)   
 
-As you can see, these architectures are quite boring and easy to understand. There's not much to learn.  
+These architectures are quite boring and easy to understand. There's not much to learn.  
 
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
