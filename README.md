@@ -295,7 +295,7 @@ Once you onboard new people on your project, try to measure the amount of confus
 [One function that wires up the entire system. If you want to know how the system works - go read it](https://www.infoq.com/presentations/8-lines-code-refactoring)   
 [Clever thinker invents a new, broader abstraction, but nobody really knows what they're talking about](https://www.joelonsoftware.com/2001/04/21/dont-let-architecture-astronauts-scare-you/)  
 
-As you can see, everything is quite boring and quite easy to understand.
+As you can see, everything is quite boring and easy to understand.
 
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
