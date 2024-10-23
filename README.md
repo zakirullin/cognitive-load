@@ -303,6 +303,14 @@ Connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/), follow on [Twitt
 [Readable version](https://minds.md/zakirullin/cognitive)
 
 <details>
+    <summary><b>Some boring easy to understand architectures</b></summary>
+    <a href="https://danluu.com/simple-architectures/">Our architecture is a standard CRUD app architecture, a Python monolith on top of Postgres</a><br>
+    <a href="https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million">How Instagram scaled to 14 million users with only 3 engineers</a><br>
+    <a href="https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/">The companies where we were like ”woah, these folks are smart as hell” for the most part failed</a><br>
+    <a href="https://www.infoq.com/presentations/8-lines-code-refactoring">One function that wires up the entire system. If you want to know how the system works - go read it</a><br>  
+    <a href="https://www.joelonsoftware.com/2001/04/21/dont-let-architecture-astronauts-scare-you/">Clever thinker invents a new, broader abstraction, but nobody really knows what they're talking about</a><br> 
+</details>
+<details>
   <summary><b>Cognitive load and interruptions</b></summary>
   <img src="img/interruption.jpeg"><br>
 </details>
@@ -310,13 +318,5 @@ Connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/), follow on [Twitt
   <summary><b>Coding principles and experience</b></summary>
   <img src="img/complexity.png"><br>
   <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
-</details>
-<details>
-    <summary><b>Some boring easy to understand architectures</b></summary>
-    <a href="https://danluu.com/simple-architectures/">Our architecture is a standard CRUD app architecture, a Python monolith on top of Postgres</a><br>
-    <a href="https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million">How Instagram scaled to 14 million users with only 3 engineers</a><br>
-    <a href="https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/">The companies where we were like ”woah, these folks are smart as hell” for the most part failed</a><br>
-    <a href="https://www.infoq.com/presentations/8-lines-code-refactoring">One function that wires up the entire system. If you want to know how the system works - go read it</a><br>  
-    <a href="https://www.joelonsoftware.com/2001/04/21/dont-let-architecture-astronauts-scare-you/">Clever thinker invents a new, broader abstraction, but nobody really knows what they're talking about</a><br> 
 </details>
 
