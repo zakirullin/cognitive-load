@@ -1,6 +1,6 @@
 # Cognitive Load is what matters
 
-[Readable version](https://texts.md/zakirullin/cognitive)
+[Readable version](https://zakirullin.md/cognitive)
 
 *It is a living document, last update: **October 2024**. Your contributions are welcome!*
 
@@ -288,15 +288,14 @@ The more mental models there are to learn, the longer it takes for a new develop
 
 Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code. 
 
-**Can a junior developer understand your code in a matter of hours? Or there's much learning to do?**
-
 ## Examples
 - Our architecture is a standard CRUD app architecture, [a Python monolith on top of Postgres](https://danluu.com/simple-architectures/)  
 - How Instagram scaled to 14 million users with [only 3 engineers](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million)  
 - The companies where we were like ”woah, these folks are [smart as hell](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” for the most part failed  
 - One function that wires up the entire system. If you want to know how the system works - [go read it](https://www.infoq.com/presentations/8-lines-code-refactoring)   
 
-These architectures are quite boring and easy to understand. There's not much to learn.  
+These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort.  
+
 
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
@@ -310,7 +309,7 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
 ---
 Connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/), follow on [Twitter](https://twitter.com/zakirullin) or [GitHub](https://github.com/zakirullin)
 
-[Readable version](https://texts.md/zakirullin/cognitive)
+[Readable version](https://zakirullin.md/cognitive)
 
 <details>
   <summary><b>Cognitive load and interruptions</b></summary>
