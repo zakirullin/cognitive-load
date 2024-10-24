@@ -1,6 +1,6 @@
 # Cognitive Load is what matters
 
-[Readable version](https://minds.md/zakirullin/cognitive)
+[Readable version](https://texts.md/zakirullin/cognitive)
 
 *It is a living document, last update: **October 2024**. Your contributions are welcome!*
 
@@ -310,7 +310,7 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
 ---
 Connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/), follow on [Twitter](https://twitter.com/zakirullin) or [GitHub](https://github.com/zakirullin)
 
-[Readable version](https://minds.md/zakirullin/cognitive)
+[Readable version](https://texts.md/zakirullin/cognitive)
 
 <details>
   <summary><b>Cognitive load and interruptions</b></summary>
