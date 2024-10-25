@@ -296,7 +296,7 @@ Once you onboard new people on your project, try to measure the amount of confus
 
 These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort.  
 
-Try to involve junior developers in code reviews. If a junior developer asks a question, consider reducing the cognitive load in that area.  
+Try to involve junior developers in code reviews. If a junior developer asks a question, consider reducing the cognitive load.  
 
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
