@@ -259,7 +259,7 @@ If you think that such layering will allow you to quickly replace a database or 
 
 Even though these layered architectures have accelerated an important shift from traditional database-centric applications to a somewhat infrastructure-independent approach, where the core business logic is independent of anything external, the idea is by no means novel.  
 
-These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamental rules instead: dependency inversion principle, cognitive load and information hiding. [Discuss](https://github.com/zakirullin/cognitive-load/discussions/24)
+These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamental rules instead: dependency inversion principle, cognitive load and information hiding. [Discuss](https://github.com/zakirullin/cognitive-load/discussions/24).
 
 ## DDD
 Domain-driven design has some great points, although it is often misinterpreted. People say "We write code in DDD", which is a bit strange, because DDD is about problem space, not about solution space.
@@ -296,7 +296,7 @@ Once you onboard new people on your project, try to measure the amount of confus
 
 These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort.  
 
-Try to involve junior developers in code reviews. If a junior developer asks a question, consider reducing the cognitive load.  
+You can try to achieve this by involving junior developers in code reviews. If a junior developer asks a question, consider reducing the cognitive load.  
 
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
