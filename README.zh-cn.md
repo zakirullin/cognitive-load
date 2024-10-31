@@ -104,9 +104,9 @@ stuff // 🧠+
 
 像 “方法应该少于 15 行代码” 或 “类应该很小” 这样的咒语被证明是有些错误的。
 
-**深模块**【Deep module】- 简单的接口实现复杂的功能
+**深模块**「Deep module」- 简单的接口实现复杂的功能
 
-**浅模块** 【Shallow module】- 接口相对于其所提供的小功能来说相对复杂
+**浅模块** 「Shallow module」- 接口相对于其所提供的小功能来说相对复杂
 
 ![Deep module](./img/deepmodulev5.png)
 
@@ -114,11 +114,11 @@ stuff // 🧠+
 
 > [信息隐藏](https://baike.baidu.com/item/%E4%BF%A1%E6%81%AF%E9%9A%90%E8%97%8F/3230616)是无比重要的，当然我们并不会在浅模块中隐藏很多复杂性。
 
-我有两个宠物项目，他们都有差不多 5千行代码。第一个项目有 80 个“浅类”【shallow class
+我有两个宠物项目，他们都有差不多 5千行代码。第一个项目有 80 个“浅类”「shallow class
 
-】，而第二个项目只有 7 个“深类”【deep class】，我已经有一年半没有维护这俩项目了。
+」，而第二个项目只有 7 个“深类”「deep class」，我已经有一年半没有维护这俩项目了。
 
-一次我回过头来维护项目，我认识到在第一个项目中理清那 80 个类之间的所有交互是一件极其困难的事情。在我开始编码之前，我必须重新建立大量的认知负荷。另一方面，我能够很快地理解第二个项目，因为它只有几个具有简单接口的“深类”【deep class】。
+一次我回过头来维护项目，我认识到在第一个项目中理清那 80 个类之间的所有交互是一件极其困难的事情。在我开始编码之前，我必须重新建立大量的认知负荷。另一方面，我能够很快地理解第二个项目，因为它只有几个具有简单接口的“深类”「deep class」。
 
 > 最好的组件是那些提供了强大功能但接口简单的组件。  
 > 
@@ -134,12 +134,30 @@ lseek(fd, offset, referencePosition)
 close(fd)
 ```
 
-这个接口的现代实现【modern implementation】有**数十万行代码**。许多复杂性隐藏在引擎盖下。然而，得益于其简单的接口，它是很容易使用的。
+这个接口的现代实现「modern implementation」有**数十万行代码**。许多复杂性隐藏在引擎盖下。然而，得益于其简单的接口，它是很容易使用的。
 
-> 这个“深模块”【deep module】的示例取自 John K. Ousterhout 的 [软件设计的哲学【A Philosophy of Software Design】](https://web.stanford.edu/~ouster/cgi-bin/book.php)一书。这本书不仅涵盖了软件开发中复杂性的本质，而且是对 Parnas 颇具影响力的论文 [分解系统模块的标准【On the criteria to be used in decomposing systems into modules】](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf)的最大诠释。两者都是必不可少的读物。其他相关读物：[可能是时候停止推荐清洁代码了【It's probably time to stop recommending Clean Code】](https://qntm.org/clean)、[被认为有害的小函数【Small Functions considered Harmful】](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29)。
+> 这个“深模块”「deep module」的示例取自 John K. Ousterhout 的 [软件设计的哲学【A Philosophy of Software Design】](https://web.stanford.edu/~ouster/cgi-bin/book.php)一书。这本书不仅涵盖了软件开发中复杂性的本质，而且是对 Parnas 颇具影响力的论文 [分解系统模块的标准【On the criteria to be used in decomposing systems into modules】](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf)的最大诠释。两者都是必不可少的读物。其他相关读物：[可能是时候停止推荐清洁代码了【It's probably time to stop recommending Clean Code】](https://qntm.org/clean)、[被认为有害的小函数【Small Functions considered Harmful】](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29)。
 
-P.S. 如果你认为我们是在支持那种肩负超多责任的，臃肿的“上帝对象”【God objects】，那你就错了。
+P.S. 如果你认为我们是在支持那种肩负超多责任的，臃肿的“上帝对象”「God objects」，那你就错了。
 
 ## 浅模块和单一职责原则(Shallow modules and SRP)
+
+很多时候，我们最终遵循模糊的“一个模块应该只负责一件事”的原则，创建了许多“浅模块”「Shallow modules」。这个模糊的“一件事”是什么？实例化一个对象算是“一件事”，对吗？所以“MetricsProviderFactoryFactory”这种东西似乎没啥问题。但这种类的类名和接口往往比它们的完整实现更烧脑，这是一种什么类型的抽象？似乎有些地方出了点问题。
+
+> 在这些“浅组件”「Shallow components」之间跳跃会让我们心力交瘁，[线性思维](https://blog.separateconcerns.com/2023-09-11-linear-code.html)对我们人类来说会更加自然。
+
+我们对系统进行更改以满足用户和利益相关方的需要。我们需要对他们负责。
+
+> 一个模块应该对一个且只对一个用户或利益相关方负责。
+
+这就是单一职责原则的全部内容。简单地说，如果我们在某个地方引入了一个 bug，然后有两个不同业务模块的人员来投诉，我们就违反了这个原则。这与我们在模块中做了多少事情无关。
+
+但即使是现在，这种解释也弊大于利。因为这条规则就算是同一个人，也可以用不同方式来理解。解释“单一职责原则”的更好方法是看看其造成了多少认知负荷。记住“一个模块的变化会引发不同业务流的连锁反应”这回事，是需要些心智负担的。以上。
+
+## 过多的“浅微服务”(Too many shallow microservices)
+
+前述“浅 - 深模块原理”「shallow-deep module principle」与规模无关，我们也可以将其应用于微服务架构。太多“浅微服务”「shallow microservices」不会有任何好处——业内正在走向所谓“宏服务”，即不那么“浅”「shallow」（=“深”「deep」）的服务。最糟糕和最难修复的现象之一是所谓的分布式整体，这通常是颗粒度过度细化拆分所带来的结果。
+
+我曾经咨询过一家初创公司，一个只有五个开发人员的团队推出了17(!)个微服务。它们的进度落后计划将近10个月，并且距离发布上线还有很远一段距离。
 
 todo
