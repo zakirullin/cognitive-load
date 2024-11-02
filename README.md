@@ -137,7 +137,7 @@ P.S. If you think we are rooting for bloated God objects with too many responsib
 ## Shallow modules and SRP
 All too often, we end up creating lots of shallow modules, following some vague "a module should be responsible for one, and only one, thing" principle. What is this blurry one thing? Instantiating an object is one thing, right? So `MetricsProviderFactoryFactory` seems to be just fine. The names and interfaces of such classes tend to be more mentally taxing than their entire implementations, what kind of abstraction is that? Something went wrong.  
 
-> Jumping between such shallow components is also mentally exhausting, [linear thinking](https://blog.separateconcerns.com/2023-09-11-linear-code.html) is more natural to us humans.  
+> Jumping between such shallow components is mentally exhausting, [linear thinking](https://blog.separateconcerns.com/2023-09-11-linear-code.html) is more natural to us humans.  
 
 We make changes to our systems to satisfy our users and stakeholders. We are responsible to them.  
 
