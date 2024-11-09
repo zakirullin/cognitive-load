@@ -2,7 +2,7 @@
 
 [Readable version](https://zakirullin.md/cognitive)
 
-*It is a living document, last update: **October 2024**. Your contributions are welcome!*
+*It is a living document, last update: **November 2024**. Your contributions are welcome!*
 
 ## Introduction
 There are so many buzzwords and best practices out there, but let's focus on something more fundamental. What matters is the amount of confusion developers feel when going through the code.
@@ -135,7 +135,7 @@ A modern implementation of this interface has **hundreds of thousands of lines o
 P.S. If you think we are rooting for bloated God objects with too many responsibilities, you got it wrong.  
 
 ## Shallow modules and SRP
-All too often, we end up creating lots of shallow modules, following some vague "a module should be responsible for one, and only one, thing" principle. What is this blurry one thing? Instantiating an object is one thing, right? So `MetricsProviderFactoryFactory` seems to be just fine. The names and interfaces of such classes tend to be more mentally taxing than their entire implementations, what kind of abstraction is that? Something went wrong.  
+All too often, we end up creating lots of shallow modules, following some vague "a module should be responsible for one, and only one, thing" principle. What is this blurry one thing? Instantiating an object is one thing, right? So [MetricsProviderFactoryFactory](https://minds.md/benji/frameworks) seems to be just fine. The names and interfaces of such classes tend to be more mentally taxing than their entire implementations, what kind of abstraction is that? Something went wrong.  
 
 > Jumping between such shallow components is mentally exhausting, [linear thinking](https://blog.separateconcerns.com/2023-09-11-linear-code.html) is more natural to us humans.  
 
