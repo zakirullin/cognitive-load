@@ -300,7 +300,7 @@ The more mental models there are to learn, the longer it takes for a new develop
 
 Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code.  
 
-If someone can't contribute to your codebase within the first hours of joining your company, there's too much cognitive load.  
+If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company.  
 
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
