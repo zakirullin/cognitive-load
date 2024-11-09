@@ -298,7 +298,9 @@ If you've internalized the mental models of the project into your long-term memo
 
 The more mental models there are to learn, the longer it takes for a new developer to deliver value.  
 
-Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code. 
+Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code.  
+
+If someone can't contribute to your codebase within the first 1 hour of joining your company, there's too much cognitive load.  
 
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
