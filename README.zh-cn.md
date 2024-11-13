@@ -196,25 +196,25 @@ P.S. 如果你认为我们是在支持那种肩负超多责任的、臃肿的被
 
 ## 业务逻辑和HTTP状态码(Business logic and HTTP status codes)
 
-在后端，我们返回：
+在后端，我们返回以下内容：
 
-`401` 表示jwt令牌过期
+`401` 表示jwt令牌已经过期
 
-`403` 表示访问权限不够
+`403` 表示访问权限不足
 
-`418` 表示服务器拒绝冲泡咖啡，因为它一直都是茶壶。「I'm a teapot」
+`418` 则是一种趣味设定，表示服务器拒绝冲泡咖啡，因为它其实是个茶壶。「I'm a teapot」
 
-前端开发人员利用后端的 API 来实现登录功能。他们将不得不暂时在大脑中承担以下认知负荷：
+前端开发人员利用后端的 API 来实现登录功能时，不得不暂时在大脑中承担以下认知负荷：
 
-`401` 表示jwt令牌过期// `🧠+`，好吧只是暂时记在脑子里。
+`401` 表示jwt令牌过期// `🧠+`，好吧只是暂时在脑子里记一下。
 
 `403` 表示访问权限不够// `🧠++`
 
 `418` 「I'm a teapot」// `🧠+++`
 
-前端开发人员将（希望）在他们这边引入某种 “数字状态 -> 含义” 字典，以便后续几代贡献者不必在他们的大脑中重新创建此映射。
+前端开发人员将（希望）在他们这边引入某种 “数字状态 -> 含义” 字典，这样后续的开发人员就无需在脑海中重现构建这种映射关系了。
 
-前端开发人员期望在他们的工作范围内引入一种 “数字状态 -> 含义” 的字典。以便后续的开发人员不必再在脑海中重新构建这种映射关系。
+
 
 接着，QA人员参与进来：“Hey，我得到了`403`状态码，这是令牌过期了还是权限不足呢？”
 
@@ -322,4 +322,37 @@ Rob Pike 曾经说过：
 
 ## 示例(Examples)
 
-todo
+- 我们的架构是标准的 CRUD 应用架构，是[基于Postgres 的 Python 单体应用](https://danluu.com/simple-architectures/)
+- Instagram 如何在仅有 [3 名工程师](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million) 的情况下，将用户规模扩展到的 1400 万的呢？
+- 我们喜爱的公司 “哇，这些人 [聪明绝顶](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” ，却在很大程度上遭遇了失败。  
+- 有一个功能连接着整个系统。如果你想知道系统是如何运作的 - [请阅读](https://www.infoq.com/presentations/8-lines-code-refactoring)
+
+这些架构相当枯燥，也很容易理解，任何人都能轻松掌握，无需耗费太多脑力。
+
+您可以尝试让初级开发人员参与代码审查来达成这一目的。如果初级开发人员提出问题，那就考虑减少认知负荷。
+
+## 结论(Conclusion)
+
+想象一下，我们在第二章中推断的并非真实情况。倘若如此，那么我们刚刚否定的结论，以及上一章中我们认为有效的结论，或许也不是正确的。`🤯`
+
+你感觉到了吗？你不仅需要在文章中来回跳转才能理解其含义（浅模块「shallow modules」！），而且段落总体上也很难理解。我们刚刚在你的脑海中制造了不必要的认知负荷。**请不要对你的同事这样做。**
+
+![](./img/smartauthorv13.png)
+
+我们应当减少一切超出工作本身所带来的认知负担。
+
+---
+
+Connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/), follow on [Twitter](https://twitter.com/zakirullin) or [GitHub](https://github.com/zakirullin)
+
+[Readable version](https://zakirullin.md/cognitive)
+
+<details>
+  <summary><b>认知负担与干扰因素(Cognitive load and interruptions)</b></summary>
+  <img src="img/interruption.jpeg"><br>
+</details>
+<details>
+  <summary><b>编码原理和经验(Coding principles and experience)</b></summary>
+  <img src="img/complexity.png"><br>
+  <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
+</details>
