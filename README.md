@@ -2,7 +2,7 @@
 
 [Readable version](https://zakirullin.md/cognitive)
 
-*It is a living document, last update: **October 2024**. Your contributions are welcome!*
+*It is a living document, last update: **November 2024**. Your contributions are welcome!*
 
 ## Introduction
 There are so many buzzwords and best practices out there, but let's focus on something more fundamental. What matters is the amount of confusion developers feel when going through the code.
@@ -27,7 +27,7 @@ We should reduce the cognitive load in our projects as much as possible.
 
 **Extraneous** - created by the way the information is presented. Caused by factors not directly relevant to the task, such as smart author's quirks. Can be greatly reduced. We will focus on this type of cognitive load. 
 
-![Intrinsic vs Extraneous](/img/smartauthorv13.png)
+![Intrinsic vs Extraneous](/img/smartauthorv14thanksmari.png)
 
 Let's jump straight to the concrete practical examples of extraneous cognitive load.
 
@@ -106,9 +106,9 @@ Mantras like "methods should be shorter than 15 lines of code" or "classes shoul
 **Deep module** - simple interface, complex functionality  
 **Shallow module** - interface is relatively complex to the small functionality it provides 
 
-![Deep module](/img/deepmodulev5.png)
+![Deep module](/img/deepmodulev8.png)
 
-Having too many shallow modules can make it difficult understand the project. **Not only do we have to keep in mind each module responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. `🤯`
+Having too many shallow modules can make it difficult to understand the project. **Not only do we have to keep in mind each module responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. `🤯`
 
 > Information hiding is paramount, and we don't hide as much complexity in shallow modules.
 
@@ -135,9 +135,9 @@ A modern implementation of this interface has **hundreds of thousands of lines o
 P.S. If you think we are rooting for bloated God objects with too many responsibilities, you got it wrong.  
 
 ## Shallow modules and SRP
-All too often, we end up creating lots of shallow modules, following some vague "a module should be responsible for one, and only one, thing" principle. What is this blurry one thing? Instantiating an object is one thing, right? So `MetricsProviderFactoryFactory` seems to be just fine. The names and interfaces of such classes tend to be more mentally taxing than their entire implementations, what kind of abstraction is that? Something went wrong.  
+All too often, we end up creating lots of shallow modules, following some vague "a module should be responsible for one, and only one, thing" principle. What is this blurry one thing? Instantiating an object is one thing, right? So [MetricsProviderFactoryFactory](https://minds.md/benji/frameworks) seems to be just fine. The names and interfaces of such classes tend to be more mentally taxing than their entire implementations, what kind of abstraction is that? Something went wrong.  
 
-> Jumping between such shallow components is also mentally exhausting, [linear thinking](https://blog.separateconcerns.com/2023-09-11-linear-code.html) is more natural to us humans.  
+> Jumping between such shallow components is mentally exhausting, [linear thinking](https://blog.separateconcerns.com/2023-09-11-linear-code.html) is more natural to us humans.  
 
 We make changes to our systems to satisfy our users and stakeholders. We are responsible to them.  
 
@@ -244,6 +244,8 @@ Worse yet, at some point frameworks can become a significant constraint when fac
 
 We can write code in a somewhat framework-agnostic way. The business logic should not reside within a framework; rather, it should use the framework's components. Put a framework outside of your core logic. Use the framework in a library-like fashion. This would allow new contributors to add value from day one, without the need of going through debris of framework-related complexity first.  
 
+> [Why I Hate Frameworks](https://minds.md/benji/frameworks)
+
 ## Hexagonal/Onion architecture
 There is a certain engineering excitement about all this stuff.
 
@@ -268,6 +270,16 @@ Ubiquitous language, domain, bounded context, aggregate, event storming are all 
 
 Chances are that the way we interpret DDD is likely to be unique and subjective. And if we build code upon this understanding, i.e., if we create a lot of extraneous cognitive load - future developers are doomed. `🤯`
 
+## Examples
+- Our architecture is a standard CRUD app architecture, [a Python monolith on top of Postgres](https://danluu.com/simple-architectures/)
+- How Instagram scaled to 14 million users with [only 3 engineers](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million)
+- The companies where we were like ”woah, these folks are [smart as hell](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” for the most part failed
+- One function that wires up the entire system. If you want to know how the system works - [go read it](https://www.infoq.com/presentations/8-lines-code-refactoring)
+
+These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort.
+
+Involve junior developers in architecture reviews. They will help you to identify the mentally demanding areas.
+
 ## Cognitive load in familiar projects
 
 > The problem is that **familiarity is not the same as simplicity**. They *feel* the same — that same ease of moving through a space without much mental effort — but for very different reasons. Every “clever” (read: “self-indulgent”) and non-idiomatic trick you use incurs a learning penalty for everyone else. Once they have done that learning, then they will find working with the code less difficult. So it is hard to recognise how to simplify code that you are already familiar with. This is why I try to get “the new kid” to critique the code before they get too institutionalised!  
@@ -286,29 +298,21 @@ If you've internalized the mental models of the project into your long-term memo
 
 The more mental models there are to learn, the longer it takes for a new developer to deliver value.  
 
-Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code. 
+Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code.  
 
-## Examples
-- Our architecture is a standard CRUD app architecture, [a Python monolith on top of Postgres](https://danluu.com/simple-architectures/)  
-- How Instagram scaled to 14 million users with [only 3 engineers](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million)  
-- The companies where we were like ”woah, these folks are [smart as hell](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” for the most part failed  
-- One function that wires up the entire system. If you want to know how the system works - [go read it](https://www.infoq.com/presentations/8-lines-code-refactoring)   
-
-These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort.  
-
-You can try to achieve this by involving junior developers in code reviews. If a junior developer asks a question, consider reducing the cognitive load.  
+If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company.  
 
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
 
 Do you feel it? Not only do you have to jump all over the article to get the meaning (shallow modules!), but the paragraph in general is difficult to understand. We have just created an unnecessary cognitive load in your head. **Do not do this to your colleagues.**
 
-![Smart Author](/img/smartauthorv13.png)
+![Smart Author](/img/smartauthorv14thanksmari.png)
 
 We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
 
 ---
-Connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/), follow on [Twitter](https://twitter.com/zakirullin) or [GitHub](https://github.com/zakirullin)
+[LinkedIn](https://www.linkedin.com/in/zakirullin/), [X](https://twitter.com/zakirullin), [GitHub](https://github.com/zakirullin)
 
 [Readable version](https://zakirullin.md/cognitive)
 
