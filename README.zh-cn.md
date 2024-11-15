@@ -26,7 +26,7 @@
 
 **与任务无关的** - 由信息的呈现方式导致。通常由与任务并无直接关联的因素引发，比如那些聪明人的 “骚操作”。并且这种类型的认知负荷是可以避免的。我们将在下文着重关注这一类型的认知负荷。
 
-![Intrinsic vs Extraneous](./img/smartauthorv13.png)
+![Intrinsic vs Extraneous](./img/smartauthorv14thanksmari.png)
 
 接下来让我们直接看一些“与任务无关的”认知负荷的具体实例。
 
@@ -106,7 +106,7 @@ Oh，等下，这里还有一个`AdminController`，它继承自`SuperuserContro
 
 **浅模块** 「Shallow module」- 其接口相对于自身所提供的微小功能而言相对复杂
 
-![Deep module](./img/deepmodulev5.png)
+![Deep module](./img/deepmodulev8.png)
 
 倘若项目中存在过多的 “浅模块”「Shallow module」，项目就会变得晦涩难懂。**因为人们不仅要记住每个模块所承担的职责，还要记住它们之间的所有交互关系**。为了弄明白“浅模块”「Shallow module」的用途，我们首先得查看所有与之相关的模块的逻辑。`🤯`
 
@@ -142,7 +142,7 @@ P.S. 如果你认为我们是在支持那种承担过多责任、臃肿不堪的
 
 ## 浅模块和单一职责原则(Shallow modules and SRP)
 
-很多时候，我们最终会遵循“一个模块应该只负责一件事”这一模糊的原则，进而创建出大量的“浅模块”「Shallow modules」。可这个模糊的“一件事”究竟是什么？比如实例化一个对象算是“一件事”，对吗？如此看来，像“MetricsProviderFactoryFactory”这种名称复杂的事物似乎并无不妥。然而，这类事物的类名和接口比其完整实现更令人费解，这到底是一种怎样的抽象呢？恐怕某些地方存在一些问题。
+很多时候，我们最终会遵循“一个模块应该只负责一件事”这一模糊的原则，进而创建出大量的“浅模块”「Shallow modules」。可这个模糊的“一件事”究竟是什么？比如实例化一个对象算是“一件事”，对吗？如此看来，像[MetricsProviderFactoryFactory](https://minds.md/benji/frameworks)这种名称复杂的事物似乎并无不妥。然而，这类事物的类名和接口比其完整实现更令人费解，这到底是一种怎样的抽象呢？恐怕某些地方存在一些问题。
 
 > 在“浅组件”「Shallow components」之间来回切换会使人疲惫不堪，而[线性思维](https://blog.separateconcerns.com/2023-09-11-linear-code.html)对人类来说是更自然的思维方式。
 
@@ -262,6 +262,8 @@ Rob Pike 曾经说过：
 
 我们可以采用不受特定框架束缚的方式来编写代码。例如，业务逻辑不应该被放置在框架内部；相反，它应该通过调用框架所提供的组件来实现。我们可以在核心业务逻辑之外搭建一个框架，用来处理一些通用功能。这样一来，其他开发人员就能够像使用类库一样调用这个框架。这样做能够让新的开发者从一开始就能投入工作，而不必先去了解和框架相关的复杂内容。
 
+> [为什么我讨厌“框架”「Why I Hate Frameworks」](https://minds.md/benji/frameworks)
+
 ## 六边形/洋葱架构(Hexagonal/Onion architecture)
 
 在工程学领域，所有这些东西都能带来某种令人兴奋之感。
@@ -296,6 +298,17 @@ Rob Pike 曾经说过：
 
 我们对DDD的阐释很有可能具有独特性和主观性。如果我们依照这种理解来构建代码（即如果我们制造了很多无关的认知负荷），那么未来的开发人员注定要失败。`🤯`
 
+## 示例(Examples)
+
+- 我们的架构是标准的 CRUD 应用架构，是[基于Postgres 的 Python 单体应用](https://danluu.com/simple-architectures/)
+- Instagram 如何在仅有 [3 名工程师](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million) 的情况下，将用户规模扩展到的 1400 万的呢？
+- 我们喜爱的公司 “哇，这些人 [聪明绝顶](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” ，却在很大程度上遭遇了失败。  
+- 有一个功能连接着整个系统。如果你想知道系统是如何运作的 - [请阅读](https://www.infoq.com/presentations/8-lines-code-refactoring)
+
+这些架构相当枯燥，也很容易理解，任何人都能轻松掌握，无需耗费太多脑力。
+
+安排初级开发人员参与架构审查。他们会助力你识别出那些对心智要求颇高的代码。
+
 ## 熟悉的项目中的认知负荷(Cogitive load in familiar projects)
 
 > 问题在于，熟悉并不等同于简单。二者给人的*感觉*看似是一样的 —— 都能让人不用费太多脑力就能轻松地在代码之间穿梭 —— 但原因却截然不同。你所使用的每一个 看似“聪明”（实则是“自我放纵”）和非惯用的技巧，都会让其他人在学习时备受折磨。一旦他们完成学习，他们使用代码的难度便会降低。因此，要认识到如何去简化自己已经熟悉的代码并非易事。这就是我为何要让 “新来的孩子” ，趁着在代码对他而言还没变得过于僵化之前，对代码进行审视！
@@ -316,16 +329,7 @@ Rob Pike 曾经说过：
 
 一旦有新人加入你的项目，就尝试去衡量他们的困惑程度（结对编程或许会有所帮助）。倘若他们持续困惑的时间超过 40 分钟，——意味着你的代码存在需要改进之处。
 
-## 示例(Examples)
-
-- 我们的架构是标准的 CRUD 应用架构，是[基于Postgres 的 Python 单体应用](https://danluu.com/simple-architectures/)
-- Instagram 如何在仅有 [3 名工程师](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million) 的情况下，将用户规模扩展到的 1400 万的呢？
-- 我们喜爱的公司 “哇，这些人 [聪明绝顶](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” ，却在很大程度上遭遇了失败。  
-- 有一个功能连接着整个系统。如果你想知道系统是如何运作的 - [请阅读](https://www.infoq.com/presentations/8-lines-code-refactoring)
-
-这些架构相当枯燥，也很容易理解，任何人都能轻松掌握，无需耗费太多脑力。
-
-您可以尝试让初级开发人员参与代码审查来达成这一目的。如果初级开发人员提出问题，那就考虑减少认知负荷。
+若你的项目能保持较低的认知负荷，那么新员工在入职后的最初几个小时内，就能为公司的代码库贡献力量。
 
 ## 结论(Conclusion)
 
@@ -333,13 +337,13 @@ Rob Pike 曾经说过：
 
 你感觉到了吗？你不仅需要在文章中来回跳转才能理解其含义（浅模块「shallow modules」！），而且段落总体上也很难理解。我们刚刚在你的脑海中制造了不必要的认知负荷。**请不要对你的同事这样做。**
 
-![](./img/smartauthorv13.png)
+![](./img/smartauthorv14thanksmari.png)
 
 我们应当减少一切超出工作本身所带来的认知负担。
 
 ---
 
-Connect on [LinkedIn](https://www.linkedin.com/in/zakirullin/), follow on [Twitter](https://twitter.com/zakirullin) or [GitHub](https://github.com/zakirullin)
+[LinkedIn](https://www.linkedin.com/in/zakirullin/), [X](https://twitter.com/zakirullin) , [GitHub](https://github.com/zakirullin)
 
 [Readable version](https://zakirullin.md/cognitive)
 
