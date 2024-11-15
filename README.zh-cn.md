@@ -22,25 +22,25 @@
 
 ## 认知负荷的类型(Types of cognitive load)
 
-**内在的** - 任务本身固有的难度产生的。它是软件开发的核心要素且无法降低。
+**内在的** - 源于任务本身所固有的难度。它是软件开发的核心要素，且这种难度无法降低。
 
-**与任务无关的** - 由信息的呈现方式导致。通常由与任务不直接相关的因素引起，例如：聪明人的“骚操作”。并且这种类型的认知负荷是可以避免的。我们将在下文中关注这一类型的认知负荷。
+**与任务无关的** - 由信息的呈现方式导致。通常由与任务并无直接关联的因素引发，比如那些聪明人的 “骚操作”。并且这种类型的认知负荷是可以避免的。我们将在下文着重关注这一类型的认知负荷。
 
 ![Intrinsic vs Extraneous](./img/smartauthorv13.png)
 
-让我们直接来看看一些“与任务无关的”认知负荷的具体实际例子。
+接下来让我们直接看一些“与任务无关的”认知负荷的具体实例。
 
 ---
 
 我们将认知负荷的“困惑程度”定义如下：
 
-`🧠`: 刚初始化的“工作记忆”，此时没有认知负荷
+`🧠`: 刚初始化的“工作记忆”，此时不存在认知负荷
 
-`🧠++`: 在“工作记忆”中放入了两项内容，认知负荷增加（`+`越多，负荷越多）
+`🧠++`: 在“工作记忆”中放入了两项内容，认知负荷有所增加（`+`越多，负荷越多）
 
-`🤯`:在“工作记忆”中放入了超过4项内容，导致“工作记忆” “溢出了”
+`🤯`:在“工作记忆”中放入了超过4项内容，致使“工作记忆” 出现 “溢出” 状况
 
-> 我们的大脑实际要更加复杂而神秘，这里只是用这个简单模型来简要描述认知负荷的困惑程度。
+> 我们的大脑实际要更加复杂而神秘，这里只是运用这个简单模型对认知负荷的困惑程度进行简要描述。
 
 ## 复杂的条件控制(Complex conditionals)
 
@@ -76,15 +76,15 @@ if !isSecure
 stuff // 🧠+
 ```
 
-我们可以只专注于要执行的主要逻辑，从而将“工作记忆”从各种先决条件中解放出来。
+我们可以只专注于要执行的主要逻辑，从而使“工作记忆”从各种先决条件中解放出来。
 
 ## 多继承噩梦 (Inheritance nightmare)
 
-我们被要求针对管理员用户对某些内容进行更改 `🧠`：
+我们接到要求，要针对管理员用户对某些内容进行修改 `🧠`：
 
 `AdminController extends UserController extends GuestController extends BaseController`
 
-Ohh，一部分的功能代码在`BaseController`，让我们瞅瞅：`🧠+`
+噢，一部分的功能代码在`BaseController`，让我们来看看：`🧠+`
 
 在`GuestController` 中引入了基本的角色机制：`🧠++`
 
@@ -92,33 +92,33 @@ Ohh，一部分的功能代码在`BaseController`，让我们瞅瞅：`🧠+`
 
 终于，我们来到了`AdminController`，让我们开始编码吧！：`🧠++++`
 
-Oh，等下，这里还有一个继承了`AdminController`的`SuperuserController`。修改了`AdminController`的话，另一些其它继承了它的类中的逻辑就会遭到破坏，所以我们要先了解一下`SuperuserController`：`🤯`
+Oh，等下，这里还有一个`AdminController`，它继承自`SuperuserController`。如果修改了`AdminController`，那么其它继承自它的类中的逻辑就会被破坏，所以我们要先了解一下`SuperuserController`：`🤯`
 
-通过组合不同的类来实现功能，而不是过度依赖继承。这里就不展开了——这里有很多[参考资料](https://www.youtube.com/watch?v=hxGOiiR9ZKg)。
+通过组合不同的类来实现功能，而不是过度依赖继承。关于这一点，这里就不详细阐述了——这里有很多[参考资料](https://www.youtube.com/watch?v=hxGOiiR9ZKg)。
 
 ## 存在数量过多的小方法，类或模块(Too many small methods, classes or modules)
 
-> `下述方法，类和模块是可以相互替换的`
+> `下述方法、类和模块是可以相互替换的`
 
-像 “方法应该少于 15 行代码” 或 “类应该很小” 这样的观点被证明是有些错误的。
+诸如 “方法应该少于 15 行代码” 或 “类应该很小” 之类的观点，经实践证明是存在一定错误的。
 
 **深模块**「Deep module」- 具有简单的接口却实现复杂的功能
 
-**浅模块** 「Shallow module」- 接口相对于其所提供的小功能来说相对复杂
+**浅模块** 「Shallow module」- 其接口相对于自身所提供的微小功能而言相对复杂
 
 ![Deep module](./img/deepmodulev5.png)
 
-如果项目中有太多的“浅模块”「Shallow module」，会使项目变得难以理解。**因为人们不仅要记住每个模块所承担的职责，还要记住它们之间的所有交互关系**。为了弄明白“浅模块”「Shallow module」的目的，我们首先得查看所有与之相关的模块的逻辑。`🤯`
+倘若项目中存在过多的 “浅模块”「Shallow module」，项目就会变得晦涩难懂。**因为人们不仅要记住每个模块所承担的职责，还要记住它们之间的所有交互关系**。为了弄明白“浅模块”「Shallow module」的用途，我们首先得查看所有与之相关的模块的逻辑。`🤯`
 
-> [信息隐藏](https://baike.baidu.com/item/%E4%BF%A1%E6%81%AF%E9%9A%90%E8%97%8F/3230616)是无比重要的，当然我们并不会在“浅模块”「Shallow module」中隐藏很多复杂性。
+> [信息隐藏](https://baike.baidu.com/item/%E4%BF%A1%E6%81%AF%E9%9A%90%E8%97%8F/3230616)至关重要，当然我们并不会在“浅模块”「Shallow module」中隐藏大量复杂性。
 
-我有两个宠物项目，每个项目都有约 5千行代码。第一个项目有 80 个“浅类”「shallow class
+我有两个业余项目，每个项目都有约 5千行代码。第一个项目包含 80 个“浅类”「shallow class
 
-」，而第二个项目只有 7 个“深类”「deep class」，我已经有一年半没有维护这俩项目了。
+」，而第二个项目仅有 7 个“深类”「deep class」，我已经有一年半没对这两个项目进行维护了。
 
-一次我回过头来维护项目，我认识到在第一个项目中理清那 80 个类之间的所有交互关系是一件极其困难的事情。在我开始编码之前，我必须重新建立大量的认知负荷。另一方面，我能够很快地理解第二个项目，因为它只有几个具有简单接口的“深类”「deep class」。
+有一次我回过头来维护项目，我发现要理清第一个项目中那 80 个类之间的所有交互关系，简直难如登天。在我开始编码之前，我不得不重新构建大量的认知负荷。另一方面，我能迅速理解第二个项目，因为它只有几个有着简单接口的“深类”「deep class」。
 
-> 在各种组件当中，最为出色的是既能够提供强大的功能表现，又具有简单易用的接口设计的组件 。
+> 在各种组件当中，最优秀的是既能够提供强大的功能表现，又具有简单易用的接口设计的组件 。
 > 
 > 「The best components are those that provide powerful functionality yet have simple interface.」
 > 
@@ -134,26 +134,25 @@ lseek(fd, offset, referencePosition)
 close(fd)
 ```
 
-这个接口的现代实现「modern implementation」有**数十万行代码**。尽管其实现复杂，但因为其具有简单的接口，所以使用起来很容易。
+这个接口的现代实现「modern implementation」有**数十万行代码**。尽管其实现复杂，但因为其具有简单的接口，所以使用起来很便捷。
 
-> 这个“深模块”「deep module」的示例取自 John K. Ousterhout 的 [软件设计的哲学【A Philosophy of Software Design】](https://web.stanford.edu/~ouster/cgi-bin/book.php)一书。这本书不仅涵盖了软件开发中复杂性的本质，而且是对 Parnas 颇具影响力的论文 [分解系统模块的标准【On the criteria to be used in decomposing systems into modules】](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf)的最大诠释。两者都是必不可少的读物。其他相关读物：[可能是时候停止推荐清洁代码了【It's probably time to stop recommending Clean Code】](https://qntm.org/clean)、[被认为有害的小函数【Small Functions considered Harmful】](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29)。
+> 这个“深模块”「deep module」的示例源于 John K. Ousterhout 的 [软件设计的哲学【A Philosophy of Software Design】](https://web.stanford.edu/~ouster/cgi-bin/book.php)一书。这本书不仅阐述了软件开发中复杂性的本质，而且是对 Parnas 颇具影响力的论文 [分解系统模块的标准【On the criteria to be used in decomposing systems into modules】](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf)的最大诠释。这两本书都是必读之物。其他相关读物：[可能是时候停止推荐清洁代码了【It's probably time to stop recommending Clean Code】](https://qntm.org/clean)、[被认为有害的小函数【Small Functions considered Harmful】](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29)。
 
-P.S. 如果你认为我们是在支持那种肩负超多责任的、臃肿的被称为 “上帝对象” 「God objects」的事物，那你就错了。
+P.S. 如果你认为我们是在支持那种承担过多责任、臃肿不堪的被称为 “上帝对象” 「God objects」的事物，那你就误解我们了。
 
 ## 浅模块和单一职责原则(Shallow modules and SRP)
 
-很多时候，我们最终遵循“一个模块应该只负责一件事”这一模糊的原则，创建了许多“浅模块”「Shallow modules」。这个模糊的“一件事”是什么？实例化一个对象算是“一件事”，对吗？所以“MetricsProviderFactoryFactory”这样的名称复杂的东西看起来似乎没啥问题。但这类东西的类名和接口比其完整实现更让人难以理解，这是一种什么样的抽象？某些地方可能有点问题。
+很多时候，我们最终会遵循“一个模块应该只负责一件事”这一模糊的原则，进而创建出大量的“浅模块”「Shallow modules」。可这个模糊的“一件事”究竟是什么？比如实例化一个对象算是“一件事”，对吗？如此看来，像“MetricsProviderFactoryFactory”这种名称复杂的事物似乎并无不妥。然而，这类事物的类名和接口比其完整实现更令人费解，这到底是一种怎样的抽象呢？恐怕某些地方存在一些问题。
 
-> 在“浅组件”「Shallow components」之间切换会让人感到非常疲惫，而[线性思维](https://blog.separateconcerns.com/2023-09-11-linear-code.html)对人类来说是更为自然的思维方式。
+> 在“浅组件”「Shallow components」之间来回切换会使人疲惫不堪，而[线性思维](https://blog.separateconcerns.com/2023-09-11-linear-code.html)对人类来说是更自然的思维方式。
 
-我们针对系统做出调整和改变，目的是为了符合用户以及利益相关方的需求。并且我们有责任对他们履行应尽的义务。
+我们对系统进行调整和改变，其目的在于满足用户以及利益相关方的需求。并且我们有责任对他们履行应尽的义务。
 
 > 一个模块应当只专注于为一个特定的用户或者利益相关方服务，并且只对这一个对象负责。
 
-这就是单一职责原则的全部内容。简单地说，如果我们在某个地方引入了一个 bug，然后有两个不同业务模块的人员都来投诉，我们就违反了这个原则。这与我们在模块中做了多少事情无关。
+这便是单一职责原则的全部内涵。简单来说，如果我们在某个地方引入了一个 bug，随后有两个不同业务模块的人员都来投诉，那就意味着我们违反了这个原则。这与我们在模块中做了多少事情无关。
 
-但是目前，这种解释是弊大于利的。因为同一条规则就算是同一个人，也可以有不同方式来理解。解释“单一职责原则”的更好方法是考量其造成了多少认知负荷。要记住“一个模块的变化会引发不同业务流的连锁反应”这件事，是需要一定心智负担的。以上。
-【todo before this 待润色】
+但就目前而言，这种解释是弊大于利的。因为即便是同一个人，对于同一条规则也可能有不同的理解方式。解释“单一职责原则”的更好方法是考量其带来了多少认知负荷。要记住“一个模块的变化会引发不同业务流的连锁反应”这一点，是需要一定心智负担的。以上。
 
 ## 过多的“浅微服务”(Too many shallow microservices)
 
