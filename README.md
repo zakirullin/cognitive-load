@@ -257,7 +257,17 @@ This architecture was something that made intuitive sense at first, but every ti
 
 > Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons. **[Layers of abstraction aren't free of charge](https://blog.jooq.org/why-you-should-not-implement-layered-architecture), they are to be held in our working memory**.  
 
-If you think that such layering will allow you to quickly replace a database or other dependencies, you're mistaken. Changing the storage causes lots of problems, and believe us, having some abstractions for the data access layer is the least of your worries. At best, abstractions can save somewhat 10% of your migration time (if any), the real pain is in data model incompatibilities, communication protocols, distributed systems challenges, and [implicit interfaces](https://www.hyrumslaw.com/). **So, why pay the price of high cognitive load for such an architecture, if it doesn't pay off in the future?** Plus, in most cases, that future of replacing some core component never happens.  
+If you think that such layering will allow you to quickly replace a database or other dependencies, you're mistaken. Changing the storage causes lots of problems, and believe us, having some abstractions for the data access layer is the least of your worries. At best, abstractions can save somewhat 10% of your migration time (if any), the real pain is in data model incompatibilities, communication protocols, distributed systems challenges, and implicit interfaces.  
+
+> With a sufficient number of users of an API,  
+> it does not matter what you promise in the contract:  
+> all observable behaviors of your system  
+> will be depended on by somebody.  
+> [The law of implicit interfaces](https://www.hyrumslaw.com/)
+
+We did a storage migration, and that took us about 10 months. The old system was single-threaded, so the exposed events were sequential. All our systems depended on that observed behaviour. A new storage didn't have that guarantee - the exposed events came out-of-order. This behavior was not part of the API contract, it was not reflected in the code. We spent a few hours writing a new storage adapter for the existing data abstraction layer. We spent the rest of the months on dealing with out-of-order events and other challenges. It's now funny to say that layering helps us replace components quickly.  
+
+**So, why pay the price of high cognitive load for such a layered architecture, if it doesn't pay off in the future?** Plus, in most cases, that future of replacing some core component never happens.  
 
 Even though these layered architectures have accelerated an important shift from traditional database-centric applications to a somewhat infrastructure-independent approach, where the core business logic is independent of anything external, the idea is by no means novel.  
 
