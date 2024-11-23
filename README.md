@@ -263,7 +263,7 @@ If you think that such layering will allow you to quickly replace a database or 
 > will be depended on by somebody.  
 > [The law of implicit interfaces](https://www.hyrumslaw.com/)
 
-We did a storage migration, and that took us about 10 months. The old system was single-threaded, so the exposed events were sequential. All our systems depended on that observed behaviour. A new distributed storage didn't have that guarantee - the exposed events came out-of-order. This behavior was not part of the API contract, it was not reflected in the code. We spent only a few hours writing a new storage adapter for the existing data abstraction layer. We spent the rest of the months on dealing with out-of-order events and other challenges. It's now funny to say that layering helps us replace components quickly.  
+We did a storage migration, and that took us about 10 months. The old system was single-threaded, so the exposed events were sequential. All our systems depended on that observed behaviour. This behavior was not part of the API contract, it was not reflected in the code. A new distributed storage didn't have that guarantee - the events came out-of-order. We spent only a few hours coding a new storage adapter for the existing data abstraction layer. We spent the next 10 months on dealing with out-of-order events and other challenges. It's now funny to say that layering helps us replace components quickly.  
 
 **So, why pay the price of high cognitive load for such a layered architecture, if it doesn't pay off in the future?** Plus, in most cases, that future of replacing some core component never happens.  
 
