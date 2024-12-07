@@ -322,7 +322,7 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
 ---
 [LinkedIn](https://www.linkedin.com/in/zakirullin/), [X](https://twitter.com/zakirullin), [GitHub](https://github.com/zakirullin)
 
-[Readable version](https://zakirullin.md/cognitive)
+[Readable version](https://minds.md/zakirullin/cognitive)
 
 <details>
   <summary><b>Cognitive load and interruptions</b></summary>
