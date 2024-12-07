@@ -1,6 +1,6 @@
 # Cognitive Load is what matters
 
-[Readable version](https://zakirullin.md/cognitive) | [Chinese translation](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md)
+[Readable version](https://minds.md/zakirullin/cognitive) | [Chinese translation](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md)
 
 *It is a living document, last update: **November 2024**. Your contributions are welcome!*
 
