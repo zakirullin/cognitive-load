@@ -36,7 +36,7 @@ Let's jump straight to the concrete practical examples of extraneous cognitive l
 We will refer to the level cognitive load as follows:  
 `🧠`: fresh working memory, zero cognitive load  
 `🧠++`: two facts in our working memory, cognitive load increased  
-`🤯`: working memory overflow, more than 4 facts  
+`🤯`: cognitive overload, more than 4 facts  
 
 > Our brain is much more complex and unexplored, but we can go with this simplistic model.
 
