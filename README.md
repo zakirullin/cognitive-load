@@ -7,7 +7,7 @@
 ## Introduction
 There are so many buzzwords and best practices out there, but most of them have failed. We need something more fundamental, something that can't be wrong.   
 
-Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy abstract concept, but rather **a fundamental human constraint**. It's not imagined, it's there and we can feel it.  
+Sometimes we feel confusion going through the code. Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy abstract concept, but rather **a fundamental human constraint**. It's not imagined, it's there and we can feel it.  
 
 Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load into our code. 
 
