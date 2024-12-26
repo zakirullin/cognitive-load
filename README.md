@@ -255,13 +255,12 @@ Abstraction is supposed to hide complexity, here it just adds [indirection](http
 
 This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it made a lot more harm than good. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.**
 
-If you think that such layering will allow you to quickly replace a database or other dependencies, you're mistaken. Changing the storage causes lots of problems, and believe us, having some abstractions for the data access layer is the least of your worries. At best, abstractions can save somewhat 10% of your migration time (if any), the real pain is in data model incompatibilities, communication protocols, distributed systems challenges, and implicit interfaces.  
+If you think that such layering will allow you to quickly replace a database or other dependencies, you're mistaken. Changing the storage causes lots of problems, and believe us, having some abstractions for the data access layer is the least of your worries. At best, abstractions can save somewhat 10% of your migration time (if any), the real pain is in data model incompatibilities, communication protocols, distributed systems challenges, and [implicit interfaces](https://www.hyrumslaw.com).  
 
 > With a sufficient number of users of an API,  
 > it does not matter what you promise in the contract:  
 > all observable behaviors of your system  
-> will be depended on by somebody.  
-> [The law of implicit interfaces](https://www.hyrumslaw.com/)
+> will be depended on by somebody.
 
 We did a storage migration, and that took us about 10 months. The old system was single-threaded, so the exposed events were sequential. All our systems depended on that observed behaviour. This behavior was not part of the API contract, it was not reflected in the code. A new distributed storage didn't have that guarantee - the events came out-of-order. We spent only a few hours coding a new storage adapter. We spent the next 10 months on dealing with out-of-order events and other challenges. It's now funny to say that layering helps us replace components quickly.  
 
