@@ -116,7 +116,7 @@ I have two pet projects, both of them are somewhat 5K lines of code. The first o
 
 Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.
 
-> The best components are those that provide powerful functionality yet have simple interface.  
+> The best components are those that provide powerful functionality yet have a simple interface.  
 > **John K. Ousterhout**
 
 The interface of the UNIX I/O is very simple. It has only five basic calls:
