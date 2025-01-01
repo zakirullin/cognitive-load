@@ -182,7 +182,8 @@ Language features are OK, as long as they are orthogonal to each other.
   There were 20 ways of initialization. Uniform initialization syntax has been added. Now we have 21 ways of initialization. By the way, does anyone remember the rules for selecting constructors from the initializer list? Something about implicit conversion with the least loss of information, <i>but if</i> the value is known statically, then... <code>🤯</code><br><br>
   <b>This increased cognitive load is not caused by a business task at hand. It is not an intrinsic complexity of the domain. It is just there due to historical reasons</b> (<i>extraneous cognitive load</i>).<br><br>
   I had to come up with some rules. Like, if that line of code is not as obvious and I have to remember the standard, I better not write it that way. The standard is somewhat 1500 pages long, by the way.<br><br>
-  <b>By no means I am trying to blame C++.</b> I love the language. It's just that I am tired now.
+  <b>By no means I am trying to blame C++.</b> I love the language. It's just that I am tired now.<br>
+  <p>Thanks to <a href="https://0xd34df00d.me" target="_blank">0xd34df00d</a>.</p>
 </details>
 
 
