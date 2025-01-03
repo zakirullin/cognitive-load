@@ -111,7 +111,7 @@ Mantras like "methods should be shorter than 15 lines of code" or "classes shoul
 **Shallow module** - interface is relatively complex to the small functionality it provides 
 
 <div align="center">
-  <img src="/img/deepmodulev8.png" alt="Deep module" width="600">
+  <img src="/img/deepmodulev8.png" alt="Deep module" width="700">
 </div>
 
 Having too many shallow modules can make it difficult to understand the project. **Not only do we have to keep in mind each module responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. `🤯`
