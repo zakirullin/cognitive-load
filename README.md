@@ -18,7 +18,9 @@ When reading code, you put things like values of variables, control flow logic a
 
 *Let's say we have been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool architectures, fancy libraries and trendy technologies were used. In other words, **the author had created a high cognitive load for us.***
 
-![Cognitive Load](/img/cognitiveloadv6.png)
+<div align="center">
+  <img src="/img/cognitiveloadv6.png" alt="Cognitive load" width="700">
+</div>
 
 We should reduce the cognitive load in our projects as much as possible.
 
@@ -108,7 +110,9 @@ Mantras like "methods should be shorter than 15 lines of code" or "classes shoul
 **Deep module** - simple interface, complex functionality  
 **Shallow module** - interface is relatively complex to the small functionality it provides 
 
-![Deep module](/img/deepmodulev8.png)
+<div align="center">
+  <img src="/img/deepmodulev8.png" alt="Deep module" width="700">
+</div>
 
 Having too many shallow modules can make it difficult to understand the project. **Not only do we have to keep in mind each module responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. `🤯`
 
@@ -311,7 +315,7 @@ Involve junior developers in architecture reviews. They will help you to identif
 If you've internalized the mental models of the project into your long-term memory, you won't experience a high cognitive load.  
 
 <div align="center">
-  <img src="/img/mentalmodelsv15.png" alt="Mental Models" width="700">
+  <img src="/img/mentalmodelsv15.png" alt="Mental models" width="700">
 </div>
 
 The more mental models there are to learn, the longer it takes for a new developer to deliver value.  
@@ -326,7 +330,7 @@ Imagine for a moment that what we inferred in the second chapter isn’t actuall
 Do you feel it? Not only do you have to jump all over the article to get the meaning (shallow modules!), but the paragraph in general is difficult to understand. We have just created an unnecessary cognitive load in your head. **Do not do this to your colleagues.**
 
 <div align="center">
-  <img src="/img/smartauthorv14thanksmari.png" alt="Smart Author" width="600">
+  <img src="/img/smartauthorv14thanksmari.png" alt="Smart author" width="600">
 </div>
 
 We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
