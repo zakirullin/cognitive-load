@@ -19,7 +19,7 @@ When reading code, you put things like values of variables, control flow logic a
 *Let's say we have been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool architectures, fancy libraries and trendy technologies were used. In other words, **the author had created a high cognitive load for us.***
 
 <div align="center">
-  <img src="/img/cognitiveloadv6.png" alt="Cognitive load" width="800">
+  <img src="/img/cognitiveloadv6.png" alt="Cognitive load" width="750">
 </div>
 
 We should reduce the cognitive load in our projects as much as possible.
