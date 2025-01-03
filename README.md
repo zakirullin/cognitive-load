@@ -269,7 +269,11 @@ We did a storage migration, and that took us about 10 months. The old system was
 
 These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamental rules instead: dependency inversion principle, cognitive load and information hiding. [Discuss](https://github.com/zakirullin/cognitive-load/discussions/24).
 
-Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons. **[Layers of abstraction aren't free of charge](https://blog.jooq.org/why-you-should-not-implement-layered-architecture), they are to be held in our working memory**.
+![Layers](/img/layers.png)
+
+Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons. 
+
+**[Layers of abstraction aren't free of charge](https://blog.jooq.org/why-you-should-not-implement-layered-architecture), they are to be held in our working memory**.
 
 ## DDD
 Domain-driven design has some great points, although it is often misinterpreted. People say "We write code in DDD", which is a bit strange, because DDD is about problem space, not about solution space.
