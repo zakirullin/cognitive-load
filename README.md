@@ -19,7 +19,7 @@ When reading code, you put things like values of variables, control flow logic a
 *Let's say we have been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool architectures, fancy libraries and trendy technologies were used. In other words, **the author had created a high cognitive load for us.***
 
 <div align="center">
-  <img src="/img/cognitiveloadv6.png" alt="Cognitive load" width="700">
+  <img src="/img/cognitiveloadv6.png" alt="Cognitive load" width="800">
 </div>
 
 We should reduce the cognitive load in our projects as much as possible.
@@ -111,7 +111,7 @@ Mantras like "methods should be shorter than 15 lines of code" or "classes shoul
 **Shallow module** - interface is relatively complex to the small functionality it provides 
 
 <div align="center">
-  <img src="/img/deepmodulev8.png" alt="Deep module" width="700">
+  <img src="/img/deepmodulev8.png" alt="Deep module" width="600">
 </div>
 
 Having too many shallow modules can make it difficult to understand the project. **Not only do we have to keep in mind each module responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. `🤯`
