@@ -2,7 +2,7 @@
 
 [Readable version](https://minds.md/zakirullin/cognitive) | [Chinese translation](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md)
 
-*It is a living document, last update: **December 2024**. Your contributions are welcome!*
+*It is a living document, last update: **January 2025**. Your contributions are welcome!*
 
 ## Introduction
 There are so many buzzwords and best practices out there, but most of them have failed. We need something more fundamental, something that can't be wrong.   
