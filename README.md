@@ -271,7 +271,9 @@ These architectures are not fundamental, they are just subjective, biased conseq
 
 Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons.
 
-<img src="/img/layers.png" alt="Layers" width="400">
+<div align="center">
+  <img src="/img/layers.png" alt="Layers" width="400">
+</div>
 
 **[Layers of abstraction aren't free of charge](https://blog.jooq.org/why-you-should-not-implement-layered-architecture), they are to be held in our working memory**.
 
