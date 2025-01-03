@@ -310,7 +310,9 @@ Involve junior developers in architecture reviews. They will help you to identif
 
 If you've internalized the mental models of the project into your long-term memory, you won't experience a high cognitive load.  
 
-![Mental Models](/img/mentalmodelsv15.png)
+<div align="center">
+  <img src="/img/mentalmodelsv15.png" alt="Mental Models" width="700">
+</div>
 
 The more mental models there are to learn, the longer it takes for a new developer to deliver value.  
 
