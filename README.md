@@ -199,7 +199,7 @@ On the backend we return:
 `403` for not enough access  
 `418` for banned users  
 
-The guys on the frontend use backend API to implement login functionality. They would have to temporarily  create the following cognitive load in their brains:  
+The engineers on the frontend use backend API to implement login functionality. They would have to temporarily create the following cognitive load in their brains:  
 `401` is for expired jwt token // `🧠+`, ok just temporary remember it  
 `403` is for not enough access // `🧠++`  
 `418` is for banned users // `🧠+++`  
@@ -208,7 +208,7 @@ Frontend developers would (hopefully) introduce some kind `numeric status -> mea
 
 Then QA people come into play:
 "Hey, I got `403` status, is that expired token or not enough access?"
-**QA people can't jump straight to testing, because first they have to recreate the cognitive load that the guys on the backend once created.**
+**QA people can't jump straight to testing, because first they have to recreate the cognitive load that the engineers on the backend once created.**
 
 Why hold this custom mapping in our working memory? It's better to abstract away your business details from the HTTP transfer protocol, and return self-descriptive codes directly in the response body:
 ```json
