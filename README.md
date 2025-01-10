@@ -206,9 +206,9 @@ The engineers on the frontend use backend API to implement login functionality. 
 
 Frontend developers would (hopefully) introduce some kind `numeric status -> meaning` dictionary on their side, so that subsequent generations of contributors wouldn't have to recreate this mapping in their brains.
 
-Then QA people come into play:
+Then QA engineers come into play:
 "Hey, I got `403` status, is that expired token or not enough access?"
-**QA people can't jump straight to testing, because first they have to recreate the cognitive load that the engineers on the backend once created.**
+**QA engineers can't jump straight to testing, because first they have to recreate the cognitive load that the engineers on the backend once created.**
 
 Why hold this custom mapping in our working memory? It's better to abstract away your business details from the HTTP transfer protocol, and return self-descriptive codes directly in the response body:
 ```json
