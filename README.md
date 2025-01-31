@@ -273,7 +273,7 @@ We did a storage migration, and that took us about 10 months. The old system was
 
 **So, why pay the price of high cognitive load for such a layered architecture, if it doesn't pay off in the future?** Plus, in most cases, that future of replacing some core component never happens.  
 
-These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamental rules instead: dependency inversion principle, cognitive load and information hiding. [Discuss](https://github.com/zakirullin/cognitive-load/discussions/24).
+These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamental rules instead: dependency inversion principle, single source of truth, cognitive load and information hiding. [Discuss](https://github.com/zakirullin/cognitive-load/discussions/24).
 
 Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons.
 
