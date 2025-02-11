@@ -351,3 +351,13 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
   <img src="img/complexity.png"><br>
   <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
+<details>
+    <summary>Comments</summary>
+    <p><strong>Rob Pike</strong><br>Nice article.</p>
+    <p><strong><a href="https://x.com/karpathy/status/1872038630405054853" target="_blank">Andrej Karpathy</a></strong><br>Nice post on software engineering. Probably the most true, least practiced viewpoint.</p>
+    <p><strong><a href="https://x.com/elonmusk/status/1872346903792566655" target="_blank">Elon Musk</a></strong><br>True.</p>
+    <p><strong><a href="https://www.linkedin.com/feed/update/urn:li:activity:7277757844970520576/" target="_blank">Addy Osmani</a></strong><br>Your article really resonates with the challenges we face in browser development. You're absolutely right about modern browsers being among the most complex software systems. Managing that complexity in Chromium is a constant challenge that aligns perfectly with many of the points you made about cognitive load.</p>
+    <p>One way we try to handle this in Chromium is through careful component isolation and well-defined interfaces between subsystems (like rendering, networking, JavaScript execution, etc.). Similar to your deep modules example with Unix I/O - we aim for powerful functionality behind relatively simple interfaces. For instance, our rendering pipeline handles incredible complexity (layout, compositing, GPU acceleration) but developers can interact with it through clear abstraction layers.</p>
+    <p>Your points about avoiding unnecessary abstractions really hit home too. In browser development, we constantly balance between making the codebase approachable for new contributors while handling the inherent complexity of web standards and compatibility. </p>
+    <p>Sometimes the simplest solution is the best one, even in a complex system.</p>
+</details>
