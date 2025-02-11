@@ -352,7 +352,7 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
   <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
 <details>
-    <summary>Comments</summary>
+    <summary><b>Comments</b></summary>
     <p><strong>Rob Pike</strong><br>Nice article.</p>
     <p><strong><a href="https://x.com/karpathy/status/1872038630405054853" target="_blank">Andrej Karpathy</a></strong><br>Nice post on software engineering. Probably the most true, least practiced viewpoint.</p>
     <p><strong><a href="https://x.com/elonmusk/status/1872346903792566655" target="_blank">Elon Musk</a></strong><br>True.</p>
