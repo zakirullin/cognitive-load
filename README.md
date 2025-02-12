@@ -24,6 +24,11 @@ When reading code, you put things like values of variables, control flow logic a
 
 We should reduce the cognitive load in our projects as much as possible.
 
+<details>
+  <summary><b>Cognitive load and interruptions</b></summary>
+  <img src="img/interruption.jpeg"><br>
+</details>
+
 ## Types of cognitive load
 **Intrinsic** - caused by the inherent difficulty of a task. It can't be reduced, it's at the very heart of software development.  
 
@@ -262,6 +267,12 @@ Abstraction is supposed to hide complexity, here it just adds [indirection](http
 
 This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it made a lot more harm than good. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.**
 
+<details>
+  <summary><b>Coding principles and experience</b></summary>
+  <img src="img/complexity.png"><br>
+  <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
+</details>
+
 If you think that such layering will allow you to quickly replace a database or other dependencies, you're mistaken. Changing the storage causes lots of problems, and believe us, having some abstractions for the data access layer is the least of your worries. At best, abstractions can save somewhat 10% of your migration time (if any), the real pain is in data model incompatibilities, communication protocols, distributed systems challenges, and [implicit interfaces](https://www.hyrumslaw.com).  
 
 > With a sufficient number of users of an API,  
@@ -359,13 +370,4 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
     <p>A good example is the fact that I always refused to have hash items expires. This is a design sacrifice because if you have certain attributes only in the top-level items (the keys themselves), the design is simpler, values will just be objects. When Redis got hash expires, it was a nice feature but required (indeed) many changes to many parts, raising the complexity.</p>
     <p>Another example is what I'm doing right now, Vector Sets, the new Redis data type. I decided that Redis would not be the source of truth about vectors, but that it can just take an approximate version of them, so I was able to do on-insert normalization, quantization without trying to retain the large floats vector on disk, and so forth. May vector DBs don't sacrifice the fact of remembering what the user put inside (the full precision vector).</p>
     <p>These are just two random examples, but I apply this idea everywhere. Now the thing is: of course one must sacrifice the right things. Often, there are 5% features that account for a very large amount of complexity: that is a good thing to kill :D</p>
-</details>
-<details>
-  <summary><b>Cognitive load and interruptions</b></summary>
-  <img src="img/interruption.jpeg"><br>
-</details>
-<details>
-  <summary><b>Coding principles and experience</b></summary>
-  <img src="img/complexity.png"><br>
-  <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
