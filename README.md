@@ -343,15 +343,6 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
 [Readable version](https://minds.md/zakirullin/cognitive)
 
 <details>
-  <summary><b>Cognitive load and interruptions</b></summary>
-  <img src="img/interruption.jpeg"><br>
-</details>
-<details>
-  <summary><b>Coding principles and experience</b></summary>
-  <img src="img/complexity.png"><br>
-  <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
-</details>
-<details>
     <summary><b>Comments</b></summary>
     <p><strong>Rob Pike</strong><br>Nice article.</p>
     <p><strong><a href="https://x.com/karpathy/status/1872038630405054853" target="_blank">Andrej Karpathy</a></strong><br>Nice post on software engineering. Probably the most true, least practiced viewpoint.</p>
@@ -364,4 +355,17 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
     <p>One way we try to handle this in Chromium is through careful component isolation and well-defined interfaces between subsystems (like rendering, networking, JavaScript execution, etc.). Similar to your deep modules example with Unix I/O - we aim for powerful functionality behind relatively simple interfaces. For instance, our rendering pipeline handles incredible complexity (layout, compositing, GPU acceleration) but developers can interact with it through clear abstraction layers.</p>
     <p>Your points about avoiding unnecessary abstractions really hit home too. In browser development, we constantly balance between making the codebase approachable for new contributors while handling the inherent complexity of web standards and compatibility. </p>
     <p>Sometimes the simplest solution is the best one, even in a complex system.</p>
+    <p><strong>Salvatore Sanfilippo</strong><br>What I believe is missing from PoSD is the concept of "design sacrifice". That is, sometimes you sacrifice something and get back simplicity, or performances, or both. I apply this idea continuously, but often is not understood.</p>
+    <p>A good example is the fact that I always refused to have hash items expires. This is a design sacrifice because if you have certain attributes only in the top-level items (the keys themselves), the design is simpler, values will just be objects. When Redis got hash expires, it was a nice feature but required (indeed) many changes to many parts, raising the complexity.</p>
+    <p>Another example is what I'm doing right now, Vector Sets, the new Redis data type. I decided that Redis would not be the source of truth about vectors, but that it can just take an approximate version of them, so I was able to do on-insert normalization, quantization without trying to retain the large floats vector on disk, and so forth. May vector DBs don't sacrifice the fact of remembering what the user put inside (the full precision vector).</p>
+    <p>These are just two random examples, but I apply this idea everywhere. Now the thing is: of course one must sacrifice the right things. Often, there are 5% features that account for a very large amount of complexity: that is a good thing to kill :D</p>
+</details>
+<details>
+  <summary><b>Cognitive load and interruptions</b></summary>
+  <img src="img/interruption.jpeg"><br>
+</details>
+<details>
+  <summary><b>Coding principles and experience</b></summary>
+  <img src="img/complexity.png"><br>
+  <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
