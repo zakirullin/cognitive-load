@@ -337,7 +337,7 @@ Once you onboard new people on your project, try to measure the amount of confus
 
 If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company.  
 
-You can use this short article URL in code reviews: "This is code is `hardfor.me` to understand".  
+You can use this short article URL in code reviews: **"This is code is `hardfor.me` to understand"**.  
 
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
