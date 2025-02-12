@@ -337,6 +337,8 @@ Once you onboard new people on your project, try to measure the amount of confus
 
 If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company.  
 
+You can use this short, blameless `hardfor.me` URL in code reviews.
+
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
 
@@ -351,7 +353,7 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
 ---
 [LinkedIn](https://www.linkedin.com/in/zakirullin/), [X](https://twitter.com/zakirullin), [GitHub](https://github.com/zakirullin)
 
-[Readable version](https://minds.md/zakirullin/cognitive), Short URL for Code Reviews: `hardfor.me`
+[Readable version](https://minds.md/zakirullin/cognitive)
 
 <details>
     <summary><b>Comments (5)</b></summary>
