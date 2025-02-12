@@ -351,7 +351,7 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
 ---
 [LinkedIn](https://www.linkedin.com/in/zakirullin/), [X](https://twitter.com/zakirullin), [GitHub](https://github.com/zakirullin)
 
-[Readable version](https://minds.md/zakirullin/cognitive)
+[Readable version](https://minds.md/zakirullin/cognitive), Short URL: `hardfor.me`
 
 <details>
     <summary><b>Comments (5)</b></summary>
