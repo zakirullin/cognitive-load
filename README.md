@@ -2,7 +2,7 @@
 
 [Readable version](https://minds.md/zakirullin/cognitive) | Short URL: `hardfor.me` | [Chinese translation](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md)  
 
-*It is a living document, last update: **February 2025**. Your contributions are welcome!*
+*It is a living document, last update: **March 2025**. Your contributions are welcome!*
 
 ## Introduction
 There are so many buzzwords and best practices out there, but most of them have failed. We need something more fundamental, something that can't be wrong.   
