@@ -2,7 +2,7 @@
 
 [Readable version](https://minds.md/zakirullin/cognitive) | Short URL: `hardfor.me` | [Chinese translation](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md)  
 
-*It is a living document, last update: **March 2025**. Your contributions are welcome!*
+*It is a living document, last update: **May 2025**. Your contributions are welcome!*
 
 ## Introduction
 There are so many buzzwords and best practices out there, but most of them have failed. We need something more fundamental, something that can't be wrong.   
@@ -284,7 +284,7 @@ We did a storage migration, and that took us about 10 months. The old system was
 
 **So, why pay the price of high cognitive load for such a layered architecture, if it doesn't pay off in the future?** Plus, in most cases, that future of replacing some core component never happens.  
 
-These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamental rules instead: dependency inversion principle, single source of truth, cognitive load and information hiding. Your business logic should not depend on low-level modules like database, UI or framework. We should be able to write tests for our core logic without worrying about the infrastructure. Business logic is in the centre, everything else is outside. You can do this using your rationale and basic rules, no need for fancy architectures. [Discuss](https://github.com/zakirullin/cognitive-load/discussions/24).
+These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamental rules instead: dependency inversion principle, single source of truth, cognitive load and information hiding. Your business logic should not depend on low-level modules like database, UI or framework. We should be able to write tests for our core logic without worrying about the infrastructure, and that's it. [Discuss](https://github.com/zakirullin/cognitive-load/discussions/24).
 
 Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons.
 
