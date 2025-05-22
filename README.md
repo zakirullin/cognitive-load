@@ -258,7 +258,7 @@ We can write code in a somewhat framework-agnostic way. The business logic shoul
 
 > [Why I Hate Frameworks](https://minds.md/benji/frameworks)
 
-## Layered Architecture
+## Layered architecture
 There is a certain engineering excitement about all this stuff.
 
 I myself was a passionate advocate of Hexagonal/Onion Architecture for years. I used it here and there and encouraged other teams to do so. The complexity of our projects went up, the sheer number of files alone had doubled. It felt like we were writing a lot of glue code. On ever changing requirements we had to make changes across multiple layers of abstractions, it all became tedious. `🤯`
@@ -280,7 +280,7 @@ If you think that such layering will allow you to quickly replace a database or 
 > all observable behaviors of your system  
 > will be depended on by somebody.
 
-We did a storage migration, and that took us about 10 months. The old system was single-threaded, so the exposed events were sequential. All our systems depended on that observed behaviour. This behavior was not part of the API contract, it was not reflected in the code. A new distributed storage didn't have that guarantee - the events came out-of-order. We spent only a few hours coding a new storage adapter, thanks to an abstraction. **We spent the next 10 months on dealing with out-of-order events and other challenges.** It's now funny to say that layering helps us replace components.  
+We did a storage migration, and that took us about 10 months. The old system was single-threaded, so the exposed events were sequential. All our systems depended on that observed behaviour. This behavior was not part of the API contract, it was not reflected in the code. A new distributed storage didn't have that guarantee - the events came out-of-order. We spent only a few hours coding a new storage adapter, thanks to an abstraction. **We spent the next 10 months on dealing with out-of-order events and other challenges.** It's now funny to say that abstractions helps us replace components.  
 
 **So, why pay the price of high cognitive load for such a layered architecture, if it doesn't pay off in the future?** Plus, in most cases, that future of replacing some core component never happens.  
 
