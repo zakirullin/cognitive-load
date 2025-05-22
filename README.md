@@ -156,7 +156,7 @@ We make changes to our systems to satisfy our users and stakeholders. We are res
 
 This is what this Single Responsibility Principle is all about. Simply put, if we introduce a bug in one place, and then two different business people come to complain, we've violated the principle. It has nothing to do with the number of things we do in our module.    
 
-But even now, this rule can do more harm than good. This principle can be understood in as many different ways as there are individuals. A better approach would be to look at how much cognitive load it all creates. It's mentally demanding to remember that change in one place can trigger a chain of reactions across different business streams. And that's about it, no fancy terms to remember.  
+But even now, this rule can do more harm than good. This principle can be understood in as many different ways as there are individuals. A better approach would be to look at how much cognitive load it all creates. It's mentally demanding to remember that change in one place can trigger a chain of reactions across different business streams. And that's about it, no fancy terms to learn.  
 
 ## Too many shallow microservices
 This shallow-deep module principle is scale-agnostic, and we can apply it to microservices architecture. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that are not so shallow (=deep). One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.
@@ -280,7 +280,7 @@ If you think that such layering will allow you to quickly replace a database or 
 > all observable behaviors of your system  
 > will be depended on by somebody.
 
-We did a storage migration, and that took us about 10 months. The old system was single-threaded, so the exposed events were sequential. All our systems depended on that observed behaviour. This behavior was not part of the API contract, it was not reflected in the code. A new distributed storage didn't have that guarantee - the events came out-of-order. We spent only a few hours coding a new storage adapter, thanks to an abstraction. We spent the next 10 months on dealing with out-of-order events and other challenges. It's now funny to say that layering helps us replace components.  
+We did a storage migration, and that took us about 10 months. The old system was single-threaded, so the exposed events were sequential. All our systems depended on that observed behaviour. This behavior was not part of the API contract, it was not reflected in the code. A new distributed storage didn't have that guarantee - the events came out-of-order. We spent only a few hours coding a new storage adapter, thanks to an abstraction. **We spent the next 10 months on dealing with out-of-order events and other challenges.** It's now funny to say that layering helps us replace components.  
 
 **So, why pay the price of high cognitive load for such a layered architecture, if it doesn't pay off in the future?** Plus, in most cases, that future of replacing some core component never happens.  
 
