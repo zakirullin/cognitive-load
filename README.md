@@ -354,7 +354,7 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
 [Readable version](https://minds.md/zakirullin/cognitive)
 
 <details>
-    <summary><b>Comments (5)</b></summary>
+    <summary><b>Comments</b></summary>
     <br>
     <p><strong>Rob Pike</strong><br>Nice article.</p>
     <p><strong><a href="https://x.com/karpathy/status/1872038630405054853" target="_blank">Andrej Karpathy</a></strong> <i>(ChatGPT, Tesla)</i><br>Nice post on software engineering. Probably the most true, least practiced viewpoint.</p>
