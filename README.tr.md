@@ -154,7 +154,7 @@ Bu arayüzün modern bir uygulaması **yüz binlerce satır kod** içerebilir. Y
 
 > Bu derin modül örneği, John K. Ousterhout’un *[A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php)* (Bir Yazılım Tasarımı Felsefesi) adlı kitabından alınmıştır. Bu kitap, yazılım geliştirmede karmaşıklığın özünü ele almakla kalmaz, aynı zamanda Parnas’ın yazılım dünyasına yön veren makalesi *[On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf)* için yapılmış belki de en iyi yorumlardan birini içerir. Her iki kaynak da mutlaka okunması gerekenlerdendir.
 > 
-> İlgili diğer okumalar:  
+> İlgili diğer yazılar:  
 > – [A Philosophy of Software Design vs Clean Code](https://github.com/johnousterhout/aposd-vs-clean-code)  
 > – [Clean Code önermeyi bırakmanın zamanı gelmiş olabilir](https://qntm.org/clean)  
 > – [Küçük Fonksiyonlar Zararlı Olabilir](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29)
