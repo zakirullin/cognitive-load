@@ -125,6 +125,8 @@ Having too many shallow modules can make it difficult to understand the project.
 
 I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas the second one has only 7 deep classes. I haven't been maintaining any of these projects for one year and a half.
 
+> Jumping between shallow components is mentally exhausting, [linear thinking](https://blog.separateconcerns.com/2023-09-11-linear-code.html) is more natural to us humans.  
+
 Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.
 
 > The best components are those that provide powerful functionality yet have a simple interface.  
@@ -148,8 +150,6 @@ P.S. If you think we are rooting for bloated God objects with too many responsib
 ## Responsible for one thing
 All too often, we end up creating lots of shallow modules, following some vague "a module should be responsible for one, and only one, thing" principle. What is this blurry one thing? Instantiating an object is one thing, right? So [MetricsProviderFactoryFactory](https://minds.md/benji/frameworks) seems to be just fine. The names and interfaces of such classes tend to be more mentally taxing than their entire implementations, what kind of abstraction is that? Something went wrong.  
 
-> Jumping between such shallow components is mentally exhausting, [linear thinking](https://blog.separateconcerns.com/2023-09-11-linear-code.html) is more natural to us humans.  
-
 We make changes to our systems to satisfy our users and stakeholders. We are responsible to them.  
 
 > A module should be responsible to one, and only one, user or stakeholder.  
@@ -163,7 +163,7 @@ This shallow-deep module principle is scale-agnostic, and we can apply it to mic
 
 I once consulted a startup where a team of five developers introduced 17(!) microservices. They were 10 months behind schedule and appeared nowhere close to the public release. Every new requirement led to changes in 4+ microservices. Diagnostic difficulty in integration space skyrocketed. Both time to market and cognitive load were unacceptably high. `🤯`  
 
-Is this the right way to approach the uncertainty of a new system? It's enormously difficult to elicit the right logical boundaries in the beginning. The key is to make decisions as late as you can responsibly wait, because that is when you have the most information on which to base the decision. By introducing a network layer up front, we make our design decisions hard to revert right from the start. The team's only justification was: "The FAANG companies proved microservices architecture to be effective". *Hello, you got to stop dreaming big.*
+Is this the right way to approach the uncertainty of a new system? It's enormously difficult to elicit the right logical boundaries in the beginning. The key is to make decisions as late as you can responsibly wait, because that is when you have the most information at hand. By introducing a network layer up front, we make our design decisions hard to revert right from the start. The team's only justification was: "The FAANG companies proved microservices architecture to be effective". *Hello, you got to stop dreaming big.*
 
 The [Tanenbaum-Torvalds debate](https://en.wikipedia.org/wiki/Tanenbaum%E2%80%93Torvalds_debate) argued that Linux's monolithic design was flawed and obsolete, and that a microkernel architecture should be used instead. Indeed, the microkernel design seemed to be superior "from a theoretical and aesthetical" point of view. On the practical side of things - three decades on, microkernel-based GNU Hurd is still in development, and monolithic Linux is everywhere. This page is powered by Linux, your smart teapot is powered by Linux. By monolithic Linux.
 
@@ -303,16 +303,6 @@ Chances are that the way we interpret DDD is likely to be unique and subjective.
 
 Team Topologies provides a much better, easier to understand framework that helps us split the cognitive load across teams. Engineers tend to develop somewhat similar mental models after learning about Team Topologies. DDD, on the other hand, seems to be creating 10 different mental models for 10 different readers. Instead of being common ground, it becomes a battleground for unnecessary debates.  
 
-## Examples
-- Our architecture is a standard CRUD app architecture, [a Python monolith on top of Postgres](https://danluu.com/simple-architectures/)
-- How Instagram scaled to 14 million users with [only 3 engineers](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million)
-- The companies where we were like ”woah, these folks are [smart as hell](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” for the most part failed
-- One function that wires up the entire system. If you want to know how the system works - [go read it](https://www.infoq.com/presentations/8-lines-code-refactoring)
-
-These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort.
-
-Involve junior developers in architecture reviews. They will help you to identify the mentally demanding areas.
-
 ## Cognitive load in familiar projects
 
 > The problem is that **familiarity is not the same as simplicity**. They *feel* the same — that same ease of moving through a space without much mental effort — but for very different reasons. Every “clever” (read: “self-indulgent”) and non-idiomatic trick you use incurs a learning penalty for everyone else. Once they have done that learning, then they will find working with the code less difficult. So it is hard to recognise how to simplify code that you are already familiar with. This is why I try to get “the new kid” to critique the code before they get too institutionalised!  
@@ -336,6 +326,16 @@ The more mental models there are to learn, the longer it takes for a new develop
 Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code.  
 
 If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company.
+
+## Examples
+- Our architecture is a standard CRUD app architecture, [a Python monolith on top of Postgres](https://danluu.com/simple-architectures/)
+- How Instagram scaled to 14 million users with [only 3 engineers](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million)
+- The companies where we were like ”woah, these folks are [smart as hell](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” for the most part failed
+- One function that wires up the entire system. If you want to know how the system works - [go read it](https://www.infoq.com/presentations/8-lines-code-refactoring)
+
+These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort.
+
+Involve junior developers in architecture reviews. They will help you to identify the mentally demanding areas.
 
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
