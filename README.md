@@ -2,7 +2,7 @@
 
 [Readable version](https://minds.md/zakirullin/cognitive) | [Chinese translation](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Korean translation](README.ko.md) | [Turkish translation](README.tr.md)
 
-*It is a living document, last update: **May 2025**. Your contributions are welcome!*
+*It is a living document, last update: **August 2025**. Your contributions are welcome!*
 
 ## Introduction
 There are so many buzzwords and best practices out there, but most of them have failed. We need something more fundamental, something that can't be wrong.   
@@ -125,9 +125,9 @@ Having too many shallow modules can make it difficult to understand the project.
 
 I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas the second one has only 7 deep classes. I haven't been maintaining any of these projects for one year and a half.
 
-> Jumping between shallow components is mentally exhausting, [linear thinking](https://blog.separateconcerns.com/2023-09-11-linear-code.html) is more natural to us humans.  
-
 Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.
+
+Jumping between shallow components is mentally exhausting, [linear thinking](https://blog.separateconcerns.com/2023-09-11-linear-code.html) is more natural to us humans.  
 
 > The best components are those that provide powerful functionality yet have a simple interface.  
 > **John K. Ousterhout**
