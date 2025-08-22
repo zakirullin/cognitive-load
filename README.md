@@ -119,15 +119,14 @@ Mantras like "methods should be shorter than 15 lines of code" or "classes shoul
   <img src="/img/deepmodulev8.png" alt="Deep module" width="700">
 </div>
 
-Having too many shallow modules can make it difficult to understand the project. **Not only do we have to keep in mind each module responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. `🤯`
+Having too many shallow modules can make it difficult to understand the project. **Not only do we have to keep in mind each module responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. Jumping between such shallow components is mentally exhausting, <a target="_blank" href="https://blog.separateconcerns.com/2023-09-11-linear-code.html">linear thinking</a> is more natural to us humans.  
 
 > Information hiding is paramount, and we don't hide as much complexity in shallow modules.
 
 I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas the second one has only 7 deep classes. I haven't been maintaining any of these projects for one year and a half.
 
 Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.
-
-Jumping between shallow components is mentally exhausting, [linear thinking](https://blog.separateconcerns.com/2023-09-11-linear-code.html) is more natural to us humans.  
+ 
 
 > The best components are those that provide powerful functionality yet have a simple interface.  
 > **John K. Ousterhout**
