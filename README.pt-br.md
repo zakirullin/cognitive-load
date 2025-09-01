@@ -51,3 +51,47 @@ Referiremos ao nível de carga coginitiva como a seguinte:
 `🤯`: sobrecarga cognitiva, mais de 4 fatos
 
 > Nosso cérebro é muito mais complexo e não explorado, mas podemos seguir neste modelo simplístico.
+
+## Condicionais complexas
+```go
+if val > someConstant // 🧠+
+    && (condition2 || condition3) // 🧠+++, condição prévia deve ser verdadeira, uma de c2 ou c3 tem de ser verdadeira
+    && (condition4 && !condition5) { // 🤯, estamos confusos neste momento
+    ...
+}
+```
+
+Introduza variáveis intermediárias com nomes significativos:
+```go
+isValid = val > someConstant
+isAllowed = condition2 || condition3
+isSecure = condition4 && !condition5 
+// 🧠, não precisamos lembrar as condições, elas são variáveis descritivas
+if isValid && isAllowed && isSecure {
+    ...
+}
+```
+
+## Ifs aninhados
+```go
+if isValid { // 🧠+, ok, código aninhado se aplica a entradas válidas apenas
+    if isSecure { // 🧠++, fazemos a tarefa apenas para entradas válidas e seguras 
+        stuff // 🧠+++
+    }
+}
+```
+
+Compare agora com *early returns*:
+```go
+if !isValid
+    return
+ 
+if !isSecure
+    return
+
+// 🧠, não realmente ligamos para retornos breves, se estamos aqui, então tudo certo
+
+stuff // 🧠+
+```
+
+Podemos focar no caminho feliz apenas, liberando nossa memória de trabalho de todos esses tipos de pré-condições.
