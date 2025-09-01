@@ -29,7 +29,7 @@ We should reduce the cognitive load in our projects as much as possible.
   <img src="img/interruption.jpeg"><br>
 </details>
 
-> We are going to use «cognitive load» in an informal sense; sometimes it lines up with the specific scientific concept of Cognitive Load, but we don't know enough about where it does and doesn't match; so understand the term in an informal sense, not always the specific scientific term we've introduced.
+> We are going to use «cognitive load» in an informal sense; sometimes it lines up with the specific scientific concept of Cognitive Load, but we don't know enough about where it does and doesn't match.
 
 ## Types of cognitive load
 **Intrinsic** - caused by the inherent difficulty of a task. It can't be reduced, it's at the very heart of software development.  
