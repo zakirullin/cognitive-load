@@ -31,3 +31,23 @@ Deveríamos reduzir a carga cognitiva em nossos projetos o máximo possível.
 </details>
 
 > Usaremos "carga cognitiva" de maneira informal; por vezes alinhará com o conceito científico específico de Carga Cognitiva, mas não sabemos o suficiente quando alinhará ou não.
+
+## Tipos de carga cognitiva
+**Intrínseca** - causada pela dificuldade inerente da tarefa. Não pode ser reduzido, já que se está na cerne do desenvolvimento do *software*.
+
+**Extrínseca** - criada pela forma que a informação é apresentada. Causada por fatores não diretamente relevantes à tarefa, como as peculiaridades do autor inteligente. Pode ser grandemente reduzida. Focaremos nesse tipo de carga cognitiva.
+
+<div align="center">
+  <img src="/img/smartauthorv14thanksmari.png" alt="Intrínseca vs Extrínseca" width="600">
+</div>
+
+Pularemos direto aos exemplos práticos e concretos de carga cognitiva extrínseca.
+
+---
+
+Referiremos ao nível de carga coginitiva como a seguinte:
+`🧠`: memória de trabalho fresca, nenhuma carga coginitiva  
+`🧠++`: dois fatos em nossa memória de trabalho, carga cognitiva aumentada
+`🤯`: sobrecarga cognitiva, mais de 4 fatos
+
+> Nosso cérebro é muito mais complexo e não explorado, mas podemos seguir neste modelo simplístico.
