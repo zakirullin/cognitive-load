@@ -338,7 +338,7 @@ These architectures are quite boring and easy to understand. Anyone can grasp th
 
 Involve junior developers in architecture reviews. They will help you to identify the mentally demanding areas.
 
-**Maintaining software is hard**, things break and we would need every bit of mental effort we can save.  
+**Maintaining software is hard**, things break and we would need every bit of mental effort we can save. The fewer components we have, the fewer issues there will be.  
 
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
