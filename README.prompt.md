@@ -28,5 +28,5 @@ if isValid && isAllowed && isSecure {
 - Prefer deep modules (simple interface, complex functionality) over many shallow ones. 
 - Don’t overuse language featuress, stick to the minimal subset. Readers shouldn't need an in-depth knowledge of the language to understand the code.
 - Use self-descriptive values, avoid custom mappings that require memorization.
-- Don’t abuse DRY, a little duplication is better than unnecessary dependencies or abstractions.
+- Don’t abuse DRY, a little duplication is better than unnecessary dependencies.
 - Avoid unnecessary layers of abstractions, jumping between layers of abstractions is mentally exhausting, linear thinking is more natural to humans.
