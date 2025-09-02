@@ -24,8 +24,8 @@ if isValid && isAllowed && isSecure {
 - Make conditionals readable, extract complex expressions into intermediate variables with meaningful names.
 - Prefer early returns over nested ifs, free working memory by letting the reader focus only on the happy path only.
 - Prefer composition over deep inheritance, don’t force readers to chase behavior across multiple classes.
-- Don't write shallow modules (complex interface, simple functionality). An example of shallow module: `MetricsProviderFactoryFactory`. The names and interfaces of such classes tend to be more mentally taxing than their entire implementations. Having too many shallow modules can make it difficult to understand the project. Not only do we have to keep in mind each module responsibilities, but also all their interactions.
-- Prefer deep modules (simple interface, complex functionality) over many shallow ones. 
+- Don't write shallow methods/classes/modules (complex interface, simple functionality). An example of shallow class: `MetricsProviderFactoryFactory`. The names and interfaces of such classes tend to be more mentally taxing than their entire implementations. Having too many shallow modules can make it difficult to understand the project. Not only do we have to keep in mind each module responsibilities, but also all their interactions.
+- Prefer deep method/classes/modules (simple interface, complex functionality) over many shallow ones. 
 - Don’t overuse language featuress, stick to the minimal subset. Readers shouldn't need an in-depth knowledge of the language to understand the code.
 - Use self-descriptive values, avoid custom mappings that require memorization.
 - Don’t abuse DRY, a little duplication is better than unnecessary dependencies.
