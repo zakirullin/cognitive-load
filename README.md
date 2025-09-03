@@ -54,7 +54,7 @@ We will refer to the level of cognitive load as follows:
 ## Complex conditionals 
 ```go
 if val > someConstant // 🧠+
-    && (condition2 || condition3) // 🧠+++, prev cond should be true, one of c2 or c3 has be true
+    && (condition2 || condition3) // 🧠+++, prev cond should be true, one of c2 or c3 has to be true
     && (condition4 && !condition5) { // 🤯, we are messed up by this point
     ...
 }
@@ -115,13 +115,13 @@ Prefer composition over inheritance. We won't go into detail - there's [plenty o
 Mantras like "methods should be shorter than 15 lines of code" or "classes should be small" turned out to be somewhat wrong.
 
 **Deep module** - simple interface, complex functionality  
-**Shallow module** - interface is relatively complex to the small functionality it provides 
+**Shallow module** - interface is relatively complex compared to the small functionality it provides 
 
 <div align="center">
   <img src="/img/deepmodulev8.png" alt="Deep module" width="700">
 </div>
 
-Having too many shallow modules can make it difficult to understand the project. **Not only do we have to keep in mind each module responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. Jumping between such shallow components is mentally exhausting, <a target="_blank" href="https://blog.separateconcerns.com/2023-09-11-linear-code.html">linear thinking</a> is more natural to us humans.  
+Having too many shallow modules can make it difficult to understand the project. **Not only do we have to keep in mind each module's responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. Jumping between such shallow components is mentally exhausting, <a target="_blank" href="https://blog.separateconcerns.com/2023-09-11-linear-code.html">linear thinking</a> is more natural to us humans.  
 
 > Information hiding is paramount, and we don't hide as much complexity in shallow modules.
 
@@ -201,12 +201,12 @@ Language features are OK, as long as they are orthogonal to each other.
 
 ## Business logic and HTTP status codes
 On the backend we return:  
-`401` for expired jwt token  
+`401` for expired JWT token  
 `403` for not enough access  
 `418` for banned users  
 
 The engineers on the frontend use backend API to implement login functionality. They would have to temporarily create the following cognitive load in their brains:  
-`401` is for expired jwt token // `🧠+`, ok just temporary remember it  
+`401` is for expired JWT token // `🧠+`, ok just temporarily remember it  
 `403` is for not enough access // `🧠++`  
 `418` is for banned users // `🧠+++`  
 
@@ -236,7 +236,7 @@ P.S. It's often mentally taxing to distinguish between "authentication" and "aut
 
 Do not repeat yourself - that is one of the first principles you are taught as a software engineer. It is so deeply embedded in ourselves that we can not stand the fact of a few extra lines of code. Although in general a good and fundamental rule, when overused it leads to the cognitive load we can not handle.
 
-Nowadays, everyone builds software based on logically separated components. Often those are distributed among multiple codebases representing separate services. When you strive to eliminate any repetition, you might end up creating tight coupling between unrelated components. As a result changes in one part may have unintended consequences in other seemingly unrelated areas. It can also hinder the ability to replace or modify individual components without impacting the entire system. `🤯`  
+Nowadays, everyone builds software based on logically separated components. Often those are distributed among multiple codebases representing separate services. When you strive to eliminate any repetition, you might end up creating tight coupling between unrelated components. As a result, changes in one part may have unintended consequences in other seemingly unrelated areas. It can also hinder the ability to replace or modify individual components without impacting the entire system. `🤯`  
 
 In fact, the same problem arises even within a single module. You might extract common functionality too early, based on perceived similarities that might not actually exist in the long run. This can result in unnecessary abstractions that are difficult to modify or extend.  
 
@@ -244,7 +244,7 @@ Rob Pike once said:
 
 > A little copying is better than a little dependency.  
 
-We are tempted to not reinvent the wheel so strong that we are ready to import large, heavy libraries to use a small function that we could easily write by ourselves.  
+We are tempted to not reinvent the wheel so strongly that we are ready to import large, heavy libraries to use a small function that we could easily write by ourselves.  
 
 **All your dependencies are your code.** Going through 10+ levels of stack trace of some imported library and figuring out what went wrong (*because things go wrong*) is painful.  
 
@@ -266,7 +266,7 @@ I myself was a passionate advocate of Hexagonal/Onion Architecture for years. I 
 
 Abstraction is supposed to hide complexity, here it just adds [indirection](https://fhur.me/posts/2024/thats-not-an-abstraction). Jumping from call to call to read along and figure out what goes wrong and what is missing is a vital requirement to quickly solve a problem. With this architecture’s layer uncoupling it requires an exponential factor of extra, often disjointed, traces to get to the point where the failure occurs. Every such trace takes space in our limited working memory. `🤯`  
 
-This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it made a lot more harm than good. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.**
+This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it did more harm than good. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.**
 
 <details>
   <summary><b>Coding principles and experience</b></summary>
@@ -278,10 +278,10 @@ If you think that such layering will allow you to quickly replace a database or 
 
 > With a sufficient number of users of an API,  
 > it does not matter what you promise in the contract:  
-> all observable behaviors of your system  
+> all observable behaviours of your system  
 > will be depended on by somebody.
 
-We did a storage migration, and that took us about 10 months. The old system was single-threaded, so the exposed events were sequential. All our systems depended on that observed behaviour. This behavior was not part of the API contract, it was not reflected in the code. A new distributed storage didn't have that guarantee - the events came out-of-order. We spent only a few hours coding a new storage adapter, thanks to an abstraction. **We spent the next 10 months on dealing with out-of-order events and other challenges.** It's now funny to say that abstractions helps us replace components quickly.  
+We did a storage migration, and that took us about 10 months. The old system was single-threaded, so the exposed events were sequential. All our systems depended on that observed behaviour. This behaviour was not part of the API contract, it was not reflected in the code. A new distributed storage didn't have that guarantee - the events came out-of-order. We spent only a few hours coding a new storage adapter, thanks to an abstraction. **We spent the next 10 months on dealing with out-of-order events and other challenges.** It's now funny to say that abstractions help us replace components quickly.  
 
 **So, why pay the price of high cognitive load for such a layered architecture, if it doesn't pay off in the future?** Plus, in most cases, that future of replacing some core component never happens.  
 
