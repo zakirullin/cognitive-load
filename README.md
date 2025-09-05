@@ -340,7 +340,7 @@ Involve junior developers in architecture reviews, they will help you to identif
 
 **Maintaining software is hard**, things break and we would need every bit of mental effort we can save. The fewer components there are in the system, the fewer issues there will be. Debugging will also be less mentally taxing.  
 
-In general, the mindset "Look how aesthetic and cool my architecture is!" is misguided. That's "a point in time" subjective description, and it says nothing about the reality. A far better approach is to observe the consequences in the long run:
+In general, the mindset "Wow, this architecture sure feels good — something to be proud of!" is misguided. That's "a point in time" subjective feeling, and it says nothing about the reality. A far better approach is to observe the consequences in the long run:
 - Is it easy to maintain the infrastructure?
 - Are there a lot of components/libraries/frameworks to update?
 - Is it easy to reproduce and debug an issue?
