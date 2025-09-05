@@ -345,7 +345,7 @@ In general, the mindset "Look how aesthetic and cool my architecture is!" is mis
 - Are there a lot of components/libraries/frameworks to update?
 - Is it easy to reproduce and debug an issue?
 - Can we make changes quickly, or are there a lot of unknown unknowns and people are afraid to touch things?
-- Can new people add features quickly? Or, there's some special approach to be learned?
+- Can new people add features quickly? Or, there's some special approach to be learned and some knowledge to be passed?
 
 These questions are far harder to track, and people often don't like to answer them directly. Look at some of the most complex software systems in the world, the ones that have stood the test of time - Linux, Kubernetes, Chrome and Redis (see comments below). You will not find anything fancy there, it's boring for the most part, and that's a good thing.
 
