@@ -347,7 +347,7 @@ In general, the mindset "Look how aesthetic and cool my architecture is!" is mis
 - Can we make changes quickly, or are there a lot of unknown unknowns and people are afraid to touch things?
 - Can new people add features quickly? Or, there's some special approach to be learned?
 
-These questions are far harder to track, and people often don't like to answer them directly. Look at some of the most complex software systems in the world, the ones that have stood the test of time - Linux, Kubernetes, Chrome and Redis (see comments below the article). You will not find anything fancy there, and that's a good thing.
+These questions are far harder to track, and people often don't like to answer them directly. Look at some of the most complex software systems in the world, the ones that have stood the test of time - Linux, Kubernetes, Chrome and Redis (see comments below). You will not find anything fancy there, and that's a good thing.
 
 
 ## Conclusion
