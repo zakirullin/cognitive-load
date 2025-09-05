@@ -340,12 +340,14 @@ Involve junior developers in architecture reviews, they will help you to identif
 
 **Maintaining software is hard**, things break and we would need every bit of mental effort we can save. The fewer components there are in the system, the fewer issues there will be. Debugging will also be less mentally taxing.  
 
-In general, the mindset "Wow, this architecture sure feels good — something to be proud of!" is misguided. That's "a point in time" subjective feeling, and it says nothing about the reality. A far better approach is to observe the consequences in the long run:
+In general, the mindset "Wow, this architecture sure feels good!" is misleading. That's "a point in time" subjective feeling, and it says nothing about the reality. A far better approach is to observe the consequences in the long run:
 - Is it easy to maintain the infrastructure?
 - Are there a lot of components/libraries/frameworks to update?
 - Is it easy to reproduce and debug an issue?
 - Can we make changes quickly, or are there a lot of unknown unknowns and people are afraid to touch things?
-- Can new people add features quickly? Or, there's some special approach to be learned and some knowledge to be passed?
+- Can new people add features quickly? Are there some unique mental models to learn?
+
+> What are those unique mental models? It's some set of rules, usually a mixture of DDD/CQRS/Clean Architecture/Event Driven Architecture. This is an author's own interpretation of the things that excite him the most. His own unique, subjective mental model. Extraneous cognitive load that others have to internalize.
 
 These questions are far harder to track, and people often don't like to answer them directly. Look at some of the most complex software systems in the world, the ones that have stood the test of time - Linux, Kubernetes, Chrome and Redis (see comments below). You will not find anything fancy there, it's boring for the most part, and that's a good thing.
 
