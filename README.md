@@ -344,7 +344,7 @@ Involve junior developers in architecture reviews, they will help you to identif
 
 In general, the mindset "Wow, this architecture sure feels good!" is misleading. That's "a point in time" subjective feeling, and it says nothing about the reality. A far better approach is to observe the consequences in the long run:
 - Is it easy to reproduce and debug an issue? Or do you have to jump across the call stacks or distributed services, keeping track of everything in your head?
-- Can we make changes quickly, or are there a lot of unknown unknowns and people are afraid to touch things?
+- Can we make changes quickly, or are there a lot of unknown unknowns, and people are afraid to touch things?
 - Can new people add features quickly? Are there some unique mental models to learn?
 
 > What are those unique mental models? It's some set of rules, usually a mixture of DDD/CQRS/Clean Architecture/Event Driven Architecture. This is an author's own interpretation of the things that excite him the most. His own subjective mental models. Extraneous cognitive load that others have to internalize.
