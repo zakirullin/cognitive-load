@@ -343,7 +343,7 @@ Involve junior developers in architecture reviews, they will help you to identif
 > Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.
 
 In general, the mindset "Wow, this architecture sure feels good!" is misleading. That's "a point in time" subjective feeling, and it says nothing about the reality. A far better approach is to observe the consequences in the long run:
-- Is it easy to reproduce and debug an issue? Or do you have to jump across the call stacks or distributed services, keeping track of everything in your head?
+- Is it easy to reproduce and debug an issue? Or do you have to jump across the call stacks or distributed services, trying to make sense of everything in your head?
 - Can we make changes quickly, or are there a lot of unknown unknowns, and people are afraid to touch things?
 - Can new people add features quickly? Are there some unique mental models to learn?
 
