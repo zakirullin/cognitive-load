@@ -146,6 +146,14 @@ A modern implementation of this interface has **hundreds of thousands of lines o
 
 > This deep module example is taken from the book [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php) by John K. Ousterhout. Not only does this book cover the very essence of complexity in software development, but it also has the greatest interpretation of Parnas' influential paper [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf). Both are essential reads. Other related readings: [A Philosophy of Software Design vs Clean Code](https://github.com/johnousterhout/aposd-vs-clean-code), [It's probably time to stop recommending Clean Code](https://qntm.org/clean), [Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29).
 
+<details>
+    <summary><b>Important things should be big, examples</b></summary>
+    <br>
+    <img src="/img/dirty.png" alt="Clean vs Dirty" width="750">
+    If you allow your important "crux" functions to be larger it is easier to pick them out from the sea of functions, they are obviously important: just look at them, they are big!
+    This picture is taken from [Codin' Dirty](https://htmx.org/essays/codin-dirty/) by Carson Gross. You'll find [real world examples](https://htmx.org/essays/codin-dirty/#real-world-examples) of deep functions there.
+</details>
+
 P.S. If you think we are rooting for bloated God objects with too many responsibilities, you got it wrong.
 
 ## Responsible for one thing
