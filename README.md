@@ -153,7 +153,6 @@ A modern implementation of this interface has **hundreds of thousands of lines o
         <img src="/img/dirty.png" alt="Clean vs Dirty" width="600">
     </div>
     <blockquote>If you allow your important "crux" functions to be larger it is easier to pick them out from the sea of functions, they are obviously important: just look at them, they are big!</blockquote>
-    <br>
     This picture is taken from <a href="https://htmx.org/essays/codin-dirty/" target="_blank">Codin' Dirty</a> article by Carson Gross. You'll find <a href="https://htmx.org/essays/codin-dirty/#real-world-examples" target="_blank">real world examples</a> of deep functions there.
 </details>
 
