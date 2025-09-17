@@ -131,7 +131,8 @@ Once I came back, I realised that it was extremely difficult to untangle all the
  
 
 > The best components are those that provide powerful functionality yet have a simple interface.  
-> **John K. Ousterhout**
+> 
+> *John K. Ousterhout*
 
 The interface of the UNIX I/O is very simple. It has only five basic calls:
 ```python
@@ -351,6 +352,8 @@ Involve junior developers in architecture reviews, they will help you to identif
 **Maintaining software is hard**, things break and we would need every bit of mental effort we can save. The fewer components there are in the system, the fewer issues there will be. Debugging will also be less mentally taxing.  
 
 > Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.
+> 
+> *Brian Kernighan*
 
 In general, the mindset "Wow, this architecture sure feels good!" is misleading. That's "a point in time" subjective feeling, and it says nothing about the reality. A far better approach is to observe the consequences in the long run:
 - Is it easy to reproduce and debug an issue? Or do you have to jump across the call stacks or distributed components, trying to make sense of everything in your head?
