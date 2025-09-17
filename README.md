@@ -347,7 +347,7 @@ If you keep the cognitive load low, people can contribute to your codebase withi
 
 These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort.  
 
-> Software systems are perhaps the most intricate and complex (in terms of number of distinct kinds of parts) of the things humanity makes
+> Software systems are perhaps the most intricate and complex (in terms of number of distinct kinds of parts) of the things humanity makes.
 > 
 > *Fred Brooks, The Mythical Man-Month*
 
