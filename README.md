@@ -132,7 +132,7 @@ Once I came back, I realised that it was extremely difficult to untangle all the
 
 > The best components are those that provide powerful functionality yet have a simple interface.  
 > 
-> *John K. Ousterhout*
+> *John Ousterhout*
 
 The interface of the UNIX I/O is very simple. It has only five basic calls:
 ```python
@@ -145,7 +145,7 @@ close(fd)
 
 A modern implementation of this interface has **hundreds of thousands of lines of code**. Lots of complexity is hidden under the hood. Yet it is easy to use due to its simple interface.
 
-> This deep module example is taken from the book [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php) by John K. Ousterhout. Not only does this book cover the very essence of complexity in software development, but it also has the greatest interpretation of Parnas' influential paper [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf). Both are essential reads. Other related readings: [A Philosophy of Software Design vs Clean Code](https://github.com/johnousterhout/aposd-vs-clean-code), [It's probably time to stop recommending Clean Code](https://qntm.org/clean), [Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29).
+> This deep module example is taken from the book [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php) by John Ousterhout. Not only does this book cover the very essence of complexity in software development, but it also has the greatest interpretation of Parnas' influential paper [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf). Both are essential reads. Other related readings: [A Philosophy of Software Design vs Clean Code](https://github.com/johnousterhout/aposd-vs-clean-code), [It's probably time to stop recommending Clean Code](https://qntm.org/clean), [Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29).
 
 <details>
     <summary><b>Important things should be big, examples</b></summary>
@@ -346,6 +346,10 @@ If you keep the cognitive load low, people can contribute to your codebase withi
 - One function that wires up the entire system. If you want to know how the system works - [go read it](https://www.infoq.com/presentations/8-lines-code-refactoring)
 
 These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort.  
+
+> Software systems are perhaps the most intricate and complex (in terms of number of distinct kinds of parts) of the things humanity makes
+> 
+> *Fred Brooks, The Mythical Man-Month*
 
 Involve junior developers in architecture reviews, they will help you to identify the mentally demanding areas.
 
