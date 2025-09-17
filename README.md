@@ -347,11 +347,11 @@ If you keep the cognitive load low, people can contribute to your codebase withi
 
 These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort.  
 
-> Software systems are perhaps the most intricate and complex (in terms of number of distinct kinds of parts) of the things humanity makes.
-> 
-> *Fred Brooks, The Mythical Man-Month*
-
 Involve junior developers in architecture reviews, they will help you to identify the mentally demanding areas.
+
+> Software systems are perhaps the most intricate and complex (in terms of number of distinct kinds of parts) of the things humanity makes.
+>
+> *Fred Brooks, The Mythical Man-Month*
 
 **Maintaining software is hard**, things break and we would need every bit of mental effort we can save. The fewer components there are in the system, the fewer issues there will be. Debugging will also be less mentally taxing.  
 
