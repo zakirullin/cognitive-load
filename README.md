@@ -2,12 +2,12 @@
 
 [Prompt](https://github.com/zakirullin/cognitive-load/blob/main/README.prompt.md) | [Readable version](https://minds.md/zakirullin/cognitive) | [Chinese](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Japanese](README.ja.md)
 
-*It is a living document, last update: **September 2025**. Your contributions are welcome!*
+*It is a living document, last update: **September 2025.** Your contributions are welcome!*
 
 ## Introduction
 There are so many buzzwords and best practices out there, but most of them have failed. We need something more fundamental, something that can't be wrong.   
 
-Sometimes we feel confusion going through the code. Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy abstract concept, but rather **a fundamental human constraint**. It's not imagined, it's there and we can feel it.  
+Sometimes we feel confusion going through the code. Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy abstract concept, but rather **a fundamental human constraint.** It's not imagined, it's there and we can feel it.  
 
 Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load into our code. 
 
@@ -121,7 +121,7 @@ Mantras like "methods should be shorter than 15 lines of code" or "classes shoul
   <img src="/img/deepmodulev8.png" alt="Deep module" width="700">
 </div>
 
-Having too many shallow modules can make it difficult to understand the project. **Not only do we have to keep in mind each module's responsibilities, but also all their interactions**. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. Jumping between such shallow components is mentally exhausting, <a target="_blank" href="https://blog.separateconcerns.com/2023-09-11-linear-code.html">linear thinking</a> is more natural to us humans.  
+Having too many shallow modules can make it difficult to understand the project. **Not only do we have to keep in mind each module's responsibilities, but also all their interactions.** To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. Jumping between such shallow components is mentally exhausting, <a target="_blank" href="https://blog.separateconcerns.com/2023-09-11-linear-code.html">linear thinking</a> is more natural to us humans.  
 
 > Information hiding is paramount, and we don't hide as much complexity in shallow modules.
 
@@ -143,7 +143,7 @@ lseek(fd, offset, referencePosition)
 close(fd)
 ```
 
-A modern implementation of this interface has **hundreds of thousands of lines of code**. Lots of complexity is hidden under the hood. Yet it is easy to use due to its simple interface.
+A modern implementation of this interface has **hundreds of thousands of lines of code.** Lots of complexity is hidden under the hood. Yet it is easy to use due to its simple interface.
 
 > This deep module example is taken from the book [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php) by John Ousterhout. Not only does this book cover the very essence of complexity in software development, but it also has the greatest interpretation of Parnas' influential paper [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf). Both are essential reads. Other related readings: [A Philosophy of Software Design vs Clean Code](https://github.com/johnousterhout/aposd-vs-clean-code), [It's probably time to stop recommending Clean Code](https://qntm.org/clean), [Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29).
 
@@ -237,7 +237,7 @@ Why hold this custom mapping in our working memory? It's better to abstract away
 Cognitive load on the frontend side: `🧠` (fresh, no facts are held in mind)  
 Cognitive load on the QA side: `🧠`
 
-The same rule applies to all sorts of numeric statuses (in the database or wherever) - **prefer self-describing strings**. We are not in the era of 640K computers to optimise for memory.  
+The same rule applies to all sorts of numeric statuses (in the database or wherever) - **prefer self-describing strings.** We are not in the era of 640K computers to optimise for memory.  
 
 > People spend time arguing between `401` and `403`, making decisions based on their own mental models. New developers are coming in, and they need to recreate that thought process. You may have documented the "whys" (ADRs) for your code, helping newcomers to understand the decisions made. But in the end it just doesn't make any sense. We can separate errors into either user-related or server-related, but apart from that, things are kind of blurry. 
 
@@ -260,7 +260,7 @@ We are tempted to not reinvent the wheel so strongly that we are ready to import
 **All your dependencies are your code.** Going through 10+ levels of stack trace of some imported library and figuring out what went wrong (*because things go wrong*) is painful.  
 
 ## Tight coupling with a framework
-There's a lot of "magic" in frameworks. By relying too heavily on a framework, **we force all upcoming developers to learn that "magic" first**. It can take months. Even though frameworks enable us to launch MVPs in a matter of days, in the long run they tend to add unnecessary complexity and cognitive load.
+There's a lot of "magic" in frameworks. By relying too heavily on a framework, **we force all upcoming developers to learn that "magic" first.** It can take months. Even though frameworks enable us to launch MVPs in a matter of days, in the long run they tend to add unnecessary complexity and cognitive load.
 
 Worse yet, at some point frameworks can become a significant constraint when faced with a new requirement that just doesn't fit the architecture. From here onwards people end up forking a framework and maintaining their own custom version. Imagine the amount of cognitive load a newcomer would have to build (i.e. learn this custom framework) in order to deliver any value. `🤯`
 
@@ -300,7 +300,7 @@ These architectures are not fundamental, they are just subjective, biased conseq
 
 Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons.
 
-**[Layers of abstraction aren't free of charge](https://blog.jooq.org/why-you-should-not-implement-layered-architecture), they are to be held in our limited working memory**.
+**[Layers of abstraction aren't free of charge](https://blog.jooq.org/why-you-should-not-implement-layered-architecture), they are to be held in our limited working memory.**
 
 <div align="center">
   <img src="/img/layers.png" alt="Layers" width="400">
@@ -317,7 +317,7 @@ Team Topologies provides a much better, easier to understand framework that help
 
 ## Cognitive load in familiar projects
 
-> The problem is that **familiarity is not the same as simplicity**. They *feel* the same — that same ease of moving through a space without much mental effort — but for very different reasons. Every “clever” (read: “self-indulgent”) and non-idiomatic trick you use incurs a learning penalty for everyone else. Once they have done that learning, then they will find working with the code less difficult. So it is hard to recognise how to simplify code that you are already familiar with. This is why I try to get “the new kid” to critique the code before they get too institutionalised!  
+> The problem is that **familiarity is not the same as simplicity.** They *feel* the same — that same ease of moving through a space without much mental effort — but for very different reasons. Every “clever” (read: “self-indulgent”) and non-idiomatic trick you use incurs a learning penalty for everyone else. Once they have done that learning, then they will find working with the code less difficult. So it is hard to recognise how to simplify code that you are already familiar with. This is why I try to get “the new kid” to critique the code before they get too institutionalised!  
 >
 > It is likely that the previous author(s) created this huge mess one tiny increment at a time, not all at once. So you are the first person who has ever had to try to make sense of it all at once.  
 >
