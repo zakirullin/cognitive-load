@@ -188,3 +188,35 @@ Esta é a forma correta de lidar com a incerteza de um novo sistema? É extremam
 O [debate Tanenbaum-Torvalds](https://en.wikipedia.org/wiki/Tanenbaum%E2%80%93Torvalds_debate) argumentou que o design monolítico do Linux era falho e obsoleto, e que a arquitetura de *microkernel* deveria ser usada ao invés. De fato, o *design* de *microkernel* parecia ser superior do ponto de vista "teorético e estético". No lado prático das coisas - três décadas depois, o GNU Hurn baseado em *microkernel* continua em desenvolvimento, e o Linux monolítico está em todo canto. Essa página é entregue por um Linux, seu bule inteligente utiliza Linux. Linux monolito.
 
 Um monolito bem-feito com módulos verdadeiramente isolados é frequentemente muito mais flexível que um monte de microsserviços. Ele requer muito menos esfoço cognitivo para manter. Apenas quando precisamos de separar *deployments* se torna crucial, como escalar o desenvolvimento de time, que devemos considerar adicionar uma camada de *network* entre os módulos, futuro microsserviços.
+
+## Linguagem rica de recursos
+
+Sentimos ansiosos por novos recursos lançados em nossas linguagem favoritas. Gastamos certo tempo para aprender esses recursos, e construímos código em cima disso.
+
+Se existem vários recursos, podemos gastar meia hora brincando com alguma slinhas de código para usar um ou outro recurso. E isso é meio que perda de tempo. Mas o que é pior, **quando retornar depois, você poderia ter de recriar todo o processo de pensamento!**
+
+**Você não apenas tem de compreender esse programa complicado, como tem de compreender porque um programador decidiu essa forma de resolver o problem com os recursos disponíveis**. `🤯`
+
+Essas afirmações foram feitas por ninguém menos que Rob Pike.
+
+> Reduza a carga cognitiva pelo número de escolhas.
+
+Recursos de linguagem são OK, contanto que sejam ortoginais entre si.
+
+<details>
+  <summary><b>Pensamentos de um engenheiro com 20 anos de experiência em C++ ⭐️</b></summary>
+  <br>
+  Eu estava procurando em meu leitor de RSS outro dia e notei que eu tenho algo entre trezentos artigos sobre linguagens desde o último verão, e eu me sinto bem!
+  <br><br>
+  Eu tenho usado C++ por 20 anos, o que são quase dois terços de minha vida. Maior parte de minha experiência deriva dos cantos mais obscuros da linguagem (como *undefined behavior* de todos os tipos). Isso não é apenas uma experiência reusável, commo é o tipo de coisa assustadora para se jogar fora.
+  <br><br>
+  Tipo, você pode imaginar, o token <code>||</code> tem significado distinto em <code>requires ((!P&lt;T&gt; || !Q&lt;T&gt;))</code> e em <code>requires (!(P&lt;T&gt; || Q&lt;T&gt;))</code>. A primeira é a disjunção de restrição, a segunda é o bom e velho operador lógico OR, e elas se comportam de maneira diferente.<br><br>
+  Você não consegue alocar espaço para um tipo trivial e apenas <code>memcpy</code> um conjunto de bytes sem esforço extra - isso não iniciará o ciclo-de-vida do objeto. Este foi o caso antes do C++20. E foi consertado no C++20, mas a carga cognitiva da linguagem tem apenas aumentado.<br><br>
+  A carga cognitiva está constantemente crescendo, mesmo quando as coisas são consertadas. Eu deveria saber o que foi consertado, quando isso foi consertado e como era antes. Eu sou um profissional afinal de contas. Certo, C++ é bom para suporte legado, o que significa que você <b>irá enfrentar</b> o legado. Por exemplo, último mês um colega meu me perguntou sobre o comportamento em C++03. <code>🤯</code><br><br>
+  Existiram 20 formas de inicialização. A sintaxe uniforme de inicialização foi adicionado. Agora temos 21 formas de inicialização. De qualquer forma, alguém lembra as regras para selecionar construtores de uma lista inicializadora? Algo sobre conversão implícita com o mínimo de perda de informação <i>mas se</i> o valor é conhecido estaticamente, então... <code>🤯</code><br><br>
+  <b>
+  Esse aumento na carga cognitiva não é causado pela tarefa do negócio em mãos. E não é uma complexidade intrínseca do domínio. É apenas algo que está lá devido a questões históricas</b> (<i>Carga cognitiva extrínseca</i>).<br><br>
+  Eu tive de vir com algumas regras. Assim, se aquela linha de código não fosse óbvia e eu tivesse de lembrar do *Standard*, melhor não escrever dessa forma. O *Standard* é longo, de 1500 páginas, a propósito.<br><br>
+  <b>De nenhuma forma estou tentando julgar C++.</b> Amo a linguagem. Mas estou apenas cansado por agora.<br><br>
+  <p>Obrigado ao <a href="https://0xd34df00d.me" target="_blank">0xd34df00d</a> por escrever.</p>
+</details>
