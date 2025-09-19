@@ -164,3 +164,15 @@ Uma implementação moderna dessa interface tem **centeras de milhares de linhas
 </details>
 
 P.S. Caso pense que estamos enraizando objetos divinos inchados com muitas responsabilidades, você compreendeu errado.
+
+## Responsável por uma única coisa
+
+Frequentemente, acabamos por criar muitos módulos rasos, seguindo vagos princípios como "um módulo deveria ser responsável por uma coisa, e apenas uma única coisa". O que seria esse borrão? Instanciar um objeto é uma coisa, correto? Então [MetricsProviderFactoryFactory](https://minds.md/benji/frameworks) parece ser correto. **Os nomes e interfaces destas classes tendem a ser mentalmente desgastantes. Mais que sua implementação completa. Que tipo de abstração é essa?** Algo está errado.
+
+Fazemos mudanças em nossos sistemas para satisfazer nossos usuários e *Stakeholders*. Somos responsáveis por eles.
+
+> Um módulo deveria ser responsável por um, e apenas um, usuário ou *Stakeholder*.
+
+Isso é o que o *Princípio da Responsabilidade Única* (*Single Responsibility Principle*) é sobre. Em termos simples, se introduzirmos um bug em um lugar e, em seguida, dois profissionais de negócios diferentes vierem reclamar, teremos violado o princípio. Isso não tem nada a ver com o número de coisas que fazemos em nosso módulo.
+
+Mas ainda assim, esta regras pode ser mais danosa que boa. Esse princípio pode ser compreendido de múltiplas formas como há de pessoas na terra. Uma forma melhor seria a de olhar para a quantidade de carga cognitiva que ele pode criar. Esta é a demanda mental para lembrar que mudar em um lugar pode ativar uma cadeia de reações em diferentes fluxos de negócios.
