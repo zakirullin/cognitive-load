@@ -111,3 +111,56 @@ Ei, espera! Existe um `SuperuserController` que extende `AdminController`. Ao mo
 
 Prefira composição à herança. Não vamos entrar em muitos detalhes - existem uma [variedade de materiais](https://www.youtube.com/watch?v=hxGOiiR9ZKg) por aí.
 
+## Pequenos métodos, classes ou módulos demasiados
+
+> Método, classes e módulos são intercambiáveis neste contexto.
+
+Mantras como "métodos deveriam ser menores que 15 linhas de código" ou "classes deveriam ser pequenas" se tornaram em algo errado.
+
+**Módulo profundo** - interface simples, funcionalidade complexa
+**Módulo raso** - interface relativamente complexa comparada à pequena funcionalidade que isso provê.
+
+<div align="center">
+  <img src="/img/deepmodulev8.png" alt="Módulo Profundo" width="700">
+</div>
+
+Ter muitos módulos rasos pode tornar o projeto difícil de compreender. **Não apenas temos de manter em mente a responsabilidade de cada módulo, como também suas interações**. Para compreender o propósito de um módulo raso vamos precisar olhar para a funcionalidade de todos os módulos relacionados. Pular entre cada componente raso é mentalmente exaustivo <a target="_blank" href="https://blog.separateconcerns.com/2023-09-11-linear-code.html">pensamento linear</a> é mais natural para nós, humanos.
+
+> Ocultar informação é fundamental, não precisamos ocultar tanto a complexidade em módulos rasos.
+
+Eu tenho dois projetos pet. Ambos com algo entre 5 mil linhas de código. O primeiro tem 80 classes rasas, enquanto o segundo tem apenas 7 classes profundas. Eu não tenho mantido nenhum dos dois projetos por um ano e meio.
+
+Ao retornar, eu percebi o quão extremamente difícil é para desembaraçar todas as interações entre essas 80 classes do primeiro projeto. Eu teria de reconstruir a quantidade enorme de carga coginitiva antes que pudesse começar a programar. Por outro lado, eu fui capaz de compreender o segundo projeto rapidamente, já que tinham apenas algumas classes profundas com interfaces simples.
+
+> Os melhores componentes são aqueles que provém funcionalidades poderosas enquanto mantém interfaces simples.
+> 
+> *John Ousterhout, Um Filósofo de Deisgn de Software*
+
+A interface do *UNIX I/O* é bastante simples. Ele tem apenas cinco básicas chamadas.
+
+```py
+open(caminho, bandeiras, permissões)
+read(da, buffer, contagem)
+read(da, buffer, contagem)
+lseek(da, desvio, posiçãoDeReferencia)
+close(da)
+```
+
+Uma implementação moderna dessa interface tem **centeras de milhares de linhas de código**. Muitas das complexidades estão ocultas por debaixo do capô. Ainda assim, é fácil de usar devido a sua simples interface.
+
+> Esse exemplo de módulo profundo é tirado do livro *[A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php)* por John Ousterhout. Não apenas este livro cobre bastante a essência da complexidade no desenvolvimento de *Software*, mas também tem a melhor interpretação do artigo influencial de Parnas *[On the Criteria To Be Used In Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf)*. Ambos são essenciais de ler. Outras leituras relacionadas: *[A Philosophy of Software Design vs Clean Code](https://github.com/johnousterhout/aposd-vs-clean-code)*, *[It's probably time to stop recommending Clean Code](https://qntm.org/clean)*, *[Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29)*.
+
+<details>
+    <summary><b>Coisas importantes deviam ser grandes, exemplos</b></summary>
+    <br>
+    <div align="center">
+        <img src="/img/dirty.png" alt="Clean vs Dirty" width="600">
+    </div>
+    <blockquote>
+      Se você permitir seu "crux" importante de funções serem maiores, sujas ("dirty"), será mais fácil de escolhê-las dentro de um mar de funções, elas serão obviamente importantes: apenas olhe para elas, elas são grandes!
+    </blockquote>
+
+  Esta imagem foi tiradas de <a href="https://htmx.org/essays/codin-dirty/" target="_blank">Codin' Dirty</a>, artigo por Carson Gross. Você encontrará <a href="https://htmx.org/essays/codin-dirty/#real-world-examples" target="_blank"> exemplos do mundo real</a> de funções profundas aí.
+</details>
+
+P.S. Caso pense que estamos enraizando objetos divinos inchados com muitas responsabilidades, você compreendeu errado.
