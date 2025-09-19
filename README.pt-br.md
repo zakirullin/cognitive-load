@@ -220,3 +220,38 @@ Recursos de linguagem são OK, contanto que sejam ortoginais entre si.
   <b>De nenhuma forma estou tentando julgar C++.</b> Amo a linguagem. Mas estou apenas cansado por agora.<br><br>
   <p>Obrigado ao <a href="https://0xd34df00d.me" target="_blank">0xd34df00d</a> por escrever.</p>
 </details>
+
+## Lógica de negócios e código de status HTTP
+
+No backend, retornamos:
+`401` para tokens JWT expirados
+`403` para acesso insuficiente
+`418` para usuários banidos
+
+Os engenheiros no frontend usam a API para implementar a funcionalidade de login. Eles precisariam de temporariamente criar a seguinte carga cognitiva em suas cabeças:
+`401` para tokens JWT expirados // `🧠+`, ok  vamos temporariamente lembrar disso
+`403` para acesso insuficiente // `🧠++`
+`418` para usuários banidos // `🧠+++`
+
+Desenvolvedores frontend deveriam (com sorte) introduzir algum tipo de dicionário `status numérico -> significado` em seus lados, então as gerações subsequentes de contribuidores não precisaram ter de recirar esse mapa em seus cérebros.
+
+Então os engenheiros QA entram na jogada:
+"Ei, eu tenho um status `403`, isso seria o token expirado ou acesso insuficiente?"
+**Engenheiros QA não conseguem pular direto aos testes, pois eles primeiro têm de recriar a carga cognitiva que os engenheiros backend uma vez criaram**
+
+Por que guardar esse mapa customizado em nossa memória de trabalho? É melhor abstrair os nossos detalhes de negócio do protocolo de transferência HTTP e retornar códigos auto-descritíveis no corpo da resposta:
+
+```json
+{
+  "código": "jwt-expirado"
+}
+```
+
+Carga cognitiva do lado do *front-end*: `🧠` (fresco, nenhum fato é guardado em mente)
+Carga cognitiva do lado do *QA*: `🧠`
+
+As mesmas regras se aplicam a todos os tipos de status numéricos (em bancos de dados ou qualquer outra coisa) - **prefira *strings* auto-descritíveis**. Não estamos em uma era de computadores com 640K de memória para otimizar.
+
+> Pessoas gastam tempo argumentando entre `401` e `403`, tomando decisões baseadas em seus próprios modelos mentais. Novos desenvolvedores estão chegando, e eles precisam de recriar esse processo de pensamento. Você pode ter documentado os Porquês (ADRs) para o seu código, ajudando novatos a compreender as decisões feitas. Mas no final apenas não fazem sentido. Nós podemos separar erros entre ambos, relacionados-ao-usuário ou relacionados-ao-servidor, mas além disso, as coisas são muito foscas.
+
+P.S. Muitas vezes, é mentalmente cansativo distinguir entre “autenticação” e “autorização”. Podemos usar termos mais simples, como [“login” e “permissões”](https://ntietz.com/blog/lets-say-instead-of-auth/), para reduzir a carga cognitiva.
