@@ -255,3 +255,20 @@ As mesmas regras se aplicam a todos os tipos de status numéricos (em bancos de 
 > Pessoas gastam tempo argumentando entre `401` e `403`, tomando decisões baseadas em seus próprios modelos mentais. Novos desenvolvedores estão chegando, e eles precisam de recriar esse processo de pensamento. Você pode ter documentado os Porquês (ADRs) para o seu código, ajudando novatos a compreender as decisões feitas. Mas no final apenas não fazem sentido. Nós podemos separar erros entre ambos, relacionados-ao-usuário ou relacionados-ao-servidor, mas além disso, as coisas são muito foscas.
 
 P.S. Muitas vezes, é mentalmente cansativo distinguir entre “autenticação” e “autorização”. Podemos usar termos mais simples, como [“login” e “permissões”](https://ntietz.com/blog/lets-say-instead-of-auth/), para reduzir a carga cognitiva.
+
+## Abusando do princípio DRY
+
+Não se repita (Don't Repeat Yourself, DRY) - é um dos primeiros princípios que você é ensinado como um engenheiro de *software*. Está tão profundamente embarcado em nós que não podemos aguentar o fato de algumas linhas extras de código. A pesar de ser, em geral, uma regra boa e fundamental, quando sobre-usada, leva a uma carga cognitiva que não poodemos suportar.
+
+Hoje em dia, todo mundo contrói *software* baseado em componentes logicamente separados, Frequentemente, esses são distribuídos entre múltiplas bases de código representando serviços separados. Quando você tenta eliminar qualquer repetição, você pode acabar por criar um acoplamento estreito entre componentes não relacionados. Como resultado, mudanças em uma parte pode levar a consequências não intencionais em outras áreas aparentemente não relacionadas. Isso também pode atrapalhar a capacidade de trocar ou modificar compoenentes individuais sem impactar em sistemas completos. `🤯`
+
+De fato, o mesmo problema surge mesmo dentro de um único módulo. Você pode extraur funcionalidades comuns muito cedo, baseado em similaridades pecebidas que podem não realmente existir no longo prazo. Isso pode resultar em abstrações desnecessárias que são difíceis de estender ou modificar.
+
+Rob Pike disse, certa vez:
+
+> Uma pequena cópia é melhor que uma pequena dependência.
+
+Somos tentados a não re-inventar a roda tão fortemente que estamos prontos para importar biliotecas garndes, e pesadas para usar pequenas funções que poderíamos escrever nós mesmos.
+
+**Todas as suas dependências são seu código**. Indo através de mais de 10 níveis de *Stack Trace* de alguma biblioteca importada e interpretar o que está de errado (*porque as coisas dão errado*) é doloroso.
+
