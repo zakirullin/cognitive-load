@@ -132,7 +132,7 @@ Once I came back, I realised that it was extremely difficult to untangle all the
 
 > The best components are those that provide powerful functionality yet have a simple interface.  
 > 
-> *John Ousterhout*
+> *John Ousterhout, A Philosophy of Software Design*
 
 The interface of the UNIX I/O is very simple. It has only five basic calls:
 ```python
