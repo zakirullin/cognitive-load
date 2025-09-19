@@ -5,7 +5,7 @@
 *It is a living document, last update: **September 2025.** Your contributions are welcome!*
 
 ## Introduction
-There are so many buzzwords and best practices out there, but most of them have failed. They failed because they were imagined, rather than grounded in reality. These ideas were based on aesthetics and subjective opinions. We need something more fundamental, something that can't be wrong.
+There are so many buzzwords and best practices out there, but most of them have failed. They failed because they were imagined, rather than grounded in reality. These ideas were based on aesthetics and subjective judgments. We need something more fundamental, something that can't be wrong.
 
 Sometimes we feel confusion going through the code. Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy abstract concept, but rather **a fundamental human constraint.** It's not imagined, it's there and we can feel it.  
 
