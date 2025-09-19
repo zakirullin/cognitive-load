@@ -272,3 +272,14 @@ Somos tentados a não re-inventar a roda tão fortemente que estamos prontos par
 
 **Todas as suas dependências são seu código**. Indo através de mais de 10 níveis de *Stack Trace* de alguma biblioteca importada e interpretar o que está de errado (*porque as coisas dão errado*) é doloroso.
 
+## Estreitamente acoplado a um *Framework*
+
+Existem várias mágicas em *frameworks*. Ao depender muito de *frameworks*, **nós forçamos todos os desenvolvedores a aprender essa "mágica" primeiro**. Isso pode levar meses. A pesar disso, *frameworks* nos permitem criar Produtos Mínimos Viáveis (Minimal Viable Products, MVP) em poucos dias, no longo prazo eles tendem a adicionar complexidade desnecessária e carga cognitiva.
+
+Pior ainda, a algum ponto os *frameworks* podem se tornar uma retrição significativa quando encarar um novo requerimento que não se encaixa na arquitetura. Até que as pessoas acabem por bifurcar um *framework* e manter suas próprias versões customizadas. Imagine a quantidade de carga cognitiva que um novato teria de construir (por exemplo, aprender esse *framework* customizado) para que possa entregar algum valor. `🤯`
+
+**De nenhuma forma eu advogo em pró de inventar tudo do zero!**
+
+Podemos programar de uma forma agnóstica à *frameworks*. A regra de negócios não deveriam residir dentro de um *framework*; ao invés disso, deveriamos usar os componentes do *framework*. Use *framework* no estilo de bibliotecas. Dessa forma, permitimos que novos contribuidores adicionem valor do dia um, sem necessidade de mergulhar em detritos de complexidade relacionadas ao *framework* primeiro.
+
+> [Why I Hate Frameworks](https://minds.md/benji/frameworks)
