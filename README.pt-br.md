@@ -95,3 +95,19 @@ stuff // 🧠+
 ```
 
 Podemos focar no caminho feliz apenas, liberando nossa memória de trabalho de todos esses tipos de pré-condições.
+
+## Pesadelo de herança
+
+Fomos pedidos para mudar algumas coisas para nossos usuários administradores: `🧠`
+
+`AdminController extends UserController extends GuestController extends BaseController`
+
+Ahh, parte da functionalidade está em `BaseControler`, vamos dar uma olhada: `🧠+`
+O mecanismo básico foi introduzido em `GuestController`: `🧠++`
+Algumas coisas foram parcialmente alteradas em `UserController`: `🧠+++`
+Finalmente, estamos aqui, `AdminController`, vamos programar nossa tarefa! `🧠++++`
+
+Ei, espera! Existe um `SuperuserController` que extende `AdminController`. Ao modificar `AdminController`, podemos quebrar partes da classe herdeira, vamos mergulhar em `SuperuserController` primeiro: `🤯`
+
+Prefira composição à herança. Não vamos entrar em muitos detalhes - existem uma [variedade de materiais](https://www.youtube.com/watch?v=hxGOiiR9ZKg) por aí.
+
