@@ -283,3 +283,40 @@ Pior ainda, a algum ponto os *frameworks* podem se tornar uma retrição signifi
 Podemos programar de uma forma agnóstica à *frameworks*. A regra de negócios não deveriam residir dentro de um *framework*; ao invés disso, deveriamos usar os componentes do *framework*. Use *framework* no estilo de bibliotecas. Dessa forma, permitimos que novos contribuidores adicionem valor do dia um, sem necessidade de mergulhar em detritos de complexidade relacionadas ao *framework* primeiro.
 
 > [Why I Hate Frameworks](https://minds.md/benji/frameworks)
+
+## Arquitetura em camadas
+
+Há uma certa emoção de engenharia em tudo isso.
+
+Eu era um apaixonado advogado de arquitetura Hexagonal/Onion por anos. Usei aqui e encorajei outros times a usar também. A complexidade de nossos projetos aumentaram, a quantidade de arquivos sozinhos dobraram. Parece como se eu estivesse escrevendo um monte de código-cola. A cada mudança de requerimento, temos de fazer mudanças entre múltiplas camadas de abstração, o que se torna tedioso. `🤯`
+
+**Abstrações são supostamente para ocultar complexidade, não adicionar [indireção](https://fhur.me/posts/2024/thats-not-an-abstraction)**. Pulando de chamada em chamada para ler e compreender o que há de errado e qual é o requerimento vital para rapidamente resolver o problema. Com essa arquitetura em camada, desacoplar requer um fator extra exponencial, frequentemente dearticulado, rastros para chegat ao ponto onde a falha ocorre. Cada rastro ocupa espaço em nossa limitada memória de trabalho. `🤯`
+
+Essa arquitetura foi algo que fez senso intuitivo de primeira, mas cada vez que tentamos aplicá-la a projetos, isso fez mais mal que bem. Gastamos anos em atividade mental desnecessária e escrevemos código-cola inútil sem valor de negócios claro. Ao contrário, tornamos as coisas piores para os negócios ao forçar novatos a aprender nossas escolhas (modelos mentais) primeiro. O tempo de mercado tem piorado. E no final, desistimos em favor do bom e velho princípio de inversão de dependência. **Nenhum termo de porta ou adaptador para aprender, nenhuma camada horizontal de abstração, nenhuma carga coginitiva extrínseca**.
+
+<details>
+  <summary><b>Princípios de programação e experiência</b></summary>
+  <img src="img/complexity.png"><br>
+  <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
+</details>
+
+Se você pensa que tal camadas irão te permitir rapidamente trocar o banco de dados ou quaisquer outras dependências, você está enganado. Mudar o armazenamento causa vários problemas, e acredite em nós, ter algumas abstrações para acessar a camada de dado é a última de suas preocupações. Ao menos, abstrações podem salvar algo entre 10% do nosso tempo de migração (se houver), a dor real está em incompatibilidades do modelo de dado, protocolo de comunicações, desafios de sistemas distrbuídos e [interfaces implícitas](https://www.hyrumslaw.com).
+
+> Com um número suficiente de usuários de uma API,
+> não importa qual a sua promessa no contrato:
+> todos os comportamentos de seu sistema
+> será dependente de alguém.
+
+Fazemos uma migração de armazenamento, e levamos algo entre 10 meses. O sistema legado era *single-thread*, então os eventos expostos eram sequenciais. Todos os nossos sistemas dependem naquele comportamento observado. Esse comportamento não era parte de nosso contrato de API, e não refletia em nosso código. Um novo armazenamento distribuído não nos garantiu isso - os eventos chegam fora-de-ordem. Gastamos apenas algumas horas programando o novo adaptador do armazenamento, agradecimentos a uma abstração. **Gastamos os próximos 10 meses lidando com eventos fora-de-ordem e outros desafios**. Agora é engraçado dizer que abstrações nos ajudam a trocar componentes rapidamente.
+
+**Então, porque pagar o preço de carga cognitiva como uma arquitetura em camadas, se podemos não pagar no futuro?** Adicionalmente, na maioria dos casos, o futuro de trocar algum componente principal nunca acontece.
+
+Essas arquiteturas não são fundamentais, elas são apenas subjetivas, com consequências enviesadas de princípios mais fundamentais. Por que confiar nessas interpretações subjetivas? Siga regras fundamentais ao invés disso: princípio de invesão de dependência, única fonte de verdade, carga cognitiva e ocultação de informação. Nossa lógica de negócios não deveriam depender de módulos de baixo-nível, como banco de dados, interfaces de usuário ou *frameworks*. Deveriamos ser capazes de escrever testes para nossa lógica principal sem ter de nos perocupar com infraestrutura, e é isso. [Dicussão](https://github.com/zakirullin/cognitive-load/discussions/24)
+
+Não adicione camadas de abstração por conta da arquitetura. Adicione-as quando precisar de uma extensão a algum ponto como é justificável por razões práticas.
+
+**[Camadas de abstrações não são livres de mudanças](https://blog.jooq.org/why-you-should-not-implement-layered-architecture), elas são gurdadas em nossa limitada memória de trabalho.**
+
+<div align="center">
+  <img src="/img/layers.png" alt="Camadas" width="400">
+</div>
