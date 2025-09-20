@@ -285,8 +285,8 @@ This architecture was something that made intuitive sense at first, but every ti
   <summary><b>Coding principles and experience</b></summary>
   <div align="center">
     <img src="img/complexity.png" width="500">
+    <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
   </div>
-  <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
 
 If you think that such layering will allow you to quickly replace a database or other dependencies, you're mistaken. Changing the storage causes lots of problems, and believe us, having some abstractions for the data access layer is the least of your worries. At best, abstractions can save somewhat 10% of your migration time (if any), the real pain is in data model incompatibilities, communication protocols, distributed systems challenges, and [implicit interfaces](https://www.hyrumslaw.com).  
