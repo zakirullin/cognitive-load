@@ -26,7 +26,9 @@ We should reduce the cognitive load in our projects as much as possible.
 
 <details>
   <summary><b>Cognitive load and interruptions</b></summary>
-  <img src="img/interruption.jpeg"><br>
+  <div> align="center">
+    <img src="img/interruption.jpeg" width="540">
+  </div>
 </details>
 
 > We are going to use "cognitive load" in an informal sense; sometimes it lines up with the specific scientific concept of Cognitive Load, but we don't know enough about where it does and doesn't match.
@@ -281,7 +283,9 @@ This architecture was something that made intuitive sense at first, but every ti
 
 <details>
   <summary><b>Coding principles and experience</b></summary>
-  <img src="img/complexity.png"><br>
+  <div align="center">
+    <img src="img/complexity.png" width="687">
+  </div>
   <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
 
