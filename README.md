@@ -26,7 +26,7 @@ We should reduce the cognitive load in our projects as much as possible.
 
 <details>
   <summary><b>Cognitive load and interruptions</b></summary>
-  <div> align="center">
+  <div align="center">
     <img src="img/interruption.jpeg" width="480">
   </div>
 </details>
