@@ -27,7 +27,7 @@ We should reduce the cognitive load in our projects as much as possible.
 <details>
   <summary><b>Cognitive load and interruptions</b></summary>
   <div> align="center">
-    <img src="img/interruption.jpeg" width="540">
+    <img src="img/interruption.jpeg" width="480">
   </div>
 </details>
 
@@ -284,7 +284,7 @@ This architecture was something that made intuitive sense at first, but every ti
 <details>
   <summary><b>Coding principles and experience</b></summary>
   <div align="center">
-    <img src="img/complexity.png" width="687">
+    <img src="img/complexity.png" width="500">
   </div>
   <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
