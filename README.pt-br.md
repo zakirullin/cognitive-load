@@ -320,3 +320,13 @@ Não adicione camadas de abstração por conta da arquitetura. Adicione-as quand
 <div align="center">
   <img src="/img/layers.png" alt="Camadas" width="400">
 </div>
+
+## *Domain-drive design*
+
+*Domain-driven design* (DDD) tem alguns pontos positivos, apesar disso, é frequentemente mal-interpretado. Pessoas dizem "Nós escrevemos código DDD", o qual é um pouco estranho, já que DDD é mais sobre o espaço do problema que o espaço de solução.
+
+Linguagem ubíqua, domínio, contexto adjunto, agregado, tempestade de evento são todos espaços de problemas. Eles são para nos ajudar a aprender os *insights* sobre o domínio e extrarir seus limites. DDD permite desenvolvedores, especialistas de domínio e pessoas de negócios se comunicarem de forma efetiva ao utilizar uma linguagem unificada e singular. Ao invés de focar nesses aspectos do DDD sobre o espaço do problrma, tendemos a dar ênfase em estruturas de arquivos em particular, serviços, repositórios e outras técnicas de solução de espaço.
+
+Chances são que a forma como interpretamos DDD é única e subjetiva. E se construirmos código em cima dessa compreensão, por exemplo, se criamos uma carga cognitiva extrínseca - desenvolvedores futuros estão condenados. `🤯`
+
+*Team Topologies* provê um *framework* muito melhor e fácil de compreender que nos permite dividir a carga cognitiva entre times. Engenheiros tendem a desenvolver modelos mentais similares depois de aprender sobre *Team Topologies*. DDD, por outro lado, parece estar criando 10 modelos mentais diferentes para 10 leitores distintos. Ao invés de um chão comum, isso se torna um campo de batalha para debates desnecessários.
