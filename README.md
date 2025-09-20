@@ -282,11 +282,11 @@ I myself was a passionate advocate of Hexagonal/Onion Architecture for years. I 
 This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it did more harm than good. We spent years on unnecessary mental activity and writing useless glue code with no clear business value. On the contrary, we made things worse for the business by forcing newcomers to learn our approaches (mental models) first. The time to market has worsened. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.** 
 
 <details>
-  <summary><b>Coding principles and experience</b></summary>
-  <div align="center">
-    <img src="img/complexity.png" width="500">
+    <summary><b>Coding principles and experience</b></summary>
+    <div align="center">
+        <img src="img/complexity.png" alt="Super simple code" width="500">
+    </div>
     <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
-  </div>
 </details>
 
 If you think that such layering will allow you to quickly replace a database or other dependencies, you're mistaken. Changing the storage causes lots of problems, and believe us, having some abstractions for the data access layer is the least of your worries. At best, abstractions can save somewhat 10% of your migration time (if any), the real pain is in data model incompatibilities, communication protocols, distributed systems challenges, and [implicit interfaces](https://www.hyrumslaw.com).  
