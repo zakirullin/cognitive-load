@@ -1,4 +1,4 @@
-# Cognitive Load is what matters
+# Cognitive load is what matters
 
 [Prompt](https://github.com/zakirullin/cognitive-load/blob/main/README.prompt.md) | [Readable version](https://minds.md/zakirullin/cognitive) | [Chinese](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Japanese](README.ja.md)
 
