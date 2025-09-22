@@ -107,15 +107,15 @@ When variable names are shortened too much, every reader has to mentally transla
  * Applies discounts to individual products and/or the user, and calculates sales tax on the subtotal.
  */
 function calcTtl(dt, usr, prds) { // The abbreviations start here, assuming "data", "user", and "products"
-  var ttl = 0; // "total" - counting this with the input parameters already means 🤯, but it gets worse...
+  var ttl = 0; // total - if we consider the function parameters, we're already 🤯, but it gets worse...
   for (var i = 0; i < prds.length; i++) {
-    var p = prds[i]; // 🧠+, Does "p" mean product?
-    var q = p.q; // 🧠++, Does "q" mean quantity?
-    var pr = p.prc; // 🧠+++, Does "pr" mean price?
+    var p = prds[i]; // 🧠+, does "p" mean product?
+    var q = p.q; // 🧠++, does "q" mean quantity?
+    var pr = p.prc; // 🧠+++, does "pr" mean price?
     var dsc = usr.dsc ? p.dsc : 0; // 🤯, I assume we're talking about a discount here?
     ttl += (pr * q) - dsc; 
   }
-  var tx = ttl * dt.txRt; // 🤯🤯 Another abbreviation for sales tax...
+  var tx = ttl * dt.txRt; // 🤯🤯 this is probably calculating tax?
   return { usr: usr.id, ttl: ttl + tx }; 
 }
 ```
