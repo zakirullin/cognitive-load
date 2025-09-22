@@ -156,7 +156,7 @@ Each of these forces the reader to pause:
 
 `🧠++` when they realize it might mean something else,
 
-`🤯` when they have to scan surrounding code or docs to confirm.
+`🤯` when they have to search surrounding code or docs to confirm.
 
 Rule of thumb: if an abbreviation could plausibly mean more than one thing in the context, spell it out. The extra keystrokes are cheaper than constant re-parsing in every reader’s head.
 
