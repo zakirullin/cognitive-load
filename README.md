@@ -141,6 +141,25 @@ function calculateTotal(data, user, products) { // 🧠, clear intent
 ```
 👉 A few extra keystrokes when writing code can save hours of decoding later. And let's be real - isn't AI already writing this for you?
 
+## Ambiguous Abbreviations
+
+Some abbreviations are so common that people think they’re “safe”, but they can still cause confusion:
+* `dt` → data or date?
+* `cnt` → count or content?
+* `val` → value or validation?
+* `res` → result, resource, response?
+* and many more...
+
+Each of these forces the reader to pause:
+
+`🧠+` if they think they know,
+
+`🧠++` when they realize it might mean something else,
+
+`🤯` when they have to scan surrounding code or docs to confirm.
+
+Rule of thumb: if an abbreviation could plausibly mean more than one thing in the context, spell it out. The extra keystrokes are cheaper than constant re-parsing in every reader’s head.
+
 
 ## Inheritance nightmare
 We are asked to change a few things for our admin users: `🧠`
