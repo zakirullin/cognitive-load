@@ -141,7 +141,7 @@ function calculateTotal(data, user, products) { // 🧠, clear intent
 ```
 A few extra keystrokes when writing code can save hours of decoding later. And let's be real - isn't AI already writing this for you?
 
-## Ambiguous Abbreviations
+## Ambiguous abbreviations
 
 Some abbreviations are so common that people think they’re “safe”, but they can still cause confusion:
 * `dt` → data or date?
