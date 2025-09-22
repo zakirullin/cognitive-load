@@ -97,6 +97,51 @@ stuff // 🧠+
 
 We can focus on the happy path only, thus freeing our working memory from all sorts of preconditions.
 
+## Excessive abbreviation
+
+When variable names are shortened too much, every reader has to mentally translate what they mean before understanding the logic. This eats up working memory slots and quickly leads to overload.
+
+```javascript
+/**
+ * Calculates the final order total for a user.
+ * Applies discounts to individual products and/or the user, and calculates sales tax on the subtotal.
+ */
+function calcTtl(dt, usr, prds) { // The abbreviations start here, assuming "data", "user", and "products"
+  var ttl = 0; // "total" - counting this with the input parameters already means 🤯, but it gets worse...
+  for (var i = 0; i < prds.length; i++) {
+    var p = prds[i]; // 🧠+, Does "p" mean product?
+    var q = p.q; // 🧠++, Does "q" mean quantity?
+    var pr = p.prc; // 🧠+++, Does "pr" mean price?
+    var dsc = usr.dsc ? p.dsc : 0; // 🤯, I assume we're talking about a discount here?
+    ttl += (pr * q) - dsc; 
+  }
+  var tx = ttl * dt.txRt; // 🤯🤯 Another abbreviation for sales tax...
+  return { usr: usr.id, ttl: ttl + tx }; 
+}
+```
+
+Compare this with using full, descriptive variable names:
+```javascript
+/**
+ * Calculates the final order total for a user.
+ * Applies discounts to individual products and/or the user, and calculates sales tax on the subtotal.
+ */
+function calculateTotal(data, user, products) { // 🧠, clear intent
+  var subtotal = 0; // 🧠
+  for (var i = 0; i < products.length; i++) {
+    var product = products[i]; // 🧠
+    var quantity = product.quantity; // 🧠
+    var price = product.price; // 🧠
+    var discount = user.hasDiscount ? product.discount : 0; // 🧠
+    subtotal += (price * quantity) - discount; // 🧠
+  }
+  var tax = subtotal * data.taxRate; // 🧠
+  return { userId: user.id, total: subtotal + tax }; // 🧠
+}
+```
+👉 A few extra keystrokes when writing code can save hours of decoding later. And let's be real - isn't AI already writing this for you?
+
+
 ## Inheritance nightmare
 We are asked to change a few things for our admin users: `🧠`
 
