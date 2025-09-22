@@ -139,7 +139,7 @@ function calculateTotal(data, user, products) { // 🧠, clear intent
   return { userId: user.id, total: subtotal + tax }; // 🧠
 }
 ```
-👉 A few extra keystrokes when writing code can save hours of decoding later. And let's be real - isn't AI already writing this for you?
+A few extra keystrokes when writing code can save hours of decoding later. And let's be real - isn't AI already writing this for you?
 
 ## Ambiguous Abbreviations
 
