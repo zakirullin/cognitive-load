@@ -38,7 +38,6 @@ Cuando leemos el codigo colocamos cosas como valores, variables, controles de fl
 
 *Digamos que nos solicitan realizar correciones a un projecto con el que no estamos familiarizados. Nos dicen que un desarrollador realmente inteligente ha contribuido al mismo. Un monton de arquitecturas geniales, librerias sofisticadas y tecnologias de punta fueron usadas. En sintesis, **el autor a creado una enorme carga cognitiva para nosotros.***
 
-
 <div align="center">
   <img src="/img/cognitiveloadv6.png" alt="Cognitive load" width="750">
 </div>
@@ -60,7 +59,6 @@ Deberíamos reducir la carga cognitiva en nuestros proyectos en medida posible.
     <img src="img/interruption.jpeg" width="480">
   </div>
 </details>
-
 
 <!-- > We are going to use "cognitive load" in an informal sense; sometimes it lines up with the specific scientific concept of Cognitive Load, but we don't know enough about where it does and doesn't match. -->
 
@@ -93,8 +91,8 @@ Vamos directamente a ejemploc concretos  de Carga Cognotiva Extrinseca.
 Nos vamos a referir a los niveles de carga cognitiva como sigue: `🧠`: memoria de trabajo fresca, sin carga cognitiva `🧠++`: al menos dos datos en nuestra memoria de trabajo, carga cognitiva moderada `🤯`: sobrecarga cognitiva, más de 4 datos
 
 <!-- > Our brain is much more complex and unexplored, but we can go with this simplistic model. -->
-> Nuestro cerebros es muchos mas complejo de lo que creemos y esta en su mayoria, inexplorado, pero podemos trabajar con este modelo simplista.
 
+> Nuestro cerebros es muchos mas complejo de lo que creemos y esta en su mayoria, inexplorado, pero podemos trabajar con este modelo simplista.
 
 **Nota**: En los ejemplos de codigo mantendremos la convencion de nombres de variables, funciones, metodos etc. en ingles, los comentarios explicativos si los traduciremos.
 
@@ -143,7 +141,9 @@ if isValid && isAllowed && isSecure {
 ```
 
 <!-- ## Nested ifs  -->
+
 ## Ifs Anidados
+
 <!--
 ```go
 if isValid { // 🧠+, okay nested code applies to valid input only
@@ -204,14 +204,21 @@ Digamos que no solicitan algunos cambios para nuestros usuarios administradores:
 `AdminController extends UserController extends GuestController extends BaseController`
 
 <!-- Ohh, part of the functionality is in `BaseController`, let's have a look: `🧠+` -->
+
 Aah!, parte de nuestra funcionalidad esta en `BaseController`, echemeos un vistazo: `🧠+`
+
 <!-- Basic role mechanics got introduced in `GuestController`: 🧠++ -->
+
 Las mecánicas básicas de los roles se introdujeron en  `GuestController`: `🧠++`
+
 <!-- Things got partially altered in `UserController`: `🧠+++ ` -->
+
 Las cosas cambiaron parcialmente en `UserController`: `🧠+++ `
 Finally we are here, `AdminController`, let's code stuff! `🧠++++`
 Finalmente estamos aqui, `AdminController`, vamos a codear! `🧠++++`
+
 <!-- Oh, wait, there's `SuperuserController` which extends `AdminController`. By modifying `AdminController` we can break things in the inherited class, so let's dive in `SuperuserController` first: `🤯 ` -->
+
 ¡Un momento!, existe el controlador `SuperuserController` que hereda de `AdminController`. Si modificamos `AdminController`, podríamos causar problemas en la clase heredada, así que primero analicemos `SuperuserController`: `🤯`
 
 <!-- Prefer composition over inheritance. We won't go into detail - there's [plenty of material](https://www.youtube.com/watch?v=hxGOiiR9ZKg) out there. -->
@@ -219,6 +226,7 @@ Finalmente estamos aqui, `AdminController`, vamos a codear! `🧠++++`
 Es preferible utilizar la composición en lugar de la herencia. No vamos a entrar en detalles; hay mucha información disponible [aquí](https://www.youtube.com/watch?v=hxGOiiR9ZKg).
 
 <!-- ## Too many small methods, classes or modules -->
+
 ## Demasiados métodos, clases y/o módulos pequeños.
 
 <!-- > Method, class and module are interchangeable in this context -->
@@ -230,8 +238,11 @@ Es preferible utilizar la composición en lugar de la herencia. No vamos a entra
 Resultó que principios como "los métodos deben tener menos de 15 líneas de código" o "las clases deben ser pequeñas", eran en cierto modo erróneos.
 
 <!-- **Deep module** - simple interface, complex functionality -->
+
 **Modulo Profundo** - interfaz simple, funcionalidad compleja
+
 <!-- **Shallow module** - interface is relatively complex compared to the small functionality it provides -->
+
 **Modulo de funcionalidad limitada** - la intyerfaz es relativamente compleja comparada a la funcionalidad relativamente simple que provee.
 
 <div align="center">
@@ -243,6 +254,7 @@ Resultó que principios como "los métodos deben tener menos de 15 líneas de c�
 El tener muchos peuqeños modulos puede dificultar el entender un proyecto. **No solo tenemos que mantener en mente cada una de las responsabilidades, sino ademas cada una de sus interacciones.** Para poder entender el proposito de un modulo con poca funcionalidad necesitamos mirar todas las funcionalidades asociadas de todos los modulos asociados. Navegar ente tantos modulos pequeños puede resultar mentalmente agotador, el  `<a target="_blank" href="https://blog.separateconcerns.com/2023-09-11-linear-code.html">`pensamiento lineal `</a>` nos resulta mas comodo y natural.
 
 <!-- > Information hiding is paramount, and we don't hide as much complexity in shallow modules. -->
+
 > La encapsulacion de información es fundamental, y no intentamos ocultar mucha complejidad en módulos más simples.
 
 <!-- I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas the second one has only 7 deep classes. I haven't been maintaining any of these projects for one year and a half. -->
@@ -252,7 +264,6 @@ Tengo dos proyectos personales, ambos con aproximadamente 5k líneas de código.
 <!-- Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface. -->
 
 Una vez que  los retome, me di cuenta de que era extremadamente difícil comprender todas las interacciones entre las 80 clases del primer proyecto. Tendría que volver a aprender una gran cantidad de conceptos antes de poder empezar a programar. Por otro lado, el segundo proyecto fue fácil de entender, ya que solo tenía unas pocas clases complejas con una interfaz sencilla.
-
 
 > Los mejores componentes son aquellos que ofrecen una funcionalidad potente pero con una interfaz sencilla.
 >
@@ -274,9 +285,10 @@ close(fd)
 
 Una implementación moderna de esta interfaz cuenta con **cientos de miles de líneas de código**. A pesar de su gran complejidad interna, su interfaz sencilla la hace muy fácil de usar.
 
-<!-- > This deep module example is taken from the book [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php) by John Ousterhout. Not only does this book cover the very essence of complexity in software development, but it also has the greatest interpretation of Parnas' influential paper [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf). Both are essential reads. Other related readings: [A Philosophy of Software Design vs Clean Code](https://github.com/johnousterhout/aposd-vs-clean-code), [It&#39;s probably time to stop recommending Clean Code](https://qntm.org/clean), [Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29). -->
+<!-- > This deep module example is taken from the book [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php) by John Ousterhout. Not only does this book cover the very essence of complexity in software development, but it also has the greatest interpretation of Parnas' influential paper [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf). Both are essential reads. Other related readings: [A Philosophy of Software Design vs Clean Code](https://github.com/johnousterhout/aposd-vs-clean-code), [It's probably time to stop recommending Clean Code](https://qntm.org/clean), [Small Functions considered Harmful](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29). -->
 
 <!-- Nota interna: Seria bueno tener titulo de traducciones de los recusos de abajo o en su defecto una traduccion de los titulos -->
+
 > El ejemplo de modulo complejo es extraido del libro  [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php) por John Ousterhout. No solo aborda la esencia de la complejidad en el desarrollo de software, sino que ofrece la mejor interpretacion del influyente articulo de Parnas titulado [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf). Ambas son lecturas escenciales.Otras lecturas relacionada pueden ser: [A Philosophy of Software Design vs Clean Code](https://github.com/johnousterhout/aposd-vs-clean-code), [It&#39;s probably time to stop recommending Clean Code](https://qntm.org/clean), [Small Functions considered Harm](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29)
 
 <!-- <details>
@@ -289,7 +301,6 @@ Una implementación moderna de esta interfaz cuenta con **cientos de miles de l�
     This picture is taken from <a href="https://htmx.org/essays/codin-dirty/" target="_blank">Codin' Dirty</a> article by Carson Gross. You'll find <a href="https://htmx.org/essays/codin-dirty/#real-world-examples" target="_blank">real world examples</a> of deep functions there.
 </details> -->
 
-
 <details>
     <summary><b>Las cosas importantes deben ser grandes: ejemplos</b></summary>
     <br>
@@ -300,14 +311,13 @@ Una implementación moderna de esta interfaz cuenta con **cientos de miles de l�
     Esta imagen ha sido tomada del artículo <a href="https://htmx.org/essays/codin-dirty/" target="_blank">Codin' Dirty</a> de Carson Gross. Allí encontrarás <a href="https://htmx.org/essays/codin-dirty/#real-world-examples" target="_blank">ejemplos reales</a> de funciones profundas.
 </details>
 
-
 <!-- P.S. If you think we are rooting for bloated God objects with too many responsibilities, you got it wrong. -->
 
 PD: Si crees que defendemos los 'God objects'/'Objeto Todopoderoso' sobrecargados y con demasiadas responsabilidades, estás equivocado.".
 
 <!-- ## Responsible for one thing -->
 
-## Responsables de una funcion
+## Responsables de una unica funcion
 
 <!-- All too often, we end up creating lots of shallow modules, following some vague "a module should be responsible for one, and only one, thing" principle. What is this blurry one thing? Instantiating an object is one thing, right? So [MetricsProviderFactoryFactory](https://minds.md/benji/frameworks) seems to be just fine. **The names and interfaces of such classes tend to be more mentally taxing than their entire implementations, what kind of abstraction is that?** Something went wrong. -->
 
@@ -316,11 +326,15 @@ Muy frecuentemente, terminamos creado numeroso modulos simplistas, siguiendo el 
 <!-- We make changes to our systems to satisfy our users and stakeholders. We are responsible to them. -->
 
 Realizamos mejoras en nuestros sistemas para satisfacer las necesidades de nuestros usuarios y demás partes interesadas. Somos responsables ante ellos.
+
 <!-- esta nota debe estar visible al publico -->
+
 > *Nota del traductor*: stakeholders normalmente se usa en el ambito de las inversiones y refiere al inversionanista o tambien traducido como accionista (posee acciones de una empresa), quien posee poder de voto en la toma de deciciones de una empresa, el mismo es la parte interesada en el correcto funcionamiento de la inversion. En nuestro caso y contexto solo refiere a una parte interesada por el funcionamiento esperado del codigo, al no encontrar una palabra que pueda sustituir directamente esta idea la hemos dejado como 'parte interesada'.
+
 <!-- 
 > A module should be responsible to one, and only one, user or stakeholder.
 > -->
+
 > Un módulo debe ser responsable ante un único usuario o interesado.
 
 <!-- This is what this Single Responsibility Principle is all about. Simply put, if we introduce a bug in one place, and then two different business people come to complain, we've violated the principle. It has nothing to do with the number of things we do in our module. -->
@@ -332,12 +346,12 @@ De eso se trata el Principio de Responsabilidad única. En pocas palabras, si in
 Pero incluso hoy en día, esta regla puede generar más mal que bien. Este principio puede interpretarse de muchas maneras, dependiendo de cada persona. Un enfoque más acertado sería analizar la carga cognitiva que implica. Es difícil recordar mentalmente que un cambio en un área puede desencadenar una serie de reacciones en diferentes procesos de la empresa. Y eso es todo; no hace falta aprender términos complicados.
 
 <!-- ## Too many shallow microservices -->
+
 ## Demasiados microservicios superficiales
 
 <!-- This shallow-deep module principle is scale-agnostic, and we can apply it to microservices architecture. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that are not so shallow (=deep). One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation. -->
 
 Este principio de módulo superficial-profundo es independiente de la escala, y podemos aplicarlo a la arquitectura de microservicios. Demasiados microservicios superficiales no servirán de nada; la industria se está moviendo hacia "macroservicios", es decir, servicios que no son tan superficiales (= profundos). Uno de los peores fenomenos y ademas, más difíciles de corregir es el llamado monolito distribuido, que a menudo es el resultado de esta separación superficial excesivamente granular.
-
 
 <!-- I once consulted a startup where a team of five developers introduced 17(!) microservices. They were 10 months behind schedule and appeared nowhere close to the public release. Every new requirement led to changes in 4+ microservices. It took an enormous amount of time to reproduce and debug an issue in such a distributed system. Both time to market and cognitive load were unacceptably high. `🤯` -->
 
@@ -357,9 +371,15 @@ Un monolito bien construido con modulos verdaderamente aislados es, muchas veces
 
 ## Feature-rich languages
 
+## Lenguages ricos en caracteristicas
+
 We feel excited when new features got released in our favourite language. We spend some time learning these features, we build code upon them.
 
+Tendemos a emocionarnos cuando se lanzan nuevas caracteristicas en nuestro lenguaje favorito. Invertimos cierta cantidad de tiempo aprendiendo esas nuevas posibilidades y creamos cosdigo en base a ellas.
+
 If there are lots of features, we may spend half an hour playing with a few lines of code, to use one or another feature. And it's kind of a waste of time. But what's worse, **when you come back later, you would have to recreate that thought process!**
+
+Si hay muchas caracteristicas puede que pasemos al menos media hora jugando con ellas escribiendo un par de lineas de codigo para poder usar luego alguna u otra caracteristica. Pero lo peors, **cuando regresamos luego, tenemos que recrear todo el proceso de pensamiento!**
 
 **You not only have to understand this complicated program, you have to understand why a programmer decided this was the way to approach a problem from the features that are available.** `🤯`
 
