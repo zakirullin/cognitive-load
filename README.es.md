@@ -383,11 +383,17 @@ Si hay muchas caracteristicas puede que pasemos al menos media hora jugando con 
 
 **You not only have to understand this complicated program, you have to understand why a programmer decided this was the way to approach a problem from the features that are available.** `🤯`
 
+**No solo tenemos que entender un programa complicado, tenemos que entender por que un programado decidio tomar dicho enfoque para abordar el problema con las caractericticas disponibles. `🤯`**
+
 These statements are made by none other than Rob Pike.
+Esta es la famosa declaracion por no menos que Rob Pike.
 
 > Reduce cognitive load by limiting the number of choices.
+> Reduzca la carga cognitiva limitando el numero de opciones.
 
 Language features are OK, as long as they are orthogonal to each other.
+
+Las nuevas características de un lenguaje son aceptables, siempre y cuando sean mutuamente independientes (ortogonnales).
 
 <details>
   <summary><b>Thoughts from an engineer with 20 years of C++ experience ⭐️</b></summary>
@@ -404,25 +410,62 @@ Language features are OK, as long as they are orthogonal to each other.
   <p>Thanks to <a href="https://0xd34df00d.me" target="_blank">0xd34df00d</a> for writing.</p>
 </details>
 
-## Business logic and HTTP status codes
+
+
+<details>
+  <summary><b>Reflexiones de un ingeniero con 20 años de experiencia en C++ ⭐️</b></summary>
+  <br>
+  El otro día estaba mirando mi lector de RSS y me di cuenta de que tengo unos trescientos artículos sin leer bajo la etiqueta "C++". No he leído un solo artículo sobre el lenguaje desde el verano pasado, ¡y me siento genial!<br><br>
+  Llevo usando C++ desde hace 20 años, eso es casi dos tercios de mi vida. La mayor parte de mi experiencia reside en lidiar con los rincones más oscuros del lenguaje (como comportamientos indefinidos de todo tipo). No es una experiencia reutilizable, y es un poco desolador desecharlo todo ahora.<br><br>
+  Por ejemplo, ¿te imaginas?, el token <code>||</code> tiene un significado diferente en <code>requires ((!P<T> || !Q<T>))</code> y en <code>requires (!(P<T> || Q<T>))</code>. El primero es la disyunción de restricciones, el segundo es el viejo y conocido operador OR lógico, y se comportan de manera diferente.<br><br>
+  No puedes reservar espacio para un tipo trivial y simplemente hacer <code>memcpy</code> de un conjunto de bytes ahí sin un esfuerzo adicional; eso no iniciará el tiempo de vida de un objeto. Así era antes de C++20. Se corrigió en C++20, pero la carga cognitiva del lenguaje no ha hecho más que aumentar.<br><br>
+  La carga cognitiva crece constantemente, aunque se hayan arreglado cosas. Debo saber qué se arregló, cuándo se arregló y cómo era antes. Después de todo, soy un profesional. Claro, C++ es bueno con el soporte de código heredado (legacy), lo que también significa que <b>te enfrentarás</b> a ese legado. Por ejemplo, el mes pasado un colega me preguntó sobre un comportamiento en C++03. <code>🤯</code><br><br>
+  Había 20 formas de inicialización. Se ha añadido la sintaxis de inicialización uniforme. Ahora tenemos 21 formas de inicialización. Por cierto, ¿alguien recuerda las reglas para seleccionar constructores a partir de la lista de inicializadores? Algo sobre la conversión implícita con la menor pérdida de información, <i>pero si</i> el valor se conoce estáticamente, entonces... <code>🤯</code><br><br>
+  <b>Este aumento de la carga cognitiva no está causado por una tarea de negocio. No es una complejidad intrínseca del dominio. Simplemente está ahí por razones históricas</b> (<i>carga cognitiva ajena</i>).<br><br>
+  Tuve que idear algunas reglas. Por ejemplo, si esa línea de código no es tan obvia y tengo que recordar el estándar, es mejor que no la escriba de esa manera. Por cierto, el estándar tiene unas 1500 páginas.<br><br>
+  <b>De ninguna manera estoy tratando de culpar a C++.</b> Amo el lenguaje. Es solo que ahora estoy cansado.<br><br>
+  <p>Gracias a <a href="https://0xd34df00d.me" target="_blank">0xd34df00d</a> por escribirlo.</p>
+</details>
+
+
+## Business logic and HTTP status codes 
+
+## Logica de Negocia y Estados HTTP
+
 
 On the backend we return:
 `401` for expired JWT token
 `403` for not enough access
 `418` for banned users
 
+Desde el backend retornan:
+`401` para un Token JWT que ha expirado
+`403` no posee los accesos adecuados
+`418` para usuarios prohibidos (esto es segun el autor pero 418 es 'Soy una tetera')
+
 The engineers on the frontend use backend API to implement login functionality. They would have to temporarily create the following cognitive load in their brains:
 `401` is for expired JWT token // `🧠+`, ok just temporarily remember it
 `403` is for not enough access // `🧠++`
 `418` is for banned users // `🧠+++`
 
+Los ingenieros del frontend que utilizan la API del backend para implementar la funcionalidad de inicio de sesión. Ellos tendran que crear temporalmente la siguiente carga cognitiva en sus cerebros:
+`401` para un Token JWT que ha expirado // `🧠+`, ok lo voy a recordar temporalmente
+`403` no posee los accesos adecuados // `🧠++`
+`418` para usuarios prohibidos // `🧠+++`
+
 Frontend developers would (hopefully) introduce some kind `numeric status -> meaning` dictionary on their side, so that subsequent generations of contributors wouldn't have to recreate this mapping in their brains.
+
+Los ingenieros frontend introduciran (si Dios quiere) algun tipo de diccionatio `estado numeroc -> significado` , de manera que los subsequentes contribuidores no tengan que recrear el mapa en sus mentes.
 
 Then QA engineers come into play:
 "Hey, I got `403` status, is that expired token or not enough access?"
 **QA engineers can't jump straight to testing, because first they have to recreate the cognitive load that the engineers on the backend once created.**
 
-Why hold this custom mapping in our working memory? It's better to abstract away your business details from the HTTP transfer protocol, and return self-descriptive codes directly in the response body:
+Luego entran los ingeniero de QA:
+"Hola!, tengo un estado `403`, es que ha expirado el token o no tengo acceso?
+**Los QA no puede ir directamente al testing porque primero tienen que recrear la carga cognitiva que los ingenieros del backend crearon.**
+
+¿Por qué mantener este mapeo personalizado en nuestra memoria de trabajo? Es mejor abstraer los detalles de negocio del protocolo de transferencia HTTP y devolver códigos autodescriptivos directamente en el cuerpo de la respuesta:
 
 ```json
 {
@@ -433,49 +476,92 @@ Why hold this custom mapping in our working memory? It's better to abstract away
 Cognitive load on the frontend side: `🧠` (fresh, no facts are held in mind)
 Cognitive load on the QA side: `🧠`
 
+La carga cognitiva del ingeniero Frontend: `🧠` (fresca, no hay que mantener informacion en mente)
+Carga cognitiva del QA: `🧠`
+
 The same rule applies to all sorts of numeric statuses (in the database or wherever) - **prefer self-describing strings.** We are not in the era of 640K computers to optimise for memory.
 
+La misma regla aplica para todo tipo de estados numericos (en bases de datos o donde sea) **hay que preferir cadenas de texto descriptivas.**  No estamos en la era de las computadoras de 640KB para vernos obligados a optimizar la memoria.
+
 > People spend time arguing between `401` and `403`, making decisions based on their own mental models. New developers are coming in, and they need to recreate that thought process. You may have documented the "whys" (ADRs) for your code, helping newcomers to understand the decisions made. But in the end it just doesn't make any sense. We can separate errors into either user-related or server-related, but apart from that, things are kind of blurry.
+>
+> Los programadors pasan tiempo dicutiendo entre 401 y 403, tomando deciciones en base a sus propio modelos mentales. Nuevos desarrolladores estan llegando y necesitan recrear los procesos de pensamiento. Puede que se haya documentado el "por que" (ADRs) en el codigo, ayudando a los recien llegados a entender las deciciones tomadas. PEro al fenal no tiene ningun sentido. Podemos separar los errores en los *relaciondo al usuario* y lo *relacionado al servido*r, pero aparte de eso, los limites tienden a ser algo borrosos.
 
 P.S. It's often mentally taxing to distinguish between "authentication" and "authorization". We can use simpler terms like [&#34;login&#34; and &#34;permissions&#34;](https://ntietz.com/blog/lets-say-instead-of-auth/) to reduce the cognitive load.
 
-## Abusing DRY principle
+PD: Usuarlmente es mentalmente agotador el distinguir entre autenticacion y autorizacion. Podemos usar terminso mas simples como [&#34;login&#34;&#34; y &#34;&#34;permisos&#34;&#34;](https://ntietz.com/blog/lets-say-instead-of-auth/) para reducir la carga cognitiva.
 
-Do not repeat yourself - that is one of the first principles you are taught as a software engineer. It is so deeply embedded in ourselves that we can not stand the fact of a few extra lines of code. Although in general a good and fundamental rule, when overused it leads to the cognitive load we can not handle.
+## Abusing DRY principle 
+
+## Abusando del principio DRY (No te repitas)
+
+Do not repeat yourself - that is one of the first principles you are taught as a software engineer. It is so deeply embedded in ourselves that we can not stand the fact of a few extra lines of code. Although in general a good and fundamental rule, when overused it leads to the cognitive load we can not handle
+
+No te repitas (tu mismo) es uno de los primeros principios que son enseñados a un ingeniero de software. Esta profundamente incrustado en nosotros y no podemos soportar el hecho de incluir alguna lineas de codigo extra. Aunque en general, es un buen fundamento, cuando hacemos un sobre uso de esta regla el mismo lleva a una sobrecarga cognitiva que no podemos manejar.
 
 Nowadays, everyone builds software based on logically separated components. Often those are distributed among multiple codebases representing separate services. When you strive to eliminate any repetition, you might end up creating tight coupling between unrelated components. As a result, changes in one part may have unintended consequences in other seemingly unrelated areas. It can also hinder the ability to replace or modify individual components without impacting the entire system. `🤯`
 
+Hoy en dia, todos contruyen software en base a componentes logicamente separados. A menudo, dichos sistemas estan distribuidos entre muchso repositoriso de codigo representado diferetes servicios independientes unos de otros. Cuando luchas por eliminar cada repeticion puedes terminan creado un *acoplamiento fuerte* entre distintos servicio no relacionados. Como resultado, los cambios enm una parte del codigo puede tener efectos no intencionados  en otra area que aprecia no relacionada. Además, puede dificultar la posibilidad de reemplazar o modificar componentes individuales sin afectar al sistema en su totalidad. 🤯
+
 In fact, the same problem arises even within a single module. You might extract common functionality too early, based on perceived similarities that might not actually exist in the long run. This can result in unnecessary abstractions that are difficult to modify or extend.
 
+De hecho, el mismo problema surge en un unico modulo. Puedes abstraer funcionalidades de manera muy temprana en el codigo basado en similaridades que pueden no existir a largo plazo. Esto resulta en abtracciones innecesarias que son dificiles de modificar o extender.
+
 Rob Pike once said:
+Rob Pike dijo una vez:
 
 > A little copying is better than a little dependency.
+> Copiar un poco es mejor que una pequeña dependencia.
 
 We are tempted to not reinvent the wheel so strongly that we are ready to import large, heavy libraries to use a small function that we could easily write by ourselves.
 
+Estamos tan tentados a no reinventar la rueda que estamos listo para imprtar una enorme y pesada libreria para usar una pequeña duncion que facilmente podriamos escribir nosotros.
+
 **All your dependencies are your code.** Going through 10+ levels of stack trace of some imported library and figuring out what went wrong (*because things go wrong*) is painful.
 
-## Tight coupling with a framework
+**Todas tus dependencias son tu código.** Recorrer más de 10 niveles de la traza de la pila de alguna librería importada y averiguar qué salió mal (*porque las cosas salen mal*) es doloroso.
+
+## Tight coupling with a framework 
+
+## Acoplamiento fuerte con un framework
 
 There's a lot of "magic" in frameworks. By relying too heavily on a framework, **we force all upcoming developers to learn that "magic" first.** It can take months. Even though frameworks enable us to launch MVPs in a matter of days, in the long run they tend to add unnecessary complexity and cognitive load.
 
+Hay mucha "magia" en los frameworks. Al depender casi exclusivamente de un framework **forzamos a los recien llegados  a aprender la "magia" primero.** Y puede que tome meses. Aun cuando muchos framework nos permita lanzar MVPs (productos minimo viable) en cuestion de dias, al largo plazo tienden a añadir una complejidad innecesaria y carga cognitiva.
+
 Worse yet, at some point frameworks can become a significant constraint when faced with a new requirement that just doesn't fit the architecture. From here onwards people end up forking a framework and maintaining their own custom version. Imagine the amount of cognitive load a newcomer would have to build (i.e. learn this custom framework) in order to deliver any value. `🤯`
+
+Peor aun, en algun punto los frameworks se vuelven un probelma importante cuando tenemos un requerimiento que no calza en su arquitectura. De aqui en adelante los profesionales  tienden a tener un fork del framework con  sus propias customizaciones. Imagina la carga cognitiva de un recien llegado que debe contruir (y por ende aprender este cframnework perzonalizado) para poder realizar una entrega. `🤯`
 
 **By no means do we advocate to invent everything from scratch!**
 
+**En ningún caso estamos a favor de (re)inventar todo desde cero.**
+
 We can write code in a somewhat framework-agnostic way. The business logic should not reside within a framework; rather, it should use the framework's components. Put a framework outside of your core logic. Use the framework in a library-like fashion. This would allow new contributors to add value from day one, without the need of going through debris of framework-related complexity first.
 
-> [Why I Hate Frameworks](https://minds.md/benji/frameworks)
+Podemos escribir codigo que sea lo mas independiente del framework posible (framework-agnostic). La logica de negocio no deberia depender del framework, deberia encambio, usar los componentes que framework posee. Pongamos el framework fuera de la logica central. Usemos el framework como si fuera una libreria. 
 
-## Layered architecture
+> [Why I Hate Frameworks (Por que Odio los Framewworks)](https://minds.md/benji/frameworks)
+
+## Layered architecture 
+
+## Arquitectura por capas
 
 There is a certain engineering excitement about all this stuff.
 
+Esto despierta un cierto entusiasmo entre los ingenieros.
+
 I myself was a passionate advocate of Hexagonal/Onion Architecture for years. I used it here and there and encouraged other teams to do so. The complexity of our projects went up, the sheer number of files alone had doubled. It felt like we were writing a lot of glue code. On ever changing requirements we had to make changes across multiple layers of abstractions, it all became tedious. `🤯`
+
+Yo mismo  soy un apacionado de la Arquitectura Hexagonal/Cebolla por años. La uso aqui y alla y motivo a los equipos que hagan lo mismo. La complejidad de nuestros proyectos se disparo, el solo numero total de archivos se habia duplicado.
 
 **Abstraction is supposed to hide complexity, here it just adds [indirection](https://fhur.me/posts/2024/thats-not-an-abstraction).** Jumping from call to call to read along and figure out what goes wrong and what is missing is a vital requirement to quickly solve a problem. With this architecture’s layer uncoupling it requires an exponential factor of extra, often disjointed, traces to get to the point where the failure occurs. Every such trace takes space in our limited working memory. `🤯`
 
+**Se supone que la complejidad debe estar oculta en la Abstraccion,  pero en este caso solo añade [confusion](https://fhur.me/posts/2024/thats-not-an-abstraction).** Pasar de una invocacion a otra para determinar que es lo que ha salido mal y que falta por hacer es un requisito fundamental para solucionar un problema.Con la arquitecura por capas el desacoplamiento requiere un factor exponencial extra, muchas veces inconexas, la traza llega al punto donde la falla ocurre.  Cada traza ocupa un espacion en nuestra limitada memoria de trabajo. `🤯` 
+
 This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it did more harm than good. We spent years on unnecessary mental activity and writing useless glue code with no clear business value. On the contrary, we made things worse for the business by forcing newcomers to learn our approaches (mental models) first. The time to market has worsened. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.**
+
+Esta arquiotectura parecia tener snetido de manera intuitiva al principio, pero cada que tratamos de aplicarla a proyectos hacia mas mal que bien. Pasamos años con acitividad mental innencesaria y escribiendo codigo pegamento inutil sin un valor de negocio claro. Al contrario, hicimos las cosas peor para la logica de negocio al forzar al los recien llegados a aprender nuestros enfoques (modelos mentales). El tiempo de comercialización ha empeorado. Al final lo dejamos todo en favor del buen y viejo principio de inversión de dependencias.  **No es necesario aprender términos relacionados con puertos/adaptadores, ni capas innecesarias de abstracción, ni carga cognitiva adicional.**
 
 <details>
     <summary><b>Coding principles and experience</b></summary>
@@ -485,50 +571,100 @@ This architecture was something that made intuitive sense at first, but every ti
     <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
 
+
+
+<details>
+    <summary><b>Principios de programación y experiencia</b></summary>
+    <div align="center">
+        <img src="img/complexity.png" alt="Código súper simple" width="500">
+    </div>
+    <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
+</details>
+
+
 If you think that such layering will allow you to quickly replace a database or other dependencies, you're mistaken. Changing the storage causes lots of problems, and believe us, having some abstractions for the data access layer is the least of your worries. At best, abstractions can save somewhat 10% of your migration time (if any), the real pain is in data model incompatibilities, communication protocols, distributed systems challenges, and [implicit interfaces](https://www.hyrumslaw.com).
+
+Si piensa que esta organizacion por capas le permite reemplazar una base de datos por otra dependencia, esta equivocado. Cambiar el almacenamiento causa muchos problemas, y creanos, tener algunas abtracciones para la capa de acceso de datos es la menor de sus preocupaciones. En el mejor de los casos, las abstracciones pueden salvar alrededor del 10% de su tiempo de migracion (si acaso), el verdadero dolor esta en la incompatibilidad de los modelos de datos, protocolos de comunicacion, desafios de los sistemas distribuidos y las [iinterfaces implicitas](https://www.hyrumslaw.com).
 
 > With a sufficient number of users of an API,
 > it does not matter what you promise in the contract:
 > all observable behaviours of your system
 > will be depended on by somebody.
+>
+> Con un numero suficiente de usuarios de una API,
+> no importa lo que haya prometido en el contrato:
+> todos los comportamientos observables de su sistema
+> van a depender de alguien.
 
 We did a storage migration, and that took us about 10 months. The old system was single-threaded, so the exposed events were sequential. All our systems depended on that observed behaviour. This behaviour was not part of the API contract, it was not reflected in the code. A new distributed storage didn't have that guarantee - the events came out-of-order. We spent only a few hours coding a new storage adapter, thanks to an abstraction. **We spent the next 10 months on dealing with out-of-order events and other challenges.** It's now funny to say that abstractions help us replace components quickly.
 
+Hicimos algo de migracion de almacenamiento, nos tomo unos 10 meses. El viejo sistema era mono-hilo, por tanto, los eventos eran expuestos de manera secuencial. Todos nuestros sistemas dependen en ese comportamiento observado. Dicho comportamiento no era parte del contrato de la API y no fue reflejada en el codigo. Un nuevo almacenamiento distribuido no tiene las garantias de que los eventos lleguen en orden. Solo usamos algunas hora ecribiendo el nuevo adaptador del amacenamient, gracias a la abtraccion. **Pasamos los siguientes 10 meses lidiando con los eventos fuera de orden y otros desafios.** Ahora resulta gracioso decir que la abtraccion nos ayuda reemplazar los componentes de manera rapida.
+
 **So, why pay the price of high cognitive load for such a layered architecture, if it doesn't pay off in the future?** Plus, in most cases, that future of replacing some core component never happens.
+
+**Entonces, porque pagar el precio de una alta carga cognitiva por una arquitectura por capas si no da beneficios futuros?** sumando ademas, que en la mayoria de los casos ese futuro de reemplazar componentes casi nunca pasa.
 
 These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamental rules instead: dependency inversion principle, single source of truth, cognitive load and information hiding. Your business logic should not depend on low-level modules like database, UI or framework. We should be able to write tests for our core logic without worrying about the infrastructure, and that's it. [Discuss](https://github.com/zakirullin/cognitive-load/discussions/24).
 
-Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons.
+Estas arquitecturas no son fundamentales, solo son subjetivas, consecuencias sesgadas de principios más fundamentales. Porque confiar unicamente en esas interpretaciones subjetivas? Sigamos mejor las reglas fundamentales: el principio de inversion de dependencias, una sola fuente de la verdad, carga cognitiva y abstraccion de la informacion. SU logica de negocio no debe depender de modulos de bajo nivel com una base de datos, la UI o un framework. Deberiamos ser capaces de escribir test para nuestra logica central sin preocuparnos por la infraestructura, y eso es todo! [Discucion](https://github.com/zakirullin/cognitive-load/discussions/24)
+
+Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons. 
+
+No añada capas de abtraccion por el amor a la arquitectura. Añadala cuando necesita una extension al pinta que se justifique por razones practicas.
 
 **[Layers of abstraction aren&#39;t free of charge](https://blog.jooq.org/why-you-should-not-implement-layered-architecture), they are to be held in our limited working memory.**
+
+**[Los niveles de abstracción no son gratuitos](https://blog.jooq.org/why-you-should-not-implement-layered-architecture), requieren recursos de nuestra memoria de trabajo, que es limitada.**
 
 <div align="center">
   <img src="/img/layers.png" alt="Layers" width="400">
 </div>
 
-## Domain-driven design
+## Domain Driven Design
 
 Domain-driven design has some great points, although it is often misinterpreted. People say, "We write code in DDD", which is a bit strange, because DDD is more about the problem space rather than the solution space.
 
+El Domain-Driven Design (Diseño Guiado por el Dominio) tiene grandes puntos a su favor, aunque frecuentemente es mal interpretado. Las personas dicen "escribo codigo en DDD", lo cual es un poco extraño, porque el DDD es mas sobre el espacio del problema que la solucion al espacio.
+
 Ubiquitous language, domain, bounded context, aggregate, event storming are all about problem space. They are meant to help us learn the insights about the domain and extract the boundaries. DDD enables developers, domain experts and business people to communicate effectively using a single, unified language. Rather than focusing on these problem space aspects of DDD, we tend to emphasise particular folder structures, services, repositories, and other solution space techniques.
+
+El Lenguaje Ubicuo, el Dominio, el Contexto Delimitado, el Agregado y el Event Storming son conceptos que pertenecen al espacio del problema (problem space). Su objetivo es ayudarnos a obtener una comprensión profunda del dominio y a delimitar sus fronteras. DDD facilita que desarrolladores, expertos del dominio y responsables de negocio se comuniquen eficazmente utilizando un lenguaje único y unificado. Sin embargo, en lugar de centrarnos en estos aspectos de DDD del espacio del problema, solemos poner el énfasis en estructuras de carpetas, servicios, repositorios y otras técnicas del espacio de la solución (solution space).
 
 Chances are that the way we interpret DDD is likely to be unique and subjective. And if we build code upon this understanding, i.e., if we create a lot of extraneous cognitive load - future developers are doomed. `🤯`
 
+Lo mas problable es que la manera en que cada uno interpreta el DDD sea unica y subjetiva. Y si escribimos codigo sobre estas conclusiones, por ejemplo, creamos muchas carga cognitiva externa, los programadores que aborde este codigo en el futuro estan perdidos! `🤯`
+
 Team Topologies provides a much better, easier to understand framework that helps us split the cognitive load across teams. Engineers tend to develop somewhat similar mental models after learning about Team Topologies. DDD, on the other hand, seems to be creating 10 different mental models for 10 different readers. Instead of being common ground, it becomes a battleground for unnecessary debates.
 
-## Cognitive load in familiar projects
+LaTopologia de Equipo provee una mejor y mas facil manera de entender el conexto que nos ayuda a dividir la carga cognitiva entre equipos. Los ingenieros tienden a desarrollar del algun modo, modelos mentales siimilar al aprender sobre Topologia de Equipos. DDD, por otro lado, parece crear 10 diferentes modelos mentales para 10 lectores diferentes. En ves de ser un terrene comun, se combierte en un campo de batalla para debates innecesarios.
+
+
+## Cognitive load in familiar projects 
+
+## La Carga Cognitiva en proyectos que nos son familiares
 
 > The problem is that **familiarity is not the same as simplicity.** They *feel* the same — that same ease of moving through a space without much mental effort — but for very different reasons. Every “clever” (read: “self-indulgent”) and non-idiomatic trick you use incurs a learning penalty for everyone else. Once they have done that learning, then they will find working with the code less difficult. So it is hard to recognise how to simplify code that you are already familiar with. This is why I try to get “the new kid” to critique the code before they get too institutionalised!
 >
+> El problema es que **la familiaridad no es igual a simplicidad.** Se *sienten* iguales, esa misma facilidad para moverse por un espacio sin tener que hacer un gran esfuerzo mental, pero por muy diferentes razones. Cada solucion "ingeniosa" (o mas bien "caprichosa") y no idiomatica que se utilice supone un obstaculo para el aprendizaje de los demas. Una vez que terminen de aprender, se encontraran con codigo menos dificil. Entonces, es dificil reconocer como el simplicar el codigo con el que estamos familiarizados. Es por qesto que tratamso que el "chco nuevo" critique el codigo antes de que este muy institucionalizado.
+>
 > It is likely that the previous author(s) created this huge mess one tiny increment at a time, not all at once. So you are the first person who has ever had to try to make sense of it all at once.
+>
+> Es proables que el(los) autor(es) anterior(es) crearan un enorme desastre con un pequeño incremento a la vez , no de un golpe. Por lo tanto, usted es la primera persona que ha tenido que intentar comprenderlo todo de una vez.
 >
 > In my class I describe a sprawling SQL stored procedure we were looking at one day, with hundreds of lines of conditionals in a huge WHERE clause. Someone asked how anyone could have let it get this bad. I told them: “When there are only 2 or 3 conditionals, adding another one doesn’t make any difference. By the time there are 20 or 30 conditionals, adding another one doesn’t make any difference!”
 >
+> En nuestras clases describimos un extenso procedimiento almacenado de SQL que estuvimos analizando un día, con cientos de líneas de condicionales en una cláusula WHERE enorme. Alguien preguntó cómo era posible que hubieran permitido que llegara a tal extremo. Les respondí: “Cuando solo hay 2 o 3 condicionales, añadir uno más no supone ninguna diferencia. Para cuando ya hay 20 o 30, ¡añadir uno más tampoco supone ninguna diferencia!”.
+>
 > There is no “simplifying force” acting on the code base other than deliberate choices that you make. Simplifying takes effort, and people are too often in a hurry.
 >
+> No existe ninguna "fuerza simplificadora" que actúe sobre la base de código, más allá de las decisiones deliberadas que se toman. Simplificar requiere esfuerzo y, con demasiada frecuencia, la gente tiene prisa
+>
 > *Thanks to [Dan North](https://dannorth.net) for his comment*.
+> *Gracias a [Dan North](https://dannorth.net) por este comentario*.
 
 If you've internalized the mental models of the project into your long-term memory, you won't experience a high cognitive load.
+
+Si has internalizado los modelos mentales del proyecto en tu memoria a largo plazo, no experimentarás una gran carga cognitiva.
 
 <div align="center">
   <img src="/img/mentalmodelsv15.png" alt="Mental models" width="700">
@@ -536,24 +672,44 @@ If you've internalized the mental models of the project into your long-term memo
 
 The more mental models there are to learn, the longer it takes for a new developer to deliver value.
 
+Cuantos más modelos mentales haya que aprender, más tiempo le tomará a un nuevo desarrollador aportar valor.
+
 Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code.
+
+Cuando incorpores a gente nueva a tu proyecto, intenta medir su nivel de confusión (el pair programming puede ayudar). Si están confundidos durante más de ~40 minutos seguidos, tienes aspectos que mejorar en tu código.
 
 If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company.
 
-## Examples
+Si mantienes la carga cognitiva baja, la gente puede contribuir a la base de código en sus primeras horas tras unirse a la empresa.
+
+## Examples 
+
+## Ejemplos
 
 - Our architecture is a standard CRUD app architecture, [a Python monolith on top of Postgres](https://danluu.com/simple-architectures/)
 - How Instagram scaled to 14 million users with [only 3 engineers](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million)
 - The companies where we were like ”woah, these folks are [smart as hell](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” for the most part failed
 - One function that wires up the entire system. If you want to know how the system works - [go read it](https://www.infoq.com/presentations/8-lines-code-refactoring)
 
+* Nuestra arquitectura es la de una aplicación CRUD estándar, [un monolito de Python sobre Postgres](https://www.google.com/url?sa=E&q=https%3A%2F%2Fdanluu.com%2Fsimple-architectures%2F).
+* Cómo Instagram escaló a 14 millones de usuarios con [solo 3 ingenieros](https://www.google.com/url?sa=E&q=https%3A%2F%2Fread.engineerscodex.com%2Fp%2Fhow-instagram-scaled-to-14-million).
+* La mayoría de las empresas sobre las que pensábamos «guau, esta gente es [increíblemente lista](https://www.google.com/url?sa=E&q=https%3A%2F%2Fkenkantzer.com%2Flearnings-from-5-years-of-tech-startup-code-audits%2F)» fracasaron.
+* Una única función que orquesta todo el sistema. Si quieres saber cómo funciona, [ve y léela](https://www.google.com/url?sa=E&q=https%3A%2F%2Fwww.infoq.com%2Fpresentations%2F8-lines-code-refactoring) .
+
 These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort.
+
+Estas arquitecturas son aburridas y faciles de entender. Cualquier puede entenderlas sin mucho esfuerzo mental.
 
 Involve junior developers in architecture reviews, they will help you to identify the mentally demanding areas.
 
+Involucrar a los desarrolladores junior en la revision de arquitecturas, te ayudaran a identificar la areas metalmente demadantes.
+
 > Software systems are perhaps the most intricate and complex (in terms of number of distinct kinds of parts) of the things humanity makes.
 >
-> *Fred Brooks, The Mythical Man-Month*
+> Los sistemas de software so quizas lo mas intricados y complejos (en el sentido de los distitos numeros de partes) que la humanidad puede hacer.
+>
+> *Fred Brooks, The Mythical Man-Month
+> Fred Brooks, The Mythical Man-Month (El mito del hombre mes)*
 
 **Maintaining software is hard**, things break and we would need every bit of mental effort we can save. The fewer components there are in the system, the fewer issues there will be. Debugging will also be less mentally taxing.
 
