@@ -10,33 +10,34 @@
 
 ## Introduccion
 
-<!-- There are so many buzzwords and best practices out there, but most of them have failed. They failed because they were imagined, not real. These ideas were based on aesthetics and subjective judgments. We need something more fundamental, something that can't be wrong. -->
+<!-- There are so many buzzwords and best practices out there, but most of them have failed. They failed because they were imagined, not real. These ideas were based on aesthetics and subjective judgments. We need **something** more fundamental, something that can't be wrong. -->
 
-Hay muchos terminos y practicas que se ponen de moda, pero la gran mayortia de ellos fallan en su cometido. Fallan porque eran imaginarios, no reales. Esta ideas estaban basadas en juicios esteticos y subjetivos. Se hace necesario alfo mas fundamental, algo que no pueda estar errado.
+Existen numerosos términos y prácticas que se ponen de moda, pero la gran mayoría de ellos fracasan en su cometido. Fallan porque son concebidos como imaginarios, no como reales. Estas ideas están basadas en juicios estéticos y subjetivos. Por ello, se hace necesario algo más fundamental, algo que no pueda estar errado
 
 <!-- Sometimes we feel confusion going through the code. Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy abstract concept, but rather **a fundamental human constraint.** It's not imagined, it's there and we can feel it. -->
 
 A veces podemos sentir mucha confusion mientras leemos codigo. Confuncion que cuesta tiempo y dinero. Confusin causado por la *carga cognitiva.* No se trata de algun concepto bastracto y/o sofisticado, sino mas bien un **limite muy humano.** Y no es imaginario, es algo que realmente podemos sentir.
 
+A veces, al revisar el código, se puede sentir mucha confusión. Esta confusión, que cuesta tiempo y dinero, es causada por la alta *carga cognitiva*. No se trata de un concepto abstracto y/o sofisticado, sino más bien de un **límite muy humano.** La carga cognitiva no es imaginaria; es algo que realmente se puede sentir.
+
 <!-- Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load into our code. -->
 
-Dado que pasamos mas tiempo leyendo y tratando de entender el coodigo del que pasamos escribiendo, deberiamos preguntarnos constantemente si estamos colocando una excesiva carga cognitiva en el codigo que escribimos.
+Dado que se invierte más tiempo leyendo y tratando de entender el código del que se emplea escribiéndolo, se debería cuestionar constantemente si se está generando una carga cognitiva excesiva en el código que se desarrolla.
 
 <!-- ## Cognitive load  -->
 
 ## La Carga Cognitiva
 
-> Cognitive load is how much a developer needs to think in order to complete a task.
->
+<!-- > Cognitive load is how much a developer needs to think in order to complete a task. -->
 > La carga cognitiva se refiere a la cantidad de esfuerzo mental que un desarrollador necesita para completar una tarea.
 
 <!-- When reading code, you put things like values of variables, control flow logic and call sequences into your head. The average person can hold roughly [four such chunks](https://github.com/zakirullin/cognitive-load/issues/16) in working memory. Once the cognitive load reaches this threshold, it becomes much harder to understand things. -->
 
-Cuando leemos el codigo colocamos cosas como valores, variables, controles de flujo, logica y llamados de secuencia en nuestra mente. La persona promedio puede colocar unos [c](https://github.com/zakirullin/cognitive-load/issues/16)[cuatro elementos ](https://github.com/zakirullin/cognitive-load/issues/16)en nuestra memmoria de trabajo. Una vez que la carga cognitiva pasa ciertto limite se vueleve muy dificil entender ciertas cosas.
+Cuando se lee el código, se colocan elementos como valores, variables, controles de flujo, lógica y llamados de secuencia en la mente. La persona promedio puede retener aproximadamente unos [c](https://github.com/zakirullin/cognitive-load/issues/16)[cuatro elementos ](https://github.com/zakirullin/cognitive-load/issues/16) en su memoria de trabajo. Una vez que la carga cognitiva excede un determinado límite, se vuelve muy difícil entender ciertas cosas.
 
 <!-- *Let's say we have been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool architectures, fancy libraries and trendy technologies were used. In other words, **the author had created a high cognitive load for us.*** -->
 
-*Digamos que nos solicitan realizar correciones a un projecto con el que no estamos familiarizados. Nos dicen que un desarrollador realmente inteligente ha contribuido al mismo. Un monton de arquitecturas geniales, librerias sofisticadas y tecnologias de punta fueron usadas. En sintesis, **el autor a creado una enorme carga cognitiva para nosotros.***
+*Digamos que se solicita realizar correcciones a un proyecto con el que no se está familiarizado. Se informa que un desarrollador realmente inteligente ha contribuido al mismo. Se utilizaron una gran cantidad de arquitecturas geniales, librerías sofisticadas y tecnologías de punta. En síntesis, **el autor ha creado una enorme carga cognitiva para nosotros.***
 
 <div align="center">
   <img src="/img/cognitiveloadv6.png" alt="Cognitive load" width="750">
@@ -44,7 +45,7 @@ Cuando leemos el codigo colocamos cosas como valores, variables, controles de fl
 
 <!-- We should reduce the cognitive load in our projects as much as possible. -->
 
-Deberíamos reducir la carga cognitiva en nuestros proyectos en medida posible.
+Deberíamos reducir la carga cognitiva en nuestros proyectos en la medida posible.
 
 <!-- <details>
   <summary><b>Cognitive load and interruptions | Carga cognitiva e interrupciones</b></summary>
@@ -63,6 +64,7 @@ Deberíamos reducir la carga cognitiva en nuestros proyectos en medida posible.
 <!-- > We are going to use "cognitive load" in an informal sense; sometimes it lines up with the specific scientific concept of Cognitive Load, but we don't know enough about where it does and doesn't match. -->
 
 > Vamos a utilizar el término "carga cognitiva" en un sentido informal; a veces coincide con el concepto científico específico de Carga Cognitiva, pero no conocemos con precisión en qué aspectos coinciden y en cuáles no.
+>
 
 <!-- ## Types of cognitive load  -->
 
@@ -70,19 +72,23 @@ Deberíamos reducir la carga cognitiva en nuestros proyectos en medida posible.
 
 <!-- **Intrinsic** - caused by the inherent difficulty of a task. It can't be reduced, it's at the very heart of software development. -->
 
-**Intinseca** - causada por la dificultad inherente a la tarea. Puede ser reducida, es el nucleo fundamental de un ingeniero de software.
+**Intinseca** - causada por la dificultad inherente a la tarea. No puede ser reducida, ya que constituye el núcleo fundamental del trabajo de un ingeniero de software
 
 <!-- **Extraneous** - created by the way the information is presented. Caused by factors not directly relevant to the task, such as smart author's quirks. Can be greatly reduced. We will focus on this type of cognitive load. -->
 
-**Extrinseca** - creada por la forma en que la informacion es presentada. Es causada por dactores que no son directamente relacionado a la tarea, como los caprichos de un autor que se siente particularmente inteligente. Puede reducirse considerablemente. Nos enfoccaremos en este tipo de carga cognitiva.
+**Extrinseca** - creada por la forma en que la información es presentada. Es causada por factores que no están directamente relacionados con la tarea, como los caprichos de un autor que se siente particularmente inteligente. Puede reducirse considerablemente. Nos enfocaremos en este tipo de carga cognitiva.
+
+<!-- <div align="center">
+  <img src="/img/smartauthorv14thanksmari.png" alt="Intrinsic vs Extraneous | Intinseca vs Extrinseca" width="600">
+</div> -->
 
 <div align="center">
-  <img src="/img/smartauthorv14thanksmari.png" alt="Intrinsic vs Extraneous | Intinseca vs Extrinseca" width="600">
+  <img src="/img/smartauthorv14thanksmari.png" alt="Intinseca vs Extrinseca" width="600">
 </div>
 
 <!-- Let's jump straight to the concrete practical examples of extraneous cognitive load. -->
 
-Vamos directamente a ejemploc concretos  de Carga Cognotiva Extrinseca.
+Vamos directamente a ejemplos concretos de Carga Cognitiva Extrínseca
 
 ---
 
@@ -90,11 +96,13 @@ Vamos directamente a ejemploc concretos  de Carga Cognotiva Extrinseca.
 
 Nos vamos a referir a los niveles de carga cognitiva como sigue: `🧠`: memoria de trabajo fresca, sin carga cognitiva `🧠++`: al menos dos datos en nuestra memoria de trabajo, carga cognitiva moderada `🤯`: sobrecarga cognitiva, más de 4 datos
 
+Nos vamos a referir a los niveles de carga cognitiva como sigue: `🧠`: memoria de trabajo fresca, sin carga cognitiva`🧠++`: al menos dos datos en nuestra memoria de trabajo, carga cognitiva moderada`🤯`: sobrecarga cognitiva, más de 4 datos.
+
 <!-- > Our brain is much more complex and unexplored, but we can go with this simplistic model. -->
 
-> Nuestro cerebros es muchos mas complejo de lo que creemos y esta en su mayoria, inexplorado, pero podemos trabajar con este modelo simplista.
+> Nuestro cerebro es mucho más complejo de lo que creemos y está, en su mayoría, inexplorado, pero podemos trabajar con este modelo simplista.
 
-**Nota**: En los ejemplos de codigo mantendremos la convencion de nombres de variables, funciones, metodos etc. en ingles, los comentarios explicativos si los traduciremos.
+**Nota sobre los ejemplos de Código**: En los ejemplos de código, se mantendrá la convención de nombres de variables, funciones, métodos, etc., en inglés, mientras que los comentarios explicativos sí serán traducidos al español.
 
 <!-- ## Complex conditionals -->
 
@@ -156,14 +164,14 @@ if isValid { // 🧠+, okay nested code applies to valid input only
 ```go
 if isValid { // 🧠+, el código anidado solo se aplica a entradas válidas
     if isSecure { // 🧠++, solo realizamos acciones con entradas de datos válidas y seguras
-        stuff // 🧠+++
+        stuff // 🧠+++ [1]
     }
 }
 ```
 
 <!-- Compare it with the early returns: -->
 
-Comparemos con el codigo anterior:
+Comparemos con el código anterior:
 
 <!-- ```go
 if !isValid
@@ -199,27 +207,27 @@ De este modo nos enfocamos únicamente en el escenario ideal, liberando así nue
 
 <!-- We are asked to change a few things for our admin users: `🧠` -->
 
-Digamos que no solicitan algunos cambios para nuestros usuarios administradores: 🧠
+Digamos que nos solicitan algunos cambios para nuestros usuarios administradores: 🧠
 
 `AdminController extends UserController extends GuestController extends BaseController`
 
 <!-- Ohh, part of the functionality is in `BaseController`, let's have a look: `🧠+` -->
 
-Aah!, parte de nuestra funcionalidad esta en `BaseController`, echemeos un vistazo: `🧠+`
+¡Ah!, parte de nuestra funcionalidad está en `BaseController`,echemos un vistazo: `🧠+`
 
 <!-- Basic role mechanics got introduced in `GuestController`: 🧠++ -->
 
-Las mecánicas básicas de los roles se introdujeron en  `GuestController`: `🧠++`
+Las mecánicas básicas de los roles se introdujeron en `GuestController`: 🧠++
 
 <!-- Things got partially altered in `UserController`: `🧠+++ ` -->
 
-Las cosas cambiaron parcialmente en `UserController`: `🧠+++ `
-Finally we are here, `AdminController`, let's code stuff! `🧠++++`
-Finalmente estamos aqui, `AdminController`, vamos a codear! `🧠++++`
+Las cosas cambiaron parcialmente en UserController: `🧠+++`
+<!-- Finally we are here, `AdminController`, let's code stuff! `🧠++++` -->
+Finalmente estamos aquí, `AdminController`, ¡vamos a codear! 🧠++++
 
 <!-- Oh, wait, there's `SuperuserController` which extends `AdminController`. By modifying `AdminController` we can break things in the inherited class, so let's dive in `SuperuserController` first: `🤯 ` -->
 
-¡Un momento!, existe el controlador `SuperuserController` que hereda de `AdminController`. Si modificamos `AdminController`, podríamos causar problemas en la clase heredada, así que primero analicemos `SuperuserController`: `🤯`
+¡Un momento!, existe el controlador `SuperuserController` que hereda de `AdminController`. Si modificamos `AdminController`, podríamos causar problemas en la clase heredada, así que primero analicemos `SuperuserController`: 🤯
 
 <!-- Prefer composition over inheritance. We won't go into detail - there's [plenty of material](https://www.youtube.com/watch?v=hxGOiiR9ZKg) out there. -->
 
@@ -227,7 +235,7 @@ Es preferible utilizar la composición en lugar de la herencia. No vamos a entra
 
 <!-- ## Too many small methods, classes or modules -->
 
-## Demasiados métodos, clases y/o módulos pequeños.
+## Demasiados métodos, clases y/o módulos pequeños
 
 <!-- > Method, class and module are interchangeable in this context -->
 
@@ -239,11 +247,11 @@ Resultó que principios como "los métodos deben tener menos de 15 líneas de c�
 
 <!-- **Deep module** - simple interface, complex functionality -->
 
-**Modulo Profundo** - interfaz simple, funcionalidad compleja
+**Modulo Profundo** - interfaz simple, funcionalidad compleja.
 
 <!-- **Shallow module** - interface is relatively complex compared to the small functionality it provides -->
 
-**Modulo de funcionalidad limitada** - la intyerfaz es relativamente compleja comparada a la funcionalidad relativamente simple que provee.
+**Modulo de funcionalidad limitada** - la interfaz es relativamente compleja comparada a la funcionalidad relativamente simple que provee.
 
 <div align="center">
   <img src="/img/deepmodulev8.png" alt="Deep module" width="700">
@@ -251,7 +259,7 @@ Resultó que principios como "los métodos deben tener menos de 15 líneas de c�
 
 <!-- Having too many shallow modules can make it difficult to understand the project. **Not only do we have to keep in mind each module's responsibilities, but also all their interactions.** To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. Jumping between such shallow components is mentally exhausting, `<a target="_blank" href="https://blog.separateconcerns.com/2023-09-11-linear-code.html">`linear thinking `</a>` is more natural to us humans. -->
 
-El tener muchos peuqeños modulos puede dificultar el entender un proyecto. **No solo tenemos que mantener en mente cada una de las responsabilidades, sino ademas cada una de sus interacciones.** Para poder entender el proposito de un modulo con poca funcionalidad necesitamos mirar todas las funcionalidades asociadas de todos los modulos asociados. Navegar ente tantos modulos pequeños puede resultar mentalmente agotador, el  `<a target="_blank" href="https://blog.separateconcerns.com/2023-09-11-linear-code.html">`pensamiento lineal `</a>` nos resulta mas comodo y natural.
+El tener muchos pequeños módulos puede dificultar el entender un proyecto. **No solo tenemos que mantener en mente cada una de las responsabilidades, sino además cada una de sus interacciones.** Para poder entender el propósito de un módulo con poca funcionalidad necesitamos mirar todas las funcionalidades asociadas de todos los módulos asociados. Navegar entre tantos módulos pequeños puede resultar mentalmente agotador, el <a target="_blank" href="https://blog.separateconcerns.com/2023-09-11-linear-code.html">pensamiento lineal </a> nos resulta más cómodo y natural.
 
 <!-- > Information hiding is paramount, and we don't hide as much complexity in shallow modules. -->
 
@@ -259,11 +267,11 @@ El tener muchos peuqeños modulos puede dificultar el entender un proyecto. **No
 
 <!-- I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas the second one has only 7 deep classes. I haven't been maintaining any of these projects for one year and a half. -->
 
-Tengo dos proyectos personales, ambos con aproximadamente 5k líneas de código. El primero tiene unas 80 clases sencillas, mientras que el segundo solo tiene 7 clases complejas. No he realizado ningún mantenimiento en ninguno de estos proyectos durante el último año y medio.
+Tenía dos proyectos personales, ambos con aproximadamente 5k líneas de código. El primero tenía unas 80 clases sencillas, mientras que el segundo solo tenía 7 clases complejas. No había realizado ningún mantenimiento en ninguno de estos proyectos durante el último año y medio.
 
 <!-- Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface. -->
 
-Una vez que  los retome, me di cuenta de que era extremadamente difícil comprender todas las interacciones entre las 80 clases del primer proyecto. Tendría que volver a aprender una gran cantidad de conceptos antes de poder empezar a programar. Por otro lado, el segundo proyecto fue fácil de entender, ya que solo tenía unas pocas clases complejas con una interfaz sencilla.
+Una vez que los retomó, se dio cuenta de que era extremadamente difícil comprender todas las interacciones entre las 80 clases del primer proyecto. Tendría que volver a aprender una gran cantidad de conceptos antes de poder empezar a programar. Por otro lado, el segundo proyecto fue fácil de entender, ya que solo tenía unas pocas clases complejas con una interfaz sencilla.
 
 > Los mejores componentes son aquellos que ofrecen una funcionalidad potente pero con una interfaz sencilla.
 >
@@ -289,7 +297,7 @@ Una implementación moderna de esta interfaz cuenta con **cientos de miles de l�
 
 <!-- Nota interna: Seria bueno tener titulo de traducciones de los recusos de abajo o en su defecto una traduccion de los titulos -->
 
-> El ejemplo de modulo complejo es extraido del libro  [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php) por John Ousterhout. No solo aborda la esencia de la complejidad en el desarrollo de software, sino que ofrece la mejor interpretacion del influyente articulo de Parnas titulado [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf). Ambas son lecturas escenciales.Otras lecturas relacionada pueden ser: [A Philosophy of Software Design vs Clean Code](https://github.com/johnousterhout/aposd-vs-clean-code), [It&#39;s probably time to stop recommending Clean Code](https://qntm.org/clean), [Small Functions considered Harm](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29)
+> El ejemplo de módulo complejo es extraído del libro  [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php) por John Ousterhout. No solo aborda la esencia de la complejidad en el desarrollo de software, sino que ofrece la mejor interpretacion del influyente artículo de Parnas titulado [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf). Ambas son lecturas escenciales.Otras lecturas relacionada pueden ser: [A Philosophy of Software Design vs Clean Code](https://github.com/johnousterhout/aposd-vs-clean-code), [It&#39;s probably time to stop recommending Clean Code](https://qntm.org/clean), [Small Functions considered Harm](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29)
 
 <!-- <details>
     <summary><b>Important things should be big, examples</b></summary>
@@ -410,8 +418,6 @@ Las nuevas características de un lenguaje son aceptables, siempre y cuando sean
   <p>Thanks to <a href="https://0xd34df00d.me" target="_blank">0xd34df00d</a> for writing.</p>
 </details>
 
-
-
 <details>
   <summary><b>Reflexiones de un ingeniero con 20 años de experiencia en C++ ⭐️</b></summary>
   <br>
@@ -427,11 +433,9 @@ Las nuevas características de un lenguaje son aceptables, siempre y cuando sean
   <p>Gracias a <a href="https://0xd34df00d.me" target="_blank">0xd34df00d</a> por escribirlo.</p>
 </details>
 
-
-## Business logic and HTTP status codes 
+## Business logic and HTTP status codes
 
 ## Logica de Negocia y Estados HTTP
-
 
 On the backend we return:
 `401` for expired JWT token
@@ -491,7 +495,7 @@ P.S. It's often mentally taxing to distinguish between "authentication" and "aut
 
 PD: Usuarlmente es mentalmente agotador el distinguir entre autenticacion y autorizacion. Podemos usar terminso mas simples como [&#34;login&#34;&#34; y &#34;&#34;permisos&#34;&#34;](https://ntietz.com/blog/lets-say-instead-of-auth/) para reducir la carga cognitiva.
 
-## Abusing DRY principle 
+## Abusing DRY principle
 
 ## Abusando del principio DRY (No te repitas)
 
@@ -521,7 +525,7 @@ Estamos tan tentados a no reinventar la rueda que estamos listo para imprtar una
 
 **Todas tus dependencias son tu código.** Recorrer más de 10 niveles de la traza de la pila de alguna librería importada y averiguar qué salió mal (*porque las cosas salen mal*) es doloroso.
 
-## Tight coupling with a framework 
+## Tight coupling with a framework
 
 ## Acoplamiento fuerte con un framework
 
@@ -539,11 +543,11 @@ Peor aun, en algun punto los frameworks se vuelven un probelma importante cuando
 
 We can write code in a somewhat framework-agnostic way. The business logic should not reside within a framework; rather, it should use the framework's components. Put a framework outside of your core logic. Use the framework in a library-like fashion. This would allow new contributors to add value from day one, without the need of going through debris of framework-related complexity first.
 
-Podemos escribir codigo que sea lo mas independiente del framework posible (framework-agnostic). La logica de negocio no deberia depender del framework, deberia encambio, usar los componentes que framework posee. Pongamos el framework fuera de la logica central. Usemos el framework como si fuera una libreria. 
+Podemos escribir codigo que sea lo mas independiente del framework posible (framework-agnostic). La logica de negocio no deberia depender del framework, deberia encambio, usar los componentes que framework posee. Pongamos el framework fuera de la logica central. Usemos el framework como si fuera una libreria.
 
 > [Why I Hate Frameworks (Por que Odio los Framewworks)](https://minds.md/benji/frameworks)
 
-## Layered architecture 
+## Layered architecture
 
 ## Arquitectura por capas
 
@@ -557,7 +561,7 @@ Yo mismo  soy un apacionado de la Arquitectura Hexagonal/Cebolla por años. La u
 
 **Abstraction is supposed to hide complexity, here it just adds [indirection](https://fhur.me/posts/2024/thats-not-an-abstraction).** Jumping from call to call to read along and figure out what goes wrong and what is missing is a vital requirement to quickly solve a problem. With this architecture’s layer uncoupling it requires an exponential factor of extra, often disjointed, traces to get to the point where the failure occurs. Every such trace takes space in our limited working memory. `🤯`
 
-**Se supone que la complejidad debe estar oculta en la Abstraccion,  pero en este caso solo añade [confusion](https://fhur.me/posts/2024/thats-not-an-abstraction).** Pasar de una invocacion a otra para determinar que es lo que ha salido mal y que falta por hacer es un requisito fundamental para solucionar un problema.Con la arquitecura por capas el desacoplamiento requiere un factor exponencial extra, muchas veces inconexas, la traza llega al punto donde la falla ocurre.  Cada traza ocupa un espacion en nuestra limitada memoria de trabajo. `🤯` 
+**Se supone que la complejidad debe estar oculta en la Abstraccion,  pero en este caso solo añade [confusion](https://fhur.me/posts/2024/thats-not-an-abstraction).** Pasar de una invocacion a otra para determinar que es lo que ha salido mal y que falta por hacer es un requisito fundamental para solucionar un problema.Con la arquitecura por capas el desacoplamiento requiere un factor exponencial extra, muchas veces inconexas, la traza llega al punto donde la falla ocurre.  Cada traza ocupa un espacion en nuestra limitada memoria de trabajo. `🤯`
 
 This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it did more harm than good. We spent years on unnecessary mental activity and writing useless glue code with no clear business value. On the contrary, we made things worse for the business by forcing newcomers to learn our approaches (mental models) first. The time to market has worsened. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.**
 
@@ -571,8 +575,6 @@ Esta arquiotectura parecia tener snetido de manera intuitiva al principio, pero 
     <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
 
-
-
 <details>
     <summary><b>Principios de programación y experiencia</b></summary>
     <div align="center">
@@ -580,7 +582,6 @@ Esta arquiotectura parecia tener snetido de manera intuitiva al principio, pero 
     </div>
     <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
-
 
 If you think that such layering will allow you to quickly replace a database or other dependencies, you're mistaken. Changing the storage causes lots of problems, and believe us, having some abstractions for the data access layer is the least of your worries. At best, abstractions can save somewhat 10% of your migration time (if any), the real pain is in data model incompatibilities, communication protocols, distributed systems challenges, and [implicit interfaces](https://www.hyrumslaw.com).
 
@@ -608,7 +609,7 @@ These architectures are not fundamental, they are just subjective, biased conseq
 
 Estas arquitecturas no son fundamentales, solo son subjetivas, consecuencias sesgadas de principios más fundamentales. Porque confiar unicamente en esas interpretaciones subjetivas? Sigamos mejor las reglas fundamentales: el principio de inversion de dependencias, una sola fuente de la verdad, carga cognitiva y abstraccion de la informacion. SU logica de negocio no debe depender de modulos de bajo nivel com una base de datos, la UI o un framework. Deberiamos ser capaces de escribir test para nuestra logica central sin preocuparnos por la infraestructura, y eso es todo! [Discucion](https://github.com/zakirullin/cognitive-load/discussions/24)
 
-Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons. 
+Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons.
 
 No añada capas de abtraccion por el amor a la arquitectura. Añadala cuando necesita una extension al pinta que se justifique por razones practicas.
 
@@ -638,8 +639,7 @@ Team Topologies provides a much better, easier to understand framework that help
 
 LaTopologia de Equipo provee una mejor y mas facil manera de entender el conexto que nos ayuda a dividir la carga cognitiva entre equipos. Los ingenieros tienden a desarrollar del algun modo, modelos mentales siimilar al aprender sobre Topologia de Equipos. DDD, por otro lado, parece crear 10 diferentes modelos mentales para 10 lectores diferentes. En ves de ser un terrene comun, se combierte en un campo de batalla para debates innecesarios.
 
-
-## Cognitive load in familiar projects 
+## Cognitive load in familiar projects
 
 ## La Carga Cognitiva en proyectos que nos son familiares
 
@@ -682,7 +682,7 @@ If you keep the cognitive load low, people can contribute to your codebase withi
 
 Si mantienes la carga cognitiva baja, la gente puede contribuir a la base de código en sus primeras horas tras unirse a la empresa.
 
-## Examples 
+## Examples
 
 ## Ejemplos
 
@@ -713,31 +713,56 @@ Involucrar a los desarrolladores junior en la revision de arquitecturas, te ayud
 
 **Maintaining software is hard**, things break and we would need every bit of mental effort we can save. The fewer components there are in the system, the fewer issues there will be. Debugging will also be less mentally taxing.
 
+**Mantener software es dificil,** las caracteriticas tienden a rompeser y necesitamos ahorrar cada gramo de energia mental que podamos. Mientras menos componentes tenga el sistema, menos problemas vamos a tener. Depurrar tambien se vuelve menos agotador.
+
 > Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.
+>
+> Depurar es el doble de dificil que escribir codigo en un primer momento. Por tanto, si es escribes el codigo mas brillante posibñle, tu eres por definicion, no lo suficientementwe listo para depurarlo.
 >
 > *Brian Kernighan*
 
 In general, the mindset "Wow, this architecture sure feels good!" is misleading. That's "a point in time" subjective feeling, and it says nothing about the reality. A far better approach is to observe the consequences in the long run:
 
+En general, la mentalidad "Wao!, esta arquitectura seguramente es la mejor" es engañosa, Esto es "en cierto punto en el tiempo" un sentimiento subjetivo y no dice nada sobre la realidad.  Un abordaje mucho mejor seria observar las consecuencia a largo plazo:
+
 - Is it easy to reproduce and debug an issue? Or do you have to jump across the call stacks or distributed components, trying to make sense of everything in your head?
+- Es facil reproducir un bug o un problema? O debe ir de un lado a otro en la pila de invocaciones o componente distribuidos, tratando de darle sentido a todo en su cabeza.
 - Can we make changes quickly, or are there a lot of unknown unknowns, and people are afraid to touch things?
+- Podemos hacer cambios rapidamente, o hay un monto de desconocido y los desarrolladores tienen miedo de tocar el codigo.
 - Can new people add features quickly? Are there some unique mental models to learn?
+- Pueden lo recien llegados añadir nuevas caracteristica rapidamente? Hay algun modelo mental unico que aprender?
 
 > What are those unique mental models? It's some set of rules, usually a mixture of DDD/CQRS/Clean Architecture/Event Driven Architecture. This is an author's own interpretation of the things that excite him the most. His own subjective mental models. **Extraneous cognitive load that others have to internalize.**
+>
+> Que son esos modelos mentales tan unicos? Es un conjunto de reglas, usualmente DDD/CQRS/Arquitectura Limpia/Arquitectura por Eventos. Esta es la interpretacion del autor en cuanto a las cosas que mas le emocionan. Son sus propios modelos subjetivos. **Cargas cognitiva extrañas que otros deben internalizar.**
 
 These questions are far harder to track, and people often don't like to answer them directly. Look at some of the most complex software systems in the world, the ones that have stood the test of time - Linux, Kubernetes, Chrome and Redis (see comments below). You will not find anything fancy there, it's boring for the most part, and that's a good thing.
 
-## Conclusion
+Estas preguntas son algo dificil de seguire, y normalmente las personas no les gusta responder de manera concreta. Si miramos algunos de los sistemas de software mas  complejos del mundos, aquellos que han soportado la prueba del tiempo (eje: Linux, Kubernetes, Chrome, Redis (ver comentatios mas abajo)).  No encontrara nada esplendoroso, es aburrido en su mayopr parte, y eso es bueno.
+
+## Conclusion 
+
+## Conclusiones
 
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`
 
+Imagina por un momento que lo que inferimos en el segundo capítulo no es realmente cierto. Si ese es el caso, entonces la conclusión que acabamos de negar, junto con las conclusiones del capítulo anterior que habíamos aceptado como válidas, tampoco podrían ser correctas. 🤯
+
 Do you feel it? Not only do you have to jump all over the article to get the meaning (shallow modules!), but the paragraph in general is difficult to understand. We have just created an unnecessary cognitive load in your head. **Do not do this to your colleagues.**
+
+¿Lo notas? No solo tienes que saltar por todo el artículo para entender el significado (¡módulos poco profundos!), sino que el párrafo en general es difícil de comprender. Acabamos de crear una carga cognitiva innecesaria en tu cabeza. **No le hagas esto a tus colegas.**
 
 <div align="center">
   <img src="/img/smartauthorv14thanksmari.png" alt="Smart author" width="600">
 </div>
 
 We should reduce any cognitive load above and beyond what is intrinsic to the work we do.
+
+Deberíamos reducir cualquier carga cognitiva que vaya más allá de lo que es intrínseco al trabajo que realizamos.
+
+```
+
+```
 
 ---
 
