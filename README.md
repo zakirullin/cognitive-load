@@ -97,6 +97,71 @@ stuff // 🧠+
 
 We can focus on the happy path only, thus freeing our working memory from all sorts of preconditions.
 
+## Excessive abbreviation
+
+When variable names are shortened too much, every reader has to mentally translate what they mean before understanding the logic. This eats up working memory slots and quickly leads to overload.
+
+```javascript
+/**
+ * Calculates the final order total for a user.
+ * Applies discounts to individual products and/or the user, and calculates sales tax on the subtotal.
+ */
+function calcTtl(dt, usr, prds) { // The abbreviations start here, assuming "data", "user", and "products"
+  var ttl = 0; // total - if we consider the function parameters, we're already 🤯, but it gets worse...
+  for (var i = 0; i < prds.length; i++) {
+    var p = prds[i]; // 🧠+, does "p" mean product?
+    var q = p.q; // 🧠++, does "q" mean quantity?
+    var pr = p.prc; // 🧠+++, does "pr" mean price?
+    var dsc = usr.dsc ? p.dsc : 0; // 🤯, I assume we're talking about a discount here?
+    ttl += (pr * q) - dsc; 
+  }
+  var tx = ttl * dt.txRt; // 🤯🤯 this is probably calculating tax?
+  return { usr: usr.id, ttl: ttl + tx }; 
+}
+```
+
+Compare this with using full, descriptive variable names:
+```javascript
+/**
+ * Calculates the final order total for a user.
+ * Applies discounts to individual products and/or the user, and calculates sales tax on the subtotal.
+ */
+function calculateTotal(data, user, products) { // 🧠, clear intent
+  var subtotal = 0; // 🧠
+  for (var i = 0; i < products.length; i++) {
+    var product = products[i]; // 🧠
+    var quantity = product.quantity; // 🧠
+    var price = product.price; // 🧠
+    var discount = user.hasDiscount ? product.discount : 0; // 🧠
+    subtotal += (price * quantity) - discount; // 🧠
+  }
+  var tax = subtotal * data.taxRate; // 🧠
+  return { userId: user.id, total: subtotal + tax }; // 🧠
+}
+```
+A few extra keystrokes when writing code can save hours of decoding later.
+
+
+## Ambiguous abbreviations
+
+Some abbreviations are so common that people think they’re “safe”, but they can still cause confusion:
+* `dt` → data or date?
+* `cnt` → count or content?
+* `val` → value or validation?
+* `res` → result, resource, response?
+* and many more...
+
+Each of these forces the reader to pause:
+
+`🧠+` if they think they know,
+
+`🧠++` when they realize it might mean something else,
+
+`🤯` when they have to search surrounding code or docs to confirm.
+
+Rule of thumb: if an abbreviation could plausibly mean more than one thing in the context, spell it out. The extra keystrokes are cheaper than constant re-parsing in every reader’s head.
+
+
 ## Inheritance nightmare
 We are asked to change a few things for our admin users: `🧠`
 
