@@ -4,7 +4,20 @@
 
 <!-- *It is a living document, last update: **September 2025.** Your contributions are welcome!* -->
 
-_Este es un domento vivo, ultima actualizacion: **Septiembre 2025**. ¡Tus contribuciones son bienbenidas!_
+_Este es un documento vivo, última actualización: **Septiembre 2025**. ¡Las contribuciones son bienvenidas!_
+
+<!--
+?NOTA SOBRE LA POLÍTICA DE TRADUCCIÓN DE ESTE DOCUMENTO
+
+Este documento no es una traducción profesional del inglés al español, qunque tratamos de seguir un conjunto de reglas de estilo para garantizar la coherencia y la calidad. Las principales directrices aplicadas son:
+
+1.  **Estilo y Tono:** Se ha mantenido el tono del autor original, puliendo el estilo para lograr un texto fluido y profesional en español.
+2.  **Perspectiva en Tercera Persona:** Todo el documento ha sido unificado a una voz impersonal en tercera persona. Se han hecho excepciones explícitas únicamente para citas directas y testimonios personales con el fin de preservar su voz original.
+3.  **Traducción de Términos Técnicos:** Los términos técnicos se han traducido al español, excepto aquellos anglicismos de uso común ("framework", "API", "software", "backend", etc.) o nombres propios que son más claros y reconocibles en su idioma original.
+4.  **Referencia Original:** El texto original en inglés se conserva como un comentario HTML inmediatamente antes de cada párrafo traducido, facilitando la comparación directa y futuras revisiones.
+
+Este trabajo fue realizado en colaboración con un asistente de IA (Gemini) actuando como editor experto.
+-->
 
 <!-- ## Introduction  -->
 
@@ -15,8 +28,6 @@ _Este es un domento vivo, ultima actualizacion: **Septiembre 2025**. ¡Tus contr
 Existen numerosos términos y prácticas que se ponen de moda, pero la gran mayoría de ellos fracasan en su cometido. Fallan porque son concebidos como imaginarios, no como reales. Estas ideas están basadas en juicios estéticos y subjetivos. Por ello, se hace necesario algo más fundamental, algo que no pueda estar errado
 
 <!-- Sometimes we feel confusion going through the code. Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy abstract concept, but rather **a fundamental human constraint.** It's not imagined, it's there and we can feel it. -->
-
-A veces podemos sentir mucha confusion mientras leemos codigo. Confuncion que cuesta tiempo y dinero. Confusin causado por la _carga cognitiva._ No se trata de algun concepto bastracto y/o sofisticado, sino mas bien un **limite muy humano.** Y no es imaginario, es algo que realmente podemos sentir.
 
 A veces, al revisar el código, se puede sentir mucha confusión. Esta confusión, que cuesta tiempo y dinero, es causada por la alta _carga cognitiva_. No se trata de un concepto abstracto y/o sofisticado, sino más bien de un **límite muy humano.** La carga cognitiva no es imaginaria; es algo que realmente se puede sentir.
 
@@ -34,7 +45,7 @@ Dado que se invierte más tiempo leyendo y tratando de entender el código del q
 
 <!-- When reading code, you put things like values of variables, control flow logic and call sequences into your head. The average person can hold roughly [four such chunks](https://github.com/zakirullin/cognitive-load/issues/16) in working memory. Once the cognitive load reaches this threshold, it becomes much harder to understand things. -->
 
-Cuando se lee el código, se colocan elementos como valores, variables, controles de flujo, lógica y llamados de secuencia en la mente. La persona promedio puede retener aproximadamente unos [c](https://github.com/zakirullin/cognitive-load/issues/16)[cuatro elementos ](https://github.com/zakirullin/cognitive-load/issues/16) en su memoria de trabajo. Una vez que la carga cognitiva excede un determinado límite, se vuelve muy difícil entender ciertas cosas.
+Cuando se lee el código, se colocan elementos como valores, variables, controles de flujo, lógica y llamados de secuencia en la mente. La persona promedio puede retener aproximadamente unos [c](https://github.com/zakirullin/cognitive-load/issues/16)[cuatro elementos](https://github.com/zakirullin/cognitive-load/issues/16) en su memoria de trabajo. Una vez que la carga cognitiva excede un determinado límite, se vuelve muy difícil entender ciertas cosas.
 
 <!-- *Let's say we have been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool architectures, fancy libraries and trendy technologies were used. In other words, **the author had created a high cognitive load for us.*** -->
 
@@ -600,164 +611,164 @@ Creer que esta organización por capas permitirá reemplazar rápidamente una ba
 
 Hicimos algo de migracion de almacenamiento, nos tomo unos 10 meses. El viejo sistema era mono-hilo, por tanto, los eventos eran expuestos de manera secuencial. Todos nuestros sistemas dependen en ese comportamiento observado. Dicho comportamiento no era parte del contrato de la API y no fue reflejada en el codigo. Un nuevo almacenamiento distribuido no tiene las garantias de que los eventos lleguen en orden. Solo usamos algunas hora ecribiendo el nuevo adaptador del amacenamient, gracias a la abtraccion. **Pasamos los siguientes 10 meses lidiando con los eventos fuera de orden y otros desafios**. Ahora resulta gracioso decir que la abtraccion nos ayuda reemplazar los componentes de manera rapida.
 
-**So, why pay the price of high cognitive load for such a layered architecture, if it doesn't pay off in the future?** Plus, in most cases, that future of replacing some core component never happens.
+<!-- **So, why pay the price of high cognitive load for such a layered architecture, if it doesn't pay off in the future?** Plus, in most cases, that future of replacing some core component never happens. -->
 
-**Entonces, porque pagar el precio de una alta carga cognitiva por una arquitectura por capas si no da beneficios futuros?** sumando ademas, que en la mayoria de los casos ese futuro de reemplazar componentes casi nunca pasa.
+**Entonces, ¿por qué asumir el coste de una alta carga cognitiva por una arquitectura por capas si no se amortiza en el futuro?** Además, en la mayoría de los casos, ese escenario futuro de reemplazar un componente clave nunca llega a materializarse.
 
-These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamental rules instead: dependency inversion principle, single source of truth, cognitive load and information hiding. Your business logic should not depend on low-level modules like database, UI or framework. We should be able to write tests for our core logic without worrying about the infrastructure, and that's it. [Discuss](https://github.com/zakirullin/cognitive-load/discussions/24).
+<!-- These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamental rules instead: dependency inversion principle, single source of truth, cognitive load and information hiding. Your business logic should not depend on low-level modules like database, UI or framework. We should be able to write tests for our core logic without worrying about the infrastructure, and that's it. [Discuss](https://github.com/zakirullin/cognitive-load/discussions/24). -->
 
-Estas arquitecturas no son fundamentales, solo son subjetivas, consecuencias sesgadas de principios más fundamentales. Porque confiar unicamente en esas interpretaciones subjetivas? Sigamos mejor las reglas fundamentales: el principio de inversion de dependencias, una sola fuente de la verdad, carga cognitiva y abstraccion de la informacion. SU logica de negocio no debe depender de modulos de bajo nivel com una base de datos, la UI o un framework. Deberiamos ser capaces de escribir test para nuestra logica central sin preocuparnos por la infraestructura, y eso es todo! [Discucion](https://github.com/zakirullin/cognitive-load/discussions/24)
+Estas arquitecturas no son fundamentales; son solo consecuencias subjetivas y sesgadas de principios más fundamentales. ¿Por qué basarse en esas interpretaciones subjetivas? En su lugar, se deben seguir los principios fundamentales: el principio de inversión de dependencias, la fuente única de la verdad, la carga cognitiva y el ocultamiento de la información. La lógica de negocio no debe depender de módulos de bajo nivel como una base de datos, la UI o un framework. Debe ser posible escribir pruebas para el núcleo de la lógica sin preocuparse por la infraestructura. Eso es todo. [Debate](https://github.com/zakirullin/cognitive-load/discussions/24)
 
-Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons.
+<!-- Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons. -->
 
-No añada capas de abtraccion por el amor a la arquitectura. Añadala cuando necesita una extension al pinta que se justifique por razones practicas.
+No se deben añadir capas de abstracción por el mero hecho de seguir una arquitectura. Deben añadirse únicamente cuando se necesite un punto de extensión que esté justificado por razones prácticas.
 
-**[Layers of abstraction aren&#39;t free of charge](https://blog.jooq.org/why-you-should-not-implement-layered-architecture), they are to be held in our limited working memory.**
+<!-- **[Layers of abstraction aren&#39;t free of charge](https://blog.jooq.org/why-you-should-not-implement-layered-architecture), they are to be held in our limited working memory.** -->
 
-**[Los niveles de abstracción no son gratuitos](https://blog.jooq.org/why-you-should-not-implement-layered-architecture), requieren recursos de nuestra memoria de trabajo, que es limitada.**
+**[Las capas de abstracción no son gratuitas](https://blog.jooq.org/why-you-should-not-implement-layered-architecture); deben mantenerse en la limitada memoria de trabajo.**
 
 <div align="center">
   <img src="/img/layers.png" alt="Layers" width="400">
 </div>
 
-## Domain Driven Design
+## Domain-Driven Design (Diseño Guiado por el Dominio)
 
-Domain-driven design has some great points, although it is often misinterpreted. People say, "We write code in DDD", which is a bit strange, because DDD is more about the problem space rather than the solution space.
+<!-- Domain-driven design has some great points, although it is often misinterpreted. People say, "We write code in DDD", which is a bit strange, because DDD is more about the problem space rather than the solution space. -->
 
-El Domain-Driven Design (Diseño Guiado por el Dominio) tiene grandes puntos a su favor, aunque frecuentemente es mal interpretado. Las personas dicen "escribo codigo en DDD", lo cual es un poco extraño, porque el DDD es mas sobre el espacio del problema que la solucion al espacio.
+El Domain-Driven Design tiene grandes aciertos, aunque a menudo se malinterpreta. Es común escuchar a gente decir: «escribimos código en DDD», lo cual es un tanto extraño, ya que el DDD se centra más en el espacio del problema que en el espacio de la solución.
 
-Ubiquitous language, domain, bounded context, aggregate, event storming are all about problem space. They are meant to help us learn the insights about the domain and extract the boundaries. DDD enables developers, domain experts and business people to communicate effectively using a single, unified language. Rather than focusing on these problem space aspects of DDD, we tend to emphasise particular folder structures, services, repositories, and other solution space techniques.
+<!-- Ubiquitous language, domain, bounded context, aggregate, event storming are all about problem space. They are meant to help us learn the insights about the domain and extract the boundaries. DDD enables developers, domain experts and business people to communicate effectively using a single, unified language. Rather than focusing on these problem space aspects of DDD, we tend to emphasise particular folder structures, services, repositories, and other solution space techniques. -->
 
-El Lenguaje Ubicuo, el Dominio, el Contexto Delimitado, el Agregado y el Event Storming son conceptos que pertenecen al espacio del problema (problem space). Su objetivo es ayudarnos a obtener una comprensión profunda del dominio y a delimitar sus fronteras. DDD facilita que desarrolladores, expertos del dominio y responsables de negocio se comuniquen eficazmente utilizando un lenguaje único y unificado. Sin embargo, en lugar de centrarnos en estos aspectos de DDD del espacio del problema, solemos poner el énfasis en estructuras de carpetas, servicios, repositorios y otras técnicas del espacio de la solución (solution space).
+El Lenguaje Ubicuo, el Dominio, el Contexto Delimitado, el Agregado y el Event Storming son todos conceptos pertenecientes al espacio del problema (problem space). Su propósito es ayudar a obtener un conocimiento profundo del dominio y a extraer sus límites. El DDD permite que desarrolladores, expertos del dominio y responsables de negocio se comuniquen eficazmente utilizando un lenguaje único y unificado. No obstante, en lugar de centrarse en estos aspectos del DDD relativos al espacio del problema, la tendencia es poner el énfasis en estructuras de carpetas, servicios, repositorios y otras técnicas del espacio de la solución (solution space).
 
-Chances are that the way we interpret DDD is likely to be unique and subjective. And if we build code upon this understanding, i.e., if we create a lot of extraneous cognitive load - future developers are doomed. `🤯`
+<!-- Chances are that the way we interpret DDD is likely to be unique and subjective. And if we build code upon this understanding, i.e., if we create a lot of extraneous cognitive load - future developers are doomed. `🤯` -->
 
-Lo mas problable es que la manera en que cada uno interpreta el DDD sea unica y subjetiva. Y si escribimos codigo sobre estas conclusiones, por ejemplo, creamos muchas carga cognitiva externa, los programadores que aborde este codigo en el futuro estan perdidos! `🤯`
+Es muy probable que la interpretación del DDD sea única y subjetiva. Y si el código se construye sobre dicha interpretación —es decir, si se genera una carga cognitiva extrínseca excesiva—, ¡los futuros desarrolladores están condenados! 🤯
 
-Team Topologies provides a much better, easier to understand framework that helps us split the cognitive load across teams. Engineers tend to develop somewhat similar mental models after learning about Team Topologies. DDD, on the other hand, seems to be creating 10 different mental models for 10 different readers. Instead of being common ground, it becomes a battleground for unnecessary debates.
+<!-- Team Topologies provides a much better, easier to understand framework that helps us split the cognitive load across teams. Engineers tend to develop somewhat similar mental models after learning about Team Topologies. DDD, on the other hand, seems to be creating 10 different mental models for 10 different readers. Instead of being common ground, it becomes a battleground for unnecessary debates. -->
 
-LaTopologia de Equipo provee una mejor y mas facil manera de entender el conexto que nos ayuda a dividir la carga cognitiva entre equipos. Los ingenieros tienden a desarrollar del algun modo, modelos mentales siimilar al aprender sobre Topologia de Equipos. DDD, por otro lado, parece crear 10 diferentes modelos mentales para 10 lectores diferentes. En ves de ser un terrene comun, se combierte en un campo de batalla para debates innecesarios.
+Team Topologies (Topologías de Equipos) proporciona un marco de trabajo mucho mejor y más fácil de entender que permite dividir la carga cognitiva entre los equipos. Los ingenieros tienden a desarrollar modelos mentales similares tras aprender sobre Team Topologies. El DDD, por otro lado, parece crear diez modelos mentales distintos para diez lectores diferentes. En lugar de ser una base común, se convierte en un campo de batalla para debates innecesarios.
 
-## Cognitive load in familiar projects
+<!-- ## Cognitive load in familiar projects -->
+## Carga cognitiva en proyectos familiares
 
-## La Carga Cognitiva en proyectos que nos son familiares
-
-> The problem is that **familiarity is not the same as simplicity.** They _feel_ the same — that same ease of moving through a space without much mental effort — but for very different reasons. Every “clever” (read: “self-indulgent”) and non-idiomatic trick you use incurs a learning penalty for everyone else. Once they have done that learning, then they will find working with the code less difficult. So it is hard to recognise how to simplify code that you are already familiar with. This is why I try to get “the new kid” to critique the code before they get too institutionalised!
+<!-- > The problem is that **familiarity is not the same as simplicity.** They _feel_ the same — that same ease of moving through a space without much mental effort — but for very different reasons. Every “clever” (read: “self-indulgent”) and non-idiomatic trick you use incurs a learning penalty for everyone else. Once they have done that learning, then they will find working with the code less difficult. So it is hard to recognise how to simplify code that you are already familiar with. This is why I try to get “the new kid” to critique the code before they get too institutionalised! -->
+> El problema es que **la familiaridad no es lo mismo que la simplicidad**. Ambas *transmiten la misma sensación* —esa facilidad para moverse por un espacio sin un gran esfuerzo mental—, pero por razones muy diferentes. Cada truco «ingenioso» (léase: «autocomplaciente») y no idiomático que se utiliza impone una penalización de aprendizaje para todos los demás. Una vez que han superado esa curva de aprendizaje, trabajar con el código les parecerá menos difícil. Por este motivo, es complicado reconocer cómo simplificar un código con el que ya se está familiarizado. ¡Por eso se intenta que «el nuevo» critique el código antes de que se «institucionalice» demasiado!
 >
-> El problema es que **la familiaridad no es igual a simplicidad.** Se _sienten_ iguales, esa misma facilidad para moverse por un espacio sin tener que hacer un gran esfuerzo mental, pero por muy diferentes razones. Cada solucion "ingeniosa" (o mas bien "caprichosa") y no idiomatica que se utilice supone un obstaculo para el aprendizaje de los demas. Una vez que terminen de aprender, se encontraran con codigo menos dificil. Entonces, es dificil reconocer como el simplicar el codigo con el que estamos familiarizados. Es por qesto que tratamso que el "chco nuevo" critique el codigo antes de que este muy institucionalizado.
+<!-- > It is likely that the previous author(s) created this huge mess one tiny increment at a time, not all at once. So you are the first person who has ever had to try to make sense of it all at once. -->
+> Es probable que los autores anteriores crearan este gran desorden de forma gradual, con pequeños incrementos, y no de una sola vez. Esto convierte al recién llegado en la primera persona que debe intentar darle sentido a todo el conjunto de golpe.
 >
-> It is likely that the previous author(s) created this huge mess one tiny increment at a time, not all at once. So you are the first person who has ever had to try to make sense of it all at once.
+<!-- > In my class I describe a sprawling SQL stored procedure we were looking at one day, with hundreds of lines of conditionals in a huge WHERE clause. Someone asked how anyone could have let it get this bad. I told them: “When there are only 2 or 3 conditionals, adding another one doesn’t make any difference. By the time there are 20 or 30 conditionals, adding another one doesn’t make any difference!” -->
+> En mis clases, suelo describir un procedimiento almacenado de SQL descomunal que analizamos un día, con cientos de líneas de condicionales en una gigantesca cláusula WHERE. Alguien preguntó cómo era posible que alguien hubiera permitido que llegara a tal extremo. Mi respuesta fue: «Cuando solo hay 2 o 3 condicionales, añadir uno más no supone ninguna diferencia. Para cuando ya hay 20 o 30, ¡añadir uno más tampoco supone ninguna diferencia!».
 >
-> Es proables que el(los) autor(es) anterior(es) crearan un enorme desastre con un pequeño incremento a la vez , no de un golpe. Por lo tanto, usted es la primera persona que ha tenido que intentar comprenderlo todo de una vez.
+<!-- > There is no “simplifying force” acting on the code base other than deliberate choices that you make. Simplifying takes effort, and people are too often in a hurry. -->
+> No existe ninguna «fuerza simplificadora» que actúe sobre la base del código, más allá de las decisiones deliberadas que se tomen. Simplificar requiere esfuerzo y, con demasiada frecuencia, la gente tiene prisa.
 >
-> In my class I describe a sprawling SQL stored procedure we were looking at one day, with hundreds of lines of conditionals in a huge WHERE clause. Someone asked how anyone could have let it get this bad. I told them: “When there are only 2 or 3 conditionals, adding another one doesn’t make any difference. By the time there are 20 or 30 conditionals, adding another one doesn’t make any difference!”
->
-> En nuestras clases describimos un extenso procedimiento almacenado de SQL que estuvimos analizando un día, con cientos de líneas de condicionales en una cláusula WHERE enorme. Alguien preguntó cómo era posible que hubieran permitido que llegara a tal extremo. Les respondí: “Cuando solo hay 2 o 3 condicionales, añadir uno más no supone ninguna diferencia. Para cuando ya hay 20 o 30, ¡añadir uno más tampoco supone ninguna diferencia!”.
->
-> There is no “simplifying force” acting on the code base other than deliberate choices that you make. Simplifying takes effort, and people are too often in a hurry.
->
-> No existe ninguna "fuerza simplificadora" que actúe sobre la base de código, más allá de las decisiones deliberadas que se toman. Simplificar requiere esfuerzo y, con demasiada frecuencia, la gente tiene prisa
->
-> _Thanks to [Dan North](https://dannorth.net) for his comment_.
+<!-- > _Thanks to [Dan North](https://dannorth.net) for his comment_. -->
 > _Gracias a [Dan North](https://dannorth.net) por este comentario_.
 
-If you've internalized the mental models of the project into your long-term memory, you won't experience a high cognitive load.
+<!-- If you've internalized the mental models of the project into your long-term memory, you won't experience a high cognitive load. -->
 
-Si has internalizado los modelos mentales del proyecto en tu memoria a largo plazo, no experimentarás una gran carga cognitiva.
+Si los modelos mentales de un proyecto se han internalizado en la memoria a largo plazo, no se experimenta una alta carga cognitiva.
 
 <div align="center">
   <img src="/img/mentalmodelsv15.png" alt="Mental models" width="700">
 </div>
 
-The more mental models there are to learn, the longer it takes for a new developer to deliver value.
+<!-- The more mental models there are to learn, the longer it takes for a new developer to deliver value. -->
 
 Cuantos más modelos mentales haya que aprender, más tiempo le tomará a un nuevo desarrollador aportar valor.
 
-Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code.
+<!-- Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code. -->
 
-Cuando incorpores a gente nueva a tu proyecto, intenta medir su nivel de confusión (el pair programming puede ayudar). Si están confundidos durante más de ~40 minutos seguidos, tienes aspectos que mejorar en tu código.
+Al incorporar nuevo personal a un proyecto, se recomienda medir su nivel de confusión (el pair programming puede ser de ayuda). Si la confusión persiste durante más de ~40 minutos seguidos, es una señal de que el código tiene margen de mejora.
 
-If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company.
+<!-- If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company. -->
 
-Si mantienes la carga cognitiva baja, la gente puede contribuir a la base de código en sus primeras horas tras unirse a la empresa.
+Si se mantiene baja la carga cognitiva, el personal puede contribuir a la base del código a las pocas horas de incorporarse a la empresa.
 
-## Examples
-
+<!-- ## Examples -->
 ## Ejemplos
 
-- Our architecture is a standard CRUD app architecture, [a Python monolith on top of Postgres](https://danluu.com/simple-architectures/)
+<!-- - Our architecture is a standard CRUD app architecture, [a Python monolith on top of Postgres](https://danluu.com/simple-architectures/)
 - How Instagram scaled to 14 million users with [only 3 engineers](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million)
 - The companies where we were like ”woah, these folks are [smart as hell](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” for the most part failed
-- One function that wires up the entire system. If you want to know how the system works - [go read it](https://www.infoq.com/presentations/8-lines-code-refactoring)
+- One function that wires up the entire system. If you want to know how the system works - [go read it](https://www.infoq.com/presentations/8-lines-code-refactoring) -->
 
-* Nuestra arquitectura es la de una aplicación CRUD estándar, [un monolito de Python sobre Postgres](https://www.google.com/url?sa=E&q=https%3A%2F%2Fdanluu.com%2Fsimple-architectures%2F).
-* Cómo Instagram escaló a 14 millones de usuarios con [solo 3 ingenieros](https://www.google.com/url?sa=E&q=https%3A%2F%2Fread.engineerscodex.com%2Fp%2Fhow-instagram-scaled-to-14-million).
-* La mayoría de las empresas sobre las que pensábamos «guau, esta gente es [increíblemente lista](https://www.google.com/url?sa=E&q=https%3A%2F%2Fkenkantzer.com%2Flearnings-from-5-years-of-tech-startup-code-audits%2F)» fracasaron.
-* Una única función que orquesta todo el sistema. Si quieres saber cómo funciona, [ve y léela](https://www.google.com/url?sa=E&q=https%3A%2F%2Fwww.infoq.com%2Fpresentations%2F8-lines-code-refactoring) .
+*   **La arquitectura de una aplicación CRUD estándar: [un monolito de Python sobre Postgres](https://danluu.com/simple-architectures/)**
+    > _Our architecture is a standard CRUD app architecture, [a Python monolith on top of Postgres](https://danluu.com/simple-architectures/)_
 
-These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort.
+*   **Cómo Instagram escaló a 14 millones de usuarios con [solo 3 ingenieros](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million)**
+    > _How Instagram scaled to 14 million users with [only 3 engineers](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million)_
 
-Estas arquitecturas son aburridas y faciles de entender. Cualquier puede entenderlas sin mucho esfuerzo mental.
+*   **La mayoría de las empresas que parecían «increíblemente listas» ([*smart as hell*](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)) acabaron fracasando**
+    > _The companies where we were like ”woah, these folks are [smart as hell](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” for the most part failed_
 
-Involve junior developers in architecture reviews, they will help you to identify the mentally demanding areas.
+*   **Una única función que orquesta todo el sistema. Para entender su funcionamiento, [basta con leerla](https://www.infoq.com/presentations/8-lines-code-refactoring)**
+    > _One function that wires up the entire system. If you want to know how the system works - [go read it](https://www.infoq.com/presentations/8-lines-code-refactoring)_
 
-Involucrar a los desarrolladores junior en la revision de arquitecturas, te ayudaran a identificar la areas metalmente demadantes.
+<!--!! Nota para los editores: en el bloque anterior hemos buscado conciliar la traduccion con el tittulo original, esta fue la propuesta de la IA, la cual no parecio excelente.  !!-->
 
-> Software systems are perhaps the most intricate and complex (in terms of number of distinct kinds of parts) of the things humanity makes.
+<!-- These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort. -->
+
+Estas arquitecturas son predecibles y fáciles de comprender; cualquiera puede asimilarlas sin un gran esfuerzo mental.
+
+<!-- Involve junior developers in architecture reviews, they will help you to identify the mentally demanding areas. -->
+
+Involucrar a los desarrolladores junior en las revisiones de arquitectura ayuda a identificar las áreas que resultan mentalmente más demandantes.
+
+<!-- > Software systems are perhaps the most intricate and complex (in terms of number of distinct kinds of parts) of the things humanity makes. -->
+> Los sistemas de software son, quizás, las creaciones más intrincadas y complejas de la humanidad (en términos del número de tipos de componentes distintos).
 >
-> Los sistemas de software so quizas lo mas intricados y complejos (en el sentido de los distitos numeros de partes) que la humanidad puede hacer.
+<!-- > _Fred Brooks, The Mythical Man-Month -->
+> _Fred Brooks, The Mythical Man-Month (El Mito del Hombre-Mes)_
+
+<!-- **Maintaining software is hard**, things break and we would need every bit of mental effort we can save. The fewer components there are in the system, the fewer issues there will be. Debugging will also be less mentally taxing. -->
+
+**Mantener el software es difícil**; los componentes fallan y es necesario ahorrar todo el esfuerzo mental posible. Cuantos menos componentes haya en el sistema, menos problemas surgirán. La depuración también resultará menos agotadora mentalmente.
+
+<!-- > Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it. -->
 >
-> _Fred Brooks, The Mythical Man-Month
-> Fred Brooks, The Mythical Man-Month (El mito del hombre mes)_
-
-**Maintaining software is hard**, things break and we would need every bit of mental effort we can save. The fewer components there are in the system, the fewer issues there will be. Debugging will also be less mentally taxing.
-
-**Mantener software es dificil,** las caracteriticas tienden a rompeser y necesitamos ahorrar cada gramo de energia mental que podamos. Mientras menos componentes tenga el sistema, menos problemas vamos a tener. Depurrar tambien se vuelve menos agotador.
-
-> Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.
->
-> Depurar es el doble de dificil que escribir codigo en un primer momento. Por tanto, si es escribes el codigo mas brillante posibñle, tu eres por definicion, no lo suficientementwe listo para depurarlo.
+> Depurar es el doble de difícil que escribir el código en primer lugar. Por lo tanto, si el código se escribe de la forma más ingeniosa posible, por definición, no se es lo suficientemente inteligente para depurarlo.
 >
 > _Brian Kernighan_
 
-In general, the mindset "Wow, this architecture sure feels good!" is misleading. That's "a point in time" subjective feeling, and it says nothing about the reality. A far better approach is to observe the consequences in the long run:
+<!-- In general, the mindset "Wow, this architecture sure feels good!" is misleading. That's "a point in time" subjective feeling, and it says nothing about the reality. A far better approach is to observe the consequences in the long run: -->
 
-En general, la mentalidad "Wao!, esta arquitectura seguramente es la mejor" es engañosa, Esto es "en cierto punto en el tiempo" un sentimiento subjetivo y no dice nada sobre la realidad. Un abordaje mucho mejor seria observar las consecuencia a largo plazo:
+En general, la mentalidad del tipo «¡Guau, qué bien se siente esta arquitectura!» es engañosa; se trata de una sensación subjetiva y momentánea que no dice nada sobre la realidad. Un enfoque mucho más acertado consiste en observar las consecuencias a largo plazo:
 
-- Is it easy to reproduce and debug an issue? Or do you have to jump across the call stacks or distributed components, trying to make sense of everything in your head?
-- Es facil reproducir un bug o un problema? O debe ir de un lado a otro en la pila de invocaciones o componente distribuidos, tratando de darle sentido a todo en su cabeza.
-- Can we make changes quickly, or are there a lot of unknown unknowns, and people are afraid to touch things?
-- Podemos hacer cambios rapidamente, o hay un monto de desconocido y los desarrolladores tienen miedo de tocar el codigo.
-- Can new people add features quickly? Are there some unique mental models to learn?
-- Pueden lo recien llegados añadir nuevas caracteristica rapidamente? Hay algun modelo mental unico que aprender?
+<!-- - Is it easy to reproduce and debug an issue? Or do you have to jump across the call stacks or distributed components, trying to make sense of everything in your head? -->
+- ¿Es fácil reproducir y depurar una incidencia? ¿O es necesario saltar entre pilas de llamadas o componentes distribuidos, intentando reconstruir todo el contexto mentalmente?
+<!-- - Can we make changes quickly, or are there a lot of unknown unknowns, and people are afraid to touch things? -->
+- ¿Se pueden realizar cambios con rapidez o, por el contrario, existen numerosas «incógnitas desconocidas» y los desarrolladores temen modificar el código?
+<!-- - Can new people add features quickly? Are there some unique mental models to learn? -->
+- ¿Pueden los recién llegados añadir características rápidamente? ¿Es necesario aprender algún modelo mental particular?
 
-> What are those unique mental models? It's some set of rules, usually a mixture of DDD/CQRS/Clean Architecture/Event Driven Architecture. This is an author's own interpretation of the things that excite him the most. His own subjective mental models. **Extraneous cognitive load that others have to internalize.**
->
-> Que son esos modelos mentales tan unicos? Es un conjunto de reglas, usualmente DDD/CQRS/Arquitectura Limpia/Arquitectura por Eventos. Esta es la interpretacion del autor en cuanto a las cosas que mas le emocionan. Son sus propios modelos subjetivos. **Cargas cognitiva extrañas que otros deben internalizar.**
+<!-- > What are those unique mental models? It's some set of rules, usually a mixture of DDD/CQRS/Clean Architecture/Event Driven Architecture. This is an author's own interpretation of the things that excite him the most. His own subjective mental models. **Extraneous cognitive load that others have to internalize.** -->
+> ¿Y qué son esos modelos mentales únicos? Generalmente, un conjunto de reglas que mezcla DDD, CQRS, Arquitectura Limpia y Arquitectura Guiada por Eventos. Es la interpretación personal del autor sobre los conceptos que más le atraen; sus propios modelos mentales subjetivos. **Una carga cognitiva extrínseca que otros se ven obligados a internalizar.**
 
-These questions are far harder to track, and people often don't like to answer them directly. Look at some of the most complex software systems in the world, the ones that have stood the test of time - Linux, Kubernetes, Chrome and Redis (see comments below). You will not find anything fancy there, it's boring for the most part, and that's a good thing.
+<!-- These questions are far harder to track, and people often don't like to answer them directly. Look at some of the most complex software systems in the world, the ones that have stood the test of time - Linux, Kubernetes, Chrome and Redis (see comments below). You will not find anything fancy there, it's boring for the most part, and that's a good thing. -->
 
-Estas preguntas son algo dificil de seguire, y normalmente las personas no les gusta responder de manera concreta. Si miramos algunos de los sistemas de software mas complejos del mundos, aquellos que han soportado la prueba del tiempo (eje: Linux, Kubernetes, Chrome, Redis (ver comentatios mas abajo)). No encontrara nada esplendoroso, es aburrido en su mayopr parte, y eso es bueno.
+Estas preguntas son mucho más difíciles de evaluar y, a menudo, la gente evita responderlas directamente. Al examinar algunos de los sistemas de software más complejos del mundo, aquellos que han superado la prueba del tiempo —como Linux, Kubernetes, Chrome y Redis (véanse los comentarios más abajo)—, no se encontrará nada extravagante. En su mayor parte, su diseño es predecible, y eso es algo positivo.
 
-## Conclusion
+<!-- ## Conclusion -->
+## Conclusión
 
-## Conclusiones
+<!-- Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯` -->
 
-Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`
+Supóngase por un momento que lo inferido en el segundo capítulo no es, en realidad, cierto. De ser así, la conclusión que acaba de negarse, junto con aquellas del capítulo anterior que se habían aceptado como válidas, podrían ser igualmente incorrectas. 🤯
 
-Imagina por un momento que lo que inferimos en el segundo capítulo no es realmente cierto. Si ese es el caso, entonces la conclusión que acabamos de negar, junto con las conclusiones del capítulo anterior que habíamos aceptado como válidas, tampoco podrían ser correctas. 🤯
+<!-- Do you feel it? Not only do you have to jump all over the article to get the meaning (shallow modules!), but the paragraph in general is difficult to understand. We have just created an unnecessary cognitive load in your head. **Do not do this to your colleagues.** -->
 
-Do you feel it? Not only do you have to jump all over the article to get the meaning (shallow modules!), but the paragraph in general is difficult to understand. We have just created an unnecessary cognitive load in your head. **Do not do this to your colleagues.**
-
-¿Lo notas? No solo tienes que saltar por todo el artículo para entender el significado (¡módulos poco profundos!), sino que el párrafo en general es difícil de comprender. Acabamos de crear una carga cognitiva innecesaria en tu cabeza. **No le hagas esto a tus colegas.**
+La sensación es perceptible: no solo se obliga al lector a saltar por todo el artículo para captar el significado (¡módulos poco profundos!), sino que el párrafo en su conjunto resulta difícil de comprender. De este modo, se ha generado una carga cognitiva innecesaria. **Se debe evitar imponer esta práctica a los colegas**.
 
 <div align="center">
   <img src="/img/smartauthorv14thanksmari.png" alt="Smart author" width="600">
 </div>
 
-We should reduce any cognitive load above and beyond what is intrinsic to the work we do.
+<!-- We should reduce any cognitive load above and beyond what is intrinsic to the work we do. -->
 
-Deberíamos reducir cualquier carga cognitiva que vaya más allá de lo que es intrínseco al trabajo que realizamos.
+Se debe reducir toda carga cognitiva adicional a la que es intrínseca al propio trabajo.
 
 ```
 
@@ -767,7 +778,7 @@ Deberíamos reducir cualquier carga cognitiva que vaya más allá de lo que es i
 
 [LinkedIn](https://www.linkedin.com/in/zakirullin/), [X](https://twitter.com/zakirullin), [GitHub](https://github.com/zakirullin), artemzr(аt)g-yоu-knоw-com
 
-<details>
+<!-- <details>
     <summary><b>Comments</b></summary>
     <br>
     <p><strong>Rob Pike</strong> <i>(Unix, Golang)</i><br>Nice article.</p>
@@ -791,4 +802,30 @@ Deberíamos reducir cualquier carga cognitiva que vaya más allá de lo que es i
     <p>I also liked it because it described practices I have done for decades, but never much admit to because they are not popular... I write really complicated stuff and need all the help I can get.</p>
     <p>Consider, if I'm right, it popped up because the Github folks, very smart people, though that developers should see it. I agree.</p>
     <p><a href="https://news.ycombinator.com/item?id=45074248" target="_blank">Comments on Hacker News</a> (<a href="https://news.ycombinator.com/item?id=42489645" target="_blank">2</a>)</p>
+</details> -->
+
+<details>
+    <summary><b>Comentarios</b></summary>
+    <br>
+    <p><strong>Rob Pike</strong> <i>(Unix, Golang)</i><br>Buen artículo.</p>
+    <p><strong><a href="https://x.com/karpathy/status/1872038630405054853" target="_blank">Andrej Karpathy</a></strong> <i>(ChatGPT, Tesla)</i><br>Buen post sobre ingeniería de software. Probablemente el punto de vista más acertado y menos practicado.</p>
+    <p><strong><a href="https://x.com/elonmusk/status/1872346903792566655" target="_blank">Elon Musk</a></strong> <i>(Cohetes)</i><br>Cierto.</p>
+    <p><strong><a href="https://www.linkedin.com/feed/update/urn:li:activity:7277757844970520576/" target="_blank">Addy Osmani</a></strong> <i>(Chrome, el sistema de software más complejo del mundo)</i><br>He visto innumerables proyectos donde desarrolladores inteligentes crearon arquitecturas impresionantes usando los últimos patrones de diseño y microservicios. Pero cuando nuevos miembros del equipo intentaban hacer cambios, pasaban semanas solo tratando de entender cómo encajaba todo. La carga cognitiva era tan alta que la productividad se desplomaba y los bugs se multiplicaban.</p>
+    <p>¿La ironía? Muchos de estos patrones que inducen complejidad se implementaron en nombre del «código limpio».</p>
+    <p>Lo que realmente importa es reducir la carga cognitiva innecesaria. A veces esto significa tener menos módulos y más profundos, en lugar de muchos superficiales. A veces significa mantener la lógica relacionada junta en lugar de dividirla en funciones diminutas.</p>
+    <p>Y a veces significa elegir soluciones predecibles y directas en lugar de las ingeniosas. El mejor código no es el más elegante o sofisticado; es el código que los futuros desarrolladores (incluyéndote a ti mismo) pueden entender rápidamente.</p>
+    <p>Tu artículo realmente resuena con los desafíos que enfrentamos en el desarrollo de navegadores. Tienes toda la razón en que los navegadores modernos se encuentran entre los sistemas de software más complejos. Gestionar esa complejidad en Chromium es un desafío constante que se alinea perfectamente con muchos de los puntos que mencionaste sobre la carga cognitiva.</p>
+    <p>Una forma en que intentamos manejar esto en Chromium es a través de un cuidadoso aislamiento de componentes e interfaces bien definidas entre subsistemas (como el renderizado, la red, la ejecución de JavaScript, etc.). Similar a tu ejemplo de módulos profundos con E/S de Unix, nuestro objetivo es tener una funcionalidad potente detrás de interfaces relativamente simples. Por ejemplo, nuestro motor de renderizado maneja una complejidad increíble (diseño, composición, aceleración por GPU), pero los desarrolladores pueden interactuar con él a través de capas de abstracción claras.</p>
+    <p>Tus puntos sobre evitar abstracciones innecesarias también me han llegado. En el desarrollo de navegadores, equilibramos constantemente el hacer que la base del código sea accesible para nuevos colaboradores mientras manejamos la complejidad inherente de los estándares web y la compatibilidad.</p>
+    <p>A veces, la solución más simple es la mejor, incluso en un sistema complejo.</p>
+    <p><strong><a href="https://x.com/antirez" target="_blank">antirez</a></strong> <i>(Redis)</i><br>Totalmente de acuerdo :) Además, lo que creo que falta en el mencionado «A Philosophy of Software Design» es el concepto de «sacrificio de diseño». Es decir, a veces sacrificas algo y a cambio obtienes simplicidad, o rendimiento, o ambas cosas. Aplico esta idea continuamente, pero a menudo no se comprende.</p>
+    <p>Un buen ejemplo es el hecho de que siempre me negué a que los elementos de un hash tuvieran expiración. Esto es un sacrificio de diseño porque si solo tienes ciertos atributos en los elementos de nivel superior (las claves mismas), el diseño es más simple, los valores serán solo objetos. Cuando Redis obtuvo la expiración en hashes, fue una buena característica pero requirió (de hecho) muchos cambios en muchas partes, aumentando la complejidad.</p>
+    <p>Otro ejemplo es lo que estoy haciendo ahora mismo, Vector Sets, el nuevo tipo de datos de Redis. Decidí que Redis no sería la fuente de la verdad sobre los vectores, sino que solo puede tomar una versión aproximada de ellos, así que pude hacer normalización y cuantización en la inserción sin intentar retener el gran vector de floats en disco, y así sucesivamente. Muchas bases de datos vectoriales no sacrifican el hecho de recordar lo que el usuario introdujo (el vector de precisión completa).</p>
+    <p>Estos son solo dos ejemplos al azar, pero aplico esta idea en todas partes. Ahora, la cuestión es: por supuesto, uno debe sacrificar las cosas correctas. A menudo, hay un 5% de funcionalidades que representan una cantidad enorme de complejidad: eso es algo bueno que eliminar :D</p>
+    <p><strong><a href="https://working-for-the-future.medium.com/about" target="_blank">Un desarrollador de internet</a></strong><br>No me contratarías... Yo me vendo por mi historial de proyectos empresariales lanzados.</p>
+    <p>Trabajé con un tipo que podía hablar en patrones de diseño. Yo nunca pude hablar de esa manera, aunque era uno de los pocos que podía entenderlo bien. Los gerentes lo amaban y podía dominar cualquier conversación de desarrollo. La gente que trabajaba a su alrededor decía que dejaba un rastro de destrucción a su paso. Me dijeron que yo era la primera persona que podía entender sus proyectos. La mantenibilidad importa. A mí lo que más me importa es el TCO (Costo Total de Propiedad). Para algunas empresas, eso es lo que cuenta.</p>
+    <p>Inicié sesión en Github después de un tiempo sin entrar y por alguna razón me llevó a un artículo en un repositorio de alguien que parecía aleatorio. Estaba pensando «¿qué es esto?» y tuve algunos problemas para llegar a mi página de inicio, así que lo leí. No lo registré realmente en ese momento, pero era increíble. Todo desarrollador debería leerlo. En gran medida, decía que casi todo lo que nos han contado sobre las mejores prácticas de programación conduce a una «carga cognitiva» excesiva, lo que significa que nuestras mentes están siendo golpeadas por las exigencias intelectuales. He sabido esto desde hace un tiempo, especialmente con las exigencias de la nube, la seguridad y DevOps.</p>
+    <p>También me gustó porque describía prácticas que he seguido durante décadas, pero que nunca admito demasiado porque no son populares... Escribo cosas realmente complicadas y necesito toda la ayuda que pueda conseguir.</p>
+    <p>Considera que, si estoy en lo cierto, apareció porque la gente de Github, gente muy inteligente, pensó que los desarrolladores deberían verlo. Estoy de acuerdo.</p>
+    <p><a href="https://news.ycombinator.com/item?id=45074248" target="_blank">Comentarios en Hacker News</a> (<a href="https://news.ycombinator.com/item?id=42489645" target="_blank">2</a>)</p>
 </details>
