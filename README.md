@@ -371,7 +371,7 @@ In general, the mindset "Wow, this architecture sure feels good!" is misleading.
 
 > What are those unique mental models? It's some set of rules, usually a mixture of DDD/CQRS/Clean Architecture/Event Driven Architecture. This is an author's own interpretation of the things that excite him the most. His own subjective mental models. **Extraneous cognitive load that others have to internalize.**
 
-These questions are far harder to track, and people often don't like to answer them directly. Look at some of the most complex software systems in the world, the ones that have stood the test of time - Linux, Kubernetes, Chrome and Redis (see comments below). You will not find anything fancy there, it's boring for the most part, and that's a good thing.
+These questions are far harder to track, and people often don't like to answer them directly. Look at some of the most complex software systems in the world, the ones that have stood the test of time - Unix, Kubernetes, Chrome and Redis (see comments below). You will not find anything fancy there, it's boring for the most part, and that's a good thing.
 
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
