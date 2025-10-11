@@ -348,6 +348,7 @@ If you keep the cognitive load low, people can contribute to your codebase withi
 - How Instagram scaled to 14 million users with [only 3 engineers](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million)
 - The companies where we were like ”woah, these folks are [smart as hell](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” for the most part failed
 - One function that wires up the entire system. If you want to know how the system works - [go read it](https://www.infoq.com/presentations/8-lines-code-refactoring)
+- Designing for Understandability: [The Raft Consensus Algorithm](https://www.youtube.com/watch?v=vYp4LYbnnW8)
 
 These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort.  
 
