@@ -129,8 +129,7 @@ Having too many shallow modules can make it difficult to understand the project.
 
 I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas the second one has only 7 deep classes. I haven't been maintaining any of these projects for one year and a half.
 
-Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.
- 
+Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.  
 
 > The best components are those that provide powerful functionality yet have a simple interface.  
 > 
@@ -210,7 +209,6 @@ Language features are OK, as long as they are orthogonal to each other.
   <b>By no means I am trying to blame C++.</b> I love the language. It's just that I am tired now.<br><br>
   <p>Thanks to <a href="https://0xd34df00d.me" target="_blank">0xd34df00d</a> for writing.</p>
 </details>
-
 
 ## Business logic and HTTP status codes
 On the backend we return:  
@@ -337,11 +335,9 @@ If you've internalized the mental models of the project into your long-term memo
   <img src="/img/mentalmodelsv15.png" alt="Mental models" width="700">
 </div>
 
-The more mental models there are to learn, the longer it takes for a new developer to deliver value.  
+The more mental models there are to learn, the longer it takes for a new developer to deliver value. If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company.  
 
 Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code.  
-
-If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company.
 
 ## Examples
 - Our architecture is a standard CRUD app architecture, [a Python monolith on top of Postgres](https://danluu.com/simple-architectures/)
