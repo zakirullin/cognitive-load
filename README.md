@@ -335,7 +335,7 @@ If you've internalized the mental models of the project into your long-term memo
   <img src="/img/mentalmodelsv15.png" alt="Mental models" width="700">
 </div>
 
-The more mental models there are to learn, the longer it takes for a new developer to deliver value. If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company.  
+The more mental models there are to learn, the longer it takes for a new developer to deliver value. If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company. And that doesn't mean we sacrifice in quality, or allow allowing piles of mud to emerge.  
 
 Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code.  
 
