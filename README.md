@@ -335,7 +335,9 @@ If you've internalized the mental models of the project into your long-term memo
   <img src="/img/mentalmodelsv15.png" alt="Mental models" width="700">
 </div>
 
-The more mental models there are to learn, the longer it takes for a new developer to deliver value. If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company. And that doesn't mean we sacrifice in quality, or allow allowing piles of mud to emerge.  
+The more unique mental models there are to learn, the longer it takes for a new developer to deliver value. If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company. And that doesn't mean we sacrifice in quality, or allow allowing piles of mud to emerge.  
+
+> What are those unique mental models? It's some set of rules, usually a mixture of DDD/CQRS/Clean Architecture/Event Driven Architecture. This is an author's own interpretation of the things that excite him the most. His own subjective mental models. **Extraneous cognitive load that others have to internalize.**
 
 Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code.  
 
@@ -364,8 +366,6 @@ In general, the mindset "Wow, this architecture sure feels good!" is misleading.
 - Is it easy to reproduce and debug an issue? Or do you have to jump across the call stacks or distributed components, trying to make sense of everything in your head?
 - Can we make changes quickly, or are there a lot of unknown unknowns, and people are afraid to touch things?
 - Can new people add features quickly? Are there some unique mental models to learn?
-
-> What are those unique mental models? It's some set of rules, usually a mixture of DDD/CQRS/Clean Architecture/Event Driven Architecture. This is an author's own interpretation of the things that excite him the most. His own subjective mental models. **Extraneous cognitive load that others have to internalize.**
 
 These questions are far harder to track, and people often don't like to answer them directly. Look at some of the most complex software systems in the world, the ones that have stood the test of time - Unix, Kubernetes, Chrome and Redis (see comments below). You will not find anything fancy there, it's boring for the most part, and that's a good thing.
 
