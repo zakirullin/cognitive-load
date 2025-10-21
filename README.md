@@ -337,7 +337,7 @@ If you've internalized the mental models of the project into your long-term memo
 
 The more unique mental models there are to learn, the longer it takes for a new developer to deliver value. If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company. And that doesn't mean we sacrifice in quality, or allow allowing piles of mud to emerge.  
 
-> What are those unique mental models? It's some set of rules, usually a mixture of DDD/Clean Architecture/Event Driven Architecture. This is an author's own interpretation of the things that excite him the most. His own subjective mental models. **Extraneous cognitive load that others have to internalize.**
+> What are those unique mental models? It's some set of rules, usually a mixture of Clean Architecture/Event Driven Architecture/DDD. This is an author's own interpretation of the things that excite him the most. His own subjective mental models. **Extraneous cognitive load that others have to internalize.**
 
 Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code.  
 
