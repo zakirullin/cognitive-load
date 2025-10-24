@@ -283,14 +283,6 @@ I myself was a passionate advocate of Hexagonal/Onion Architecture for years. I 
 
 This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it did more harm than good. We spent years on unnecessary mental activity and writing useless glue code with no clear business value. On the contrary, we made things worse for the business by forcing newcomers to learn our approaches (mental models) first. The time to market has worsened. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.** 
 
-<details>
-    <summary><b>Coding principles and experience</b></summary>
-    <div align="center">
-        <img src="img/complexity.png" alt="Super simple code" width="500">
-    </div>
-    <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
-</details>
-
 If you think that such layering will allow you to quickly replace a database or other dependencies, you're mistaken. Changing the storage causes lots of problems, and believe us, having some abstractions for the data access layer is the least of your worries. At best, abstractions can save somewhat 10% of your migration time (if any), the real pain is in data model incompatibilities, communication protocols, distributed systems challenges, and [implicit interfaces](https://www.hyrumslaw.com).  
 
 > With a sufficient number of users of an API,  
@@ -349,6 +341,14 @@ Once you onboard new people on your project, try to measure the amount of confus
 - Designing for Understandability: [The Raft Consensus Algorithm](https://www.youtube.com/watch?v=vYp4LYbnnW8)
 
 These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort.  
+
+<details>
+    <summary><b>Coding principles and experience</b></summary>
+    <div align="center">
+        <img src="img/complexity.png" alt="Super simple code" width="500">
+    </div>
+    <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
+</details>
 
 Involve junior developers in architecture reviews, they will help you to identify the mentally demanding areas.
 
