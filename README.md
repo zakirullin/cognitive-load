@@ -112,7 +112,7 @@ Oh, wait, there's `SuperuserController` which extends `AdminController`. By modi
 Prefer composition over inheritance. We won't go into detail - there's [plenty of material](https://www.youtube.com/watch?v=hxGOiiR9ZKg) out there.
 
 ## Too many small methods, classes or modules
-> Method, class and module are interchangeable in this context 
+> Method, class and module are interchangeable in this context.
  
 Mantras like "methods should be shorter than 15 lines of code" or "classes should be small" turned out to be somewhat wrong.
 
@@ -327,7 +327,7 @@ If you've internalized the mental models of the project into your long-term memo
   <img src="/img/mentalmodelsv15.png" alt="Mental models" width="700">
 </div>
 
-The more unique mental models there are to learn, the longer it takes for a new developer to deliver value. If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company. And that doesn't mean we sacrifice in quality, or allow allowing piles of mud to emerge.  
+The more unique mental models there are to learn, the longer it takes for a new developer to deliver value. If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company. And that doesn't mean we sacrifice in quality, or allow piles of mud to emerge.  
 
 > What are those unique mental models? It's some set of rules, usually a mixture of Clean Architecture/Event Driven Architecture/DDD. This is an author's own interpretation of the things that excite him the most. His own subjective mental models. **Extraneous cognitive load that others have to internalize.**
 
