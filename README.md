@@ -334,6 +334,11 @@ The more unique mental models there are to learn, the longer it takes for a new 
 Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code.  
 
 ## Examples
+> Software systems are perhaps the most intricate and complex (in terms of number of distinct kinds of parts) of the things humanity makes.
+>
+> *Fred Brooks, The Mythical Man-Month*
+
+
 - Our architecture is a standard CRUD app architecture, [a Python monolith on top of Postgres](https://danluu.com/simple-architectures/)
 - How Instagram scaled to 14 million users with [only 3 engineers](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million)
 - The companies where we were like ”woah, these folks are [smart as hell](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” for the most part failed
@@ -349,11 +354,6 @@ These architectures are quite boring and easy to understand. Anyone can grasp th
     </div>
     <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
 </details>
-
-> Software systems are perhaps the most intricate and complex (in terms of number of distinct kinds of parts) of the things humanity makes.  
-> 
-> *Fred Brooks, The Mythical Man-Month*
-
 
 Involve junior developers in architecture reviews, they will help you to identify the mentally demanding areas.
 
