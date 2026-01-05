@@ -1,15 +1,15 @@
 # 认知负荷才是关键
 
-[Prompt](README.prompt.md) | [MindsMD](https://minds.md/zakirullin/cognitive) | [English](README.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Japanese](README.ja.md)
+[Prompt](https://github.com/zakirullin/cognitive-load/blob/main/README.prompt.md) | [Blog version](https://minds.md/zakirullin/cognitive) | [Chinese](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Japanese](README.ja.md) | [Spanish](README.es.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Vietnamese](README.vi.md) | [Nepali](README.np.md)
 
-*这是一份持续更新的文档，最后更新：**2025 年 9 月**。欢迎你的贡献！* 
+*这是一份持续更新的文档，最后更新：**2025 年 10 月**。欢迎你的贡献！* 
 
-*本译文基于原文 [4a6d92d](https://github.com/zakirullin/cognitive-load/commit/4a6d92d4b0cf326d82b9beaf43d05696b03d22f9) 版本进行翻译。*
+*本译文基于原文 [6df913d](https://github.com/zakirullin/cognitive-load/commit/6df913dc1c1bf63dfe5933144155908ce68f6808) 版本进行翻译。*
 
 ## 简介(Introduction)
-这世上充斥着各种流行术语与“最佳实践”，但大多数最终都失灵了。我们需要更基础、更不可能出错的东西。  
+这世上充斥着各种流行术语与“最佳实践”，但大多数最终都失灵了。究其原因，在于这些理念往往只是想象中的图景，而非源自现实。它们建立在美学偏好与主观判断之上。我们需要更基础、更不可能出错的东西。  
 
-有时我们在阅读代码时会感到困惑。困惑消耗时间和金钱。困惑源于过高的“认知负荷”。它不是某种花哨的抽象概念，而是**人类的一种基本约束**。它不是臆想出来的，它的确存在，而且我们能真切感受到。  
+有时我们在阅读代码时会感到困惑。困惑消耗时间和金钱。困惑源于过高的“认知负荷”。它不是某种花哨的抽象概念，而是**人类的一种基本约束。** 它不是臆想出来的，它的确存在，而且我们能真切感受到。  
 
 鉴于我们在阅读与理解代码上所花费的时间远多于书写代码所花费的，我们应当持续地自省：我们是否正在把过多的认知负荷添加到代码中。 
 
@@ -28,7 +28,9 @@
 
 <details>
   <summary><b>认知负荷与打断</b></summary>
-  <img src="img/interruption.jpeg"><br>
+  <div align="center">
+    <img src="img/interruption.jpeg" width="480">
+  </div>
 </details>
 
 > 我们会以一种非正式的方式使用“认知负荷”这个术语；有时它与认知负荷的科学概念一致，但我们并不确切知道在哪些地方一致、哪些地方不一致。
@@ -112,7 +114,7 @@ stuff // 🧠+
 尽量倾向组合而非继承。细节不展开——参考资料已经[汗牛充栋](https://www.youtube.com/watch?v=hxGOiiR9ZKg)。
 
 ## 过多微型方法，类或模块(Too many small methods, classes or modules)
-> 在这里，“方法”“类”“模块”可以互换理解 
+> 在这里，“方法”“类”“模块”可以互换理解。
  
 “方法少于 15 行”“类应该小”这些准则，实践下来并不总是对的。
 
@@ -123,7 +125,7 @@ stuff // 🧠+
   <img src="/img/deepmodulev8.png" alt="相较于深度“抽象”的浅模块其内部犬牙交错的调用关系，深模块可能因为链条清晰而让理解与维护成为可能" width="700">
 </div>
 
-浅模块过多会让项目难以理解。**不仅要记住每个模块的职责，还要记住它们之间的所有交互**。要理解一个浅模块的目的，往往得先看完与之相关的所有模块功能。频繁在这些浅组件之间跳转令人心力交瘁，<a target="_blank" href="https://blog.separateconcerns.com/2023-09-11-linear-code.html">线性思维</a>对人类更自然。  
+浅模块过多会让项目难以理解。**不仅要记住每个模块的职责，还要记住它们之间的所有交互。** 要理解一个浅模块的目的，往往得先看完与之相关的所有模块功能。频繁在这些浅组件之间跳转令人心力交瘁，<a target="_blank" href="https://blog.separateconcerns.com/2023-09-11-linear-code.html">线性思维</a>对人类更自然。  
 
 > 信息隐藏至关重要；而浅模块隐藏的复杂性并不多。
 
@@ -131,11 +133,11 @@ stuff // 🧠+
 
 回头再看，第一个项目中 80 个类之间的交互简直难以理清。在能动手写代码之前，我得先重建一大坨认知负荷。相反，第二个项目很快就能上手，因为它只有少数几个接口简单的深类。
  
-
 > 最好的组件是功能强大而接口简单的组件。  
-> **John K. Ousterhout**
+> 
+> *John Ousterhout, 《软件设计的哲学》*
 
-UNIX I/O 的接口很简单，只有 5 个基本调用：
+Unix I/O 的接口很简单，只有 5 个基本调用：
 ```python
 open(path, flags, permissions)
 read(fd, buffer, count)
@@ -144,14 +146,24 @@ lseek(fd, offset, referencePosition)
 close(fd)
 ```
 
-现代实现可以有**数十万行代码**。尽管背后是大量复杂性逻辑，但因为接口设计简单，使用就容易。
+现代实现可以有**数十万行代码。** 尽管背后是大量复杂性逻辑，但因为接口设计简单，使用就容易。
 
 > 这个深模块的例子来自 John K. Ousterhout 的著作 [《软件设计的哲学》](https://web.stanford.edu/~ouster/cgi-bin/book.php)。此书不仅直击软件开发复杂性的本质，还对 Parnas 那篇影响深远的论文 [《On the Criteria To Be Used in Decomposing Systems into Modules》(论将系统分解为模块的标准)](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf)做了极佳的诠释。二者皆为必读。更多延伸阅读：[《〈软件设计的哲学〉与〈代码整洁之道〉》](https://github.com/johnousterhout/aposd-vs-clean-code)、[《可能是时候停止推荐〈代码整洁之道〉了》](https://qntm.org/clean)、[《小型函数的弊端》](https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29)。
+
+<details>
+    <summary><b>重要的事物应当有足够的分量，丰富的示例</b></summary>
+    <br>
+    <div align="center">
+        <img src="/img/dirty.png" alt="整洁 vs 粗糙" width="600">
+    </div>
+    <blockquote>如果你允许那些关键的核心函数（“关键点”）写得长一些（“粗糙”一点），反而更容易在茫茫函数之海中将其识别出来，它们的重要性一目了然：看，它们体量庞大，显然不同凡响！</blockquote>
+    这张图取自 <a href="https://htmx.org/essays/codin-dirty/" target="_blank">《Codin' Dirty》</a> 由 Carson Gross编写。你将在这里找到大型函数(deep functions)的<a href="https://htmx.org/essays/codin-dirty/#real-world-examples" target="_blank">真实世界案例</a>。
+</details>
 
 P.S. 如果你以为我们是在为臃肿、职责过多的“万能对象”摇旗呐喊，那你就误解了。
 
 ## 关于“仅为一件事负责” (Responsible for one thing)
-我们常常遵循一种模糊的原则，结果造出一堆浅模块：“一个模块应该只负责一件事，而且仅此一件”。但这“一件事”到底是什么？实例化一个对象也算一件事，对吧？那么 [MetricsProviderFactoryFactory](https://minds.md/benji/frameworks) 就理所当然？**这类类名和接口带来的心智负担，往往比它们整个实现还高——这算什么抽象？**哪儿不对劲了。  
+我们常常遵循一种模糊的原则，结果造出一堆浅模块：“一个模块应该只负责一件事，而且仅此一件”。但这“一件事”到底是什么？实例化一个对象也算一件事，对吧？那么 [MetricsProviderFactoryFactory](https://minds.md/benji/frameworks) 就理所当然？**这类类名和接口带来的心智负担，往往比它们整个实现还高——这算什么抽象？** 哪儿不对劲了。  
 
 我们修改系统是为满足用户和利益相关方的诉求。我们应当对他们负责。  
 
@@ -200,7 +212,6 @@ P.S. 如果你以为我们是在为臃肿、职责过多的“万能对象”摇
   <p>感谢 <a href="https://0xd34df00d.me" target="_blank">0xd34df00d</a> 的来稿。</p>
 </details>
 
-
 ## 业务逻辑与HTTP状态码(Business logic and HTTP status codes)
 在后端我们返回：  
 `401` 表示 JWT 令牌过期  
@@ -228,7 +239,7 @@ P.S. 如果你以为我们是在为臃肿、职责过多的“万能对象”摇
 前端侧认知负荷：`🧠`(清空，脑中无须再记映射)  
 QA 侧认知负荷：`🧠`
 
-同样的规则适用于各种“数字类型的状态码”(无论在数据库里还是别处)——**优先使用自描述的字符串**。我们早就不处在需要为 640K 内存做优化的年代了。
+同样的规则适用于各种“数字类型的状态码”(无论在数据库里还是别处)——**优先使用自描述的字符串。** 我们早就不处在需要为 640K 内存做优化的年代了。
 
 > 人们会为 `401` 和 `403` 争论不休，依据各自的心智模型(mental model) 下判断。新的开发者加入后，他们又得重新推演一遍当时的思路。也许你写了架构决策文档(Architecture Decision Record, ADR)来记录“为什么”要这样做，帮助新人理解当时的决策。但归根结底，这并不明智。我们可以大体把错误分成“用户相关”和“服务器相关”，除此之外，界线其实很模糊。 
 
@@ -251,7 +262,7 @@ Rob Pike 说过：
 **你的依赖库，也是你代码的一部分。** Bug 来去无踪，不可预测，当你为了定位问题的根源而不得不翻阅某个依赖库的的十几层调用链时，你会知道什么叫做折磨。
 
 ## 框架的紧耦合(Tight coupling with a framework)
-框架里有很多“魔法”(A.K.A. 奇技淫巧)。当我们过度依赖某个框架时，**会迫使后来的开发者先去学习这些魔法**，这可能要花上几个月。虽然框架能让我们在几天内推出 MVP，但从长远看，它们往往带来不必要的复杂性与认知负荷。
+框架里有很多“魔法”(A.K.A. 奇技淫巧)。当我们过度依赖某个框架时，**会迫使后来的开发者先去学习这些魔法。** 这可能要花上几个月。虽然框架能让我们在几天内推出 MVP，但从长远看，它们往往带来不必要的复杂性与认知负荷。
 
 更糟糕的是，当遇到一个与架构格格不入的新需求时，框架可能会成为最大的约束。于是人们开始 fork 框架并维护自有的定制版。想象下新人要积累多少认知负荷(也就是学会这个定制框架)才能产出价值。`🤯`
 
@@ -266,15 +277,13 @@ Rob Pike 说过：
 
 我自己曾经是六边形架构(Hexagonal Architecture) / 洋葱架构(Onion Architecture) 的热情拥护者，持续了好几年。这里用、那里也用，还鼓励其他团队用。随后项目复杂度上去了，单看文件数量就翻了一倍。我们像是在写大量“胶水代码”。在需求持续变更的背景下，我们得在多层抽象里同时改动，一切变得繁琐乏味。`🤯`
 
-抽象本应隐藏复杂性，但这里它只是增加了[间接层](https://fhur.me/posts/2024/thats-not-an-abstraction)。要快速定位问题，理解哪里出错了、缺了什么，通常需要沿着调用链逐步跟踪。但在这种分层架构中，层与层之间的解耦导致我们需要额外的、甚至割裂的多层调用链来找到错误点。每一条这样的调用链，都会占据我们有限的工作记忆。`🤯`
+**抽象本应隐藏复杂性，但这里它只是增加了[间接层](https://fhur.me/posts/2024/thats-not-an-abstraction)。** 要快速定位问题，理解哪里出错了、缺了什么，通常需要沿着调用链逐步跟踪。但在这种分层架构中，层与层之间的解耦导致我们需要额外的、甚至割裂的多层调用链来找到错误点。每一条这样的调用链，都会占据我们有限的工作记忆。`🤯`
 
-这种架构最初看起来很直观，但我们每次在项目中实践，收效都不如预期，得不偿失。最终我们回归朴素的依赖倒置原则。**不用再学什么端口/适配器，不要非必要的的横向抽象层，不制造外在负荷。**
+<div align="center">
+  <img src="/img/layers.png" alt="Layers" width="400">
+</div>
 
-<details>
-  <summary><b>编码原则与工作年限</b></summary>
-  <img src="img/complexity.png"><br>
-  <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
-</details>
+这种架构最初看起来很直观，但我们每次在项目中实践，收效都不如预期，得不偿失。我们耗费了数年时间，在那些不必要的心智活动和编写毫无明确业务价值的胶水代码上。不仅如此，我们还强行要求新人必须先学习我们那套“心智模型”，结果反而给业务造成了更多困扰。这最终导致了产品上市时间的进一步延迟。最终我们回归朴素的依赖倒置原则。**不用再学什么端口/适配器，不要非必要的的横向抽象层，不制造外在负荷。**
 
 如果你以为分层能让你快速替换数据库或其他依赖，那就错了。更换存储会带来大量问题；相信我们，数据访问层的抽象是你最不该担心的事情。最理想情况下，抽象也就省个 10% 的迁移时间(如果真能省的话)；真正的痛点在于数据模型不兼容、通信协议、分布式系统挑战，以及[隐式接口](https://www.hyrumslaw.com)。  
 
@@ -291,11 +300,7 @@ Rob Pike 说过：
 
 不要为了“架构”本身去叠加抽象层。只有在确实需要扩展点、并且有实际理由支撑时，才去增加抽象层。
 
-**[抽象层不是免费的](https://blog.jooq.org/why-you-should-not-implement-layered-architecture)，它们会占用我们有限的工作记忆**。
-
-<div align="center">
-  <img src="/img/layers.png" alt="Layers" width="400">
-</div>
+**[抽象层不是免费的](https://blog.jooq.org/why-you-should-not-implement-layered-architecture)，它们会占用我们有限的工作记忆。**
 
 ## 领域驱动设计(Domain-driven design, DDD)
 尽管领域驱动设计（Domain-driven design，缩写为 DDD）常常遭受误解，但其在某些方面的确有卓越之处。人们通常说的 “我们用 DDD 写代码”，这种说法其实是有些奇怪的，因为 DDD 是和问题空间（problem space）相关的，而不是和解决方案空间（solution space）相关的。
@@ -303,8 +308,6 @@ Rob Pike 说过：
 > 译注：<br>
 > problem space: 问题空间，简单理解就是当前环境下业务所面临的一系列问题和背后的需求。<br>
 > solution space: 解决方案空间，则是针对问题空间的解决方案，它思考的是如何设计实现软件系统以解决这些问题，它属于工程设计实施阶段，通常是技术专家主导的解决方案设计和实现。
-
-
 
 通用语言(ubiquitous language)、领域(domain)、有界上下文(bounded context)、聚合(aggregate)、事件风暴(event storming)——这些都属于问题空间的范畴。它们帮助我们洞悉领域、划定边界。DDD 让开发者、领域专家与业务人员能用一种统一语言高效沟通。然而，相较于关注这些问题空间的方面，我们常常强调特定的文件夹结构、服务(service)、仓库(repository) 以及其他解决方案层面的技术，而忽略了DDD在问题空间上的问题。
 
@@ -314,7 +317,7 @@ Team Topologies 提供了一个更好、更易理解的框架，帮助我们在�
 
 ## 熟悉的项目中的认知负荷(Cognitive load in familiar projects)
 
-> 问题在于，**熟悉并不等于简单**。二者给人的*感觉*看似是一样的 —— 都让人不用费太多脑力就能轻松的在代码之间穿梭 —— 但原因完全不同。你使用的每一个看似“聪明”(其实是“自我炫技”)且非大家惯用的技巧，都会让别人付出额外的学习成本。一旦他们学会了，那与代码相处就没那么难了。这就是为什么你很难看出如何简化你已经熟悉的代码。我会尽量让“新来的开发者”在他们还没被环境同化之前来评审代码！  
+> 问题在于，**熟悉并不等于简单。** 二者给人的*感觉*看似是一样的 —— 都让人不用费太多脑力就能轻松的在代码之间穿梭 —— 但原因完全不同。你使用的每一个看似“聪明”(其实是“自我炫技”)且非大家惯用的技巧，都会让别人付出额外的学习成本。一旦他们学会了，那与代码相处就没那么难了。这就是为什么你很难看出如何简化你已经熟悉的代码。我会尽量让“新来的开发者”在他们还没被环境同化之前来评审代码！  
 >
 > 之前的作者很可能是一点点把代码写乱的，而非一次性造成的。你可能是第一个必须一次性搞清楚整个烂摊子的人。
 >
@@ -330,36 +333,48 @@ Team Topologies 提供了一个更好、更易理解的框架，帮助我们在�
   <img src="/img/mentalmodelsv15.png" alt="心智模型" width="700">
 </div>
 
-要学习的心智模型越多，新成员产出价值所需的时间就越长。  
+要学习的独特心智模型越多，新成员产出价值所需的时间就越长。如果你保持较低的认知负荷，就能让新员工在入职几小时内，可以为代码库做出贡献。这并不意味着我们要牺牲代码质量，或允许混乱的代码(Big Ball of Mud)出现。 
+
+> 这些独特的心智模型究竟是什么？它是一套特定的规则体系，通常融合了清晰架构(Clean Architecture)、事件驱动架构(Event Driven Architecture)与领域驱动设计(DDD)的理念。这其实是作者基于自身最受启发的理论所形成的个人化解读，是他主观构建的心智模型。**可这也恰恰成为了他人必须内化的额外认知负担。**
 
 当你为新人做项目的入职培训时，试着衡量他们的困惑程度(结对编程会有帮助)。如果他们连续 ~40 分钟仍很困惑——那你的代码就有改进空间。  
 
-如果你把认知负荷控制在较低水平，新人可以在入职培训后的几个小时内就能对你的代码库做出贡献。
-
 ## 示例(Examples)
+> 人类所创造的诸多事物中，软件系统或许是其中最为精密复杂的（若以构成要素的多样性而言）。
+>
+> *Fred Brooks, 《人月神话》*
+
+
 - “我们的架构是标准的 CRUD 应用架构，[一个基于 Postgres 的 Python 单体](https://danluu.com/simple-architectures/)”
 - Instagram 如何在仅[3 名工程师](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million)的情况下扩展至 1400 万用户
 - 那些让我们惊呼“哇，这些人[聪明绝顶](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)”的公司，大多都失败了
 - 一个函数串起整个系统。如果你想知道系统如何运转——[去读它](https://www.infoq.com/presentations/8-lines-code-refactoring)
+- 为易懂性而设计：[Raft一致性算法](https://www.youtube.com/watch?v=vYp4LYbnnW8)
 
 这些架构相当“无聊”且易懂。任何人无需太多心力就能掌握。  
+
+<details>
+    <summary><b>编码原则与经验</b></summary>
+    <div align="center">
+        <img src="img/complexity.png" alt="极简代码" width="500">
+    </div>
+    <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
+</details>
 
 在架构评审中让初级开发者参与进来，他们能帮你识别出那些对脑力要求很高的部分。
 
 **维护软件很难**，总会出问题，我们需要尽可能节省每一分心力。系统组件越少，问题也就越少。调试也会更省心。  
 
 > 调试的难度是写代码的两倍。因此，如果你把代码写得尽可能“聪明”，那意味着你根本不够聪明去调试它。
+>
+> *Brian Kernighan*
 
 总体而言，抱着 “哇，这个架构真舒服！”这样的心态是有误导性的。那只是“某一时刻”的主观感受，丝毫不能代表现实。更好的方法是长期观察它的后果：
-- 基础设施是否易于维护？
-- 是否有大量组件/库/框架需要更新？
-- 是否容易复现和调试问题？
-- 我们能否快速修改代码，还是存在很多未知因素让人不敢碰？
+- 问题是否易于复现和调试？还是你不得不穿梭于多层调用栈或分布式组件之间，在你脑海中试图拼凑出完整的调用链路？
+- 我们能否快速进行修改？还是说，系统中存在大量未知的不确定性，导致大家不敢轻易调整？
 - 新人能否快速添加功能？是否有一些独特的心智模型需要学习？
 
-> 独特的心智模型是什么？是一套规则的组合，通常是 DDD/CQRS/Clean Architecture/事件驱动架构的混搭。这是作者对他最兴奋之物的自我诠释，是他主观的心智模型。也是他人需要内化的额外的认知负荷。
-
-这些问题很难追踪，人们也往往不愿直接回答。看看世界上最复杂且经得住时间考验的软件系统——Linux、Kubernetes、Chrome 和 Redis(见下方评论)。你不会在它们身上找到什么花哨的东西——大多“很无聊”，这恰恰是好事。
+这些问题很难追踪，人们也往往不愿直接回答。看看世界上最复杂且经得住时间考验的软件系统——Unix、Kubernetes、Chrome 和 Redis(见下方评论)。你不会在它们身上找到什么花哨的东西——大多“很无聊”，这恰恰是好事。
 
 ## 结论(Conclusion)
 想象一下，如果我们在第二章里推断出的结论其实并不正确。那意味着，我们刚刚否定掉的结论，以及之前章节里我们认为正确的那些结论，也可能都不成立。`🤯`  
@@ -378,9 +393,9 @@ Team Topologies 提供了一个更好、更易理解的框架，帮助我们在�
 <details>
     <summary><b>评论</b></summary>
     <br>
-    <p><strong>Rob Pike</strong><br>好文章</p>
+    <p><strong>Rob Pike</strong> <i>(Unix, Golang)</i><br>好文章.</p>
     <p><strong><a href="https://x.com/karpathy/status/1872038630405054853" target="_blank">Andrej Karpathy</a></strong> <i>(ChatGPT, Tesla)</i><br>一篇关于软件工程的好文。也许是最真实、却最少被践行的观点。</p>
-    <p><strong><a href="https://x.com/elonmusk/status/1872346903792566655" target="_blank">Elon Musk</a></strong><br>确实如此。</p>
+    <p><strong><a href="https://x.com/elonmusk/status/1872346903792566655" target="_blank">Elon Musk</a></strong> <i>(Rockets)</i><br>确实如此。</p>
     <p><strong><a href="https://www.linkedin.com/feed/update/urn:li:activity:7277757844970520576/" target="_blank">Addy Osmani</a></strong> <i>(Chrome，世界上最复杂的软件系统之一)</i><br>我见过无数项目中，聪明的开发者用最新的设计模式和微服务构建了令人印象深刻的架构。但当新成员尝试做改动时，他们花了好几周也只是试图弄清楚各部分如何拼在一起。认知负荷高到离谱，生产力直线下降，bug 倍增。</p>
     <p>讽刺的是？许多引入复杂性的模式，都是以“整洁代码”的名义被实施的。</p>
     <p>真正重要的是减少不必要的认知负担。有时这意味着用更少、更“深”的模块替代许多“浅”的模块。有时这意味着把相关逻辑放在一起，而不是拆成无数微小函数。</p>
@@ -394,7 +409,7 @@ Team Topologies 提供了一个更好、更易理解的框架，帮助我们在�
     <p>另一个例子是我正在做的 Vector Sets，新的 Redis 数据类型。我决定 Redis 不做向量的“事实来源(source of truth)”，而只是存储近似版本，因此我可以在写入时做归一化、量化，而无需在磁盘上保存大规模的浮点向量等等。很多向量数据库不会牺牲“保留用户放入的全精度向量”这点。</p>
     <p>这只是两个随机例子，但我到处都在应用这种理念。关键是：当然要牺牲对的东西。往往 5% 的特性就占据了非常大比例的复杂性：那正是该砍掉的 :D</p>
     <p><strong><a href="https://working-for-the-future.medium.com/about" target="_blank">一位来自互联网的开发者</a></strong><br>你们可能不会雇我……我靠“发过多少企业项目”这类履历吃饭。</p>
-    <p>我曾和一个能“说设计模式”的人共事。我从来不会那样说话，尽管我是少数能很好理解他的人之一。管理者很喜欢他，他能主导任何开发讨论。但周围人说，他走到哪儿都留下一地鸡毛。别人说我是第一个能理解他项目的人。可维护性很重要。我最在乎 TCO(总拥有成本)。对很多公司来说，这才重要。</p>
+    <p>我曾和一个能“说设计模式”的人共事。我从来不会那样说话，尽管我是少数能很好理解他的人之一。管理者很喜欢他，他能主导任何开发讨论。但周围人说，他走到哪儿都留下一地鸡毛。别人说我是第一个能理解他项目的人。可维护性很重要。我最在乎 TCO (<i>总拥有成本</i>)。对很多公司来说，这才重要。</p>
     <p>我很久没上 Github 了，某次登录后不知为何跳到某个看起来随机的人仓库里的文章上。我在想“这是什么”，又一时回不了主页，于是就读了。起初没在意，但它太棒了。每个开发者都该读一读。它基本告诉我们：几乎我们被灌输的所有编程最佳实践，都会导致过量的“认知负荷”，意思是我们的脑子被过度的消耗。我早就有这感觉，尤其在云、安全、DevOps 的要求下。</p>
     <p>我也喜欢它，因为它描述了我几十年来一直在做、但不太好意思承认(因为不流行)的实践……我写的东西非常复杂，需要尽可能多的帮助。</p>
     <p>想想看，如果我是对的，那它会出现在 Github 首页，是因为 Github 的聪明人觉得开发者应该看看它。我赞同。</p>
