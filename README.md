@@ -1,11 +1,11 @@
-# Cognitive Load is what matters
+# Cognitive load is what matters
 
-[Prompt](https://github.com/zakirullin/cognitive-load/blob/main/README.prompt.md) | [Readable version](https://minds.md/zakirullin/cognitive) | [Chinese](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Japanese](README.ja.md)
+[Prompt](https://github.com/zakirullin/cognitive-load/blob/main/README.prompt.md) | [Blog version](https://minds.md/zakirullin/cognitive) | [Chinese](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Japanese](README.ja.md) | [Spanish](README.es.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Vietnamese](README.vi.md) | [Nepali](README.np.md)
 
-*It is a living document, last update: **September 2025.** Your contributions are welcome!*
+*It is a living document, last update: **October 2025.** Your contributions are welcome!*
 
 ## Introduction
-There are so many buzzwords and best practices out there, but most of them have failed. They failed because they were imagined, rather than grounded in reality. These ideas were based on aesthetics and subjective judgments. We need something more fundamental, something that can't be wrong.
+There are so many buzzwords and best practices out there, but most of them have failed. They failed because they were imagined, not real. These ideas were based on aesthetics and subjective judgments. We need something more fundamental, something that can't be wrong.
 
 Sometimes we feel confusion going through the code. Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy abstract concept, but rather **a fundamental human constraint.** It's not imagined, it's there and we can feel it.  
 
@@ -26,7 +26,9 @@ We should reduce the cognitive load in our projects as much as possible.
 
 <details>
   <summary><b>Cognitive load and interruptions</b></summary>
-  <img src="img/interruption.jpeg"><br>
+  <div align="center">
+    <img src="img/interruption.jpeg" width="480">
+  </div>
 </details>
 
 > We are going to use "cognitive load" in an informal sense; sometimes it lines up with the specific scientific concept of Cognitive Load, but we don't know enough about where it does and doesn't match.
@@ -110,7 +112,7 @@ Oh, wait, there's `SuperuserController` which extends `AdminController`. By modi
 Prefer composition over inheritance. We won't go into detail - there's [plenty of material](https://www.youtube.com/watch?v=hxGOiiR9ZKg) out there.
 
 ## Too many small methods, classes or modules
-> Method, class and module are interchangeable in this context 
+> Method, class and module are interchangeable in this context.
  
 Mantras like "methods should be shorter than 15 lines of code" or "classes should be small" turned out to be somewhat wrong.
 
@@ -127,14 +129,13 @@ Having too many shallow modules can make it difficult to understand the project.
 
 I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas the second one has only 7 deep classes. I haven't been maintaining any of these projects for one year and a half.
 
-Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.
- 
+Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.  
 
 > The best components are those that provide powerful functionality yet have a simple interface.  
 > 
 > *John Ousterhout, A Philosophy of Software Design*
 
-The interface of the UNIX I/O is very simple. It has only five basic calls:
+The interface of the Unix I/O is very simple. It has only five basic calls:
 ```python
 open(path, flags, permissions)
 read(fd, buffer, count)
@@ -209,7 +210,6 @@ Language features are OK, as long as they are orthogonal to each other.
   <p>Thanks to <a href="https://0xd34df00d.me" target="_blank">0xd34df00d</a> for writing.</p>
 </details>
 
-
 ## Business logic and HTTP status codes
 On the backend we return:  
 `401` for expired JWT token  
@@ -277,13 +277,11 @@ I myself was a passionate advocate of Hexagonal/Onion Architecture for years. I 
 
 **Abstraction is supposed to hide complexity, here it just adds [indirection](https://fhur.me/posts/2024/thats-not-an-abstraction).** Jumping from call to call to read along and figure out what goes wrong and what is missing is a vital requirement to quickly solve a problem. With this architecture’s layer uncoupling it requires an exponential factor of extra, often disjointed, traces to get to the point where the failure occurs. Every such trace takes space in our limited working memory. `🤯`  
 
-This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it did more harm than good. We spent years on unnecessary mental activity and writing useless glue code with no clear business value. On the contrary, we made things worse for the business by forcing newcomers to learn our approaches (mental models) first. The time to market has worsened. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.** 
+<div align="center">
+  <img src="/img/layers.png" alt="Layers" width="400">
+</div>
 
-<details>
-  <summary><b>Coding principles and experience</b></summary>
-  <img src="img/complexity.png"><br>
-  <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
-</details>
+This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it did more harm than good. We spent years on unnecessary mental activity and writing useless glue code with no clear business value. On the contrary, we made things worse for the business by forcing newcomers to learn our approaches (mental models) first. The time to market has worsened. In the end, we gave it all up in favour of the good old dependency inversion principle. **No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.** 
 
 If you think that such layering will allow you to quickly replace a database or other dependencies, you're mistaken. Changing the storage causes lots of problems, and believe us, having some abstractions for the data access layer is the least of your worries. At best, abstractions can save somewhat 10% of your migration time (if any), the real pain is in data model incompatibilities, communication protocols, distributed systems challenges, and [implicit interfaces](https://www.hyrumslaw.com).  
 
@@ -301,10 +299,6 @@ These architectures are not fundamental, they are just subjective, biased conseq
 Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons.
 
 **[Layers of abstraction aren't free of charge](https://blog.jooq.org/why-you-should-not-implement-layered-architecture), they are to be held in our limited working memory.**
-
-<div align="center">
-  <img src="/img/layers.png" alt="Layers" width="400">
-</div>
 
 ## Domain-driven design
 Domain-driven design has some great points, although it is often misinterpreted. People say, "We write code in DDD", which is a bit strange, because DDD is more about the problem space rather than the solution space.
@@ -333,25 +327,35 @@ If you've internalized the mental models of the project into your long-term memo
   <img src="/img/mentalmodelsv15.png" alt="Mental models" width="700">
 </div>
 
-The more mental models there are to learn, the longer it takes for a new developer to deliver value.  
+The more unique mental models there are to learn, the longer it takes for a new developer to deliver value. If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company. And that doesn't mean we sacrifice in quality, or allow piles of mud to emerge.  
+
+> What are those unique mental models? It's some set of rules, usually a mixture of Clean Architecture/Event Driven Architecture/DDD. This is an author's own interpretation of the things that excite him the most. His own subjective mental models. **Extraneous cognitive load that others have to internalize.**
 
 Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they're confused for more than ~40 minutes in a row - you've got things to improve in your code.  
 
-If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company.
-
 ## Examples
+> Software systems are perhaps the most intricate and complex (in terms of number of distinct kinds of parts) of the things humanity makes.
+>
+> *Fred Brooks, The Mythical Man-Month*
+
+
 - Our architecture is a standard CRUD app architecture, [a Python monolith on top of Postgres](https://danluu.com/simple-architectures/)
 - How Instagram scaled to 14 million users with [only 3 engineers](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million)
 - The companies where we were like ”woah, these folks are [smart as hell](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)” for the most part failed
 - One function that wires up the entire system. If you want to know how the system works - [go read it](https://www.infoq.com/presentations/8-lines-code-refactoring)
+- Designing for Understandability: [The Raft Consensus Algorithm](https://www.youtube.com/watch?v=vYp4LYbnnW8)
 
 These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort.  
 
-Involve junior developers in architecture reviews, they will help you to identify the mentally demanding areas.
+<details>
+    <summary><b>Coding principles and experience</b></summary>
+    <div align="center">
+        <img src="img/complexity.png" alt="Super simple code" width="500">
+    </div>
+    <a href="https://twitter.com/flaviocopes">@flaviocopes</a>
+</details>
 
-> Software systems are perhaps the most intricate and complex (in terms of number of distinct kinds of parts) of the things humanity makes.  
-> 
-> *Fred Brooks, The Mythical Man-Month*
+Involve junior developers in architecture reviews, they will help you to identify the mentally demanding areas.
 
 **Maintaining software is hard**, things break and we would need every bit of mental effort we can save. The fewer components there are in the system, the fewer issues there will be. Debugging will also be less mentally taxing.  
 
@@ -364,9 +368,7 @@ In general, the mindset "Wow, this architecture sure feels good!" is misleading.
 - Can we make changes quickly, or are there a lot of unknown unknowns, and people are afraid to touch things?
 - Can new people add features quickly? Are there some unique mental models to learn?
 
-> What are those unique mental models? It's some set of rules, usually a mixture of DDD/CQRS/Clean Architecture/Event Driven Architecture. This is an author's own interpretation of the things that excite him the most. His own subjective mental models. **Extraneous cognitive load that others have to internalize.**
-
-These questions are far harder to track, and people often don't like to answer them directly. Look at some of the most complex software systems in the world, the ones that have stood the test of time - Linux, Kubernetes, Chrome and Redis (see comments below). You will not find anything fancy there, it's boring for the most part, and that's a good thing.
+These questions are far harder to track, and people often don't like to answer them directly. Look at some of the most complex software systems in the world, the ones that have stood the test of time - Unix, Kubernetes, Chrome and Redis (see comments below). You will not find anything fancy there, it's boring for the most part, and that's a good thing.
 
 ## Conclusion
 Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. `🤯`  
@@ -398,10 +400,10 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
     <p>Sometimes the simplest solution is the best one, even in a complex system.</p>
     <p><strong><a href="https://x.com/antirez" target="_blank">antirez</a></strong> <i>(Redis)</i><br>Totally agree about it :) Also, what I believe is missing from mentioned "A Philosophy of Software Design" is the concept of "design sacrifice". That is, sometimes you sacrifice something and get back simplicity, or performances, or both. I apply this idea continuously, but often is not understood.</p>
     <p>A good example is the fact that I always refused to have hash items expires. This is a design sacrifice because if you have certain attributes only in the top-level items (the keys themselves), the design is simpler, values will just be objects. When Redis got hash expires, it was a nice feature but required (indeed) many changes to many parts, raising the complexity.</p>
-    <p>Another example is what I'm doing right now, Vector Sets, the new Redis data type. I decided that Redis would not be the source of truth about vectors, but that it can just take an approximate version of them, so I was able to do on-insert normalization, quantization without trying to retain the large floats vector on disk, and so forth. May vector DBs don't sacrifice the fact of remembering what the user put inside (the full precision vector).</p>
+    <p>Another example is what I'm doing right now, Vector Sets, the new Redis data type. I decided that Redis would not be the source of truth about vectors, but that it can just take an approximate version of them, so I was able to do on-insert normalization, quantization without trying to retain the large floats vector on disk, and so forth. Many vector DBs don't sacrifice the fact of remembering what the user put inside (the full precision vector).</p>
     <p>These are just two random examples, but I apply this idea everywhere. Now the thing is: of course one must sacrifice the right things. Often, there are 5% features that account for a very large amount of complexity: that is a good thing to kill :D</p>
     <p><strong><a href="https://working-for-the-future.medium.com/about" target="_blank">A developer from the internet</a></strong><br>You would not hire me... I sell myself on my track record of released enterprise projects.</p>
-    <p>I worked with a guy that could speak design patterns. I could never speak that way, though I was one of the few that could well understand him. The managers loved him and he could dominate any development conversation. The people working around him said he left a trail of destruction behind him. I was told that I was the first person that could understand his projects. Maintainability matters. I care most about TCO. For some firms, that's what matters.</p>
+    <p>I worked with a guy that could speak design patterns. I could never speak that way, though I was one of the few that could well understand him. The managers loved him and he could dominate any development conversation. The people working around him said he left a trail of destruction behind him. I was told that I was the first person that could understand his projects. Maintainability matters. I care most about TCO (<i>Total Cost of Ownership</i>). For some firms, that's what matters.</p>
     <p>I logged into Github after not being there for a while and for some reason it took me to an article in a repository by someone that seemed random. I was thinking "what is this" and had some trouble getting to my home page, so I read it. I didn't really register it at the time, but it was amazing. Every developer should read it. It largely said that almost everything we've been told about programming best practices leads to excessive "cognitive load", meaning our minds are getting kicked by the intellectual demands. I've known this for a while, especially with the demands of cloud, security and DevOps.</p>
     <p>I also liked it because it described practices I have done for decades, but never much admit to because they are not popular... I write really complicated stuff and need all the help I can get.</p>
     <p>Consider, if I'm right, it popped up because the Github folks, very smart people, though that developers should see it. I agree.</p>
