@@ -330,3 +330,74 @@ Linguagem ubíqua, domínio, contexto adjunto, agregado, tempestade de evento s�
 Chances são que a forma como interpretamos DDD é única e subjetiva. E se construirmos código em cima dessa compreensão, por exemplo, se criamos uma carga cognitiva extrínseca - desenvolvedores futuros estão condenados. `🤯`
 
 *Team Topologies* provê um *framework* muito melhor e fácil de compreender que nos permite dividir a carga cognitiva entre times. Engenheiros tendem a desenvolver modelos mentais similares depois de aprender sobre *Team Topologies*. DDD, por outro lado, parece estar criando 10 modelos mentais diferentes para 10 leitores distintos. Ao invés de um chão comum, isso se torna um campo de batalha para debates desnecessários.
+
+
+## Carga Cognitiva em projetos familiares
+
+> O problema está no fato que **familiaridade não é o mesmo que simplicidade.** Eles *parecem* a mesma coisa — mesma facilidade de se mover no espaço sem muito esforço mental — mas por razões muito diferentes. Cada truque “inteligente” (leia-se: “autoindulgente”) e não idiomático que você usa acarreta uma penalidade de aprendizagem para todos os outros. Uma vez que eles aprendido, é mais fácil trabalhar com o código. Então é difícil reconhecer como é difícil simplificar um código já familiarizado. É por isso que eu peço aos "novatos" que critiquem o código antes que fiquem muito institucionalizados!
+>
+> É como se o(s) autor(es) anterior(res) tivesse(m) criado essa grande bagunça um incremento por vez, e não tudo de uma só vez. Então você é a primeira pessoa que tentou encontrar sentido nisso tudo de uma só vez.
+>
+> Em minha aula, eu descrevo um extenso procedimento SQL armazenado onde estávamos analisando um dia, com centenas de linhas de condicionais em uma grande cláusula WHERE. Alguém me perguntou como eu pude deixar isso ficar assim tão ruim. E disse: "Quando há apenas 2 ou 3 condicionais, adicionar mais uma não faz qualquer diferença. Mas com o tempo, você terá 20 ou 30 condicionais, e adicionar outras não fará nenhuma diferença!"
+>
+> Não existe "força de simplificação" atuando no código-base outras além de escolhas deliberadas que você faz. Simplificar demanda esforço, e pessoas, muitas vezes, estão com pressa.
+>
+>*Obrigado ao [Dan North](https://dannorth.net) por seu comentário*.  
+
+Se você tem internalizado os modelos mentais do projeto em sua memória de longo-termo, você não irá experienciar a carga cognitiva.
+
+<div align="center">
+  <img src="/img/mentalmodelsv15.png" alt="Modelos mentais" width="700">
+</div>
+
+Quanto mais modelos mentais tiver de aprender, mais tempo levará para um novo desenvolvedor entregar valor.
+
+Uma vez que você embarca novas pessoas em seu projeto, tente medir a quantidade de confusão que eles têm (pair programming pode ajudar). Caso eles estejam confusos por mais de, mais ou menos, 40 minutos de uma só vez, você tem coisas a melhorar em seu código.
+
+Se você mantiver a carga cognitiva baixa, pessoas podem contribuir para seu código-base dentro de algumas poucas horas ao entrar na empresa.
+
+## Exemplos
+
+- Nossa arquitetura é uma aplicação CRUD padrão, [Um monolito Python em cima de Postgres](https://danluu.com/simple-architectures/).
+- Como o Instagram escalou para 14 milhões de usuários com [apenas 3 engenheiros](https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million).
+- As empresas que nos deixaram tipo "Nossa! Esses caras são [inteligentes para caramba](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/)" acabaram, na sua maioria, fracassando.
+- Uma função que liga todo o sistema. Se você quiser como o sistema funciona, [leia isso](https://www.infoq.com/presentations/8-lines-code-refactoring).
+
+Essas arquiteturas são bastante chatas e fáceis de compreender. Qualquer um pode compreendê-las sem muito esforço mental.
+
+Envolva desenvolvedores júniors em suas reviews de arquitetura, eles podem te ajudar a identificar áreas mentalmente exaustivas.
+
+> Sistemas de software são talvez os mais intricados e complexos (em termos de número de tipos distintos de peças) entre as coisas que a humanidade cria.  
+> 
+> *Fred Brooks, The Mythical Man-Month*
+
+**Manter software é difícil**, as coisas quebram e precisamos de todo o esforço mental que pudermos economizar. Quanto menos componentes houver no sistema, menos problemas haverá. A depuração também será menos desgastante mentalmente.
+
+> Depurar é duas vezes mais difícil do que escrever o código, em primeiro lugar. Portanto, se você escrever o código da forma mais esperta possível, você, por definição, não será inteligente o suficiente para depurá-lo.  
+>
+> *Brian Kernighan*
+
+Em geral, a mentalidade de "Uau, essa arquitetura parece ótima!" é enganosa. Essa é uma sensação subjetiva de um determinado momento e não diz nada sobre a realidade. Uma abordagem muito melhor é observar as consequências a longo prazo:
+
+- É fácil reproduzir e depurar um problema? Ou você precisa pular entre *call stacks* ou componentes distribuídos, tentando entender tudo na sua cabeça?
+- Podemos fazer alterações rapidamente ou há muitas incógnitas e as pessoas têm medo de mexer nas coisas?
+- Os novos funcionários podem adicionar recursos rapidamente? Há alguns modelos mentais únicos a serem aprendidos?
+
+> O que são esses modelos mentais únicos? É um conjunto de regras, geralmente uma mistura de DDD/CQRS/Arquitetura Limpa/Arquitetura Orientada a Eventos. Essa é a interpretação do autor sobre as coisas que mais o entusiasmam. Seus próprios modelos mentais subjetivos. 
+
+**Carga cognitiva estranha que os outros têm de internalizar.**
+
+Essas questões são muito mais difíceis de rastrear, e as pessoas geralmente não gostam de respondê-las diretamente. Veja alguns dos sistemas de software mais complexos do mundo, aqueles que resistiram ao teste do tempo — Linux, Kubernetes, Chrome e Redis (veja os comentários abaixo). Você não encontrará nada sofisticado neles, são em sua maioria enfadonhos, e isso é bom.
+
+## Conclusão
+
+Imagine por um momento que o que inferimos no segundo capítulo não seja realmente verdade. Se for este o caso, então a conclusão que acabamos de negar, juntamente com as conclusões do capítulo anterior que aceitamos como válidas, também podem não estar corretas.
+
+Você percebeu? Não só você precisa pular de um lado para outro no artigo para entender o significado (módulos superficiais!), como o parágrafo em geral é difícil de entender. Acabamos de criar uma carga cognitiva desnecessária na sua cabeça. **Não faça isso com seus colegas.**
+
+<div align="center">
+  <img src="/img/smartauthorv14thanksmari.png" alt="O autor espeto" width="600">
+</div>
+
+Deveríamos reduzir qualquer carga cognitiva acima. É algo além de instrínseco para o trabalho que fazemos.
+
