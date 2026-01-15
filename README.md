@@ -7,7 +7,7 @@
 ## Introduction
 There are so many buzzwords and best practices out there, but most of them have failed. They failed because they were imagined, not real. These ideas were based on aesthetics and subjective judgments. We need something more fundamental, something that can't be wrong.
 
-Sometimes we feel confusion going through the code. Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy abstract concept, but rather **a fundamental human constraint.** It's not imagined, it's there and we can feel it.  
+Sometimes we feel confused when going through the code. Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy abstract concept, but rather **a fundamental human constraint.** It's not imagined, it's there and we can feel it.  
 
 Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load into our code. 
 
@@ -36,7 +36,7 @@ We should reduce the cognitive load in our projects as much as possible.
 ## Types of cognitive load
 **Intrinsic** - caused by the inherent difficulty of a task. It can't be reduced, it's at the very heart of software development.  
 
-**Extraneous** - created by the way the information is presented. Caused by factors not directly relevant to the task, such as smart author's quirks. Can be greatly reduced. We will focus on this type of cognitive load. 
+**Extraneous** - created by the way the information is presented. Caused by factors not directly relevant to the task, such as the author’s quirks. Can be greatly reduced. We will focus on this type of cognitive load. 
 
 <div align="center">
   <img src="/img/smartauthorv14thanksmari.png" alt="Intrinsic vs Extraneous" width="600">
@@ -112,7 +112,7 @@ Oh, wait, there's `SuperuserController` which extends `AdminController`. By modi
 Prefer composition over inheritance. We won't go into detail - there's [plenty of material](https://www.youtube.com/watch?v=hxGOiiR9ZKg) out there.
 
 ## Too many small methods, classes or modules
-> Method, class and module are interchangeable in this context.
+> Methods, classes, and modules are interchangeable in this context.
  
 Mantras like "methods should be shorter than 15 lines of code" or "classes should be small" turned out to be somewhat wrong.
 
@@ -127,7 +127,7 @@ Having too many shallow modules can make it difficult to understand the project.
 
 > Information hiding is paramount, and we don't hide as much complexity in shallow modules.
 
-I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas the second one has only 7 deep classes. I haven't been maintaining any of these projects for one year and a half.
+I have two pet projects, both of them are roughly 5K lines of code. The first one has 80 shallow classes, whereas the second one has only 7 deep classes. I haven't maintained either of these projects for a year and a half.
 
 Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.  
 
@@ -155,7 +155,7 @@ A modern implementation of this interface has **hundreds of thousands of lines o
         <img src="/img/dirty.png" alt="Clean vs Dirty" width="600">
     </div>
     <blockquote>If you allow your important "crux" functions to be larger ("dirty") it is easier to pick them out from the sea of functions, they are obviously important: just look at them, they are big!</blockquote>
-    This picture is taken from <a href="https://htmx.org/essays/codin-dirty/" target="_blank">Codin' Dirty</a> article by Carson Gross. You'll find <a href="https://htmx.org/essays/codin-dirty/#real-world-examples" target="_blank">real world examples</a> of deep functions there.
+    This picture is taken from <a href="https://htmx.org/essays/codin-dirty/" target="_blank">Codin' Dirty</a> article by Carson Gross. You'll find <a href="https://htmx.org/essays/codin-dirty/#real-world-examples" target="_blank">real-world examples</a> of deep functions there.
 </details>
 
 P.S. If you think we are rooting for bloated God objects with too many responsibilities, you got it wrong.
@@ -163,7 +163,7 @@ P.S. If you think we are rooting for bloated God objects with too many responsib
 ## Responsible for one thing
 All too often, we end up creating lots of shallow modules, following some vague "a module should be responsible for one, and only one, thing" principle. What is this blurry one thing? Instantiating an object is one thing, right? So [MetricsProviderFactoryFactory](https://minds.md/benji/frameworks) seems to be just fine. **The names and interfaces of such classes tend to be more mentally taxing than their entire implementations, what kind of abstraction is that?** Something went wrong.  
 
-We make changes to our systems to satisfy our users and stakeholders. We are responsible to them.  
+We make changes to our systems to satisfy our users and stakeholders. We are accountable to them.  
 
 > A module should be responsible to one, and only one, user or stakeholder.  
 
@@ -172,20 +172,20 @@ This is what this Single Responsibility Principle is all about. Simply put, if w
 But even now, this rule can do more harm than good. This principle can be understood in as many different ways as there are individuals. A better approach would be to look at how much cognitive load it all creates. It's mentally demanding to remember that change in one place can trigger a chain of reactions across different business streams. And that's about it, no fancy terms to learn.  
 
 ## Too many shallow microservices
-This shallow-deep module principle is scale-agnostic, and we can apply it to microservices architecture. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that are not so shallow (=deep). One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.
+This shallow-deep module principle is scale-agnostic, and we can apply it to microservices architecture. Too many shallow microservices won't do any good - the industry is heading towards somewhat "macroservices", i.e., services that are not so shallow (=deep). One of the worst and hardest to fix phenomenon is the so-called distributed monolith, which is often the result of this overly granular shallow separation.
 
-I once consulted a startup where a team of five developers introduced 17(!) microservices. They were 10 months behind schedule and appeared nowhere close to the public release. Every new requirement led to changes in 4+ microservices. It took an enormous amount of time to reproduce and debug an issue in such a distributed system. Both time to market and cognitive load were unacceptably high. `🤯`  
+I once consulted a startup where a team of five developers introduced 17(!) microservices. They were 10 months behind schedule and were nowhere close to a public release. Every new requirement led to changes in 4+ microservices. It took an enormous amount of time to reproduce and debug an issue in such a distributed system. Both time to market and cognitive load were unacceptably high. `🤯`  
 
-Is this the right way to approach the uncertainty of a new system? It's enormously difficult to elicit the right logical boundaries in the beginning. The key is to make decisions as late as you can responsibly wait, because that is when you have the most information at hand. By introducing a network layer up front, we make our design decisions hard to revert right from the start. The team's only justification was: "The FAANG companies proved microservices architecture to be effective". *Hello, you got to stop dreaming big.*
+Is this the right way to approach the uncertainty of a new system? It's enormously difficult to elicit the right logical boundaries in the beginning. The key is to make decisions as late as you can responsibly wait, because that is when you have the most information at hand. By introducing a network layer up front, we make our design decisions hard to revert right from the start. The team's only justification was: "The FAANG companies proved that microservices can be effective". *Come on — you've got to stop dreaming big.*
 
-The [Tanenbaum-Torvalds debate](https://en.wikipedia.org/wiki/Tanenbaum%E2%80%93Torvalds_debate) argued that Linux's monolithic design was flawed and obsolete, and that a microkernel architecture should be used instead. Indeed, the microkernel design seemed to be superior "from a theoretical and aesthetical" point of view. On the practical side of things - three decades on, microkernel-based GNU Hurd is still in development, and monolithic Linux is everywhere. This page is powered by Linux, your smart teapot is powered by Linux. By monolithic Linux.
+The [Tanenbaum-Torvalds debate](https://en.wikipedia.org/wiki/Tanenbaum%E2%80%93Torvalds_debate) argued that Linux's monolithic design was flawed and obsolete, and that a microkernel architecture should be used instead. Indeed, the microkernel design seemed to be superior "from a theoretical and aesthetic" point of view. On the practical side of things - three decades on, microkernel-based GNU Hurd is still in development, and monolithic Linux is everywhere. This page is powered by Linux, your smart teapot is powered by Linux. By monolithic Linux.
 
 A well-crafted monolith with truly isolated modules is often much more flexible than a bunch of microservices. It also requires far less cognitive effort to maintain. It's only when the need for separate deployments becomes crucial, such as scaling the development team, that you should consider adding a network layer between the modules, future microservices.
 
 ## Feature-rich languages
-We feel excited when new features got released in our favourite language. We spend some time learning these features, we build code upon them.
+We feel excited when new features are released in our favourite language. We spend some time learning these features, we build code on top of them.
 
-If there are lots of features, we may spend half an hour playing with a few lines of code, to use one or another feature. And it's kind of a waste of time. But what's worse, **when you come back later, you would have to recreate that thought process!**
+If there are lots of features, we may spend half an hour playing with a few lines of code, to use one feature or another. And it's kind of a waste of time. But what's worse, **when you come back later, you would have to recreate that thought process!**
  
 **You not only have to understand this complicated program, you have to understand why a programmer decided this was the way to approach a problem from the features that are available.** `🤯`
 
@@ -199,14 +199,14 @@ Language features are OK, as long as they are orthogonal to each other.
   <summary><b>Thoughts from an engineer with 20 years of C++ experience ⭐️</b></summary>
   <br>
   I was looking at my RSS reader the other day and noticed that I have somewhat three hundred unread articles under the "C++" tag. I haven't read a single article about the language since last summer, and I feel great!<br><br>
-  I've been using C++ for 20 years for now, that's almost two-thirds of my life. Most of my experience lies in dealing with the darkest corners of the language (such as undefined behaviours of all sorts). It's not a reusable experience, and it's kind of creepy to throw it all away now.<br><br>
+  I've been using C++ for 20 years now, that's almost two-thirds of my life. Most of my experience lies in dealing with the darkest corners of the language (such as undefined behaviours of all sorts). It's not a reusable experience, and it's kind of creepy to throw it all away now.<br><br>
   Like, can you imagine, the token <code>||</code> has a different meaning in <code>requires ((!P&lt;T&gt; || !Q&lt;T&gt;))</code> and in <code>requires (!(P&lt;T&gt; || Q&lt;T&gt;))</code>. The first is the constraint disjunction, the second is the good-old logical OR operator, and they behave differently.<br><br>
   You can't allocate space for a trivial type and just <code>memcpy</code> a set of bytes there without extra effort - that won't start the lifetime of an object. This was the case before C++20. It was fixed in C++20, but the cognitive load of the language has only increased.<br><br>
   Cognitive load is constantly growing, even though things got fixed. I should know what was fixed, when it was fixed, and what it was like before. I am a professional after all. Sure, C++ is good at legacy support, which also means that you <b>will face</b> that legacy. For example, last month a colleague of mine asked me about some behaviour in C++03. <code>🤯</code><br><br>
   There were 20 ways of initialization. Uniform initialization syntax has been added. Now we have 21 ways of initialization. By the way, does anyone remember the rules for selecting constructors from the initializer list? Something about implicit conversion with the least loss of information, <i>but if</i> the value is known statically, then... <code>🤯</code><br><br>
   <b>This increased cognitive load is not caused by a business task at hand. It is not an intrinsic complexity of the domain. It is just there due to historical reasons</b> (<i>extraneous cognitive load</i>).<br><br>
   I had to come up with some rules. Like, if that line of code is not as obvious and I have to remember the standard, I better not write it that way. The standard is somewhat 1500 pages long, by the way.<br><br>
-  <b>By no means I am trying to blame C++.</b> I love the language. It's just that I am tired now.<br><br>
+  <b>By no means am I trying to blame C++.</b> I love the language. It's just that I am tired now.<br><br>
   <p>Thanks to <a href="https://0xd34df00d.me" target="_blank">0xd34df00d</a> for writing.</p>
 </details>
 
@@ -239,7 +239,7 @@ Cognitive load on the QA side: `🧠`
 
 The same rule applies to all sorts of numeric statuses (in the database or wherever) - **prefer self-describing strings.** We are not in the era of 640K computers to optimise for memory.  
 
-> People spend time arguing between `401` and `403`, making decisions based on their own mental models. New developers are coming in, and they need to recreate that thought process. You may have documented the "whys" (ADRs) for your code, helping newcomers to understand the decisions made. But in the end it just doesn't make any sense. We can separate errors into either user-related or server-related, but apart from that, things are kind of blurry. 
+> People spend time arguing over `401` vs `403`, making decisions based on their own mental models. New developers are coming in, and they need to recreate that thought process. You may have documented the "whys" (ADRs) for your code, helping newcomers understand the decisions made. But in the end it just doesn't make any sense. We can classify errors as either user-related or server-related, but apart from that, things are kind of blurry. 
 
 P.S. It's often mentally taxing to distinguish between "authentication" and "authorization". We can use simpler terms like ["login" and "permissions"](https://ntietz.com/blog/lets-say-instead-of-auth/) to reduce the cognitive load.
 
