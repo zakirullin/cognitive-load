@@ -1,6 +1,6 @@
 # Cognitive load is what matters
 
-[Prompt](https://github.com/zakirullin/cognitive-load/blob/main/README.prompt.md) | [Blog version](https://minds.md/zakirullin/cognitive) | [Chinese](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Japanese](README.ja.md) | [Spanish](README.es.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Vietnamese](README.vi.md) | [Nepali](README.np.md)
+[Prompt](https://github.com/zakirullin/cognitive-load/blob/main/README.prompt.md) | [Blog version](https://minds.md/zakirullin/cognitive) | [Chinese](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Japanese](README.ja.md) | [Spanish](README.es.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Brazilian Portuguese](README.pt-br) | [Vietnamese](README.vi.md) | [Nepali](README.np.md)
 
 *It is a living document, last update: **October 2025.** Your contributions are welcome!*
 
@@ -385,7 +385,7 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
 [LinkedIn](https://www.linkedin.com/in/zakirullin/), [X](https://twitter.com/zakirullin), [GitHub](https://github.com/zakirullin), artemzr(аt)g-yоu-knоw-com
 
 <details>
-    <summary><b>Comments</b></summary>
+    <summary><b>Comments (6)</b></summary>
     <br>
     <p><strong>Rob Pike</strong> <i>(Unix, Golang)</i><br>Nice article.</p>
     <p><strong><a href="https://x.com/karpathy/status/1872038630405054853" target="_blank">Andrej Karpathy</a></strong> <i>(ChatGPT, Tesla)</i><br>Nice post on software engineering. Probably the most true, least practiced viewpoint.</p>
