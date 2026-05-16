@@ -127,7 +127,7 @@ Having too many shallow modules can make it difficult to understand the project.
 
 > Information hiding is paramount, and we don't hide as much complexity in shallow modules.
 
-I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas the second one has only 7 deep classes. I haven't been maintaining any of these projects for one year and a half.
+I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas [the second one](https://github.com/zakirullin/files.md) has only 7 deep classes. I haven't been maintaining any of these projects for one year and a half.
 
 Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.  
 
@@ -382,7 +382,7 @@ Do you feel it? Not only do you have to jump all over the article to get the mea
 We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
 
 ---
-[LinkedIn](https://www.linkedin.com/in/zakirullin/), [X](https://twitter.com/zakirullin), [GitHub](https://github.com/zakirullin), artemzr(аt)g-yоu-knоw-com
+By Artem Zakirullin. [LinkedIn](https://www.linkedin.com/in/zakirullin/), [X](https://twitter.com/zakirullin), artemzr(аt)g-yоu-knоw-com
 
 <details>
     <summary><b>Comments (7)</b></summary>
