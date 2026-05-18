@@ -384,7 +384,7 @@ We should reduce any cognitive load above and beyond what is intrinsic to the wo
 ---
 By [Artem Zakirullin](https://www.linkedin.com/in/zakirullin/) · [X](https://twitter.com/zakirullin) · artemzr(аt)g-yоu-knоw-com  
 
-Consider [supporting my writing on GitHub 💚](https://github.com/sponsors/zakirullin)  
+Consider [supporting my writing 💚](https://github.com/sponsors/zakirullin)  
 
 <details>
     <summary><b>Comments (7)</b></summary>
