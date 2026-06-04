@@ -2,7 +2,7 @@
 
 [Prompt](https://github.com/zakirullin/cognitive-load/blob/main/README.prompt.md) | [Blog version](https://minds.md/zakirullin/cognitive) | [Chinese](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Japanese](README.ja.md) | [Spanish](README.es.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Brazilian Portuguese](README.pt-br) | [Vietnamese](README.vi.md) | [Nepali](README.np.md)
 
-*It is a living document, last update: **April 2026.**  
+It is a living document, last update: **April 2026.**  
 
 ## Introduction
 There are so many buzzwords and best practices out there, but most of them have failed. They failed because they were imagined, not real. These ideas were based on aesthetics and subjective judgments. We need something more fundamental, something that can't be wrong.
@@ -127,7 +127,7 @@ Having too many shallow modules can make it difficult to understand the project.
 
 > Information hiding is paramount, and we don't hide as much complexity in shallow modules.
 
-I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas the second onehas only [7 deep classes](https://github.com/zakirullin/files.md/blob/main/server/bot.go). I haven't been maintaining any of these projects for one year and a half.
+I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas the second one has only [7 deep classes](https://github.com/zakirullin/files.md/blob/main/server/bot.go). I haven't been maintaining any of these projects for one year and a half.
 
 Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.  
 
