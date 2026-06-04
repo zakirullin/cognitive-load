@@ -382,9 +382,7 @@ Do you feel it? Not only do you have to jump all over the article to get the mea
 We should reduce any cognitive load above and beyond what is intrinsic to the work we do. 
 
 ---
-By [Artem Zakirullin](https://www.linkedin.com/in/zakirullin/) · [X](https://twitter.com/zakirullin) · artemzr(аt)g-yоu-knоw-com  
-
-Consider [supporting my writing 💚](https://github.com/sponsors/zakirullin)  
+By [Artem Zakirullin](https://twitter.com/zakirullin) · [LinkedIn](https://www.linkedin.com/in/zakirullin/) · artemzr(аt)g-yоu-knоw-com Consider ·  [Support my writing 💚](https://github.com/sponsors/zakirullin)
 
 <details>
     <summary><b>Comments (7)</b></summary>
