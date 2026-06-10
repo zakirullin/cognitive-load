@@ -11,7 +11,7 @@ Sometimes we feel confusion going through the code. Confusion costs time and mon
 
 Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load into our code.  
 
-It is especially important in the AI age, when we need to validate a lot of LLM-generated code with our own brains.  
+**It is especially important in the AI age, when we need to validate a lot of LLM-generated code with our own brains**.  
 
 ## Cognitive load
 > Cognitive load is how much a developer needs to think in order to complete a task.
