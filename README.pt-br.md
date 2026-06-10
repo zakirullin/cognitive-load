@@ -1,6 +1,6 @@
 # Carga Cognitiva é o que importa
 
-[Prompt](README.prompt.md) | [Versão do Blog](https://minds.md/zakirullin/cognitive) | [Original](README.md)
+[Agents](README.agents) | [Versão do Blog](https://minds.md/zakirullin/cognitive) | [Original](README.md)
 
 *Este é um documento vivo, última atualização da tradução: **Janeiro de 2026** e última atualização do documento original: **Outubro de 2025**. Contribuições são bem vindas!*
 

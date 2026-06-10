@@ -1,6 +1,6 @@
 # 认知负荷才是关键
 
-[Prompt](https://github.com/zakirullin/cognitive-load/blob/main/README.prompt.md) | [Blog version](https://minds.md/zakirullin/cognitive) | [Chinese](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Japanese](README.ja.md) | [Spanish](README.es.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Vietnamese](README.vi.md) | [Nepali](README.np.md)
+[Agents](https://github.com/zakirullin/cognitive-load/blob/main/README.agents.md) | [Blog version](https://minds.md/zakirullin/cognitive) | [Chinese](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Japanese](README.ja.md) | [Spanish](README.es.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Vietnamese](README.vi.md) | [Nepali](README.np.md)
 
 *这是一份持续更新的文档，最后更新：**2025 年 10 月**。欢迎你的贡献！* 
 
