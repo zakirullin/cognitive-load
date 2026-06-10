@@ -1,6 +1,6 @@
 # संज्ञानात्मक भार नै महत्त्वपूर्ण छ
 
-[प्रोम्प्ट](https://github.com/zakirullin/cognitive-load/blob/main/README.prompt.md) | [ब्लग संस्करण](https://minds.md/zakirullin/cognitive) | [चिनियाँ](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [कोरियाली](README.ko.md) | [टर्किश](README.tr.md) | [जापानी](README.ja.md) | [भियतनामी](README.vi.md)
+[प्रोम्प्ट](https://github.com/zakirullin/cognitive-load/blob/main/README.agents.md) | [ब्लग संस्करण](https://minds.md/zakirullin/cognitive) | [चिनियाँ](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [कोरियाली](README.ko.md) | [टर्किश](README.tr.md) | [जापानी](README.ja.md) | [भियतनामी](README.vi.md)
 
 *यो एक जीवित दस्तावेज हो, अन्तिम अपडेट: **अक्टोबर २०२५।** तपाईंको योगदान स्वागत छ!*
 

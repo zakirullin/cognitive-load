@@ -1,15 +1,17 @@
 # Cognitive load is what matters
 
-[Prompt](https://github.com/zakirullin/cognitive-load/blob/main/README.prompt.md) | [Blog version](https://minds.md/zakirullin/cognitive) | [Chinese](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Japanese](README.ja.md) | [Spanish](README.es.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Brazilian Portuguese](README.pt-br) | [Vietnamese](README.vi.md) | [Nepali](README.np.md)
+[Agents](https://github.com/zakirullin/cognitive-load/blob/main/README.agents.md) | [Blog version](https://minds.md/zakirullin/cognitive) | [Chinese](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Japanese](README.ja.md) | [Spanish](README.es.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Brazilian Portuguese](README.pt-br) | [Vietnamese](README.vi.md) | [Nepali](README.np.md)
 
-It is a living document, last update: **April 2026.**  
+It is a living document, last update: **June 2026.**  
 
 ## Introduction
 There are so many buzzwords and best practices out there, but most of them have failed. They failed because they were imagined, not real. These ideas were based on aesthetics and subjective judgments. We need something more fundamental, something that can't be wrong.
 
 Sometimes we feel confusion going through the code. Confusion costs time and money. Confusion is caused by high *cognitive load*. It's not some fancy abstract concept, but rather **a fundamental human constraint.** It's not imagined, it's there and we can feel it.  
 
-Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load into our code. 
+Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load into our code.  
+
+It is especially important in the AI age, when we need to validate a lot of LLM-generated code with our own brains.  
 
 ## Cognitive load
 > Cognitive load is how much a developer needs to think in order to complete a task.

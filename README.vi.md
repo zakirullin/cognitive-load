@@ -1,6 +1,6 @@
 # Cognitive load mới là thứ quan trọng
 
-[Prompt](https://github.com/zakirullin/cognitive-load/blob/main/README.prompt.md) | [Blog version](https://minds.md/zakirullin/cognitive) | [Chinese](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Japanese](README.ja.md) | [Vietnamese](README.vi.md)
+[Agents](https://github.com/zakirullin/cognitive-load/blob/main/README.agents.md) | [Blog version](https://minds.md/zakirullin/cognitive) | [Chinese](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Japanese](README.ja.md) | [Vietnamese](README.vi.md)
 
 *Đây là tài liệu sống, cập nhật lần cuối: **Tháng 10/2025.** Mọi đóng góp đều được chào đón!*
 
