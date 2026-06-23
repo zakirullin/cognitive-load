@@ -1,6 +1,6 @@
 # Cognitive load is what matters
 
-[For AI agents](https://github.com/zakirullin/cognitive-load/blob/main/README.agents.md) | [Blog](https://minds.md/zakirullin/cognitive) | [Chinese](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Japanese](README.ja.md) | [Spanish](README.es.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Brazilian Portuguese](README.pt-br) | [Vietnamese](README.vi.md) | [Nepali](README.np.md)
+[For AI agents](https://github.com/zakirullin/cognitive-load/blob/main/README.agents.md) | [Blog](https://minds.md/zakirullin/cognitive) | [Chinese](https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md) | [Japanese](README.ja.md) | [Spanish](README.es.md) | [Korean](README.ko.md) | [Turkish](README.tr.md) | [Brazilian Portuguese](README.pt-br.md) | [Vietnamese](README.vi.md) | [Nepali](README.np.md)
 
 *It is a living document, last update: **June 2026.***  
 
