@@ -383,28 +383,52 @@ Chúng ta nên giảm bất kỳ cognitive load nào ngoài cái vốn có trong
 ---
 [LinkedIn](https://www.linkedin.com/in/zakirullin/), [X](https://twitter.com/zakirullin), [GitHub](https://github.com/zakirullin), artemzr(аt)g-yоu-knоw-com
 
-<details>
-    <summary><b>Comment</b></summary>
-    <br>
-    <p><strong>Rob Pike</strong> <i>(Unix, Golang)</i><br>Bài viết hay.</p>
-    <p><strong><a href="https://x.com/karpathy/status/1872038630405054853" target="_blank">Andrej Karpathy</a></strong> <i>(ChatGPT, Tesla)</i><br>Bài post hay về software engineering. Có lẽ là quan điểm đúng nhất, được thực hành ít nhất.</p>
-    <p><strong><a href="https://x.com/elonmusk/status/1872346903792566655" target="_blank">Elon Musk</a></strong> <i>(Rocket)</i><br>Đúng.</p>
-    <p><strong><a href="https://www.linkedin.com/feed/update/urn:li:activity:7277757844970520576/" target="_blank">Addy Osmani</a></strong> <i>(Chrome, software system phức tạp nhất thế giới)</i><br>Tôi đã thấy vô số project nơi developer thông minh tạo ra architecture ấn tượng bằng design pattern mới nhất và microservice. Nhưng khi team member mới cố gắng thay đổi, họ mất hàng tuần chỉ để hiểu mọi thứ fit với nhau như thế nào. Cognitive load cao đến nỗi productivity giảm mạnh và bug nhân lên.</p>
-    <p>Mỉa mai? Nhiều pattern gây complexity này được implement với danh nghĩa "clean code."</p>
-    <p>Điều thực sự quan trọng là giảm unnecessary cognitive burden. Đôi khi điều này có nghĩa là ít module sâu hơn thay vì nhiều shallow module. Đôi khi có nghĩa là giữ logic liên quan với nhau thay vì tách thành các function nhỏ.</p>
-    <p>Và đôi khi có nghĩa là chọn solution nhàm chán, straightforward hơn là clever. Code tốt nhất không phải elegant hoặc sophisticated nhất - đó là code mà developer tương lai (bao gồm cả bạn) có thể hiểu nhanh chóng.</p>
-    <p>Bài viết của bạn thực sự cộng hưởng với các challenge chúng tôi đối mặt trong browser development. Bạn hoàn toàn đúng về browser hiện đại là một trong những software system phức tạp nhất. Quản lý complexity đó trong Chromium là challenge liên tục align hoàn hảo với nhiều điểm bạn đưa ra về cognitive load.</p>
-    <p>Một cách chúng tôi cố gắng handle điều này trong Chromium là thông qua component isolation cẩn thận và well-defined interface giữa các subsystem (như rendering, networking, JavaScript execution, v.v.). Tương tự ví dụ deep module của bạn với Unix I/O - chúng tôi aim cho powerful functionality đằng sau interface tương đối đơn giản. Ví dụ, rendering pipeline của chúng tôi handle incredible complexity (layout, compositing, GPU acceleration) nhưng developer có thể tương tác với nó thông qua clear abstraction layer.</p>
-    <p>Các điểm của bạn về tránh unnecessary abstraction cũng rất trúng. Trong browser development, chúng tôi liên tục cân bằng giữa làm codebase approachable cho contributor mới trong khi handle inherent complexity của web standard và compatibility.</p>
-    <p>Đôi khi solution đơn giản nhất là tốt nhất, ngay cả trong complex system.</p>
-    <p><strong><a href="https://x.com/antirez" target="_blank">antirez</a></strong> <i>(Redis)</i><br>Hoàn toàn đồng ý :) Ngoài ra, cái tôi tin là thiếu trong "A Philosophy of Software Design" đã đề cập là khái niệm "design sacrifice". Tức là, đôi khi bạn sacrifice thứ gì đó và nhận lại simplicity, hoặc performance, hoặc cả hai. Tôi áp dụng ý tưởng này liên tục, nhưng thường không được hiểu.</p>
-    <p>Một ví dụ tốt là việc tôi luôn từ chối có hash item expire. Đây là design sacrifice vì nếu bạn có certain attribute chỉ trong top-level item (các key chính chúng), thiết kế đơn giản hơn, value sẽ chỉ là object. Khi Redis có hash expire, đó là nice feature nhưng yêu cầu (thật vậy) nhiều thay đổi cho nhiều part, tăng complexity.</p>
-    <p>Một ví dụ khác là cái tôi đang làm ngay bây giờ, Vector Set, Redis data type mới. Tôi quyết định rằng Redis sẽ không là source of truth về vector, mà nó chỉ có thể lấy approximate version của chúng, nên tôi có thể làm on-insert normalization, quantization mà không cố gắng retain large float vector trên disk, v.v. Nhiều vector DB không sacrifice việc nhớ cái user đưa vào (full precision vector).</p>
-    <p>Đây chỉ là hai ví dụ random, nhưng tôi áp dụng ý tưởng này ở mọi nơi. Bây giờ vấn đề là: dĩ nhiên người ta phải sacrifice đúng thứ. Thường có 5% feature chiếm very large amount của complexity: đó là thứ tốt để kill :D</p>
-    <p><strong><a href="https://working-for-the-future.medium.com/about" target="_blank">Một developer từ internet</a></strong><br>Bạn sẽ không hire tôi... Tôi bán mình dựa trên track record của các enterprise project đã release.</p>
-    <p>Tôi làm việc với một người có thể nói về design pattern. Tôi không bao giờ có thể nói kiểu đó, mặc dù tôi là một trong số ít có thể hiểu anh ta rõ ràng. Các manager yêu thích anh ta và anh ta có thể dominate bất kỳ development conversation nào. Những người làm việc xung quanh anh ta nói anh ta để lại trail of destruction phía sau. Người ta nói với tôi rằng tôi là người đầu tiên có thể hiểu project của anh ta. Maintainability quan trọng. Tôi quan tâm nhất về TCO (<i>Total Cost of Ownership</i>). Với một vài firm, đó là thứ quan trọng.</p>
-    <p>Tôi đăng nhập Github sau khi không ở đó một thời gian và vì lý do nào đó nó đưa tôi đến một bài trong repository của ai đó có vẻ random. Tôi nghĩ "cái gì đây" và gặp chút rắc rối để đến home page, nên tôi đọc nó. Tôi không thực sự register nó vào lúc đó, nhưng nó tuyệt vời. Mọi developer nên đọc nó. Nó phần lớn nói rằng hầu như mọi thứ chúng ta được nói về programming best practice dẫn đến "cognitive load" quá mức, có nghĩa là đầu óc của chúng ta bị đá bởi intellectual demand. Tôi đã biết điều này một thời gian, đặc biệt với các demand của cloud, security và DevOps.</p>
-    <p>Tôi cũng thích nó vì nó mô tả practice tôi làm trong hàng thập kỷ, nhưng không bao giờ thừa nhận vì chúng không popular... Tôi viết stuff thực sự phức tạp và cần mọi help tôi có thể nhận được.</p>
-    <p>Cân nhắc, nếu tôi đúng, nó pop up vì các Github folk, những người rất thông minh, nghĩ rằng developer nên thấy nó. Tôi đồng ý.</p>
-    <p><a href="https://news.ycombinator.com/item?id=45074248" target="_blank">Comment trên Hacker News</a> (<a href="https://news.ycombinator.com/item?id=42489645" target="_blank">2</a>)</p>
-</details>
+## Comment
+
+**Rob Pike** *(Unix, Golang)*  
+Bài viết hay.
+
+**[Andrej Karpathy](https://x.com/karpathy/status/1872038630405054853)** *(ChatGPT, Tesla)*  
+Bài post hay về software engineering. Có lẽ là quan điểm đúng nhất, được thực hành ít nhất.
+
+**[Elon Musk](https://x.com/elonmusk/status/1872346903792566655)** *(Rocket)*  
+Đúng.
+
+**[Addy Osmani](https://www.linkedin.com/feed/update/urn:li:activity:7277757844970520576/)** *(Chrome, software system phức tạp nhất thế giới)*  
+Tôi đã thấy vô số project nơi developer thông minh tạo ra architecture ấn tượng bằng design pattern mới nhất và microservice. Nhưng khi team member mới cố gắng thay đổi, họ mất hàng tuần chỉ để hiểu mọi thứ fit với nhau như thế nào. Cognitive load cao đến nỗi productivity giảm mạnh và bug nhân lên.
+
+Mỉa mai? Nhiều pattern gây complexity này được implement với danh nghĩa "clean code."
+
+Điều thực sự quan trọng là giảm unnecessary cognitive burden. Đôi khi điều này có nghĩa là ít module sâu hơn thay vì nhiều shallow module. Đôi khi có nghĩa là giữ logic liên quan với nhau thay vì tách thành các function nhỏ.
+
+Và đôi khi có nghĩa là chọn solution nhàm chán, straightforward hơn là clever. Code tốt nhất không phải elegant hoặc sophisticated nhất - đó là code mà developer tương lai (bao gồm cả bạn) có thể hiểu nhanh chóng.
+
+Bài viết của bạn thực sự cộng hưởng với các challenge chúng tôi đối mặt trong browser development. Bạn hoàn toàn đúng về browser hiện đại là một trong những software system phức tạp nhất. Quản lý complexity đó trong Chromium là challenge liên tục align hoàn hảo với nhiều điểm bạn đưa ra về cognitive load.
+
+Một cách chúng tôi cố gắng handle điều này trong Chromium là thông qua component isolation cẩn thận và well-defined interface giữa các subsystem (như rendering, networking, JavaScript execution, v.v.). Tương tự ví dụ deep module của bạn với Unix I/O - chúng tôi aim cho powerful functionality đằng sau interface tương đối đơn giản. Ví dụ, rendering pipeline của chúng tôi handle incredible complexity (layout, compositing, GPU acceleration) nhưng developer có thể tương tác với nó thông qua clear abstraction layer.
+
+Các điểm của bạn về tránh unnecessary abstraction cũng rất trúng. Trong browser development, chúng tôi liên tục cân bằng giữa làm codebase approachable cho contributor mới trong khi handle inherent complexity của web standard và compatibility.
+
+Đôi khi solution đơn giản nhất là tốt nhất, ngay cả trong complex system.
+
+**[antirez](https://x.com/antirez)** *(Redis)*  
+Hoàn toàn đồng ý :) Ngoài ra, cái tôi tin là thiếu trong "A Philosophy of Software Design" đã đề cập là khái niệm "design sacrifice". Tức là, đôi khi bạn sacrifice thứ gì đó và nhận lại simplicity, hoặc performance, hoặc cả hai. Tôi áp dụng ý tưởng này liên tục, nhưng thường không được hiểu.
+
+Một ví dụ tốt là việc tôi luôn từ chối có hash item expire. Đây là design sacrifice vì nếu bạn có certain attribute chỉ trong top-level item (các key chính chúng), thiết kế đơn giản hơn, value sẽ chỉ là object. Khi Redis có hash expire, đó là nice feature nhưng yêu cầu (thật vậy) nhiều thay đổi cho nhiều part, tăng complexity.
+
+Một ví dụ khác là cái tôi đang làm ngay bây giờ, Vector Set, Redis data type mới. Tôi quyết định rằng Redis sẽ không là source of truth về vector, mà nó chỉ có thể lấy approximate version của chúng, nên tôi có thể làm on-insert normalization, quantization mà không cố gắng retain large float vector trên disk, v.v. Nhiều vector DB không sacrifice việc nhớ cái user đưa vào (full precision vector).
+
+Đây chỉ là hai ví dụ random, nhưng tôi áp dụng ý tưởng này ở mọi nơi. Bây giờ vấn đề là: dĩ nhiên người ta phải sacrifice đúng thứ. Thường có 5% feature chiếm very large amount của complexity: đó là thứ tốt để kill :D
+
+**[Một developer từ internet](https://working-for-the-future.medium.com/about)**  
+Bạn sẽ không hire tôi... Tôi bán mình dựa trên track record của các enterprise project đã release.
+
+Tôi làm việc với một người có thể nói về design pattern. Tôi không bao giờ có thể nói kiểu đó, mặc dù tôi là một trong số ít có thể hiểu anh ta rõ ràng. Các manager yêu thích anh ta và anh ta có thể dominate bất kỳ development conversation nào. Những người làm việc xung quanh anh ta nói anh ta để lại trail of destruction phía sau. Người ta nói với tôi rằng tôi là người đầu tiên có thể hiểu project của anh ta. Maintainability quan trọng. Tôi quan tâm nhất về TCO (*Total Cost of Ownership*). Với một vài firm, đó là thứ quan trọng.
+
+Tôi đăng nhập Github sau khi không ở đó một thời gian và vì lý do nào đó nó đưa tôi đến một bài trong repository của ai đó có vẻ random. Tôi nghĩ "cái gì đây" và gặp chút rắc rối để đến home page, nên tôi đọc nó. Tôi không thực sự register nó vào lúc đó, nhưng nó tuyệt vời. Mọi developer nên đọc nó. Nó phần lớn nói rằng hầu như mọi thứ chúng ta được nói về programming best practice dẫn đến "cognitive load" quá mức, có nghĩa là đầu óc của chúng ta bị đá bởi intellectual demand. Tôi đã biết điều này một thời gian, đặc biệt với các demand của cloud, security và DevOps.
+
+Tôi cũng thích nó vì nó mô tả practice tôi làm trong hàng thập kỷ, nhưng không bao giờ thừa nhận vì chúng không popular... Tôi viết stuff thực sự phức tạp và cần mọi help tôi có thể nhận được.
+
+Cân nhắc, nếu tôi đúng, nó pop up vì các Github folk, những người rất thông minh, nghĩ rằng developer nên thấy nó. Tôi đồng ý.
+
+[Comment trên Hacker News](https://news.ycombinator.com/item?id=45074248) ([2](https://news.ycombinator.com/item?id=42489645))
