@@ -383,36 +383,36 @@ Yaptığımız işin doğasında olan zorlayıcı kısımlar (intrinsic cognitiv
 ## Yorumlar
 
 **Rob Pike**  
-Nice article.
+Güzel makale.
 
 **[Andrej Karpathy](https://x.com/karpathy/status/1872038630405054853)** *(ChatGPT, Tesla)*  
-Nice post on software engineering. Probably the most true, least practiced viewpoint.
+Yazılım mühendisliği üzerine güzel bir yazı. Muhtemelen en doğru, ama en az uygulanan bakış açısı.
 
 **[Elon Musk](https://x.com/elonmusk/status/1872346903792566655)**  
-True.
+Doğru.
 
-**[Addy Osmani](https://www.linkedin.com/feed/update/urn:li:activity:7277757844970520576/)** *(Chrome, the most complex software system in the world)*  
-I've seen countless projects where smart developers created impressive architectures using the latest design patterns and microservices. But when new team members tried to make changes, they spent weeks just trying to understand how everything fits together. The cognitive load was so high that productivity plummeted and bugs multiplied.
+**[Addy Osmani](https://www.linkedin.com/feed/update/urn:li:activity:7277757844970520576/)** *(Chrome, dünyanın en karmaşık yazılım sistemi)*  
+Akıllı geliştiricilerin en yeni tasarım desenleri ve mikroservislerle etkileyici mimariler kurduğu sayısız proje gördüm. Ancak yeni ekip üyeleri bir değişiklik yapmaya çalıştığında, her şeyin birbirine nasıl oturduğunu anlamaya haftalarını harcadılar. Bilişsel yük o kadar yüksekti ki verimlilik çöktü, hatalar çoğaldı.
 
-The irony? Many of these complexity-inducing patterns were implemented in the name of "clean code."
+İşin ironisi mi? Karmaşıklığa yol açan bu desenlerin çoğu "temiz kod" adına uygulanmıştı.
 
-What really matters is reducing unnecessary cognitive burden. Sometimes this means fewer, deeper modules instead of many shallow ones. Sometimes it means keeping related logic together instead of splitting it into tiny functions.
+Asıl önemli olan, gereksiz bilişsel yükü azaltmak. Bazen bu, birçok sığ modül yerine daha az sayıda ama derin modül kullanmak demek. Bazen ilişkili mantığı küçük fonksiyonlara bölmek yerine bir arada tutmak demek.
 
-And sometimes it means choosing boring, straightforward solutions over clever ones. The best code isn't the most elegant or sophisticated - it's the code that future developers (including yourself) can understand quickly.
+Bazen de zekice çözümler yerine sıkıcı, basit çözümleri seçmek demek. En iyi kod, en zarif ya da en sofistike olan değil; gelecekteki geliştiricilerin (kendiniz dahil) hızlıca anlayabileceği koddur.
 
-Your article really resonates with the challenges we face in browser development. You're absolutely right about modern browsers being among the most complex software systems. Managing that complexity in Chromium is a constant challenge that aligns perfectly with many of the points you made about cognitive load.
+Makaleniz tarayıcı geliştirmede karşılaştığımız zorluklarla gerçekten örtüşüyor. Modern tarayıcıların en karmaşık yazılım sistemleri arasında olduğu konusunda kesinlikle haklısınız. Chromium'da bu karmaşıklığı yönetmek sürekli bir mücadele ve bilişsel yük hakkında söylediğiniz birçok noktayla mükemmel biçimde örtüşüyor.
 
-One way we try to handle this in Chromium is through careful component isolation and well-defined interfaces between subsystems (like rendering, networking, JavaScript execution, etc.). Similar to your deep modules example with Unix I/O - we aim for powerful functionality behind relatively simple interfaces. For instance, our rendering pipeline handles incredible complexity (layout, compositing, GPU acceleration) but developers can interact with it through clear abstraction layers.
+Chromium'da bununla başa çıkma yollarımızdan biri, dikkatli bileşen yalıtımı ve alt sistemler (render, ağ, JavaScript çalıştırma vb.) arasında iyi tanımlanmış arayüzler. Unix I/O ile verdiğiniz derin modül örneğine benzer şekilde, görece basit arayüzlerin ardında güçlü işlevsellik sunmayı hedefliyoruz. Örneğin render hattımız inanılmaz bir karmaşıklığı (yerleşim, kompozisyon, GPU hızlandırma) yönetiyor, ancak geliştiriciler onunla net soyutlama katmanları üzerinden etkileşime girebiliyor.
 
-Your points about avoiding unnecessary abstractions really hit home too. In browser development, we constantly balance between making the codebase approachable for new contributors while handling the inherent complexity of web standards and compatibility.
+Gereksiz soyutlamalardan kaçınma konusundaki görüşleriniz de tam yerine oturuyor. Tarayıcı geliştirmede, web standartlarının ve uyumluluğun getirdiği doğal karmaşıklığı yönetirken kod tabanını yeni katkıcılar için de ulaşılabilir tutmak adına sürekli bir denge kuruyoruz.
 
-Sometimes the simplest solution is the best one, even in a complex system.
+Bazen en basit çözüm en iyi çözümdür; karmaşık bir sistemde bile.
 
 **[antirez](https://x.com/antirez)** *(Redis)*  
-Totally agree about it :) Also, what I believe is missing from mentioned "A Philosophy of Software Design" is the concept of "design sacrifice". That is, sometimes you sacrifice something and get back simplicity, or performances, or both. I apply this idea continuously, but often is not understood.
+Buna tamamen katılıyorum :) Ayrıca bahsedilen "A Philosophy of Software Design" kitabında eksik olduğunu düşündüğüm şey "tasarım fedakârlığı" (design sacrifice) kavramı. Yani bazen bir şeyden feragat edersiniz ve karşılığında sadelik, performans ya da her ikisini birden geri alırsınız. Bu fikri sürekli uyguluyorum, ama çoğu zaman anlaşılmıyor.
 
-A good example is the fact that I always refused to have hash items expires. This is a design sacrifice because if you have certain attributes only in the top-level items (the keys themselves), the design is simpler, values will just be objects. When Redis got hash expires, it was a nice feature but required (indeed) many changes to many parts, raising the complexity.
+İyi bir örnek, hash öğelerinin süresinin dolmasına (expire) her zaman karşı çıkmış olmam. Bu bir tasarım fedakârlığı, çünkü belirli nitelikleri yalnızca üst düzey öğelerde (yani anahtarların kendisinde) tutarsanız tasarım daha basit olur, değerler yalnızca nesnelerden ibaret kalır. Redis'e hash expire geldiğinde güzel bir özellikti, ancak (gerçekten de) birçok yerde birçok değişiklik gerektirdi ve karmaşıklığı artırdı.
 
-Another example is what I'm doing right now, Vector Sets, the new Redis data type. I decided that Redis would not be the source of truth about vectors, but that it can just take an approximate version of them, so I was able to do on-insert normalization, quantization without trying to retain the large floats vector on disk, and so forth. May vector DBs don't sacrifice the fact of remembering what the user put inside (the full precision vector).
+Bir başka örnek, şu anda üzerinde çalıştığım Vector Sets, yani Redis'in yeni veri tipi. Redis'in vektörler için gerçeğin kaynağı (source of truth) olmayacağına, yalnızca bunların yaklaşık bir versiyonunu alabileceğine karar verdim. Böylece ekleme sırasında normalizasyon ve nicemleme (quantization) yapabildim; büyük float vektörünü diskte tutmaya çalışmadım, vb. Birçok vektör veritabanı, kullanıcının içeri koyduğu şeyi (tam hassasiyetli vektörü) hatırlamaktan fedakârlık etmez.
 
-These are just two random examples, but I apply this idea everywhere. Now the thing is: of course one must sacrifice the right things. Often, there are 5% features that account for a very large amount of complexity: that is a good thing to kill :D
+Bunlar sadece rastgele iki örnek, ama bu fikri her yerde uyguluyorum. Mesele şu ki, elbette doğru şeylerden fedakârlık etmek gerekir. Çoğu zaman, karmaşıklığın çok büyük bir kısmına yol açan %5'lik özellikler vardır: bunları öldürmek iyi bir şeydir :D
